@@ -11,16 +11,16 @@ export function AthleticsSection({ sections }: AthleticsSectionProps) {
   const icons = [Trophy, Medal, Users];
 
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
-          <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-athletics-heading">Cardinal Athletics</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl" data-testid="text-athletics-description">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4" data-testid="text-athletics-heading">Cardinal Athletics</h2>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl" data-testid="text-athletics-description">
             Home to champions, Stanford Athletics combines competitive excellence with academic achievement.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {sections.map((section, index) => {
             const Icon = icons[index % icons.length];
             return (

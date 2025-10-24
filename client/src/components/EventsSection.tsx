@@ -10,8 +10,8 @@ interface EventsSectionProps {
 
 export function EventsSection({ events }: EventsSectionProps) {
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 bg-white shadow-lg rounded-t-3xl">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="mb-12">
           <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-events-heading">Upcoming Events</h2>
           <p className="text-lg text-muted-foreground" data-testid="text-events-description">

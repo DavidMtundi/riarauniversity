@@ -1,3 +1,6 @@
+/* Import Stanford Design System */
+@import './styles/design-system.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -352,4 +355,4 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
-}
+}/* Force refresh Fri Oct 24 18:02:58 EAT 2025 */

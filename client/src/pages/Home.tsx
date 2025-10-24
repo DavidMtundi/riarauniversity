@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
+import { MissionSection } from "@/components/MissionSection";
 import { NewsSection } from "@/components/NewsSection";
 import { EducationSection } from "@/components/EducationSection";
 import { ResearchSection } from "@/components/ResearchSection";
@@ -11,6 +12,7 @@ import { EventsSection } from "@/components/EventsSection";
 import { HealthcareSection } from "@/components/HealthcareSection";
 import { AthleticsSection } from "@/components/AthleticsSection";
 import { AdmissionSection } from "@/components/AdmissionSection";
+import { ParallaxContainer, ParallaxSection } from "@/components/ParallaxSection";
 import type { NewsArticle, EducationPath, School, ResearchStat, Profile, Event, ContentSection } from "@shared/schema";
 
 export default function Home() {
@@ -116,19 +118,69 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
-        <HeroSection />
-        <NewsSection articles={newsArticles} />
-        <EducationSection paths={educationPaths} schools={schools} />
-        <ResearchSection stats={researchStats} profile={researchProfile} />
-        <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
-        <ArtsSection sections={artsSections} profile={artsProfile} />
-        <EventsSection events={events} />
-        <HealthcareSection sections={healthcareSections} />
-        <AthleticsSection sections={athleticsSections} />
-        <AdmissionSection />
-      </main>
-      <Footer />
+      <ParallaxContainer>
+        <main className="flex-1">
+          {/* Hero Section - Base layer */}
+          <ParallaxSection zIndex={1}>
+            <HeroSection />
+          </ParallaxSection>
+          
+          {/* Mission Section - Slides over hero */}
+          <ParallaxSection zIndex={2} stickyTop="0">
+            <MissionSection />
+          </ParallaxSection>
+          
+          {/* News Section - Slides over mission */}
+          <ParallaxSection zIndex={3} stickyTop="0">
+            <NewsSection articles={newsArticles} />
+          </ParallaxSection>
+          
+          {/* Education Section - Slides over news */}
+          <ParallaxSection zIndex={4} stickyTop="0">
+            <EducationSection paths={educationPaths} schools={schools} />
+          </ParallaxSection>
+          
+          {/* Research Section - Slides over education */}
+          <ParallaxSection zIndex={5} stickyTop="0">
+            <ResearchSection stats={researchStats} profile={researchProfile} />
+          </ParallaxSection>
+          
+          {/* Campus Life Section - Slides over research */}
+          <ParallaxSection zIndex={6} stickyTop="0">
+            <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
+          </ParallaxSection>
+          
+          {/* Arts Section - Slides over campus life */}
+          <ParallaxSection zIndex={7} stickyTop="0">
+            <ArtsSection sections={artsSections} profile={artsProfile} />
+          </ParallaxSection>
+          
+          {/* Events Section - Slides over arts */}
+          <ParallaxSection zIndex={8} stickyTop="0">
+            <EventsSection events={events} />
+          </ParallaxSection>
+          
+          {/* Healthcare Section - Slides over events */}
+          <ParallaxSection zIndex={9} stickyTop="0">
+            <HealthcareSection sections={healthcareSections} />
+          </ParallaxSection>
+          
+          {/* Athletics Section - Slides over healthcare */}
+          <ParallaxSection zIndex={10} stickyTop="0">
+            <AthleticsSection sections={athleticsSections} />
+          </ParallaxSection>
+          
+          {/* Admission Section - Slides over athletics */}
+          <ParallaxSection zIndex={11} stickyTop="0">
+            <AdmissionSection />
+          </ParallaxSection>
+          
+          {/* Footer - Slides over admission */}
+          <ParallaxSection zIndex={12} stickyTop="0">
+            <Footer />
+          </ParallaxSection>
+        </main>
+      </ParallaxContainer>
     </div>
   );
 }

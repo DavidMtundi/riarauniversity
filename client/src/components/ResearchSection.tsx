@@ -10,13 +10,19 @@ interface ResearchSectionProps {
 
 export function ResearchSection({ stats, profile }: ResearchSectionProps) {
   return (
-    <section id="research" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="research" className="py-20 bg-gray-50 shadow-lg rounded-t-3xl">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         {profile && (
           <Card className="mb-16 overflow-hidden border-0 shadow-lg" data-testid="card-research-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="flex flex-col justify-center">
-                <div className="w-48 h-48 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 mb-6"></div>
+                <div className="w-48 h-48 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt={profile.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="flex flex-col justify-center">
                 <p className="text-2xl font-serif italic mb-6 text-foreground leading-relaxed" data-testid="text-profile-quote">

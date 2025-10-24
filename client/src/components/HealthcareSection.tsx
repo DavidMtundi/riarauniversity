@@ -11,8 +11,8 @@ export function HealthcareSection({ sections }: HealthcareSectionProps) {
   const icons = [Activity, Heart, Baby];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 bg-gray-50 shadow-lg rounded-t-3xl">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="mb-12">
           <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-healthcare-heading">Health Care Excellence</h2>
           <p className="text-lg text-muted-foreground max-w-3xl" data-testid="text-healthcare-description">

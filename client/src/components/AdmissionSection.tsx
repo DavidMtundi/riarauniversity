@@ -4,8 +4,8 @@ import { GraduationCap, DollarSign, ArrowRight } from "lucide-react";
 
 export function AdmissionSection() {
   return (
-    <section id="admission" className="py-20 bg-primary/5">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="admission" className="py-20 bg-gray-50">
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="grid md:grid-cols-2 gap-8">
           <Card className="overflow-hidden hover-elevate" data-testid="card-admission-explore">
             <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 relative flex items-center justify-center">
