@@ -1,0 +1,47 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { GraduationCap, DollarSign, ArrowRight } from "lucide-react";
+
+export function AdmissionSection() {
+  return (
+    <section id="admission" className="py-20 bg-primary/5">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-8">
+          <Card className="overflow-hidden hover-elevate" data-testid="card-admission-explore">
+            <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 relative flex items-center justify-center">
+              <GraduationCap className="h-24 w-24 text-primary/40" />
+            </div>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-serif font-semibold mb-4" data-testid="text-admission-explore-title">
+                Explore the possibilities of a Stanford education
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-admission-explore-description">
+                We look for distinctive students who exhibit an abundance of energy and curiosity in their classes, activities, projects, research, and lives.
+              </p>
+              <Button data-testid="button-admission-explore">
+                Explore admission <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="overflow-hidden hover-elevate" data-testid="card-admission-financial">
+            <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 relative flex items-center justify-center">
+              <DollarSign className="h-24 w-24 text-primary/40" />
+            </div>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-serif font-semibold mb-4" data-testid="text-admission-financial-title">
+                Stanford meets the full financial need of every admitted undergrad
+              </h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-admission-financial-description">
+                More than two-thirds of undergrads receive some form of financial assistance. Generally, tuition is covered for families with incomes below $150,000.
+              </p>
+              <Button data-testid="button-admission-financial">
+                Learn about financial aid <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+}
