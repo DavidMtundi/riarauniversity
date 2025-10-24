@@ -34,7 +34,7 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                 <div>
                   <p className="font-semibold text-lg mb-1" data-testid="text-arts-profile-name">{profile.name}</p>
                   <p className="text-muted-foreground mb-4" data-testid="text-arts-profile-title">{profile.title}</p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid="button-arts-profile-read-more">
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-arts-profile-read-more">
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -56,7 +56,7 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-arts-description-${section.id}`}>
                     {section.description}
                   </p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid={`button-arts-link-${section.id}`}>
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-arts-link-${section.id}`}>
                     Explore <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>

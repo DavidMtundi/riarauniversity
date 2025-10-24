@@ -24,7 +24,7 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
                 <div>
                   <p className="font-semibold text-lg mb-1" data-testid="text-campus-profile-name">{profile.name}</p>
                   <p className="text-muted-foreground mb-4" data-testid="text-campus-profile-title">{profile.title}</p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid="button-campus-profile-read-more">
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-campus-profile-read-more">
                     Read more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
@@ -49,7 +49,7 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-campus-description-${section.id}`}>
                     {section.description}
                   </p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid={`button-campus-link-${section.id}`}>
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-campus-link-${section.id}`}>
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>

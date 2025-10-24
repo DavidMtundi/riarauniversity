@@ -25,7 +25,7 @@ export function ResearchSection({ stats, profile }: ResearchSectionProps) {
                 <div>
                   <p className="font-semibold text-lg mb-1" data-testid="text-profile-name">{profile.name}</p>
                   <p className="text-muted-foreground mb-4" data-testid="text-profile-title">{profile.title}</p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid="button-profile-read-more">
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-profile-read-more">
                     Read more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>

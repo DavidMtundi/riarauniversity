@@ -34,7 +34,7 @@ export function NewsSection({ articles }: NewsSectionProps) {
                 <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-featured-excerpt">
                   {featuredArticle.excerpt}
                 </p>
-                <Button variant="link" className="p-0 h-auto font-semibold" data-testid="button-featured-read-more">
+                <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-featured-read-more">
                   Read more <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>

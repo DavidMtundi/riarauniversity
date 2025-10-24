@@ -27,7 +27,7 @@ export function EducationSection({ paths, schools }: EducationSectionProps) {
                   <p className="text-muted-foreground mb-4 leading-relaxed" data-testid={`text-education-description-${path.id}`}>
                     {path.description}
                   </p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid={`button-education-link-${path.id}`}>
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-education-link-${path.id}`}>
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
@@ -50,7 +50,7 @@ export function EducationSection({ paths, schools }: EducationSectionProps) {
               </a>
             ))}
           </div>
-          <Button variant="link" className="p-0 h-auto font-semibold" data-testid="button-more-academics">
+          <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-more-academics">
             More about academics <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>

@@ -20,16 +20,16 @@ export interface IStorage {
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
-  private newsArticles: NewsArticle[];
-  private educationPaths: EducationPath[];
-  private schools: School[];
-  private researchStats: ResearchStat[];
-  private profiles: Map<string, Profile>;
-  private campusLifeSections: ContentSection[];
-  private artsSections: ContentSection[];
-  private events: Event[];
-  private healthcareSections: ContentSection[];
-  private athleticsSections: ContentSection[];
+  private newsArticles: NewsArticle[] = [];
+  private educationPaths: EducationPath[] = [];
+  private schools: School[] = [];
+  private researchStats: ResearchStat[] = [];
+  private profiles: Map<string, Profile> = new Map();
+  private campusLifeSections: ContentSection[] = [];
+  private artsSections: ContentSection[] = [];
+  private events: Event[] = [];
+  private healthcareSections: ContentSection[] = [];
+  private athleticsSections: ContentSection[] = [];
 
   constructor() {
     this.users = new Map();

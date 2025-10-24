@@ -33,7 +33,7 @@ export function HealthcareSection({ sections }: HealthcareSectionProps) {
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-healthcare-description-${section.id}`}>
                     {section.description}
                   </p>
-                  <Button variant="link" className="p-0 h-auto font-semibold" data-testid={`button-healthcare-link-${section.id}`}>
+                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-healthcare-link-${section.id}`}>
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </CardContent>
