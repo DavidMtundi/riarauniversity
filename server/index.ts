@@ -66,30 +66,27 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Dynamic port selection: try 3000 first, then 5000 as fallback
+  // Dynamic port selection: use PORT env var or default to 5174
   const startServer = () => {
+    const envPort = process.env.PORT ? parseInt(process.env.PORT, 10) : undefined;
+    const defaultPort = 5174;
+
     const tryPort = (port: number) => {
       server.listen(port, "0.0.0.0", () => {
         log(`serving on port ${port}`);
       });
-      
+
       server.on('error', (err: any) => {
         if (err.code === 'EADDRINUSE') {
-          if (port === 3000) {
-            log(`Port 3000 is in use, trying port 5000...`);
-            tryPort(5000);
-          } else {
-            log(`Both ports 3000 and 5000 are in use. Please specify a different port with PORT environment variable.`);
-            process.exit(1);
-          }
+          log(`Port ${port} is in use. Please choose a different PORT (e.g. export PORT=3005) and try again.`);
+          process.exit(1);
         } else {
           throw err;
         }
       });
     };
 
-    // Start with port 3000
-    tryPort(3000);
+    tryPort(envPort || defaultPort);
   };
 
   startServer();

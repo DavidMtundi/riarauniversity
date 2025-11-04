@@ -125,58 +125,38 @@ export default function Home() {
             <HeroSection />
           </ParallaxSection>
           
-          {/* Mission Section - Slides over hero */}
+          {/* Mission Section + All other sections - Single parallax layer */}
           <ParallaxSection zIndex={2} stickyTop="0">
             <MissionSection />
-          </ParallaxSection>
-          
-          {/* News Section - Slides over mission */}
-          <ParallaxSection zIndex={3} stickyTop="0">
+            
+            {/* News Section */}
             <NewsSection articles={newsArticles} />
-          </ParallaxSection>
-          
-          {/* Education Section - Slides over news */}
-          <ParallaxSection zIndex={4} stickyTop="0">
+            
+            {/* Education Section */}
             <EducationSection paths={educationPaths} schools={schools} />
-          </ParallaxSection>
-          
-          {/* Research Section - Slides over education */}
-          <ParallaxSection zIndex={5} stickyTop="0">
+            
+            {/* Research Section */}
             <ResearchSection stats={researchStats} profile={researchProfile} />
-          </ParallaxSection>
-          
-          {/* Campus Life Section - Slides over research */}
-          <ParallaxSection zIndex={6} stickyTop="0">
+            
+            {/* Campus Life Section */}
             <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
-          </ParallaxSection>
-          
-          {/* Arts Section - Slides over campus life */}
-          <ParallaxSection zIndex={7} stickyTop="0">
+            
+            {/* Arts Section */}
             <ArtsSection sections={artsSections} profile={artsProfile} />
-          </ParallaxSection>
-          
-          {/* Events Section - Slides over arts */}
-          <ParallaxSection zIndex={8} stickyTop="0">
+            
+            {/* Events Section */}
             <EventsSection events={events} />
-          </ParallaxSection>
-          
-          {/* Healthcare Section - Slides over events */}
-          <ParallaxSection zIndex={9} stickyTop="0">
+            
+            {/* Healthcare Section */}
             <HealthcareSection sections={healthcareSections} />
-          </ParallaxSection>
-          
-          {/* Athletics Section - Slides over healthcare */}
-          <ParallaxSection zIndex={10} stickyTop="0">
+            
+            {/* Athletics Section */}
             <AthleticsSection sections={athleticsSections} />
-          </ParallaxSection>
-          
-          {/* Admission Section - Slides over athletics */}
-          <ParallaxSection zIndex={11} stickyTop="0">
+            
+            {/* Admission Section */}
             <AdmissionSection />
-          </ParallaxSection>
-          
-          {/* Footer - Slides over admission */}
-          <ParallaxSection zIndex={12} stickyTop="0">
+            
+            {/* Footer */}
             <Footer />
           </ParallaxSection>
         </main>
