@@ -1,8 +1,8 @@
-# Stanford University Website
+# Riara University Website
 
 ## Overview
 
-This is a modern, institutional website built for Stanford University, featuring a comprehensive information architecture that showcases academics, research, campus life, athletics, healthcare, and arts programs. The application follows a full-stack architecture with a React frontend and Express backend, implementing a component-based design system inspired by leading university websites (Stanford, Harvard, MIT, Yale).
+This is a modern, institutional website built for Riara University, featuring a comprehensive information architecture that showcases academics, research, campus life, athletics, healthcare, and arts programs. The application follows a full-stack architecture with a React frontend and Express backend, implementing a component-based design system inspired by leading university websites (Riara, Harvard, MIT, Yale).
 
 The website presents a rich, content-driven experience with multiple sections including news articles, educational pathways, school information, research statistics, faculty/student profiles, events, and various content sections for different university programs. The design emphasizes academic authority with approachable elegance, utilizing a carefully crafted typography system and consistent spacing patterns.
 

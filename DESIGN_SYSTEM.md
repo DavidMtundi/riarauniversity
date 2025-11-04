@@ -1,6 +1,6 @@
-# Stanford University Design System
+# Riara University Design System
 
-This document explains how to use the centralized design system for the Stanford Clone project.
+This document explains how to use the centralized design system for the Riara Clone project.
 
 ## Overview
 
@@ -80,7 +80,7 @@ const textColor = getColor('text.primary');
 
 ### Colors
 
-- **Stanford Brand**: `stanford.red`, `stanford.redLight`, `stanford.redDark`
+- **Riara Brand**: `Riara.red`, `Riara.redLight`, `Riara.redDark`
 - **Primary**: `primary.50` through `primary.900`
 - **Neutral**: `neutral.50` through `neutral.900`
 - **Text**: `text.primary`, `text.secondary`, `text.tertiary`, `text.inverse`
@@ -94,7 +94,7 @@ const textColor = getColor('text.primary');
 ### Shadows
 
 - **Standard**: `sm`, `base`, `md`, `lg`, `xl`
-- **Stanford**: `stanford` (custom Stanford shadow)
+- **Riara**: `Riara` (custom Riara shadow)
 
 ### Border Radius
 
@@ -106,10 +106,10 @@ const textColor = getColor('text.primary');
 
 ```tsx
 // Using CSS custom properties
-<header className="shadow-stanford" style={{fontFamily: 'var(--font-family-primary)'}}>
+<header className="shadow-Riara" style={{fontFamily: 'var(--font-family-primary)'}}>
   <div className="bg-red-600 text-white">
     <h1 style={{fontSize: 'var(--font-size-header-title)'}}>
-      Stanford University
+      Riara University
     </h1>
   </div>
 </header>

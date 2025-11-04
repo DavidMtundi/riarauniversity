@@ -1,9 +1,9 @@
-# Stanford University Website - Design Guidelines
+# Riara University Website - Design Guidelines
 
 ## Design Approach
 
 **Selected Approach:** Reference-Based (Institutional/University)
-**Primary Reference:** Stanford University's existing site structure
+**Primary Reference:** Riara University's existing site structure
 **Secondary References:** Harvard, MIT, Yale (leading institutional websites)
 
 **Design Principles:**
@@ -122,7 +122,7 @@
 ## Images
 
 **Hero Section:**
-- Large, high-quality campus image showing iconic Stanford architecture (Hoover Tower, Main Quad, Memorial Church)
+- Large, high-quality campus image showing iconic Riara architecture (Hoover Tower, Main Quad, Memorial Church)
 - Dimensions: Full viewport width, 600-800px height
 - Treatment: Subtle overlay for text readability
 
