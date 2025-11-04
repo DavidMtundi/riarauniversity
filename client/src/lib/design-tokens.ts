@@ -10,7 +10,7 @@ export const typography = {
     serif: 'serif',
   },
   fontSize: {
-    // Mission section specific sizes (matching Stanford's actual CSS)
+    // Mission section specific sizes (matching Riara's actual CSS)
     missionTitle: {
       base: '1.625em', // 26px
       responsive: '3.90625em', // 62.5px (≥576px)

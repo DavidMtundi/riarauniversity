@@ -127,10 +127,10 @@ export const createResponsiveFontSize = (baseSize: string, responsiveSize: strin
   },
 });
 
-// Stanford-specific styles
-export const stanfordStyles = {
+// Riara-specific styles
+export const riaraStyles = {
   header: {
-    shadow: shadows.stanford,
+    shadow: shadows.riara,
     redBackground: colors.background.red,
     whiteText: colors.text.inverse,
   },

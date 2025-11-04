@@ -18,7 +18,7 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 w-full bg-white shadow-riara z-50">
-      {/* Top Bar - Stanford Style */}
+      {/* Top Bar - Riara Style */}
       <div className="bg-red-800">
         <div className="w-full px-4 sm:px-6">
           <div className="flex h-12 sm:h-14 items-center justify-between text-white" style={{fontFamily: 'var(--font-family-primary)'}}>

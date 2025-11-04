@@ -214,3 +214,43 @@
 .shadow-riara {
   box-shadow: var(--shadow-riara);
 }
+
+/* Riara Footer Styles - Reusable */
+/* 
+ * Usage:
+ * 1. Add 'riara-footer' class to any footer element: <footer className="riara-footer">
+ * 2. For pages that need Riara body typography, add 'has-riara-footer' class to body element via useEffect
+ * 
+ * Example in a page component:
+ * useEffect(() => {
+ *   document.body.classList.add('has-riara-footer');
+ *   return () => {
+ *     document.body.classList.remove('has-riara-footer');
+ *   };
+ * }, []);
+ */
+
+/* Footer component styling - applies to any footer with riara-footer class */
+.riara-footer {
+  position: relative;
+  background-color: #fff;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+/* Optional: Apply Riara body typography when body has has-riara-footer class */
+body.has-riara-footer {
+  line-height: 1.5;
+  font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.8em;
+  color: #000;
+}
+
+/* Ensure footer gets proper styling when body has the class */
+body.has-riara-footer > footer.riara-footer,
+body.has-riara-footer footer.riara-footer {
+  position: relative;
+  background-color: #fff;
+  line-height: 1.5;
+  overflow: hidden;
+}

@@ -63,7 +63,7 @@ export default function Events() {
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Upcoming Events</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Discover what's happening at Stanford
+                Discover what's happening at Riara
               </p>
             </div>
           </div>

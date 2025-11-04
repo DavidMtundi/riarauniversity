@@ -14,7 +14,7 @@ export function EventsSection({ events }: EventsSectionProps) {
         <div className="mb-12">
           <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-events-heading">Upcoming Events</h2>
           <p className="text-lg text-muted-foreground" data-testid="text-events-description">
-            Discover lectures, performances, exhibitions, and community gatherings at Stanford.
+            Discover lectures, performances, exhibitions, and community gatherings at Riara.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ export function AdmissionSection() {
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-serif font-semibold mb-4" data-testid="text-admission-explore-title">
-                Explore the possibilities of a Stanford education
+                Explore the possibilities of a Riara education
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-admission-explore-description">
                 We look for distinctive students who exhibit an abundance of energy and curiosity in their classes, activities, projects, research, and lives.
@@ -29,7 +29,7 @@ export function AdmissionSection() {
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-serif font-semibold mb-4" data-testid="text-admission-financial-title">
-                Stanford meets the full financial need of every admitted undergrad
+                Riara meets the full financial need of every admitted undergrad
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed" data-testid="text-admission-financial-description">
                 More than two-thirds of undergrads receive some form of financial assistance. Generally, tuition is covered for families with incomes below $150,000.

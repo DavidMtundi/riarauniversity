@@ -14,9 +14,9 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
     <section className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="mb-12">
-          <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-arts-heading">Arts at Stanford</h2>
+          <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-arts-heading">Arts at Riara</h2>
           <p className="text-lg text-muted-foreground max-w-3xl" data-testid="text-arts-description">
-            From world-class museums to live performances and interdisciplinary scholarship, the arts are an integral part of the Stanford experience.
+            From world-class museums to live performances and interdisciplinary scholarship, the arts are an integral part of the Riara experience.
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                 <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt="Arts at Stanford"
+                    alt="Arts at Riara"
                     className="w-full h-full object-cover"
                   />
                 </div>

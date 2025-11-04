@@ -78,7 +78,7 @@ export default function Home() {
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-primary border-r-transparent mb-4"></div>
-            <p className="text-muted-foreground">Loading Stanford University...</p>
+            <p className="text-muted-foreground">Loading Riara University...</p>
           </div>
         </main>
         <Footer />
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
             <h2 className="text-2xl font-serif font-bold mb-2">Unable to Load Content</h2>
             <p className="text-muted-foreground mb-6">
-              We're experiencing technical difficulties loading the Stanford University website. Please try refreshing the page.
+              We're experiencing technical difficulties loading the Riara University website. Please try refreshing the page.
             </p>
             <button
               onClick={() => window.location.reload()}

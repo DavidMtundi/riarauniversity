@@ -70,7 +70,7 @@ export default function Arts() {
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">The Arts</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Enriching the Bay Area and shaping culture with arts experiences for everyone
+                Enriching Nairobi and shaping culture with arts experiences for everyone
               </p>
             </div>
           </div>

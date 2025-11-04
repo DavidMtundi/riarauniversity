@@ -42,7 +42,7 @@ export class MemStorage implements IStorage {
         id: "1",
         category: "Research Spotlight",
         title: "Why research matters",
-        excerpt: "Discover the groundbreaking research happening at Stanford and its impact on society, from medicine to technology.",
+        excerpt: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology.",
         imageUrl: "",
         link: "#",
         featured: true
@@ -59,7 +59,7 @@ export class MemStorage implements IStorage {
         id: "3",
         category: "Science & Engineering",
         title: "New observation method improves outlook for lithium metal battery",
-        excerpt: "Stanford engineers develop innovative technique for analyzing battery performance at the molecular level.",
+        excerpt: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level.",
         imageUrl: "",
         link: "#"
       },
@@ -82,7 +82,7 @@ export class MemStorage implements IStorage {
       {
         id: "6",
         category: "Awards",
-        title: "Stanford Professor William Tarpeh receives MacArthur Fellowship",
+        title: "Riara Professor William Tarpeh receives MacArthur Fellowship",
         excerpt: "Recognition for innovative work in environmental engineering and sustainable water treatment.",
         imageUrl: "",
         link: "#"
@@ -124,12 +124,12 @@ export class MemStorage implements IStorage {
     ];
 
     this.researchStats = [
-      { id: "1", value: "6,699", label: "Inventions created by federally funded Stanford research" },
-      { id: "2", value: "3,029", label: "U.S. patents based on federally funded Stanford research" },
+      { id: "1", value: "6,699", label: "Inventions created by federally funded Riara research" },
+      { id: "2", value: "3,029", label: "Kenyan patents based on federally funded Riara research" },
       { id: "3", value: "400+", label: "Start-up companies founded based on federally funded research" },
-      { id: "4", value: "350,000+", label: "Jobs created by companies from Stanford research" },
-      { id: "5", value: "$94B", label: "Private investment in start-ups from Stanford research" },
-      { id: "6", value: "$11T+", label: "Market value of top 30 companies founded by Stanford alumni" }
+      { id: "4", value: "350,000+", label: "Jobs created by companies from Riara research" },
+      { id: "5", value: "$94B", label: "Private investment in start-ups from Riara research" },
+      { id: "6", value: "$11T+", label: "Market value of top 30 companies founded by Riara alumni" }
     ];
 
     this.profiles = new Map([
@@ -145,7 +145,7 @@ export class MemStorage implements IStorage {
         id: "campus-profile",
         name: "Khoi Young, '25",
         title: "Design major and three-time NCAA gymnastics champion",
-        quote: "There's a lot to question – that's one of the most important things I'll take with me from my Stanford experience.",
+        quote: "There's a lot to question – that's one of the most important things I'll take with me from my Riara experience.",
         imageUrl: "",
         link: "#"
       }],
@@ -201,7 +201,7 @@ export class MemStorage implements IStorage {
       {
         id: "performance",
         title: "Live Performance",
-        description: "Stanford Live presents a wide range of performances by artists from around the world",
+        description: "Riara Live presents a wide range of performances by artists from around the world",
         imageUrl: "",
         link: "#"
       }
@@ -211,7 +211,7 @@ export class MemStorage implements IStorage {
       {
         id: "1",
         type: "Exhibition",
-        title: "Branner Library Monthly Book & Map Exhibit - Oceans: Pacific Ocean",
+        title: "Branner Library Monthly Book & Map Exhibit - Oceans: Indian Ocean",
         date: "Oct 24",
         imageUrl: "",
         link: "#"
@@ -221,7 +221,7 @@ export class MemStorage implements IStorage {
         type: "Exhibition",
         title: "Spotlight on Special Collections",
         date: "Oct 24",
-        time: "09:00 am PT",
+        time: "09:00 am EAT",
         imageUrl: "",
         link: "#"
       },
@@ -230,16 +230,16 @@ export class MemStorage implements IStorage {
         type: "Conference",
         title: "Teaching and Mentoring Academy's 8th Annual Education Day",
         date: "Oct 25",
-        time: "08:30 am PT",
+        time: "08:30 am EAT",
         imageUrl: "",
         link: "#"
       },
       {
         id: "4",
         type: "Performance",
-        title: "Ensemble OH? x Stanford Climate Week",
+        title: "Ensemble OH? x Riara Climate Week",
         date: "Oct 25",
-        time: "07:30 pm PT",
+        time: "07:30 pm EAT",
         imageUrl: "",
         link: "#"
       }
@@ -248,22 +248,22 @@ export class MemStorage implements IStorage {
     this.healthcareSections = [
       {
         id: "medicine",
-        title: "Stanford Medicine",
+        title: "Riara Medicine",
         description: "Leading a worldwide revolution in precision health through biomedical research, education, and clinical enterprises",
         imageUrl: "",
         link: "#"
       },
       {
         id: "health-care",
-        title: "Stanford Health Care",
+        title: "Riara Health Care",
         description: "Leveraging expertise and advanced technology to deliver unparalleled care for each patient's unique needs",
         imageUrl: "",
         link: "#"
       },
       {
         id: "childrens",
-        title: "Stanford Children's Health",
-        description: "The only health care network in the Bay Area exclusively dedicated to pediatric and obstetric care",
+        title: "Riara Children's Health",
+        description: "The only health care network in Nairobi exclusively dedicated to pediatric and obstetric care",
         imageUrl: "",
         link: "#"
       }
@@ -273,21 +273,21 @@ export class MemStorage implements IStorage {
       {
         id: "championships",
         title: "Home of Champions",
-        description: "Stanford's 137 NCAA championships are the most for any university, a product of an unrivaled culture of excellence",
+        description: "Riara's 137 NCAA championships are the most for any university, a product of an unrivaled culture of excellence",
         imageUrl: "",
         link: "#"
       },
       {
         id: "olympic",
         title: "Olympic Excellence",
-        description: "The Cardinal has produced at least one medalist in every Olympics in which the U.S. has competed since 1912",
+        description: "The Cardinal has produced at least one medalist in every Olympics in which Kenya has competed since 1912",
         imageUrl: "",
         link: "#"
       },
       {
         id: "impact",
         title: "Multidimensional Impact",
-        description: "Stanford student-athletes have achieved local, national, and global impact through community involvement and advocacy",
+        description: "Riara student-athletes have achieved local, national, and global impact through community involvement and advocacy",
         imageUrl: "",
         link: "#"
       }

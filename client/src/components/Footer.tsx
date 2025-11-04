@@ -57,18 +57,18 @@ const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: "HEALTH CARE",
     links: [
-      { label: "Stanford Health Care", href: "/healthcare/stanford-health", testId: "link-footer-stanford-health" },
-      { label: "Stanford Children's Health", href: "/healthcare/childrens-health", testId: "link-footer-childrens-health" },
+      { label: "Riara Health Care", href: "/healthcare/riara-health", testId: "link-footer-riara-health" },
+      { label: "Riara Children's Health", href: "/healthcare/childrens-health", testId: "link-footer-childrens-health" },
     ],
   },
   {
     title: "ONLINE LEARNING",
     links: [
-      { label: "Stanford Online", href: "/online-learning", testId: "link-footer-online-learning" },
+      { label: "Riara Online", href: "/online-learning", testId: "link-footer-online-learning" },
     ],
   },
   {
-    title: "ABOUT STANFORD",
+    title: "ABOUT RIARA",
     links: [
       { label: "Facts", href: "/about/facts", testId: "link-footer-facts" },
       { label: "History", href: "/about/history", testId: "link-footer-history" },
@@ -89,7 +89,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
       { label: "Campus Map", href: "/resources/campus-map", testId: "link-footer-campus-map" },
       { label: "Community Engagement", href: "/resources/community", testId: "link-footer-community" },
       { label: "Directory", href: "/resources/directory", testId: "link-footer-directory" },
-      { label: "Stanford Profiles", href: "/resources/profiles", testId: "link-footer-profiles" },
+      { label: "Riara Profiles", href: "/resources/profiles", testId: "link-footer-profiles" },
     ],
   },
 ];
@@ -97,37 +97,37 @@ const FOOTER_SECTIONS: FooterSection[] = [
 const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
   {
     icon: Facebook,
-    href: "https://facebook.com/stanford",
+    href: "https://facebook.com/riara",
     label: "Facebook",
     testId: "link-social-facebook",
   },
   {
     icon: Twitter,
-    href: "https://twitter.com/stanford",
+    href: "https://twitter.com/riara",
     label: "Twitter",
     testId: "link-social-twitter",
   },
   {
     icon: Instagram,
-    href: "https://instagram.com/stanford",
+    href: "https://instagram.com/riara",
     label: "Instagram",
     testId: "link-social-instagram",
   },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/school/stanford-university",
+    href: "https://linkedin.com/school/riara-university",
     label: "LinkedIn",
     testId: "link-social-linkedin",
   },
   {
     icon: Youtube,
-    href: "https://youtube.com/stanford",
+    href: "https://youtube.com/riara-university",
     label: "YouTube",
     testId: "link-social-youtube",
   },
   {
     icon: Apple,
-    href: "https://itunes.stanford.edu",
+    href: "https://itunes.riara-university.edu",
     label: "iTunes U",
     testId: "link-social-itunes",
   },
@@ -143,9 +143,9 @@ const ACTION_BUTTONS: ActionButton[] = [
 ];
 
 const PRIMARY_FOOTER_LINKS: FooterLink[] = [
-  { label: "Stanford Home", href: "/", testId: "link-footer-home" },
+  { label: "Riara Home", href: "/", testId: "link-footer-home" },
   { label: "Maps & Directions", href: "/maps", testId: "link-footer-maps" },
-  { label: "Search Stanford", href: "/search", testId: "link-footer-search" },
+      { label: "Search Riara", href: "/search", testId: "link-footer-search" },
   { label: "Emergency Info", href: "/emergency", testId: "link-footer-emergency" },
 ];
 
@@ -165,7 +165,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
       <li key={link.href}>
         <a
           href={link.href}
-          className="hover:text-red-600 transition-colors"
+          className="font-bold hover:text-red-600 transition-colors"
           data-testid={link.testId}
         >
           {link.label}
@@ -185,7 +185,7 @@ const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
 );
 
 const SocialMediaIcons: React.FC = () => (
-  <div className="flex gap-4 mb-6">
+  <div className="flex gap-4">
     {SOCIAL_MEDIA_LINKS.map((social) => {
       const Icon = social.icon;
       return (
@@ -209,7 +209,7 @@ const ActionButtons: React.FC = () => (
       <Button
         key={button.href}
         variant="outline"
-        className="w-full justify-start text-gray-700 border-gray-300 hover:border-red-600 hover:text-red-600"
+        className="w-full justify-start font-bold text-gray-700 border-gray-300 hover:border-red-600 hover:text-red-600"
         asChild
         data-testid={button.testId}
       >
@@ -221,14 +221,19 @@ const ActionButtons: React.FC = () => (
 
 export function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white riara-footer">
       {/* Upper Section - Light Background */}
       <div className="bg-gray-50">
         <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-12">
+          {/* Social Media Icons - Top Right */}
+          <div className="flex justify-end mb-6">
+            <SocialMediaIcons />
+          </div>
+          
+          {/* Footer Links and Action Buttons */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Social Media and Links */}
+            {/* Footer Links */}
             <div className="lg:col-span-10">
-              <SocialMediaIcons />
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
                 {FOOTER_SECTIONS.map((section) => (
                   <FooterSection key={section.title} section={section} />
@@ -248,11 +253,11 @@ export function Footer() {
       <div className="bg-red-600 text-white">
         <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            {/* Stanford Logo */}
+            {/* Riara Logo */}
             <div className="flex items-center gap-4">
               <div className="text-white">
-                <div className="text-2xl font-serif font-bold">Stanford</div>
-                <div className="text-sm font-sans">University</div>
+                <div className="text-2xl font-serif font-bold">Riara</div>
+                <div className="text-sm font-sans font-bold">University</div>
               </div>
             </div>
 
@@ -262,7 +267,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="hover:text-gray-200 transition-colors"
+                  className="font-bold hover:text-gray-200 transition-colors"
                   data-testid={link.testId}
                 >
                   {link.label}
@@ -278,7 +283,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="hover:text-white transition-colors"
+                  className="font-bold hover:text-white transition-colors"
                   data-testid={link.testId}
                 >
                   {link.label}
@@ -287,8 +292,8 @@ export function Footer() {
             </div>
             
             {/* Copyright */}
-            <p className="text-sm text-gray-200">
-              © Stanford University. Stanford, California 94305.
+            <p className="text-sm font-bold text-gray-200">
+              © Riara University. Riara, Nairobi, Kenya.
             </p>
           </div>
         </div>

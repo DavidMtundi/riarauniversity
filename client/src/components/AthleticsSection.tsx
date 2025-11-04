@@ -15,7 +15,7 @@ export function AthleticsSection({ sections }: AthleticsSectionProps) {
         <div className="mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-4" data-testid="text-athletics-heading">Cardinal Athletics</h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl" data-testid="text-athletics-description">
-            Home to champions, Stanford Athletics combines competitive excellence with academic achievement.
+            Home to champions, Riara Athletics combines competitive excellence with academic achievement.
           </p>
         </div>
 
