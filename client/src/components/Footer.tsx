@@ -97,31 +97,31 @@ const FOOTER_SECTIONS: FooterSection[] = [
 const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
   {
     icon: Facebook,
-    href: "https://facebook.com/riara",
+    href: "https://www.facebook.com/RiaraUniversity",
     label: "Facebook",
     testId: "link-social-facebook",
   },
   {
     icon: Twitter,
-    href: "https://twitter.com/riara",
+    href: "https://x.com/RiaraUniversity",
     label: "Twitter",
     testId: "link-social-twitter",
   },
   {
     icon: Instagram,
-    href: "https://instagram.com/riara",
+    href: "https://www.instagram.com/riara.university/",
     label: "Instagram",
     testId: "link-social-instagram",
   },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/school/riara-university",
+    href: "https://ke.linkedin.com/school/riara-university/",
     label: "LinkedIn",
     testId: "link-social-linkedin",
   },
   {
     icon: Youtube,
-    href: "https://youtube.com/riara-university",
+    href: "https://www.youtube.com/user/RiaraUniversity",
     label: "YouTube",
     testId: "link-social-youtube",
   },
