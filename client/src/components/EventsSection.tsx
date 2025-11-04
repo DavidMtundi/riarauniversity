@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
@@ -10,7 +9,7 @@ interface EventsSectionProps {
 
 export function EventsSection({ events }: EventsSectionProps) {
   return (
-    <section className="py-20 bg-white shadow-lg rounded-t-3xl">
+    <section className="py-20 bg-white">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="mb-12">
           <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-events-heading">Upcoming Events</h2>
@@ -21,15 +20,15 @@ export function EventsSection({ events }: EventsSectionProps) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {events.slice(0, 4).map((event) => (
-            <Card key={event.id} className="overflow-hidden hover-elevate cursor-pointer" data-testid={`card-event-${event.id}`}>
+            <div key={event.id} className="cursor-pointer" data-testid={`card-event-${event.id}`}>
               <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/5 relative">
                 <div className="absolute top-4 left-4">
-                  <div className="bg-primary text-primary-foreground px-3 py-2 rounded-md text-center">
+                  <div className="bg-primary text-primary-foreground px-3 py-2 text-center">
                     <p className="text-xs font-semibold uppercase" data-testid={`text-event-date-${event.id}`}>{event.date}</p>
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
+              <div className="p-6">
                 <Badge variant="secondary" className="mb-3" data-testid={`badge-event-type-${event.id}`}>{event.type}</Badge>
                 <h3 className="text-lg font-semibold mb-3 line-clamp-2 leading-snug" data-testid={`text-event-title-${event.id}`}>
                   {event.title}
@@ -40,8 +39,8 @@ export function EventsSection({ events }: EventsSectionProps) {
                     <span>{event.time}</span>
                   </div>
                 )}
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 

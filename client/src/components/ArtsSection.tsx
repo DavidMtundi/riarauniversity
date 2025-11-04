@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Palette, Building, Music, ArrowRight } from "lucide-react";
 import type { ContentSection, Profile } from "@shared/schema";
@@ -12,7 +11,7 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
   const icons = [Palette, Building, Music];
 
   return (
-    <section className="py-20 bg-gray-50 shadow-lg rounded-t-3xl">
+    <section className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="mb-12">
           <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-arts-heading">Arts at Stanford</h2>
@@ -22,10 +21,10 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
         </div>
 
         {profile && (
-          <Card className="mb-12 overflow-hidden border-0 shadow-lg" data-testid="card-arts-profile">
+          <div className="mb-12" data-testid="card-arts-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="flex flex-col justify-center">
-                <div className="w-48 h-48 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden">
+                <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                     alt="Arts at Stanford"
@@ -46,14 +45,14 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                 </div>
               </div>
             </div>
-          </Card>
+          </div>
         )}
 
         <div className="grid md:grid-cols-3 gap-6">
           {sections.map((section, index) => {
             const Icon = icons[index % icons.length];
             return (
-              <Card key={section.id} className="overflow-hidden hover-elevate" data-testid={`card-arts-${section.id}`}>
+              <div key={section.id} data-testid={`card-arts-${section.id}`}>
                 <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
                   <img 
                     src={`https://images.unsplash.com/photo-${1560000000000 + section.id * 4000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
@@ -63,7 +62,7 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10"></div>
                   <Icon className="h-16 w-16 text-white/80 relative z-10" />
                 </div>
-                <CardContent className="p-6">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3" data-testid={`text-arts-title-${section.id}`}>{section.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-arts-description-${section.id}`}>
                     {section.description}
@@ -71,8 +70,8 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                   <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-arts-link-${section.id}`}>
                     Explore <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             );
           })}
         </div>

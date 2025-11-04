@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, DollarSign, ArrowRight } from "lucide-react";
 
@@ -7,11 +6,11 @@ export function AdmissionSection() {
     <section id="admission" className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="overflow-hidden hover-elevate" data-testid="card-admission-explore">
+          <div data-testid="card-admission-explore">
             <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 relative flex items-center justify-center">
               <GraduationCap className="h-24 w-24 text-primary/40" />
             </div>
-            <CardContent className="p-8">
+            <div className="p-8">
               <h3 className="text-2xl font-serif font-semibold mb-4" data-testid="text-admission-explore-title">
                 Explore the possibilities of a Stanford education
               </h3>
@@ -21,14 +20,14 @@ export function AdmissionSection() {
               <Button data-testid="button-admission-explore">
                 Explore admission <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
-          <Card className="overflow-hidden hover-elevate" data-testid="card-admission-financial">
+          <div data-testid="card-admission-financial">
             <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 relative flex items-center justify-center">
               <DollarSign className="h-24 w-24 text-primary/40" />
             </div>
-            <CardContent className="p-8">
+            <div className="p-8">
               <h3 className="text-2xl font-serif font-semibold mb-4" data-testid="text-admission-financial-title">
                 Stanford meets the full financial need of every admitted undergrad
               </h3>
@@ -38,8 +37,8 @@ export function AdmissionSection() {
               <Button data-testid="button-admission-financial">
                 Learn about financial aid <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>

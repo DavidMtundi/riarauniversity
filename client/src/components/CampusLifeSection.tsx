@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, MessageCircle, Dumbbell, ArrowRight } from "lucide-react";
 import type { ContentSection, Profile } from "@shared/schema";
@@ -12,10 +11,10 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
   const icons = [Users, MessageCircle, Dumbbell];
 
   return (
-    <section id="campus-life" className="py-20 bg-white shadow-lg rounded-t-3xl">
+    <section id="campus-life" className="py-20 bg-white">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
         {profile && (
-          <Card className="mb-16 overflow-hidden border-0 shadow-lg" data-testid="card-campus-profile">
+          <div className="mb-16" data-testid="card-campus-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="flex flex-col justify-center order-2 md:order-1">
                 <p className="text-2xl font-serif italic mb-6 text-foreground leading-relaxed" data-testid="text-campus-profile-quote">
@@ -30,7 +29,7 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
                 </div>
               </div>
               <div className="flex flex-col justify-center order-1 md:order-2">
-                <div className="w-48 h-48 rounded-lg bg-gradient-to-br from-primary/20 to-primary/5 ml-auto overflow-hidden">
+                <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 ml-auto overflow-hidden">
                   <img 
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                     alt="Campus Life"
@@ -39,14 +38,14 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
                 </div>
               </div>
             </div>
-          </Card>
+          </div>
         )}
 
         <div className="grid md:grid-cols-3 gap-6">
           {sections.map((section, index) => {
             const Icon = icons[index % icons.length];
             return (
-              <Card key={section.id} className="overflow-hidden hover-elevate" data-testid={`card-campus-${section.id}`}>
+              <div key={section.id} data-testid={`card-campus-${section.id}`}>
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
                   <img 
                     src={`https://images.unsplash.com/photo-${1540000000000 + section.id * 3000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
@@ -56,7 +55,7 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10"></div>
                   <Icon className="h-20 w-20 text-white/80 relative z-10" />
                 </div>
-                <CardContent className="p-6">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3" data-testid={`text-campus-title-${section.id}`}>{section.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-campus-description-${section.id}`}>
                     {section.description}
@@ -64,8 +63,8 @@ export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps)
                   <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-campus-link-${section.id}`}>
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             );
           })}
         </div>

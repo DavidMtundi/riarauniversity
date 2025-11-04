@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Trophy, Medal, Users, ArrowRight } from "lucide-react";
 import type { ContentSection } from "@shared/schema";
@@ -24,11 +23,11 @@ export function AthleticsSection({ sections }: AthleticsSectionProps) {
           {sections.map((section, index) => {
             const Icon = icons[index % icons.length];
             return (
-              <Card key={section.id} className="overflow-hidden hover-elevate" data-testid={`card-athletics-${section.id}`}>
+              <div key={section.id} data-testid={`card-athletics-${section.id}`}>
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/5 relative flex items-center justify-center">
                   <Icon className="h-16 w-16 text-primary/30" />
                 </div>
-                <CardContent className="p-6">
+                <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3" data-testid={`text-athletics-title-${section.id}`}>{section.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-athletics-description-${section.id}`}>
                     {section.description}
@@ -36,8 +35,8 @@ export function AthleticsSection({ sections }: AthleticsSectionProps) {
                   <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-athletics-link-${section.id}`}>
                     Learn more <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             );
           })}
         </div>
