@@ -37,7 +37,11 @@ export const SOCIAL_MEDIA_LINKS = {
 
 // School/Department Links
 export const SCHOOL_LINKS = {
-  lawSchool: "https://law.riarauniversity.ac.ke/",
-  schoolOfBusiness: "https://sob.riarauniversity.ac.ke/",
+  business: "https://sob.riarauniversity.ac.ke/",
+  education: "https://soe.riarauniversity.ac.ke/",
+  law: "https://law.riarauniversity.ac.ke/",
+  computingScience: "https://scs.riarauniversity.ac.ke/",
+  internationalRelations: "https://ird.riarauniversity.ac.ke/",
+  communicationJournalism: "https://cmj.riarauniversity.ac.ke/",
 } as const;
 

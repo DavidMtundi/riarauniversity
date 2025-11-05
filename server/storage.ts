@@ -128,13 +128,12 @@ export class MemStorage implements IStorage {
     ];
 
     this.schools = [
-      { id: "business", name: "Business", url: "#" },
-      { id: "education", name: "Education", url: "#" },
-      { id: "engineering", name: "Engineering", url: "#" },
-      { id: "humanities", name: "Humanities & Sciences", url: "#" },
-      { id: "law", name: "Law", url: "#" },
-      { id: "medicine", name: "Medicine", url: "#" },
-      { id: "sustainability", name: "Sustainability", url: "#" }
+      { id: "business", name: "School of Business", url: "https://sob.riarauniversity.ac.ke/" },
+      { id: "education", name: "School of Education", url: "https://soe.riarauniversity.ac.ke/" },
+      { id: "law", name: "Riara Law School", url: "https://law.riarauniversity.ac.ke/" },
+      { id: "computing", name: "School of Computing Science", url: "https://scs.riarauniversity.ac.ke/" },
+      { id: "international", name: "School of International Relations", url: "https://ird.riarauniversity.ac.ke/" },
+      { id: "communication", name: "School of Communication and Journalism", url: "https://cmj.riarauniversity.ac.ke/" }
     ];
 
     this.researchStats = [

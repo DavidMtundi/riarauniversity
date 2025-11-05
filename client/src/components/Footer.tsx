@@ -1,12 +1,13 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { FOOTER_LINKS, SOCIAL_MEDIA_LINKS as SOCIAL_LINKS_CONFIG } from "@/lib/links";
+import { FOOTER_LINKS, SOCIAL_MEDIA_LINKS as SOCIAL_LINKS_CONFIG, SCHOOL_LINKS } from "@/lib/links";
 
 // Types for better maintainability and reusability
 interface FooterLink {
   label: string;
   href: string;
   testId?: string;
+  external?: boolean;
 }
 
 interface FooterSection {
@@ -32,13 +33,12 @@ const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: "SCHOOLS",
     links: [
-      { label: "Business", href: "/schools/business", testId: "link-footer-business" },
-      { label: "Education", href: "/schools/education", testId: "link-footer-education" },
-      { label: "Engineering", href: "/schools/engineering", testId: "link-footer-engineering" },
-      { label: "Humanities & Sciences", href: "/schools/humanities", testId: "link-footer-humanities" },
-      { label: "Law", href: "/schools/law", testId: "link-footer-law" },
-      { label: "Medicine", href: "/schools/medicine", testId: "link-footer-medicine" },
-      { label: "Sustainability", href: "/schools/sustainability", testId: "link-footer-sustainability" },
+      { label: "School of Business", href: SCHOOL_LINKS.business, testId: "link-footer-business", external: true },
+      { label: "School of Education", href: SCHOOL_LINKS.education, testId: "link-footer-education", external: true },
+      { label: "Riara Law School", href: SCHOOL_LINKS.law, testId: "link-footer-law", external: true },
+      { label: "School of Computing Science", href: SCHOOL_LINKS.computingScience, testId: "link-footer-computing", external: true },
+      { label: "School of International Relations", href: SCHOOL_LINKS.internationalRelations, testId: "link-footer-international", external: true },
+      { label: "School of Communication and Journalism", href: SCHOOL_LINKS.communicationJournalism, testId: "link-footer-communication", external: true },
     ],
   },
   {
@@ -168,6 +168,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
           href={link.href}
           className="font-bold hover:text-red-600 transition-colors"
           data-testid={link.testId}
+          {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
           {link.label}
         </a>
