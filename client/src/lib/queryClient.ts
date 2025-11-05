@@ -29,10 +29,17 @@ export const getQueryFn: <T>(options: {
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
-    // Join query key and append .json for static file serving
+    // Join query key
     const url = queryKey.join("/") as string;
-    const jsonUrl = url.endsWith(".json") ? url : `${url}.json`;
-    const res = await fetch(jsonUrl, {
+    
+    // In development, use regular API endpoints (Express server)
+    // In production, append .json for static file serving (Firebase Hosting)
+    const isDevelopment = import.meta.env.DEV || window.location.hostname === 'localhost';
+    const finalUrl = isDevelopment 
+      ? url 
+      : (url.endsWith(".json") ? url : `${url}.json`);
+    
+    const res = await fetch(finalUrl, {
       credentials: "include",
     });
 

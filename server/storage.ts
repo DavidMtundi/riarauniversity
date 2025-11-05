@@ -158,7 +158,7 @@ export class MemStorage implements IStorage {
       ["campus", {
         id: "campus-profile",
         name: "Amani Wanjiru, '25",
-        title: "Design major and three-time NCAA gymnastics champion",
+        title: "Design major and three-time Innovations champion",
         quote: "There's a lot to question – that's one of the most important things I'll take with me from my Riara experience.",
         imageUrl: "",
         link: "#"
