@@ -82,7 +82,7 @@ export class MemStorage implements IStorage {
       {
         id: "6",
         category: "Awards",
-        title: "Riara Professor William Tarpeh receives MacArthur Fellowship",
+        title: "Riara Professor David Kamau receives MacArthur Fellowship",
         excerpt: "Recognition for innovative work in environmental engineering and sustainable water treatment.",
         imageUrl: "",
         link: "#"
@@ -149,7 +149,7 @@ export class MemStorage implements IStorage {
     this.profiles = new Map([
       ["research", {
         id: "research-profile",
-        name: "Renee Zhao",
+        name: "Dr. James Kariuki",
         title: "Assistant Professor of Mechanical Engineering",
         quote: "The truly impactful technologies are always based on the condition that you can freely explore.",
         imageUrl: "",
@@ -157,7 +157,7 @@ export class MemStorage implements IStorage {
       }],
       ["campus", {
         id: "campus-profile",
-        name: "Khoi Young, '25",
+        name: "Amani Wanjiru, '25",
         title: "Design major and three-time NCAA gymnastics champion",
         quote: "There's a lot to question – that's one of the most important things I'll take with me from my Riara experience.",
         imageUrl: "",
@@ -165,7 +165,7 @@ export class MemStorage implements IStorage {
       }],
       ["arts", {
         id: "arts-profile",
-        name: "Helena Zhang, '22",
+        name: "Grace Muthoni, '22",
         title: "Graduated with a bachelor's degree in human biology and a minor in art history",
         quote: "Art is an outlet and a starting point for me, for what I have to say.",
         imageUrl: "",

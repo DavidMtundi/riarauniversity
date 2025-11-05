@@ -29,7 +29,10 @@ export const getQueryFn: <T>(options: {
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
-    const res = await fetch(queryKey.join("/") as string, {
+    // Join query key and append .json for static file serving
+    const url = queryKey.join("/") as string;
+    const jsonUrl = url.endsWith(".json") ? url : `${url}.json`;
+    const res = await fetch(jsonUrl, {
       credentials: "include",
     });
 
