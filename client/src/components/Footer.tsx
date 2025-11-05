@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FOOTER_LINKS, SOCIAL_MEDIA_LINKS as SOCIAL_LINKS_CONFIG } from "@/lib/links";
 
 // Types for better maintainability and reusability
 interface FooterLink {
@@ -51,7 +52,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
     title: "RESEARCH",
     links: [
       { label: "Research Centers A - Z", href: "/research/centers", testId: "link-footer-research-centers" },
-      { label: "Libraries", href: "/research/libraries", testId: "link-footer-libraries" },
+      { label: "Libraries", href: FOOTER_LINKS.library, testId: "link-footer-libraries" },
     ],
   },
   {
@@ -97,37 +98,37 @@ const FOOTER_SECTIONS: FooterSection[] = [
 const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
   {
     icon: Facebook,
-    href: "https://www.facebook.com/RiaraUniversity",
+    href: SOCIAL_LINKS_CONFIG.facebook,
     label: "Facebook",
     testId: "link-social-facebook",
   },
   {
     icon: Twitter,
-    href: "https://x.com/RiaraUniversity",
+    href: SOCIAL_LINKS_CONFIG.twitter,
     label: "Twitter",
     testId: "link-social-twitter",
   },
   {
     icon: Instagram,
-    href: "https://www.instagram.com/riara.university/",
+    href: SOCIAL_LINKS_CONFIG.instagram,
     label: "Instagram",
     testId: "link-social-instagram",
   },
   {
     icon: Linkedin,
-    href: "https://ke.linkedin.com/school/riara-university/",
+    href: SOCIAL_LINKS_CONFIG.linkedin,
     label: "LinkedIn",
     testId: "link-social-linkedin",
   },
   {
     icon: Youtube,
-    href: "https://www.youtube.com/user/RiaraUniversity",
+    href: SOCIAL_LINKS_CONFIG.youtube,
     label: "YouTube",
     testId: "link-social-youtube",
   },
   {
     icon: Apple,
-    href: "https://itunes.riara-university.edu",
+    href: SOCIAL_LINKS_CONFIG.itunes,
     label: "iTunes U",
     testId: "link-social-itunes",
   },

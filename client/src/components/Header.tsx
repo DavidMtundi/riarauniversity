@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { RiaraLogo, RiaraLogoFallback } from "./RiaraLogo";
 import { MobileMenu } from "./MobileMenu";
 import { useState } from "react";
+import { HEADER_LINKS } from "@/lib/links";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,13 +29,12 @@ export function Header() {
             <div className="flex items-center gap-4 sm:gap-6 text-white">
               <div className="hidden sm:flex items-center gap-2 md:gap-4 lg:gap-6">
                 <span className="text-xs md:text-sm">Information for:</span>
-                <a href="https://students.ru.ac.ke/Login/" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Students</a>
-                <a href="https://staff.ru.ac.ke/login" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Faculty & Staff</a>
-                <a href="https://odel.riarauniversity.ac.ke/?redirect=0" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Virtual Campus</a>
-                <a href="https://accounts.google.com/v3/signin/" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Student Email</a>
-                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Alumni</a>
-                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">RU-Shop</a>
-
+                <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Students</a>
+                <a href={HEADER_LINKS.facultyStaff} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Faculty & Staff</a>
+                <a href={HEADER_LINKS.virtualCampus} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Virtual Campus</a>
+                <a href={HEADER_LINKS.studentEmail} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Student Email</a>
+                <a href={HEADER_LINKS.alumni} className="text-xs md:text-sm hover:text-gray-300 transition-colors">Alumni</a>
+                <a href={HEADER_LINKS.ruShop} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Ru-Shop</a>
               </div>
               <Button size="icon" variant="ghost" className="text-white hover:text-gray-300 hover:bg-white/10" data-testid="button-search">
                 <Search className="h-4 w-4" />
