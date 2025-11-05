@@ -20,7 +20,7 @@ export function EducationSection({ paths, schools }: EducationSectionProps) {
               <div key={path.id} data-testid={`card-education-${path.id}`}>
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
                   <img 
-                    src={`https://images.unsplash.com/photo-${1520000000000 + path.id * 2000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
+                    src={path.imageUrl || `https://images.unsplash.com/photo-${1520000000000 + (index + 1) * 2000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
                     alt={path.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />

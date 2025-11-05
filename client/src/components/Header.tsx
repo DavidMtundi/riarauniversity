@@ -28,11 +28,13 @@ export function Header() {
             <div className="flex items-center gap-4 sm:gap-6 text-white">
               <div className="hidden sm:flex items-center gap-2 md:gap-4 lg:gap-6">
                 <span className="text-xs md:text-sm">Information for:</span>
-                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Students</a>
-                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Faculty & Staff</a>
-                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Families</a>
-                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Visitors</a>
+                <a href="https://students.ru.ac.ke/Login/" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Students</a>
+                <a href="https://staff.ru.ac.ke/login" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Faculty & Staff</a>
+                <a href="https://odel.riarauniversity.ac.ke/?redirect=0" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Virtual Campus</a>
+                <a href="https://accounts.google.com/v3/signin/" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Student Email</a>
                 <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">Alumni</a>
+                <a href="#" className="text-xs md:text-sm hover:text-gray-300 transition-colors">RU-Shop</a>
+
               </div>
               <Button size="icon" variant="ghost" className="text-white hover:text-gray-300 hover:bg-white/10" data-testid="button-search">
                 <Search className="h-4 w-4" />

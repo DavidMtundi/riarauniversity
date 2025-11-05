@@ -110,6 +110,20 @@ export class MemStorage implements IStorage {
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
         imageUrl: "",
         link: "#"
+      },
+      {
+        id: "law",
+        title: "Law School",
+        description: "Excellence in legal education preparing students for leadership in the legal profession and public service",
+        imageUrl: "https://law.riarauniversity.ac.ke/wp-content/uploads/2014/10/Riara-Law-School-Slide-2-scaled.jpeg",
+        link: "#"
+      },
+      {
+        id: "business",
+        title: "School of Business",
+        description: "Preparing future leaders and entrepreneurs with cutting-edge business education and real-world experience",
+        imageUrl: "https://sob.riarauniversity.ac.ke/wp-content/uploads/2022/07/School-of-Business-Slide-1-1.jpg",
+        link: "#"
       }
     ];
 
@@ -155,6 +169,22 @@ export class MemStorage implements IStorage {
         title: "Graduated with a bachelor's degree in human biology and a minor in art history",
         quote: "Art is an outlet and a starting point for me, for what I have to say.",
         imageUrl: "",
+        link: "#"
+      }],
+      ["law", {
+        id: "law-profile",
+        name: "Dr. Lando Welcome",
+        title: "Dean, Riara Law School",
+        quote: "Excellence in legal education and commitment to shaping the next generation of legal professionals.",
+        imageUrl: "https://law.riarauniversity.ac.ke/wp-content/uploads/2025/04/Dr.-Lando-Welcome-1-1.jpg",
+        link: "#"
+      }],
+      ["business", {
+        id: "business-profile",
+        name: "Dr. Opati Welcome",
+        title: "Dean, School of Business",
+        quote: "Empowering students to become innovative leaders and entrepreneurs who drive positive change in the business world.",
+        imageUrl: "https://sob.riarauniversity.ac.ke/wp-content/uploads/2024/03/Dr.-Opati-Welcome-1-2-1.jpg",
         link: "#"
       }]
     ]);

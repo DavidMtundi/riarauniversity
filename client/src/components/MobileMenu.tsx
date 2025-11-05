@@ -119,10 +119,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="text-center">
           <p className="text-sm font-medium text-gray-700 mb-3">Information for:</p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Students</a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Faculty & Staff</a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Families</a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Visitors</a>
+            <a href="https://students.ru.ac.ke/Login/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 transition-colors">Students</a>
+            <a href="https://staff.ru.ac.ke/login" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 transition-colors">Faculty & Staff</a>
+            <a href="https://odel.riarauniversity.ac.ke/?redirect=0" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 transition-colors">Virtual Campus</a>
+            <a href="https://accounts.google.com/v3/signin/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800 transition-colors">Student Email</a>
             <a href="#" className="text-gray-600 hover:text-gray-800 transition-colors">Alumni</a>
           </div>
         </div>
