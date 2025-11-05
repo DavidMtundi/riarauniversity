@@ -44,18 +44,32 @@ export function EducationSection({ paths, schools }: EducationSectionProps) {
         <div className="p-8">
           <h3 className="text-2xl font-serif font-semibold mb-6" data-testid="text-schools-heading">Six schools in which to pursue your passions</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {schools.map((school) => (
-              <a
-                key={school.id}
-                href={school.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
-                data-testid={`link-school-${school.id}`}
-              >
-                {school.name}
-              </a>
-            ))}
+            {schools.map((school) => {
+              // Ensure URL is valid and absolute
+              const url = school?.url && typeof school.url === 'string' && school.url.trim() 
+                ? school.url.trim()
+                : '#';
+              
+              // Ensure URL starts with http/https
+              const validUrl = url && url !== '#' && (url.startsWith('http://') || url.startsWith('https://'))
+                ? url
+                : url && url !== '#' 
+                  ? `https://${url.replace(/^\/+/, '')}`
+                  : '#';
+              
+              return (
+                <a
+                  key={school.id}
+                  href={validUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline font-medium"
+                  data-testid={`link-school-${school.id}`}
+                >
+                  {school.name}
+                </a>
+              );
+            })}
           </div>
           <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-more-academics">
             More about academics <ArrowRight className="ml-2 h-4 w-4" />
