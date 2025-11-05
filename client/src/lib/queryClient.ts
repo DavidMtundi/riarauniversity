@@ -59,6 +59,8 @@ export const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
       staleTime: Infinity,
       retry: false,
+      // Enable parallel queries for faster loading
+      gcTime: 1000 * 60 * 60 * 24, // 24 hours (formerly cacheTime)
     },
     mutations: {
       retry: false,

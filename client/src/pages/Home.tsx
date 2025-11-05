@@ -1,19 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
+import { lazy, Suspense } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { MissionSection } from "@/components/MissionSection";
-import { NewsSection } from "@/components/NewsSection";
-import { EducationSection } from "@/components/EducationSection";
-import { ResearchSection } from "@/components/ResearchSection";
-import { CampusLifeSection } from "@/components/CampusLifeSection";
-import { ArtsSection } from "@/components/ArtsSection";
-import { EventsSection } from "@/components/EventsSection";
-import { HealthcareSection } from "@/components/HealthcareSection";
-import { AthleticsSection } from "@/components/AthleticsSection";
-import { AdmissionSection } from "@/components/AdmissionSection";
 import { ParallaxContainer, ParallaxSection } from "@/components/ParallaxSection";
 import type { NewsArticle, EducationPath, School, ResearchStat, Profile, Event, ContentSection } from "@shared/schema";
+
+// Lazy load below-the-fold components for better initial load performance
+const NewsSection = lazy(() => import("@/components/NewsSection").then(m => ({ default: m.NewsSection })));
+const EducationSection = lazy(() => import("@/components/EducationSection").then(m => ({ default: m.EducationSection })));
+const ResearchSection = lazy(() => import("@/components/ResearchSection").then(m => ({ default: m.ResearchSection })));
+const CampusLifeSection = lazy(() => import("@/components/CampusLifeSection").then(m => ({ default: m.CampusLifeSection })));
+const ArtsSection = lazy(() => import("@/components/ArtsSection").then(m => ({ default: m.ArtsSection })));
+const EventsSection = lazy(() => import("@/components/EventsSection").then(m => ({ default: m.EventsSection })));
+const HealthcareSection = lazy(() => import("@/components/HealthcareSection").then(m => ({ default: m.HealthcareSection })));
+const AthleticsSection = lazy(() => import("@/components/AthleticsSection").then(m => ({ default: m.AthleticsSection })));
+const AdmissionSection = lazy(() => import("@/components/AdmissionSection").then(m => ({ default: m.AdmissionSection })));
 
 export default function Home() {
   const { data: newsArticles = [], isLoading: newsLoading, error: newsError } = useQuery<NewsArticle[]>({
@@ -129,32 +132,50 @@ export default function Home() {
           <ParallaxSection zIndex={2} stickyTop="0">
             <MissionSection />
             
-            {/* News Section */}
-            <NewsSection articles={newsArticles} />
+            {/* News Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <NewsSection articles={newsArticles} />
+            </Suspense>
             
-            {/* Education Section */}
-            <EducationSection paths={educationPaths} schools={schools} />
+            {/* Education Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <EducationSection paths={educationPaths} schools={schools} />
+            </Suspense>
             
-            {/* Research Section */}
-            <ResearchSection stats={researchStats} profile={researchProfile} />
+            {/* Research Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <ResearchSection stats={researchStats} profile={researchProfile} />
+            </Suspense>
             
-            {/* Campus Life Section */}
-            <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
+            {/* Campus Life Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
+            </Suspense>
             
-            {/* Arts Section */}
-            <ArtsSection sections={artsSections} profile={artsProfile} />
+            {/* Arts Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <ArtsSection sections={artsSections} profile={artsProfile} />
+            </Suspense>
             
-            {/* Events Section */}
-            <EventsSection events={events} />
+            {/* Events Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <EventsSection events={events} />
+            </Suspense>
             
-            {/* Healthcare Section */}
-            <HealthcareSection sections={healthcareSections} />
+            {/* Healthcare Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <HealthcareSection sections={healthcareSections} />
+            </Suspense>
             
-            {/* Athletics Section */}
-            <AthleticsSection sections={athleticsSections} />
+            {/* Athletics Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <AthleticsSection sections={athleticsSections} />
+            </Suspense>
             
-            {/* Admission Section */}
-            <AdmissionSection />
+            {/* Admission Section - Lazy loaded */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <AdmissionSection />
+            </Suspense>
             
             {/* Footer */}
             <Footer />

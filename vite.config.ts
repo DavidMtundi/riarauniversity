@@ -30,6 +30,17 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'query-vendor': ['@tanstack/react-query'],
+          'router-vendor': ['wouter'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+    minify: 'esbuild', // Use esbuild (default) - faster and no extra dependencies
   },
   server: {
     fs: {
