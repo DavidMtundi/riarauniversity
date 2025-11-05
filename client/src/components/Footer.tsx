@@ -52,7 +52,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
     title: "RESEARCH",
     links: [
       { label: "Research Centers A - Z", href: "/research/centers", testId: "link-footer-research-centers" },
-      { label: "Libraries", href: FOOTER_LINKS.library, testId: "link-footer-libraries" },
+      { label: "School Library", href: FOOTER_LINKS.library, testId: "link-footer-School Library" },
     ],
   },
   {
