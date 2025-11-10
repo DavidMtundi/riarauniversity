@@ -3,14 +3,42 @@
  * Centralized design system for consistent styling across the application
  */
 
-// Typography
+// Typography - Stanford System Font Stack
 export const typography = {
   fontFamily: {
-    primary: 'Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif',
+    primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
     serif: 'serif',
   },
   fontSize: {
-    // Mission section specific sizes (matching Riara's actual CSS)
+    // Stanford Heading Sizes
+    h1: '3rem', // 48px (32-48px range)
+    h2: '2.25rem', // 36px (28-36px range)
+    h3: '1.75rem', // 28px (24-28px range)
+    h4: '1.375rem', // 22px (20-22px range)
+    h5: '1.125rem', // 18px (16-18px range)
+    h6: '1rem', // 16px (14-16px range)
+    // Stanford Paragraph Sizes
+    body: '0.875rem', // 14px (14-16px range)
+    bodyLarge: '1.125rem', // 18px (18-20px range)
+    bodySmall: '0.75rem', // 12px (12-13px range)
+    // Stanford Navigation Sizes
+    navPrimary: '1rem', // 16px
+    navSecondary: '0.875rem', // 14px
+    navGateway: '0.8125rem', // 13px
+    footer: '0.8125rem', // 13px
+    // Standard sizes
+    xs: '0.75rem', // 12px
+    sm: '0.8125rem', // 13px
+    base: '0.875rem', // 14px
+    md: '1rem', // 16px
+    lg: '1.125rem', // 18px
+    xl: '1.25rem', // 20px
+    '2xl': '1.375rem', // 22px
+    '3xl': '1.5rem', // 24px
+    '4xl': '1.75rem', // 28px
+    '5xl': '2.25rem', // 36px
+    '6xl': '3rem', // 48px
+    // Legacy Mission section specific sizes (for backward compatibility)
     missionTitle: {
       base: '1.625em', // 26px
       responsive: '3.90625em', // 62.5px (≥576px)
@@ -23,17 +51,6 @@ export const typography = {
     headerTitle: '3rem', // 48px
     headerNav: '1.5rem', // 24px
     headerInfo: '1.125rem', // 18px
-    // Standard sizes
-    xs: '0.75rem', // 12px
-    sm: '0.875rem', // 14px
-    base: '1rem', // 16px
-    lg: '1.125rem', // 18px
-    xl: '1.25rem', // 20px
-    '2xl': '1.5rem', // 24px
-    '3xl': '1.875rem', // 30px
-    '4xl': '2.25rem', // 36px
-    '5xl': '3rem', // 48px
-    '6xl': '3.75rem', // 60px
   },
   fontWeight: {
     light: '300',
@@ -45,17 +62,79 @@ export const typography = {
     black: '900',
   },
   lineHeight: {
-    tight: '1.25',
-    snug: '1.375',
-    normal: '1.5',
-    relaxed: '1.625',
-    loose: '2',
+    // Stanford Heading Line Heights
+    h1: '1.2', // 1.2-1.3 range
+    h2: '1.25',
+    h3: '1.3',
+    h4: '1.35',
+    h5: '1.4',
+    h6: '1.4',
+    // Stanford Paragraph Line Heights
+    body: '1.6',
+    bodyLarge: '1.7',
+    bodySmall: '1.5',
+    // Standard line heights
+    tight: '1.2',
+    snug: '1.25',
+    normal: '1.3',
+    relaxed: '1.35',
+    loose: '1.4',
+  },
+  letterSpacing: {
+    h1: '-0.5px',
+    h2: '-0.3px',
+    h3: '0px',
+    h4: '0px',
+    h5: '0px',
+    h6: '0px',
+    normal: '0px',
   },
 } as const;
 
-// Colors (Riara University brand colors)
+// Colors - Stanford Brand Colors
 export const colors = {
-  // Primary Riara University colors
+  // Stanford Brand Colors
+  stanford: {
+    red: '#A21D25', // Cardinal Red
+    redDark: '#7B1519', // Dark Red (hover/active)
+    redLight: '#C92A33',
+  },
+  // Text Colors - Stanford
+  text: {
+    primary: '#000000',
+    secondary: '#333333',
+    tertiary: '#666666',
+    h5h6: '#1B1B1B',
+    muted: '#999999',
+    copyright: '#CCCCCC',
+    inverse: '#ffffff',
+    inverseSecondary: '#f5f5f5',
+  },
+  // Background Colors - Stanford
+  background: {
+    primary: '#ffffff',
+    secondary: '#fafafa',
+    tertiary: '#f5f5f5',
+    lightGray: '#F5F5F5',
+    mediumGray: '#E8E8E8',
+    darkGray: '#2E2E2E',
+    footer: '#2E2E2E',
+    copyright: '#1A1A1A',
+    buttonPrimary: '#A21D25',
+    buttonSecondary: '#F0F0F0',
+    buttonSearch: '#E8E8E8',
+    inverse: '#000000',
+    maroon: '#800020', // For header background
+  },
+  // Border Colors - Stanford
+  border: {
+    light: '#D0D0D0',
+    medium: '#CCCCCC',
+    secondary: '#E8E8E8',
+    dark: '#a3a3a3',
+    maroon: '#A00030',
+  },
+  // Legacy Riara University colors (for backward compatibility)
   riara: {
     maroon: '#800020', // Riara Maroon
     maroonLight: '#A00030',
@@ -64,7 +143,7 @@ export const colors = {
     goldLight: '#FBBF24',
     goldDark: '#D97706',
   },
-  // Semantic colors
+  // Semantic colors (legacy - for backward compatibility)
   primary: {
     50: '#fef2f2',
     100: '#fee2e2',
@@ -77,7 +156,7 @@ export const colors = {
     800: '#991b1b',
     900: '#7f1d1d',
   },
-  // Neutral colors
+  // Neutral colors (legacy - for backward compatibility)
   neutral: {
     50: '#fafafa',
     100: '#f5f5f5',
@@ -89,29 +168,6 @@ export const colors = {
     700: '#404040',
     800: '#262626',
     900: '#171717',
-  },
-  // Text colors
-  text: {
-    primary: '#000000',
-    secondary: '#404040',
-    tertiary: '#737373',
-    inverse: '#ffffff',
-    inverseSecondary: '#f5f5f5',
-  },
-  // Background colors
-  background: {
-    primary: '#ffffff',
-    secondary: '#fafafa',
-    tertiary: '#f5f5f5',
-    inverse: '#000000',
-    maroon: '#800020', // For header background
-  },
-  // Border colors
-  border: {
-    light: '#e5e5e5',
-    medium: '#d4d4d4',
-    dark: '#a3a3a3',
-    maroon: '#A00030',
   },
 } as const;
 

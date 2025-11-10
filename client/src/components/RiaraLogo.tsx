@@ -38,8 +38,8 @@ export function RiaraLogoFallback({ size = 'md', className = '' }: RiaraLogoProp
   };
 
   return (
-    <div className={`${sizeClasses[size]} ${className} bg-red-800 rounded-full flex items-center justify-center hidden`}>
-      <span className="text-white font-bold text-lg">R</span>
+    <div className={`${sizeClasses[size]} ${className} bg-[var(--color-bg-maroon)] rounded-full flex items-center justify-center hidden`}>
+      <span className="text-[var(--color-text-inverse)] font-bold text-lg">R</span>
     </div>
   );
 }

@@ -1,144 +1,268 @@
-/* Riara University Design System - CSS Custom Properties */
+/* Stanford University Design System - CSS Custom Properties */
 
-:root {
-  /* Typography */
-  --font-family-primary: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-  --font-family-serif: serif;
+/* Theme tokens live in theme.css. */
 
-  /* Font Sizes */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-lg: 1.125rem; /* 18px */
-  --font-size-xl: 1.25rem; /* 20px */
-  --font-size-2xl: 1.5rem; /* 24px */
-  --font-size-3xl: 1.875rem; /* 30px */
-  --font-size-4xl: 2.25rem; /* 36px */
-  --font-size-5xl: 3rem; /* 48px */
-  --font-size-6xl: 3.75rem; /* 60px */
-
-  /* Mission Section Specific Sizes */
-  --font-size-mission-title: 1.625em; /* 26px */
-  --font-size-mission-title-responsive: 3.90625em; /* 62.5px */
-  --font-size-mission-text: 1.5625em; /* 25px */
-  --font-size-mission-text-responsive: 1.953125em; /* 31.25px */
-
-  /* Header Specific Sizes */
-  --font-size-header-title: 3rem; /* 48px */
-  --font-size-header-nav: 1.5rem; /* 24px */
-  --font-size-header-info: 1.125rem; /* 18px */
-
-  /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
-  --font-weight-black: 900;
-
-  /* Line Heights */
-  --line-height-tight: 1.25;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 2;
-
-  /* Riara Brand Colors */
-  --color-riara-maroon: #800020;
-  --color-riara-maroon-light: #A00030;
-  --color-riara-maroon-dark: #600015;
-  --color-riara-gold: #F59E0B;
-  --color-riara-gold-light: #FBBF24;
-  --color-riara-gold-dark: #D97706;
-
-  /* Primary Colors */
-  --color-primary-50: #fef2f2;
-  --color-primary-100: #fee2e2;
-  --color-primary-200: #fecaca;
-  --color-primary-300: #fca5a5;
-  --color-primary-400: #f87171;
-  --color-primary-500: #ef4444;
-  --color-primary-600: #dc2626;
-  --color-primary-700: #b91c1c;
-  --color-primary-800: #991b1b;
-  --color-primary-900: #7f1d1d;
-
-  /* Neutral Colors */
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
-
-  /* Text Colors */
-  --color-text-primary: #000000;
-  --color-text-secondary: #404040;
-  --color-text-tertiary: #737373;
-  --color-text-inverse: #ffffff;
-  --color-text-inverse-secondary: #f5f5f5;
-
-  /* Background Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #fafafa;
-  --color-bg-tertiary: #f5f5f5;
-  --color-bg-inverse: #000000;
-  --color-bg-maroon: #800020;
-
-  /* Border Colors */
-  --color-border-light: #e5e5e5;
-  --color-border-medium: #d4d4d4;
-  --color-border-dark: #a3a3a3;
-  --color-border-maroon: #A00030;
-
-  /* Spacing */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px */
-  --spacing-2xl: 3rem; /* 48px */
-  --spacing-3xl: 4rem; /* 64px */
-  --spacing-4xl: 6rem; /* 96px */
-  --spacing-5xl: 8rem; /* 128px */
-
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-riara: 0 0 15px rgba(128, 0, 32, .2), 0 4px 6px rgba(128, 0, 32, .1);
-
-  /* Border Radius */
-  --radius-none: 0;
-  --radius-sm: 0.125rem; /* 2px */
-  --radius-base: 0.25rem; /* 4px */
-  --radius-md: 0.375rem; /* 6px */
-  --radius-lg: 0.5rem; /* 8px */
-  --radius-xl: 0.75rem; /* 12px */
-  --radius-2xl: 1rem; /* 16px */
-  --radius-3xl: 1.5rem; /* 24px */
-  --radius-full: 9999px;
-
-  /* Breakpoints */
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
-
-  /* Component Specific */
-  --header-height-top-bar: 2.5rem; /* 40px */
-  --header-height-main-nav: 4rem; /* 64px */
+/* Stanford Typography - Base Styles */
+body, html {
+  font-family: var(--font-family-primary);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-body);
 }
 
-/* Responsive Typography Classes */
+/* Stanford Heading Styles */
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-h1);
+  line-height: var(--line-height-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-h3);
+  line-height: var(--line-height-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-h4);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-h4);
+  line-height: var(--line-height-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-h5);
+  color: var(--color-text-h5-h6);
+  letter-spacing: var(--letter-spacing-h5);
+  line-height: var(--line-height-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-h6);
+  color: var(--color-text-h5-h6);
+  letter-spacing: var(--letter-spacing-h6);
+  line-height: var(--line-height-h6);
+}
+
+/* Stanford Paragraph Styles */
+p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-body);
+}
+
+p.large {
+  font-size: var(--font-size-body-large);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-body-large);
+}
+
+p.small {
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-tertiary);
+  line-height: var(--line-height-body-small);
+}
+
+/* Stanford Navigation Styles */
+nav a,
+.nav-link-primary {
+  font-size: var(--font-size-nav-primary);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+nav a:hover,
+.nav-link-primary:hover {
+  color: var(--color-stanford-red);
+}
+
+.nav-link-secondary {
+  font-size: var(--font-size-nav-secondary);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+}
+
+.nav-link-secondary:hover {
+  color: var(--color-stanford-red);
+}
+
+.nav-link-gateway {
+  font-size: var(--font-size-nav-gateway);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+}
+
+.nav-link-gateway:hover {
+  color: var(--color-stanford-red);
+}
+
+/* Stanford Link Styles */
+a {
+  color: var(--color-stanford-red);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-stanford-red-dark);
+}
+
+a:active {
+  color: var(--color-stanford-red);
+}
+
+a:visited {
+  color: var(--color-stanford-red-dark);
+}
+
+/* Stanford Button Styles */
+button,
+.btn-primary {
+  font-size: var(--font-size-nav-primary);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-inverse);
+  background-color: var(--color-bg-button-primary);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+button:hover,
+.btn-primary:hover {
+  background-color: var(--color-stanford-red-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
+.btn-secondary {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-button-secondary);
+  border: 1px solid var(--color-border-light);
+  padding: 11px 22px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-bg-medium-gray);
+}
+
+.btn-search {
+  font-size: var(--font-size-nav-secondary);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-button-search);
+  border: 1px solid var(--color-border-medium);
+  padding: 10px 20px;
+}
+
+.btn-search:hover {
+  background-color: var(--color-bg-medium-gray);
+}
+
+/* Stanford Special Text Elements */
+.category-tag {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-stanford-red);
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.article-metadata {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+}
+
+.section-header {
+  font-size: var(--font-size-nav-secondary);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-h5-h6);
+  text-transform: uppercase;
+}
+
+blockquote {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Stanford Footer Styles */
+footer,
+.footer-stanford {
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-inverse);
+}
+
+.footer-heading {
+  font-size: var(--font-size-footer);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverse);
+}
+
+.footer-link {
+  font-size: var(--font-size-footer);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-inverse);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--color-bg-light-gray);
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-copyright);
+  background-color: var(--color-bg-copyright);
+}
+
+/* Responsive Typography - Mobile adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(var(--font-size-h1) * 0.8); /* 20-25% reduction */
+  }
+  
+  h2 {
+    font-size: calc(var(--font-size-h2) * 0.8);
+  }
+  
+  h3 {
+    font-size: calc(var(--font-size-h3) * 0.8);
+  }
+  
+  p {
+    line-height: 1.8; /* Increased for mobile readability */
+  }
+}
+
+/* Legacy Mission Classes (for backward compatibility) */
 .mission-title {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-mission-title);
@@ -198,7 +322,20 @@
   color: var(--color-text-inverse);
 }
 
-/* Utility Classes */
+/* Stanford Utility Classes */
+.text-stanford-red {
+  color: var(--color-stanford-red);
+}
+
+.bg-stanford-red {
+  background-color: var(--color-stanford-red);
+}
+
+.border-stanford-red {
+  border-color: var(--color-stanford-red);
+}
+
+/* Legacy Utility Classes (for backward compatibility) */
 .text-riara-maroon {
   color: var(--color-riara-maroon);
 }
@@ -233,7 +370,7 @@
 /* Footer component styling - applies to any footer with riara-footer class */
 .riara-footer {
   position: relative;
-  background-color: #fff;
+  background-color: var(--color-bg-primary);
   line-height: 1.5;
   overflow: hidden;
 }
@@ -241,16 +378,16 @@
 /* Optional: Apply Riara body typography when body has has-riara-footer class */
 body.has-riara-footer {
   line-height: 1.5;
-  font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family-primary);
   font-size: 1.8em;
-  color: #000;
+  color: var(--color-text-primary);
 }
 
 /* Ensure footer gets proper styling when body has the class */
 body.has-riara-footer > footer.riara-footer,
 body.has-riara-footer footer.riara-footer {
   position: relative;
-  background-color: #fff;
+  background-color: var(--color-bg-primary);
   line-height: 1.5;
   overflow: hidden;
 }

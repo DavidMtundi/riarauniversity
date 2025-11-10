@@ -161,12 +161,12 @@ const LEGAL_LINKS: FooterLink[] = [
 
 // Reusable components for better maintainability
 const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
-  <ul className="space-y-2 text-sm text-gray-700">
+  <ul className="space-y-2 text-sm text-[var(--color-text-secondary)]">
     {links.map((link) => (
       <li key={link.href}>
         <a
           href={link.href}
-          className="font-bold hover:text-red-600 transition-colors"
+          className="font-bold hover:text-[var(--color-stanford-red)] transition-colors"
           data-testid={link.testId}
           {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
@@ -179,7 +179,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
 
 const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
   <div>
-    <h3 className="font-bold text-sm mb-4 uppercase tracking-wide text-red-600">
+    <h3 className="font-bold text-sm mb-4 uppercase tracking-wide text-[var(--color-stanford-red)]">
       {section.title}
     </h3>
     <FooterLinkList links={section.links} />
@@ -194,7 +194,7 @@ const SocialMediaIcons: React.FC = () => (
         <a
           key={social.href}
           href={social.href}
-          className="text-gray-600 hover:text-red-600 transition-colors"
+          className="text-[var(--color-text-tertiary)] hover:text-[var(--color-stanford-red)] transition-colors"
           aria-label={social.label}
           data-testid={social.testId}
         >
@@ -211,7 +211,7 @@ const ActionButtons: React.FC = () => (
       <Button
         key={button.href}
         variant="outline"
-        className="w-full justify-start font-bold text-gray-700 border-gray-300 hover:border-red-600 hover:text-red-600"
+        className="w-full justify-start font-bold text-[var(--color-text-secondary)] border-[var(--color-border-medium)] hover:border-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red)]"
         asChild
         data-testid={button.testId}
       >
@@ -223,9 +223,9 @@ const ActionButtons: React.FC = () => (
 
 export function Footer() {
   return (
-    <footer className="bg-white riara-footer">
+    <footer className="bg-[var(--color-bg-primary)] riara-footer">
       {/* Upper Section - Light Background */}
-      <div className="bg-gray-50">
+      <div className="bg-[var(--color-bg-secondary)]">
         <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-12">
           {/* Social Media Icons - Top Right */}
           <div className="flex justify-end mb-6">
@@ -252,12 +252,12 @@ export function Footer() {
       </div>
 
       {/* Lower Section - Dark Red Background */}
-      <div className="bg-red-600 text-white">
+      <div className="bg-[var(--color-stanford-red)] text-[var(--color-text-inverse)]">
         <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             {/* Riara Logo */}
             <div className="flex items-center gap-4">
-              <div className="text-white">
+              <div className="text-[var(--color-text-inverse)]">
                 <div className="text-2xl font-serif font-bold">Riara</div>
                 <div className="text-sm font-sans font-bold">University</div>
               </div>
@@ -269,7 +269,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-bold hover:text-gray-200 transition-colors"
+                  className="font-bold hover:text-[var(--color-text-inverse-secondary)] transition-colors"
                   data-testid={link.testId}
                 >
                   {link.label}
@@ -279,13 +279,13 @@ export function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="mt-6 pt-6 border-t border-red-500">
-            <div className="flex flex-wrap gap-6 text-sm text-gray-200 mb-4">
+          <div className="mt-6 pt-6 border-t border-[var(--color-stanford-red)]">
+            <div className="flex flex-wrap gap-6 text-sm text-[var(--color-text-inverse-secondary)] mb-4">
               {LEGAL_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-bold hover:text-white transition-colors"
+                  className="font-bold hover:text-[var(--color-text-inverse)] transition-colors"
                   data-testid={link.testId}
                 >
                   {link.label}
@@ -294,7 +294,7 @@ export function Footer() {
             </div>
             
             {/* Copyright */}
-            <p className="text-sm font-bold text-gray-200">
+            <p className="text-sm font-bold text-[var(--color-text-inverse-secondary)]">
               © Riara University. Riara, Nairobi, Kenya.
             </p>
           </div>
