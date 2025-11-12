@@ -161,12 +161,12 @@ const LEGAL_LINKS: FooterLink[] = [
 
 // Reusable components for better maintainability
 const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
-  <ul className="space-y-2 text-sm text-[var(--color-text-secondary)]">
+  <ul className="space-y-2 md:space-y-2.5 text-xs md:text-sm text-[var(--color-text-secondary)]">
     {links.map((link) => (
       <li key={link.href}>
         <a
           href={link.href}
-          className="font-bold hover:text-[var(--color-stanford-red)] transition-colors"
+          className="font-semibold hover:text-[var(--color-stanford-red)] transition-colors leading-relaxed"
           data-testid={link.testId}
           {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
@@ -179,7 +179,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
 
 const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
   <div>
-    <h3 className="font-bold text-sm mb-4 uppercase tracking-wide text-[var(--color-stanford-red)]">
+    <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide text-[var(--color-stanford-red)]">
       {section.title}
     </h3>
     <FooterLinkList links={section.links} />
@@ -187,18 +187,20 @@ const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
 );
 
 const SocialMediaIcons: React.FC = () => (
-  <div className="flex gap-4">
+  <div className="flex gap-4 md:gap-5">
     {SOCIAL_MEDIA_LINKS.map((social) => {
       const Icon = social.icon;
       return (
         <a
           key={social.href}
           href={social.href}
-          className="text-[var(--color-text-tertiary)] hover:text-[var(--color-stanford-red)] transition-colors"
+          className="text-[var(--color-text-tertiary)] hover:text-[var(--color-stanford-red)] transition-colors hover:scale-110"
           aria-label={social.label}
           data-testid={social.testId}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <Icon className="h-5 w-5" />
+          <Icon className="h-5 w-5 md:h-6 md:w-6" />
         </a>
       );
     })}
@@ -226,17 +228,17 @@ export function Footer() {
     <footer className="bg-[var(--color-bg-primary)] riara-footer">
       {/* Upper Section - Light Background */}
       <div className="bg-[var(--color-bg-secondary)]">
-        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-12">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-12 md:py-16">
           {/* Social Media Icons - Top Right */}
-          <div className="flex justify-end mb-6">
+          <div className="flex justify-end mb-8 md:mb-10">
             <SocialMediaIcons />
           </div>
           
           {/* Footer Links and Action Buttons */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
             {/* Footer Links */}
             <div className="lg:col-span-10">
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8">
                 {FOOTER_SECTIONS.map((section) => (
                   <FooterSection key={section.title} section={section} />
                 ))}
@@ -252,24 +254,24 @@ export function Footer() {
       </div>
 
       {/* Lower Section - Dark Red Background */}
-      <div className="bg-[var(--color-stanford-red)] text-[var(--color-text-inverse)]">
-        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="bg-[var(--color-stanford-red)]">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-10 md:py-12">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
             {/* Riara Logo */}
-            <div className="flex items-center gap-4">
-              <div className="text-[var(--color-text-inverse)]">
-                <div className="text-2xl font-serif font-bold">Riara</div>
-                <div className="text-sm font-sans font-bold">University</div>
+            <div className="flex items-center">
+              <div className="text-white">
+                <div className="text-3xl md:text-4xl font-serif font-bold leading-tight">Riara</div>
+                <div className="text-sm md:text-base font-sans font-semibold mt-1">University</div>
               </div>
             </div>
 
             {/* Primary Footer Links */}
-            <div className="flex flex-wrap gap-6 text-sm">
+            <div className="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
               {PRIMARY_FOOTER_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-bold hover:text-[var(--color-text-inverse-secondary)] transition-colors"
+                  className="!text-white font-bold hover:!text-[var(--color-text-inverse-secondary)] transition-colors whitespace-nowrap"
                   data-testid={link.testId}
                 >
                   {link.label}
@@ -279,13 +281,13 @@ export function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="mt-6 pt-6 border-t border-[var(--color-stanford-red)]">
-            <div className="flex flex-wrap gap-6 text-sm text-[var(--color-text-inverse-secondary)] mb-4">
+          <div className="mt-8 pt-6 border-t border-white/20">
+            <div className="flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm mb-4">
               {LEGAL_LINKS.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-bold hover:text-[var(--color-text-inverse)] transition-colors"
+                  className="!text-white font-bold hover:!text-[var(--color-text-inverse-secondary)] transition-colors whitespace-nowrap"
                   data-testid={link.testId}
                 >
                   {link.label}
@@ -294,7 +296,7 @@ export function Footer() {
             </div>
             
             {/* Copyright */}
-            <p className="text-sm font-bold text-[var(--color-text-inverse-secondary)]">
+            <p className="text-xs md:text-sm font-bold !text-white">
               © Riara University. Riara, Nairobi, Kenya.
             </p>
           </div>

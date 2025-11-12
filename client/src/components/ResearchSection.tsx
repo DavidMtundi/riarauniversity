@@ -5,12 +5,24 @@ import type { ResearchStat, Profile } from "@shared/schema";
 interface ResearchSectionProps {
   stats: ResearchStat[];
   profile?: Profile;
+  showHeader?: boolean;
 }
 
-export function ResearchSection({ stats, profile }: ResearchSectionProps) {
+export function ResearchSection({ stats, profile, showHeader = true }: ResearchSectionProps) {
   return (
     <section id="research" className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+        {showHeader && (
+          <header className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-research-heading">
+              Research
+            </h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-research-subheading">
+              Advancing knowledge and solving the world's greatest challenges
+            </p>
+          </header>
+        )}
+
         {profile && (
           <div className="mb-16" data-testid="card-research-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
@@ -40,7 +52,7 @@ export function ResearchSection({ stats, profile }: ResearchSectionProps) {
         )}
 
         <div className="mb-8">
-          <h2 className="text-3xl font-serif font-bold text-center mb-12" data-testid="text-research-impact-heading">Research Impact</h2>
+          <h3 className="text-3xl font-serif font-bold text-center mb-12" data-testid="text-research-impact-heading">Research Impact</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {stats.map((stat) => (
               <div key={stat.id} className="text-center" data-testid={`stat-${stat.id}`}>

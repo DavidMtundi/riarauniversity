@@ -5,18 +5,21 @@ import type { Event } from "@shared/schema";
 
 interface EventsSectionProps {
   events: Event[];
+  showHeader?: boolean;
 }
 
-export function EventsSection({ events }: EventsSectionProps) {
+export function EventsSection({ events, showHeader = true }: EventsSectionProps) {
   return (
     <section className="py-20 bg-white">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
-        <div className="mb-12">
-          <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-events-heading">Upcoming Events</h2>
-          <p className="text-lg text-muted-foreground" data-testid="text-events-description">
-            Discover lectures, performances, exhibitions, and community gatherings at Riara.
-          </p>
-        </div>
+        {showHeader && (
+          <header className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-events-heading">Upcoming Events</h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-events-description">
+              Discover lectures, performances, exhibitions, and community gatherings at Riara.
+            </p>
+          </header>
+        )}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {events.slice(0, 4).map((event) => (

@@ -4,20 +4,23 @@ import type { ContentSection } from "@shared/schema";
 
 interface HealthcareSectionProps {
   sections: ContentSection[];
+  showHeader?: boolean;
 }
 
-export function HealthcareSection({ sections }: HealthcareSectionProps) {
+export function HealthcareSection({ sections, showHeader = true }: HealthcareSectionProps) {
   const icons = [Activity, Heart, Baby];
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
-        <div className="mb-12">
-          <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-healthcare-heading">Health Care Excellence</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl" data-testid="text-healthcare-description">
-            Leading innovations in medicine and delivering exceptional patient care through our world-class health care institutions.
-          </p>
-        </div>
+        {showHeader && (
+          <header className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-healthcare-heading">Health Care Excellence</h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto" data-testid="text-healthcare-description">
+              Leading innovations in medicine and delivering exceptional patient care through our world-class health care institutions.
+            </p>
+          </header>
+        )}
 
         <div className="grid md:grid-cols-3 gap-6">
           {sections.map((section, index) => {

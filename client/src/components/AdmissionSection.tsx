@@ -1,10 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, DollarSign, ArrowRight } from "lucide-react";
 
-export function AdmissionSection() {
+interface AdmissionSectionProps {
+  showHeader?: boolean;
+}
+
+export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
   return (
     <section id="admission" className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+        {showHeader && (
+          <header className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-admission-heading">
+              Admission
+            </h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-admission-subheading">
+              Join a community of scholars, innovators, and leaders shaping the future
+            </p>
+          </header>
+        )}
+
         <div className="grid md:grid-cols-2 gap-8">
           <div data-testid="card-admission-explore">
             <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 relative flex items-center justify-center">

@@ -13,12 +13,12 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
   return (
     <section className="py-20 bg-gray-50">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
-        <div className="mb-12">
-          <h2 className="text-4xl font-serif font-bold mb-4" data-testid="text-arts-heading">Arts at Riara</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl" data-testid="text-arts-description">
+        <header className="text-center mb-10 md:mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-arts-heading">Arts at Riara</h2>
+          <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto" data-testid="text-arts-description">
             From world-class museums to live performances and interdisciplinary scholarship, the arts are an integral part of the Riara experience.
           </p>
-        </div>
+        </header>
 
         {profile && (
           <div className="mb-12" data-testid="card-arts-profile">
@@ -55,7 +55,7 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
               <div key={section.id} data-testid={`card-arts-${section.id}`}>
                 <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
                   <img 
-                    src={`https://images.unsplash.com/photo-${1560000000000 + section.id * 4000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
+                    src={`https://images.unsplash.com/photo-${1560000000000 + Number(section.id) * 4000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
                     alt={section.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />

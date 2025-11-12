@@ -5,14 +5,26 @@ import type { ContentSection, Profile } from "@shared/schema";
 interface CampusLifeSectionProps {
   sections: ContentSection[];
   profile?: Profile;
+  showHeader?: boolean;
 }
 
-export function CampusLifeSection({ sections, profile }: CampusLifeSectionProps) {
+export function CampusLifeSection({ sections, profile, showHeader = true }: CampusLifeSectionProps) {
   const icons = [Users, MessageCircle, Dumbbell];
 
   return (
     <section id="campus-life" className="py-20 bg-white">
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+        {showHeader && (
+          <header className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-campus-life-heading">
+              Campus Life
+            </h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-campus-life-subheading">
+              Building a vibrant community of creative and accomplished people from around the world
+            </p>
+          </header>
+        )}
+
         {profile && (
           <div className="mb-16" data-testid="card-campus-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
