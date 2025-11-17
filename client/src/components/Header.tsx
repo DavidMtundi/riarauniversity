@@ -37,8 +37,8 @@ export function Header({ variant = "default" }: HeaderProps) {
       <div
         className={cn(
           isOverlay
-            ? "bg-gradient-to-b from-black/70 via-black/50 to-black/20"
-            : "bg-[var(--color-bg-maroon)]"
+          ? "text-white"
+          : "bg-[var(--color-bg-maroon)]"
         )}
       >
         <div className="w-full px-3 sm:px-4 md:px-6">

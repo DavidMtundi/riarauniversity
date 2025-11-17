@@ -261,49 +261,45 @@ export function Footer() {
       {/* Lower Section - Dark Red Background */}
       <div className="bg-[var(--color-stanford-red)]">
         <Container className="py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6 md:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
-            {/* Riara Logo */}
-            <div className="flex items-center">
-              <div className="text-white">
-                <div className="text-3xl md:text-4xl font-serif font-bold leading-tight">Riara</div>
-                <div className="text-sm md:text-base font-sans font-semibold mt-1">University</div>
+          <div className="flex flex-col md:flex-row md:items-start md:gap-10 lg:gap-16">
+            {/* Column 1: Riara University Name */}
+            <div className="flex flex-col items-center md:items-start text-center md:text-left text-white min-w-[160px]">
+              <span className="text-2xl md:text-[2.25rem] font-serif font-semibold leading-none tracking-tight">Riara</span>
+              <span className="text-xl md:text-[1.75rem] font-serif font-semibold leading-tight tracking-tight mt-1">University</span>
+            </div>
+
+            {/* Column 2: Links + Legal + Copyright */}
+            <div className="flex flex-col gap-5 text-white flex-1">
+              <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm md:text-base font-semibold tracking-[0.05em] text-white">
+                {PRIMARY_FOOTER_LINKS.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="transition-colors whitespace-nowrap hover:!text-[var(--color-text-inverse-secondary)]"
+                    data-testid={link.testId}
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </div>
-            </div>
 
-            {/* Primary Footer Links */}
-            <div className="flex flex-wrap gap-4 md:gap-6 text-sm md:text-base">
-              {PRIMARY_FOOTER_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="!text-white font-bold hover:!text-[var(--color-text-inverse-secondary)] transition-colors whitespace-nowrap"
-                  data-testid={link.testId}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs md:text-sm font-semibold tracking-[0.04em] text-white">
+                {LEGAL_LINKS.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="transition-colors whitespace-nowrap hover:!text-[var(--color-text-inverse-secondary)]"
+                    data-testid={link.testId}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
 
-          {/* Legal Links */}
-          <div className="mt-6 sm:mt-7 md:mt-8 pt-5 sm:pt-6 border-t border-white/20">
-            <div className="flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm mb-4">
-              {LEGAL_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="!text-white font-bold hover:!text-[var(--color-text-inverse-secondary)] transition-colors whitespace-nowrap"
-                  data-testid={link.testId}
-                >
-                  {link.label}
-                </a>
-              ))}
+              <p className="text-xs md:text-sm font-semibold tracking-[0.05em] text-white/90">
+                © Riara University. Riara, Nairobi, Kenya.
+              </p>
             </div>
-            
-            {/* Copyright */}
-            <p className="text-xs md:text-sm font-bold !text-white">
-              © Riara University. Riara, Nairobi, Kenya.
-            </p>
           </div>
         </Container>
       </div>
