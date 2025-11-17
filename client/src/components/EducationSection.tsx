@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, BookOpen, Lightbulb, ArrowRight } from "lucide-react";
 import type { EducationPath, School } from "@shared/schema";
+import { Container } from "@/components/Container";
 
 interface EducationSectionProps {
   paths: EducationPath[];
@@ -13,7 +14,7 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
 
   return (
     <section id="academics" className="py-12 sm:py-16 md:py-20 bg-white">
-      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+      <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-education-heading">
@@ -44,8 +45,12 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
                   <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mb-3 sm:mb-4 leading-relaxed" data-testid={`text-education-description-${path.id}`}>
                     {path.description}
                   </p>
-                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] text-sm sm:text-base transition-colors" data-testid={`button-education-link-${path.id}`}>
-                    Learn more <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
+                  <Button
+                    variant="outline"
+                    className="group inline-flex items-center gap-2 rounded-full border-[var(--color-stanford-red)] px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base font-semibold text-[var(--color-stanford-red)] transition-all duration-200 hover:bg-[var(--color-stanford-red)] hover:text-white shadow-sm hover:shadow-md"
+                    data-testid={`button-education-link-${path.id}`}
+                  >
+                    Learn more <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>
               </div>
@@ -86,12 +91,16 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
             })}
           </div>
           <div className="text-center md:text-left">
-            <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]" data-testid="button-more-academics">
-              More about academics <ArrowRight className="ml-2 h-4 w-4" />
+            <Button
+              variant="outline"
+              className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 shadow-sm hover:shadow-md"
+              data-testid="button-more-academics"
+            >
+              More about academics <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

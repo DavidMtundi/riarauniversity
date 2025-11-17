@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Container } from "@/components/Container";
 
 export function MissionSection() {
   return (
@@ -8,7 +9,7 @@ export function MissionSection() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat bg-fixed opacity-10"></div>
       
       {/* Content */}
-      <div className="relative z-10 px-2 sm:px-3 md:px-4 lg:px-5 xl:px-6 2xl:px-8">
+      <Container className="relative z-10">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-center">
             Excellence Through Innovation
@@ -21,7 +22,7 @@ export function MissionSection() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

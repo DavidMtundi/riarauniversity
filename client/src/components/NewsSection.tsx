@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import type { NewsArticle } from "@shared/schema";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/Container";
 
 interface NewsSectionProps {
   articles: NewsArticle[];
@@ -24,7 +25,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
 
   return (
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
-      <div className="px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 2xl:px-24 mx-auto max-w-[1440px]">
+      <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-news-heading">
@@ -131,7 +132,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
             <ArrowRight className="ml-2 h-4 w-4" aria-hidden />
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

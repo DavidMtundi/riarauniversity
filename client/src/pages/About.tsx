@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Container } from "@/components/Container";
 import { SCHOOL_LINKS } from "@/lib/links";
 
 export default function About() {
@@ -9,7 +10,7 @@ export default function About() {
       <main className="flex-1 pt-24">
         {/* Page Header */}
         <section className="bg-[var(--color-bg-secondary)] py-16 md:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--color-text-primary)] mb-4 md:mb-6">
                 About Riara University
@@ -18,12 +19,12 @@ export default function About() {
                 Nurturing Innovators
               </p>
             </div>
-          </div>
+          </Container>
         </section>
 
         {/* About Content */}
-        <section className="py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <section className="py-16 md:py-20">
+          <Container>
             <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
               
               {/* The Riara Story */}
@@ -185,7 +186,7 @@ export default function About() {
               </div>
 
             </div>
-          </div>
+          </Container>
         </section>
       </main>
       <Footer />

@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { NewsSection } from "@/components/NewsSection";
+import { Container } from "@/components/Container";
+import { RetryButton } from "@/components/RetryButton";
 import type { NewsArticle } from "@shared/schema";
 
 export default function News() {
@@ -39,13 +41,10 @@ export default function News() {
             <p className="text-[var(--color-text-secondary)] mb-6">
               We're experiencing technical difficulties loading the News page. Please try refreshing the page.
             </p>
-            <button
+            <RetryButton
               onClick={() => window.location.reload()}
-              className="inline-flex items-center justify-center rounded-md bg-[var(--color-stanford-red)] px-6 py-2 text-sm font-medium text-white hover:bg-[var(--color-stanford-red-dark)] transition-colors"
               data-testid="button-reload"
-            >
-              Reload Page
-            </button>
+            />
           </div>
         </main>
         <Footer />
@@ -59,7 +58,7 @@ export default function News() {
       <main className="flex-1 pt-24">
         {/* Page Header */}
         <section className="bg-[var(--color-bg-secondary)] py-16 md:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--color-text-primary)] mb-4 md:mb-6">
                 Campus News
@@ -68,7 +67,7 @@ export default function News() {
                 Stories about people, research, and innovation across the Farm
               </p>
             </div>
-          </div>
+          </Container>
         </section>
 
         <NewsSection articles={newsArticles} showHeader={false} />

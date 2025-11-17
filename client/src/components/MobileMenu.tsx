@@ -125,6 +125,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <a href={HEADER_LINKS.virtualCampus} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors">Virtual Campus</a>
             <a href={HEADER_LINKS.studentEmail} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors">Student Email</a>
             <a href={HEADER_LINKS.alumni} className="hover:text-[var(--color-text-primary)] transition-colors">Alumni</a>
+            <a href={HEADER_LINKS.ruShop} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors">Ru-Shop</a>
           </div>
         </div>
       </div>

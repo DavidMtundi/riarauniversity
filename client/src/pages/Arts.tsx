@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ArtsSection } from "@/components/ArtsSection";
+import { Container } from "@/components/Container";
+import { RetryButton } from "@/components/RetryButton";
 import type { ContentSection, Profile } from "@shared/schema";
 
 export default function Arts() {
@@ -46,13 +48,10 @@ export default function Arts() {
             <p className="text-muted-foreground mb-6">
               We're experiencing technical difficulties loading the Arts page. Please try refreshing the page.
             </p>
-            <button
+            <RetryButton
               onClick={() => window.location.reload()}
-              className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground hover-elevate active-elevate-2"
               data-testid="button-reload"
-            >
-              Reload Page
-            </button>
+            />
           </div>
         </main>
         <Footer />
@@ -65,15 +64,15 @@ export default function Arts() {
       <Header />
       <main className="flex-1">
         {/* Page Header */}
-        <section className="bg-muted/30 py-16">
-          <div className="max-w-6xl mx-auto px-6">
+        <section className="bg-[var(--color-bg-secondary)] py-16 md:py-20">
+          <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">The Arts</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Enriching Nairobi and shaping culture with arts experiences for everyone
               </p>
             </div>
-          </div>
+          </Container>
         </section>
 
         <ArtsSection sections={artsSections} profile={artsProfile} />

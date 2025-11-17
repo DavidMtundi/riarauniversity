@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap, DollarSign, ArrowRight } from "lucide-react";
+import { Container } from "@/components/Container";
 
 interface AdmissionSectionProps {
   showHeader?: boolean;
@@ -8,7 +9,7 @@ interface AdmissionSectionProps {
 export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
   return (
     <section id="admission" className="py-20 bg-gray-50">
-      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+      <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-admission-heading">
@@ -55,7 +56,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

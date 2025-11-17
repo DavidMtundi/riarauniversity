@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Users, MessageCircle, Dumbbell, ArrowRight } from "lucide-react";
 import type { ContentSection, Profile } from "@shared/schema";
+import { Container } from "@/components/Container";
 
 interface CampusLifeSectionProps {
   sections: ContentSection[];
@@ -13,7 +14,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
 
   return (
     <section id="campus-life" className="py-20 bg-white">
-      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+      <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-campus-life-heading">
@@ -35,8 +36,12 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
                 <div>
                   <p className="font-semibold text-lg mb-1" data-testid="text-campus-profile-name">{profile.name}</p>
                   <p className="text-muted-foreground mb-4" data-testid="text-campus-profile-title">{profile.title}</p>
-                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid="button-campus-profile-read-more">
-                    Read more <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button
+                    variant="outline"
+                    className="group inline-flex items-center gap-2 rounded-full border-[var(--color-stanford-red)] px-4 sm:px-5 py-2 text-sm font-semibold text-[var(--color-stanford-red)] transition-all duration-200 hover:bg-[var(--color-stanford-red)] hover:text-white shadow-sm hover:shadow-md"
+                    data-testid="button-campus-profile-read-more"
+                  >
+                    Read more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>
               </div>
@@ -72,8 +77,12 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-campus-description-${section.id}`}>
                     {section.description}
                   </p>
-                  <Button variant="ghost" className="p-0 h-auto font-semibold hover:bg-transparent" data-testid={`button-campus-link-${section.id}`}>
-                    Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button
+                    variant="outline"
+                    className="group inline-flex items-center gap-2 rounded-full border-[var(--color-stanford-red)] px-4 sm:px-5 py-2 text-sm font-semibold text-[var(--color-stanford-red)] transition-all duration-200 hover:bg-[var(--color-stanford-red)] hover:text-white shadow-sm hover:shadow-md"
+                    data-testid={`button-campus-link-${section.id}`}
+                  >
+                    Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </div>
               </div>
@@ -82,11 +91,15 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" size="lg" data-testid="button-more-campus-life">
-            More about campus life <ArrowRight className="ml-2 h-4 w-4" />
+          <Button
+            variant="outline"
+            className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 shadow-sm hover:shadow-md"
+            data-testid="button-more-campus-life"
+          >
+            More about campus life <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

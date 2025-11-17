@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useMemo } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
 import { MissionSection } from "@/components/MissionSection";
 import { ParallaxContainer, ParallaxSection } from "@/components/ParallaxSection";
 import type { NewsArticle, EducationPath, School, ResearchStat, Profile, Event, ContentSection } from "@shared/schema";
+import { RetryButton } from "@/components/RetryButton";
 
 // Lazy load below-the-fold components for better initial load performance
 const NewsSection = lazy(() => import("@/components/NewsSection").then(m => ({ default: m.NewsSection })));
@@ -104,13 +105,10 @@ export default function Home() {
             <p className="text-muted-foreground mb-6">
               We're experiencing technical difficulties loading the Riara University website. Please try refreshing the page.
             </p>
-            <button
+            <RetryButton
               onClick={() => window.location.reload()}
-              className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground hover-elevate active-elevate-2"
               data-testid="button-reload"
-            >
-              Reload Page
-            </button>
+            />
           </div>
         </main>
         <Footer />

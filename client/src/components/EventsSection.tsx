@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import type { Event } from "@shared/schema";
+import { Container } from "@/components/Container";
 
 interface EventsSectionProps {
   events: Event[];
@@ -11,7 +12,7 @@ interface EventsSectionProps {
 export function EventsSection({ events, showHeader = true }: EventsSectionProps) {
   return (
     <section className="py-20 bg-white">
-      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48">
+      <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-events-heading">Upcoming Events</h2>
@@ -48,11 +49,15 @@ export function EventsSection({ events, showHeader = true }: EventsSectionProps)
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" data-testid="button-more-events">
-            More events <ArrowRight className="ml-2 h-4 w-4" />
+          <Button
+            variant="outline"
+            className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 shadow-sm hover:shadow-md"
+            data-testid="button-more-events"
+          >
+            More events <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

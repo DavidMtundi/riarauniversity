@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/Container";
 import { FOOTER_LINKS, SOCIAL_MEDIA_LINKS as SOCIAL_LINKS_CONFIG, SCHOOL_LINKS } from "@/lib/links";
 
 // Types for better maintainability and reusability
@@ -228,7 +229,7 @@ export function Footer() {
     <footer className="bg-[var(--color-bg-primary)] riara-footer">
       {/* Upper Section - Light Background */}
       <div className="bg-[var(--color-bg-secondary)]">
-        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-12 md:py-16">
+        <Container className="py-8 sm:py-10 md:py-12 lg:py-14">
           {/* Social Media Icons - Top Right */}
           <div className="flex justify-end mb-8 md:mb-10">
             <SocialMediaIcons />
@@ -250,12 +251,12 @@ export function Footer() {
               <ActionButtons />
             </div>
           </div>
-        </div>
+        </Container>
       </div>
 
       {/* Lower Section - Dark Red Background */}
       <div className="bg-[var(--color-stanford-red)]">
-        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-48 py-10 md:py-12">
+        <Container className="py-6 sm:py-8 md:py-10 lg:py-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
             {/* Riara Logo */}
             <div className="flex items-center">
@@ -281,7 +282,7 @@ export function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="mt-8 pt-6 border-t border-white/20">
+          <div className="mt-6 sm:mt-7 md:mt-8 pt-5 sm:pt-6 border-t border-white/20">
             <div className="flex flex-wrap gap-4 md:gap-6 text-xs md:text-sm mb-4">
               {LEGAL_LINKS.map((link) => (
                 <a
@@ -300,7 +301,7 @@ export function Footer() {
               © Riara University. Riara, Nairobi, Kenya.
             </p>
           </div>
-        </div>
+        </Container>
       </div>
     </footer>
   );
