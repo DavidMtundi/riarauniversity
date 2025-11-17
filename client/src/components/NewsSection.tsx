@@ -27,7 +27,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
       <Container>
         {showHeader && (
-          <header className="text-center mb-10 md:mb-14">
+        <header className="text-center mb-10 md:mb-14 space-y-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-news-heading">
               Campus News
             </h2>

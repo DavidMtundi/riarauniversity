@@ -114,10 +114,10 @@ export function Header({ variant = "default" }: HeaderProps) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-sm lg:text-base xl:text-lg font-bold no-underline hover:no-underline transition-colors border-b-2 border-transparent",
+                    "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors",
                     isOverlay
-                      ? "text-white hover:text-white hover:border-white/80"
-                      : "text-[var(--color-text-primary)] hover:text-[var(--color-stanford-red)] hover:border-[var(--color-stanford-red)]"
+                      ? "!text-white hover:!text-white"
+                      : "text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]"
                   )}
                   data-testid={link.testId}
                 >

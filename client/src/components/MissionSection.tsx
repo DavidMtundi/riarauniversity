@@ -17,9 +17,8 @@ export function MissionSection() {
           <p className="text-xl sm:text-2xl md:text-3xl font-light text-center leading-relaxed mb-6 sm:mb-8 max-w-7xl mx-auto">
             At Riara University, we are committed to fostering academic excellence, innovation, and transformative learning experiences. Our mission is to empower students with knowledge, critical thinking skills, and practical expertise that prepares them for success in an ever-evolving world. Through cutting-edge research, collaborative learning, and a commitment to community impact, we shape tomorrow's leaders today.
           </p>
-          <Button size="lg" className="bg-[var(--color-bg-maroon)] hover:bg-[var(--color-stanford-red-dark)] text-[var(--color-text-inverse)] text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4" data-testid="button-learn-more">
-            Discover Riara University
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Button size="lg" className="bg-[var(--color-bg-maroon)] hover:bg-[var(--color-stanford-red-dark)] text-[var(--color-text-inverse)] text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4" data-testid="button-learn-more">
+            More About Riara University
           </Button>
         </div>
       </Container>
