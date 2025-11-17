@@ -93,10 +93,10 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
           <div className="text-center md:text-left">
             <Button
               variant="outline"
-              className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
               data-testid="button-more-academics"
             >
-              More about academics <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              More about academics <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         </div>

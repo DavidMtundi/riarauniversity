@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 interface ContainerProps {
   children: ReactNode;
   className?: string;
-  maxWidth?: "7xl" | "6xl" | "5xl" | "4xl" | "3xl" | "2xl" | "xl" | "lg" | "full";
+  maxWidth?: "wide" | "7xl" | "6xl" | "5xl" | "4xl" | "3xl" | "2xl" | "xl" | "lg" | "full";
 }
 
 /**
@@ -15,17 +15,18 @@ interface ContainerProps {
  * 
  * @param children - Content to wrap
  * @param className - Additional CSS classes
- * @param maxWidth - Maximum width of the container (default: "7xl")
+ * @param maxWidth - Maximum width of the container (default: "wide")
  */
 export function Container({ 
   children, 
   className,
-  maxWidth = "7xl"
+  maxWidth = "wide"
 }: ContainerProps) {
   // Centralized padding configuration - update here to change padding site-wide
-  const paddingClasses = "px-2 sm:px-2 md:px-1 lg:px-2 xl:px-2";
+  const paddingClasses = "px-1 sm:px-2 md:px-3 lg:px-4 xl:px-4";
   
   const maxWidthClasses = {
+    wide: "max-w-[90rem]",
     "7xl": "max-w-7xl",
     "6xl": "max-w-6xl",
     "5xl": "max-w-5xl",

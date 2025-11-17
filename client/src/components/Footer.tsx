@@ -227,14 +227,18 @@ const ActionButtons: React.FC = () => (
 export function Footer() {
   return (
     <footer className="bg-[var(--color-bg-primary)] riara-footer">
-      {/* Upper Section - Light Background */}
-      <div className="bg-[var(--color-bg-secondary)]">
-        <Container className="py-8 sm:py-10 md:py-12 lg:py-14">
-          {/* Social Media Icons - Top Right */}
-          <div className="flex justify-end mb-8 md:mb-10">
+      {/* Social Icons Row */}
+      <div className="bg-[var(--color-bg-tertiary)] border-t border-[var(--color-border-secondary)]">
+        <Container className="py-6 sm:py-8 px-4 sm:px-6 md:px-8">
+          <div className="flex items-center justify-center md:justify-end">
             <SocialMediaIcons />
           </div>
-          
+        </Container>
+      </div>
+
+      {/* Upper Section - Light Background */}
+      <div className="bg-[var(--color-bg-primary)]">
+        <Container className="py-8 sm:py-10 md:py-12 lg:py-14 px-4 sm:px-6 md:px-8">
           {/* Footer Links and Action Buttons */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
             {/* Footer Links */}
@@ -256,7 +260,7 @@ export function Footer() {
 
       {/* Lower Section - Dark Red Background */}
       <div className="bg-[var(--color-stanford-red)]">
-        <Container className="py-6 sm:py-8 md:py-10 lg:py-12">
+        <Container className="py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6 md:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-8">
             {/* Riara Logo */}
             <div className="flex items-center">

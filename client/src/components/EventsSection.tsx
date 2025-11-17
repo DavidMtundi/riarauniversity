@@ -51,10 +51,10 @@ export function EventsSection({ events, showHeader = true }: EventsSectionProps)
         <div className="text-center">
           <Button
             variant="outline"
-            className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid="button-more-events"
           >
-            More events <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            More events <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
       </Container>
