@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { lazy, Suspense, useMemo } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
@@ -68,6 +68,56 @@ export default function Home() {
     queryKey: ['/api/athletics']
   });
 
+  const [isHeroInView, setIsHeroInView] = useState(true);
+  const heroRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    let lastKnownScrollY = window.scrollY;
+    let ticking = false;
+
+    const handleScroll = () => {
+      lastKnownScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const heroElement = heroRef.current;
+          if (heroElement) {
+            const heroHeight = heroElement.offsetHeight;
+            const headerHeight = 120; // total combined header height
+            const isVisible = lastKnownScrollY < Math.max(heroHeight - headerHeight, 0);
+            setIsHeroInView(isVisible);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    const handleResize = () => {
+      const heroElement = heroRef.current;
+      if (!heroElement) {
+        return;
+      }
+      const heroHeight = heroElement.offsetHeight;
+      const headerHeight = 120;
+      const isVisible = window.scrollY < Math.max(heroHeight - headerHeight, 0);
+      setIsHeroInView(isVisible);
+    };
+
+    handleResize();
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const isLoading = newsLoading || educationLoading || schoolsLoading || statsLoading ||
                     researchProfileLoading || campusProfileLoading || artsProfileLoading ||
                     campusLifeLoading || artsLoading || eventsLoading || healthcareLoading || athleticsLoading;
@@ -118,12 +168,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header variant={isHeroInView ? "overlay" : "default"} />
       <ParallaxContainer>
         <main className="flex-1">
           {/* Hero Section - Base layer */}
           <ParallaxSection zIndex={1}>
-            <HeroSection />
+            <HeroSection ref={heroRef} />
           </ParallaxSection>
           
           {/* Mission Section + All other sections - Single parallax layer */}

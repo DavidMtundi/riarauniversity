@@ -1,9 +1,13 @@
+import { forwardRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/Container";
 
-export function HeroSection() {
+export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, ref) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 sm:pt-14 md:pt-30">
+    <section
+      ref={ref}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 sm:pt-14 md:pt-30"
+    >
       {/* Riara University Background Image with Parallax */}
       <div className="absolute inset-0 bg-[url('/riara-logo.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
       
@@ -28,4 +32,4 @@ export function HeroSection() {
       </div>
     </section>
   );
-}
+});
