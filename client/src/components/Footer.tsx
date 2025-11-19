@@ -283,7 +283,7 @@ export function Footer() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs md:text-sm font-semibold tracking-[0.04em] text-white">
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm md:text-base font-semibold tracking-[0.04em] text-white">
                 {LEGAL_LINKS.map((link) => (
                   <a
                     key={link.href}
@@ -296,7 +296,7 @@ export function Footer() {
                 ))}
               </div>
 
-              <p className="text-xs md:text-sm font-semibold tracking-[0.05em] text-white/90">
+              <p className="text-sm md:text-base font-semibold tracking-[0.05em] text-white/90">
                 © Riara University. Riara, Nairobi, Kenya.
               </p>
             </div>
