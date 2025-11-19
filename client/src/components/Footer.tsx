@@ -162,12 +162,12 @@ const LEGAL_LINKS: FooterLink[] = [
 
 // Reusable components for better maintainability
 const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
-  <ul className="space-y-2 md:space-y-2.5 text-xs md:text-sm text-[var(--color-text-secondary)]">
+  <ul className="space-y-3 md:space-y-3.5 text-base md:text-lg text-[var(--color-text-secondary)]">
     {links.map((link) => (
       <li key={link.href}>
         <a
           href={link.href}
-          className="font-semibold hover:text-[var(--color-stanford-red)] transition-colors leading-relaxed"
+          className="font-semibold hover:text-[var(--color-stanford-red)] transition-colors leading-relaxed md:leading-loose"
           data-testid={link.testId}
           {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
@@ -180,7 +180,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
 
 const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
   <div>
-    <h3 className="font-bold text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wide text-[var(--color-stanford-red)]">
+    <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4 uppercase tracking-wide text-[var(--color-stanford-red)]">
       {section.title}
     </h3>
     <FooterLinkList links={section.links} />
