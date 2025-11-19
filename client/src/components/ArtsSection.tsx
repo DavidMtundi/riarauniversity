@@ -25,12 +25,13 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
           <div className="mb-12" data-testid="card-arts-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="flex flex-col justify-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt="Arts at Riara"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden rounded-lg flex items-center justify-center">
+                  <div className="text-center text-muted-foreground">
+                    <svg className="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-xs font-medium">Image Placeholder</p>
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col justify-center">
@@ -59,13 +60,11 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
             return (
               <div key={section.id} data-testid={`card-arts-${section.id}`}>
                 <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={`https://images.unsplash.com/photo-${1560000000000 + Number(section.id) * 4000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                    alt={section.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10"></div>
-                  <Icon className="h-16 w-16 text-white/80 relative z-10" />
+                  <div className="relative z-10 flex flex-col items-center">
+                    <Icon className="h-16 w-16 text-white/80 mb-2" />
+                    <p className="text-xs font-medium text-white/60">Image Placeholder</p>
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3" data-testid={`text-arts-title-${section.id}`}>{section.title}</h3>

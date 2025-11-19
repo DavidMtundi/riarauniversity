@@ -23,9 +23,9 @@ export default function About() {
         </section>
 
         {/* About Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-12">
           <Container>
-            <div className="max-w-5xl mx-auto space-y-10 md:space-y-12">
+            <div className="max-w-5xl mx-auto space-y-6 md:space-y-8">
               
               {/* The Riara Story */}
               <div className="prose prose-lg max-w-none">

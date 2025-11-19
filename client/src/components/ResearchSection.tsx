@@ -28,12 +28,13 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
           <div className="mb-16" data-testid="card-research-profile">
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div className="flex flex-col justify-center">
-                <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                    alt={profile.name}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-48 h-48 bg-gradient-to-br from-primary/20 to-primary/5 mb-6 overflow-hidden rounded-lg flex items-center justify-center">
+                  <div className="text-center text-muted-foreground">
+                    <svg className="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <p className="text-xs font-medium">Image Placeholder</p>
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col justify-center">
