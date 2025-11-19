@@ -52,10 +52,13 @@ export function HealthcareSection({ sections, showHeader = true }: HealthcareSec
         <div className="text-center mt-12">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid="button-more-healthcare"
+            asChild
           >
-            More about health care <ArrowRight className="h-4 w-4" />
+            <a href="/healthcare" className="!text-white">
+              More about health care <ArrowRight className="h-4 w-4 !text-white" />
+            </a>
           </Button>
         </div>
       </Container>

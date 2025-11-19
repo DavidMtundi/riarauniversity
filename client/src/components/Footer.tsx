@@ -17,7 +17,7 @@ interface FooterSection {
 }
 
 interface SocialMediaLink {
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<any>;
   href: string;
   label: string;
   testId?: string;
@@ -201,7 +201,7 @@ const SocialMediaIcons: React.FC = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icon className="h-5 w-5 md:h-6 md:w-6" />
+          <Icon className="h-7 w-7 md:h-8 md:w-8" strokeWidth={2.5} />
         </a>
       );
     })}

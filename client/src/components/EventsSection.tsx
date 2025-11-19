@@ -9,9 +9,10 @@ interface EventsSectionProps {
   showHeader?: boolean;
   ctaLabel?: string;
   ctaTestId?: string;
+  ctaHref?: string;
 }
 
-export function EventsSection({ events, showHeader = true, ctaLabel = "More events", ctaTestId = "button-more-events" }: EventsSectionProps) {
+export function EventsSection({ events, showHeader = true, ctaLabel = "More events", ctaTestId = "button-more-events", ctaHref = "/events" }: EventsSectionProps) {
   return (
     <section className="py-20 bg-white">
       <Container>
@@ -53,10 +54,13 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
         <div className="text-center">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid={ctaTestId}
+            asChild
           >
-            {ctaLabel} <ArrowRight className="h-4 w-4" />
+            <a href={ctaHref} className="!text-white">
+              {ctaLabel} <ArrowRight className="h-4 w-4 !text-white" />
+            </a>
           </Button>
         </div>
       </Container>

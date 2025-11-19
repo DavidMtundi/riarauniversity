@@ -130,11 +130,14 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-[var(--color-text-inverse)] px-8 sm:px-10"
+            className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-[var(--color-text-inverse)] px-8 sm:px-10 text-base sm:text-lg font-semibold"
             data-testid="button-more-news"
+            asChild
           >
-            More campus news
-            <ArrowRight className="ml-2 h-4 w-4" aria-hidden />
+            <a href="/news" className="!text-white">
+              More campus news
+              <ArrowRight className="ml-2 h-4 w-4 !text-white" aria-hidden />
+            </a>
           </Button>
         </div>
       </Container>

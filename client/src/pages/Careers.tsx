@@ -85,7 +85,8 @@ export default function Careers() {
           events={careers} 
           showHeader={false} 
           ctaLabel="See all careers" 
-          ctaTestId="button-more-careers" 
+          ctaTestId="button-more-careers"
+          ctaHref="/careers"
         />
       </main>
       <Footer />
