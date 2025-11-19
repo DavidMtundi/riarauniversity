@@ -16,8 +16,8 @@ export function AthleticsSection({ sections, showHeader = true }: AthleticsSecti
       <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-athletics-heading">Cardinal Athletics</h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto" data-testid="text-athletics-description">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)] mb-4" data-testid="text-athletics-heading">Cardinal Athletics</h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)] max-w-3xl mx-auto" data-testid="text-athletics-description">
               Home to champions, Riara Athletics combines competitive excellence with academic achievement.
             </p>
           </header>
@@ -52,7 +52,7 @@ export function AthleticsSection({ sections, showHeader = true }: AthleticsSecti
         <div className="text-center mt-12">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid="button-more-athletics"
           >
             More about athletics <ArrowRight className="h-4 w-4" />

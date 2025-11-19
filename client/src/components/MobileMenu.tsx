@@ -105,6 +105,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               News
             </a>
             <a 
+              href="/careers" 
+              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+              onClick={onClose}
+            >
+              Careers
+            </a>
+            <a 
               href="/arts" 
               className="p-6 text-center hover:bg-[var(--color-bg-secondary)] transition-colors"
               onClick={onClose}

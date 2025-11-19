@@ -15,10 +15,10 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
       <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-research-heading">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-research-heading">
               Research
             </h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-research-subheading">
+            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-research-subheading">
               Advancing knowledge and solving the world's greatest challenges
             </p>
           </header>
@@ -71,7 +71,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
         <div className="text-center mt-12">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid="button-more-research"
           >
             More about research <ArrowRight className="h-4 w-4" />

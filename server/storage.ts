@@ -14,6 +14,7 @@ export interface IStorage {
   getCampusLifeSections(): Promise<ContentSection[]>;
   getArtsSections(): Promise<ContentSection[]>;
   getEvents(): Promise<Event[]>;
+  getCareers(): Promise<Event[]>;
   getHealthcareSections(): Promise<ContentSection[]>;
   getAthleticsSections(): Promise<ContentSection[]>;
 }
@@ -28,6 +29,7 @@ export class MemStorage implements IStorage {
   private campusLifeSections: ContentSection[] = [];
   private artsSections: ContentSection[] = [];
   private events: Event[] = [];
+  private careers: Event[] = [];
   private healthcareSections: ContentSection[] = [];
   private athleticsSections: ContentSection[] = [];
 
@@ -109,20 +111,6 @@ export class MemStorage implements IStorage {
         title: "Lifelong Learning",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
         imageUrl: "",
-        link: "#"
-      },
-      {
-        id: "law",
-        title: "Law School",
-        description: "Excellence in legal education preparing students for leadership in the legal profession and public service",
-        imageUrl: "https://law.riarauniversity.ac.ke/wp-content/uploads/2014/10/Riara-Law-School-Slide-2-scaled.jpeg",
-        link: "#"
-      },
-      {
-        id: "business",
-        title: "School of Business",
-        description: "Preparing future leaders and entrepreneurs with cutting-edge business education and real-world experience",
-        imageUrl: "https://sob.riarauniversity.ac.ke/wp-content/uploads/2022/07/School-of-Business-Slide-1-1.jpg",
         link: "#"
       }
     ];
@@ -274,6 +262,45 @@ export class MemStorage implements IStorage {
       }
     ];
 
+    this.careers = [
+      {
+        id: "c1",
+        type: "Faculty",
+        title: "Assistant Professor of Computer Science",
+        date: "Apply by Nov 30",
+        time: "Full-time",
+        imageUrl: "",
+        link: "#"
+      },
+      {
+        id: "c2",
+        type: "Research",
+        title: "Senior Research Scientist, Precision Health",
+        date: "Apply by Dec 5",
+        time: "Full-time",
+        imageUrl: "",
+        link: "#"
+      },
+      {
+        id: "c3",
+        type: "Administration",
+        title: "Director of Student Success Programs",
+        date: "Apply by Dec 12",
+        time: "Full-time",
+        imageUrl: "",
+        link: "#"
+      },
+      {
+        id: "c4",
+        type: "Staff",
+        title: "Campus Sustainability Project Manager",
+        date: "Apply by Dec 18",
+        time: "Contract",
+        imageUrl: "",
+        link: "#"
+      }
+    ];
+
     this.healthcareSections = [
       {
         id: "medicine",
@@ -370,6 +397,10 @@ export class MemStorage implements IStorage {
 
   async getEvents(): Promise<Event[]> {
     return this.events;
+  }
+
+  async getCareers(): Promise<Event[]> {
+    return this.careers;
   }
 
   async getHealthcareSections(): Promise<ContentSection[]> {

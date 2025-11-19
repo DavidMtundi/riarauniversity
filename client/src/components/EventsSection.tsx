@@ -7,16 +7,18 @@ import { Container } from "@/components/Container";
 interface EventsSectionProps {
   events: Event[];
   showHeader?: boolean;
+  ctaLabel?: string;
+  ctaTestId?: string;
 }
 
-export function EventsSection({ events, showHeader = true }: EventsSectionProps) {
+export function EventsSection({ events, showHeader = true, ctaLabel = "More events", ctaTestId = "button-more-events" }: EventsSectionProps) {
   return (
     <section className="py-20 bg-white">
       <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-events-heading">Upcoming Events</h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-events-description">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)] mb-4" data-testid="text-events-heading">Upcoming Events</h2>
+            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-events-description">
               Discover lectures, performances, exhibitions, and community gatherings at Riara.
             </p>
           </header>
@@ -51,10 +53,10 @@ export function EventsSection({ events, showHeader = true }: EventsSectionProps)
         <div className="text-center">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
-            data-testid="button-more-events"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            data-testid={ctaTestId}
           >
-            More events <ArrowRight className="h-4 w-4" />
+            {ctaLabel} <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
       </Container>

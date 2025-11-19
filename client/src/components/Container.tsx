@@ -23,10 +23,10 @@ export function Container({
   maxWidth = "wide"
 }: ContainerProps) {
   // Centralized padding configuration - update here to change padding site-wide
-  const paddingClasses = "px-1 sm:px-2 md:px-3 lg:px-4 xl:px-4";
+  const paddingClasses = "px-1 sm:px-2 md:px-3 lg:px-4 xl:px-4 2xl:px-6";
   
   const maxWidthClasses = {
-    wide: "max-w-[90rem]",
+    wide: "w-full max-w-[100rem] 2xl:max-w-[118rem]",
     "7xl": "max-w-7xl",
     "6xl": "max-w-6xl",
     "5xl": "max-w-5xl",

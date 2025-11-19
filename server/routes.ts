@@ -46,6 +46,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     res.json(events);
   });
 
+  app.get("/api/careers", async (_req, res) => {
+    const careers = await storage.getCareers();
+    res.json(careers);
+  });
+
   app.get("/api/healthcare", async (_req, res) => {
     const sections = await storage.getHealthcareSections();
     res.json(sections);

@@ -17,10 +17,10 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
       <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-education-heading">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-education-heading">
               Academics
             </h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-education-subheading">
+            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-education-subheading">
               Discover your path to academic excellence and intellectual growth
             </p>
           </header>
@@ -59,41 +59,40 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
         </div>
 
         <div className="mt-12 md:mt-16 p-6 md:p-8 bg-[var(--color-bg-secondary)] rounded-lg">
-          <h3 className="text-xl md:text-2xl font-serif font-semibold mb-6 text-center md:text-left" data-testid="text-schools-heading">
+          <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-center" data-testid="text-schools-heading">
             Six schools in which to pursue your passions
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
-            {schools.map((school) => {
-              // Ensure URL is valid and absolute
-              const url = school?.url && typeof school.url === 'string' && school.url.trim() 
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-center mb-6 md:mb-8 py-4 md:py-6">
+            {schools.map((school, index) => {
+              const url = school?.url && typeof school.url === 'string' && school.url.trim()
                 ? school.url.trim()
                 : '#';
-              
-              // Ensure URL starts with http/https
               const validUrl = url && url !== '#' && (url.startsWith('http://') || url.startsWith('https://'))
                 ? url
-                : url && url !== '#' 
+                : url && url !== '#'
                   ? `https://${url.replace(/^\/+/, '')}`
                   : '#';
               
               return (
-                <a
-                  key={school.id}
-                  href={validUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline font-semibold transition-colors text-sm md:text-base"
-                  data-testid={`link-school-${school.id}`}
-                >
-                  {school.name}
-                </a>
+                <div key={school.id} className="flex items-center gap-4 text-sm md:text-base font-semibold text-[var(--color-stanford-red)]">
+                  <a
+                    href={validUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    data-testid={`link-school-${school.id}`}
+                  >
+                    {school.name}
+                  </a>
+                  {index < schools.length - 1 && <span className="text-[var(--color-border-dark)]">|</span>}
+                </div>
               );
             })}
           </div>
-          <div className="text-center md:text-left">
+          <div className="text-center">
             <Button
               variant="outline"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-full border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
               data-testid="button-more-academics"
             >
               More about academics <ArrowRight className="h-4 w-4" />

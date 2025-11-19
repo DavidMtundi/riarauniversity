@@ -28,10 +28,10 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
       <Container>
         {showHeader && (
         <header className="text-center mb-10 md:mb-14 space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-news-heading">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-news-heading">
               Campus News
             </h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-news-subheading">
+          <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-news-subheading">
               Stories about people, research, and innovation across the Farm
             </p>
           </header>

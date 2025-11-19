@@ -179,52 +179,52 @@ export default function Home() {
           {/* Mission Section + All other sections - Single parallax layer */}
           <ParallaxSection zIndex={2} stickyTop="0">
             <MissionSection />
-            
-            {/* News Section - Lazy loaded */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <NewsSection articles={newsArticles} />
-            </Suspense>
-            
-            {/* Education Section - Lazy loaded */}
+
+            {/* Education Section - Academics */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <EducationSection paths={educationPaths} schools={schools} />
             </Suspense>
-            
-            {/* Research Section - Lazy loaded */}
+
+            {/* Research Section */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <ResearchSection stats={researchStats} profile={researchProfile} />
             </Suspense>
-            
-            {/* Campus Life Section - Lazy loaded */}
+
+            {/* Campus Life */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
             </Suspense>
-            
-            {/* Arts Section - Lazy loaded */}
+
+            {/* Arts & Culture */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <ArtsSection sections={artsSections} profile={artsProfile} />
             </Suspense>
-            
-            {/* Events Section - Lazy loaded */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <EventsSection events={events} />
-            </Suspense>
-            
-            {/* Healthcare Section - Lazy loaded */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <HealthcareSection sections={healthcareSections} />
-            </Suspense>
-            
-            {/* Athletics Section - Lazy loaded */}
+
+            {/* Athletics */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <AthleticsSection sections={athleticsSections} />
             </Suspense>
-            
-            {/* Admission Section - Lazy loaded */}
+
+            {/* Events */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <EventsSection events={events} />
+            </Suspense>
+
+            {/* Healthcare */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <HealthcareSection sections={healthcareSections} />
+            </Suspense>
+
+            {/* News & Stories */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <NewsSection articles={newsArticles} />
+            </Suspense>
+
+            {/* Admission */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <AdmissionSection />
             </Suspense>
-            
+
             {/* Footer */}
             <Footer />
           </ParallaxSection>

@@ -188,7 +188,7 @@ const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
 );
 
 const SocialMediaIcons: React.FC = () => (
-  <div className="flex gap-4 md:gap-5">
+  <div className="flex gap-4 md:gap-5 text-[var(--color-text-primary)]">
     {SOCIAL_MEDIA_LINKS.map((social) => {
       const Icon = social.icon;
       return (
@@ -237,7 +237,7 @@ export function Footer() {
       </div>
 
       {/* Upper Section - Light Background */}
-      <div className="bg-[var(--color-bg-primary)]">
+      <div className="bg-[var(--color-bg-primary)] text-lg sm:text-xl">
         <Container className="py-8 sm:py-10 md:py-12 lg:py-14 px-4 sm:px-6 md:px-8">
           {/* Footer Links and Action Buttons */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
@@ -275,7 +275,7 @@ export function Footer() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="transition-colors whitespace-nowrap hover:!text-[var(--color-text-inverse-secondary)]"
+                    className="transition-colors whitespace-nowrap !text-white visited:!text-white hover:!text-[var(--color-text-inverse-secondary)]"
                     data-testid={link.testId}
                   >
                     {link.label}
@@ -288,7 +288,7 @@ export function Footer() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="transition-colors whitespace-nowrap hover:!text-[var(--color-text-inverse-secondary)]"
+                    className="transition-colors whitespace-nowrap !text-white visited:!text-white hover:!text-[var(--color-text-inverse-secondary)]"
                     data-testid={link.testId}
                   >
                     {link.label}

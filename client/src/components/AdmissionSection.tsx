@@ -12,10 +12,10 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
       <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)]" data-testid="text-admission-heading">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-text-primary)]" data-testid="text-admission-heading">
               Admission
             </h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)]" data-testid="text-admission-subheading">
+            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-admission-subheading">
               Join a community of scholars, innovators, and leaders shaping the future
             </p>
           </header>

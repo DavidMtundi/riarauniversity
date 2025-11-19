@@ -11,7 +11,7 @@ export function MissionSection() {
       {/* Content */}
       <Container className="relative z-10">
         <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4 sm:mb-6 text-center">
             Excellence Through Innovation
           </h2>
           <p className="text-xl sm:text-2xl md:text-3xl font-light text-center leading-relaxed mb-6 sm:mb-8 max-w-7xl mx-auto">
