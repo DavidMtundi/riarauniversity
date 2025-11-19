@@ -32,13 +32,11 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
             return (
               <div key={path.id} data-testid={`card-education-${path.id}`}>
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={path.imageUrl || `https://images.unsplash.com/photo-${1520000000000 + (index + 1) * 2000000}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
-                    alt={path.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10"></div>
-                  <Icon className="h-24 w-24 text-white/80 relative z-10" />
+                  <div className="relative z-10 flex flex-col items-center">
+                    <Icon className="h-24 w-24 text-white/80 mb-2" />
+                    <p className="text-xs font-medium text-white/60">Image Placeholder</p>
+                  </div>
                 </div>
                 <div className="p-4 sm:p-6 bg-white">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold mb-2 sm:mb-3 text-[var(--color-text-primary)]" data-testid={`text-education-title-${path.id}`}>{path.title}</h3>
