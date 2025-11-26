@@ -7,17 +7,31 @@
     "link": "#",
     "partners": [
       {
-        "id": "airtel",
-        "name": "Airtel Kenya",
-        "description": "Equipped the University with state-of-the-art Robotics and Digital Skills laboratories",
-        "logoUrl": "",
-        "website": "https://www.airtelkenya.com"
+        "id": "standard-group",
+        "name": "Standard Group",
+        "description": "Media and communications partner supporting university initiatives",
+        "logoUrl": "/partners/logos/standard-group.png",
+        "website": "#"
       },
       {
-        "id": "chandaria",
-        "name": "Chandaria Foundation",
-        "description": "Supporting digital skills development and innovation initiatives",
-        "logoUrl": "",
+        "id": "nairobi-securities-exchange",
+        "name": "Nairobi Securities Exchange",
+        "description": "Financial markets and investment education partnership",
+        "logoUrl": "/partners/logos/nse.png",
+        "website": "#"
+      },
+      {
+        "id": "helb",
+        "name": "HELB",
+        "description": "Higher Education Loans Board supporting student financial aid",
+        "logoUrl": "/partners/logos/helb.png",
+        "website": "#"
+      },
+      {
+        "id": "qwetu-student-residence",
+        "name": "QWETU Student Residence",
+        "description": "Student accommodation and housing services",
+        "logoUrl": "/partners/logos/qwetu.png",
         "website": "#"
       }
     ]
@@ -30,25 +44,18 @@
     "link": "#",
     "partners": [
       {
-        "id": "sheridan",
-        "name": "Sheridan College (Canada)",
-        "description": "Joint projects, exchange programmes, and international trips",
-        "logoUrl": "",
-        "website": "https://www.sheridancollege.ca"
+        "id": "seneca",
+        "name": "Seneca",
+        "description": "International academic collaboration and exchange programs",
+        "logoUrl": "/partners/logos/seneca.png",
+        "website": "#"
       },
       {
-        "id": "uclan",
-        "name": "University of Central Lancashire (UK)",
-        "description": "Exchange programmes and joint learning through Collaborative Online International Learning (COIL)",
-        "logoUrl": "",
-        "website": "https://www.uclan.ac.uk"
-      },
-      {
-        "id": "uca",
-        "name": "University of Central Arkansas (USA)",
-        "description": "COIL approaches and international collaboration",
-        "logoUrl": "",
-        "website": "https://uca.edu"
+        "id": "griffith-college",
+        "name": "Griffith College",
+        "description": "Global educational partnership and student exchange",
+        "logoUrl": "/partners/logos/griffith-college.png",
+        "website": "#"
       }
     ]
   },
@@ -60,32 +67,25 @@
     "link": "#",
     "partners": [
       {
-        "id": "british-council",
-        "name": "British Council",
-        "description": "Funded initiatives including Virtual Accelerator, Project HerIZONS, and PEDAL programme",
-        "logoUrl": "",
-        "website": "https://www.britishcouncil.org"
-      },
-      {
-        "id": "iit-madras",
-        "name": "IIT Madras",
-        "description": "India-Kenya Innovation Nexus collaboration for innovation and entrepreneurship",
-        "logoUrl": "",
-        "website": "https://www.iitm.ac.in"
-      },
-      {
-        "id": "iit-hyderabad",
-        "name": "IIT Hyderabad",
-        "description": "India-Kenya Innovation Nexus collaboration",
-        "logoUrl": "",
-        "website": "https://www.iith.ac.in"
-      },
-      {
         "id": "mozilla",
         "name": "Mozilla Foundation",
         "description": "Supporting curriculum development and open source initiatives",
-        "logoUrl": "",
+        "logoUrl": "/partners/logos/mozilla.png",
         "website": "https://foundation.mozilla.org"
+      },
+      {
+        "id": "kenet",
+        "name": "KENET (Kenya Education Network)",
+        "description": "National research and education network supporting academic connectivity",
+        "logoUrl": "/partners/logos/kenet.png",
+        "website": "#"
+      },
+      {
+        "id": "regional-center",
+        "name": "Regional Center",
+        "description": "Regional collaboration and research initiatives",
+        "logoUrl": "/partners/logos/regional-center.png",
+        "website": "#"
       }
     ]
   },
@@ -98,19 +98,78 @@
     "partners": [
       {
         "id": "education-collaborative",
-        "name": "Education Collaborative",
-        "description": "Africa-wide network aiming to train 1.1 million ethical entrepreneurial graduates by 2030",
-        "logoUrl": "",
+        "name": "The Education Collaborative",
+        "description": "Africa-wide network aiming to train ethical entrepreneurial graduates",
+        "logoUrl": "/partners/logos/education-collaborative.png",
         "website": "#"
       },
       {
-        "id": "kneil",
-        "name": "Kenya Network of Entrepreneurial Institutional Leaders (KNEIL)",
-        "description": "Transforming into a fully entrepreneurial university",
-        "logoUrl": "",
+        "id": "arielle-for-africa",
+        "name": "Arielle for Africa",
+        "description": "Pan-African educational and development initiatives",
+        "logoUrl": "/partners/logos/arielle-for-africa.png",
+        "website": "#"
+      },
+      {
+        "id": "ciarb-kenya",
+        "name": "CIARB Kenya Branch",
+        "description": "Chartered Institute of Arbitrators - Kenya Branch",
+        "logoUrl": "/partners/logos/ciarb-kenya.png",
+        "website": "#"
+      },
+      {
+        "id": "kenya-association",
+        "name": "Kenya Association",
+        "description": "Professional association supporting university programs",
+        "logoUrl": "/partners/logos/kenya-association.png",
+        "website": "#"
+      }
+    ]
+  },
+  {
+    "id": "training",
+    "title": "Training & Certification Partners",
+    "description": "Organizations providing professional training and certification programs",
+    "imageUrl": "",
+    "link": "#",
+    "partners": [
+      {
+        "id": "icdl",
+        "name": "ICDL",
+        "description": "International Computer Driving Licence certification programs",
+        "logoUrl": "/partners/logos/icdl.png",
+        "website": "#"
+      },
+      {
+        "id": "igm",
+        "name": "IGM",
+        "description": "Professional training and certification programs",
+        "logoUrl": "/partners/logos/igm.png",
+        "website": "#"
+      },
+      {
+        "id": "mediation-training",
+        "name": "Mediation Training Institute of East Africa",
+        "description": "Alternative dispute resolution training and certification",
+        "logoUrl": "/partners/logos/mediation-training.png",
+        "website": "#"
+      }
+    ]
+  },
+  {
+    "id": "legal",
+    "title": "Legal & Advocacy Partners",
+    "description": "Organizations supporting legal education and advocacy",
+    "imageUrl": "",
+    "link": "#",
+    "partners": [
+      {
+        "id": "kituo-cha-sheria",
+        "name": "Kituo cha Sheria",
+        "description": "Legal aid and advocacy organization supporting legal education",
+        "logoUrl": "/partners/logos/kituo-cha-sheria.png",
         "website": "#"
       }
     ]
   }
 ]
-

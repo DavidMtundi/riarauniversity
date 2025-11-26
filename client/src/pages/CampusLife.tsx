@@ -25,7 +25,7 @@ export default function CampusLife() {
         <main className="flex-1 flex items-center justify-center pt-24">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
-            <p className="text-[var(--color-text-secondary)]">Loading Campus Life...</p>
+            <p className="text-[var(--color-text-secondary)]">Loading Student Life...</p>
           </div>
         </main>
         <Footer />
@@ -46,7 +46,7 @@ export default function CampusLife() {
             </div>
             <h2 className="text-2xl font-serif font-bold text-[var(--color-text-primary)] mb-2">Unable to Load Content</h2>
             <p className="text-[var(--color-text-secondary)] mb-6">
-              We're experiencing technical difficulties loading the Campus Life page. Please try refreshing the page.
+              We're experiencing technical difficulties loading the Student Life page. Please try refreshing the page.
             </p>
             <RetryButton
               onClick={() => window.location.reload()}
@@ -68,7 +68,7 @@ export default function CampusLife() {
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--color-text-primary)] mb-4 md:mb-6">
-                Campus Life
+                Student Life
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
                 Building a vibrant community of creative and accomplished people from around the world

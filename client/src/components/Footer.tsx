@@ -75,6 +75,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
       { label: "Facts", href: "/about/facts", testId: "link-footer-facts" },
       { label: "History", href: "/about/history", testId: "link-footer-history" },
       { label: "Accreditation", href: "/about/accreditation", testId: "link-footer-accreditation" },
+      { label: "Partners", href: "/partners", testId: "link-footer-partners" },
     ],
   },
   {

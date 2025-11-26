@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern, institutional website built for Riara University, featuring a comprehensive information architecture that showcases academics, research, campus life, athletics, healthcare, and arts programs. The application follows a full-stack architecture with a React frontend and Express backend, implementing a component-based design system inspired by leading university websites (Riara, Harvard, MIT, Yale).
+This is a modern, institutional website built for Riara University, featuring a comprehensive information architecture that showcases academics, research, Student Life, athletics, healthcare, and arts programs. The application follows a full-stack architecture with a React frontend and Express backend, implementing a component-based design system inspired by leading university websites (Riara, Harvard, MIT, Yale).
 
 The website presents a rich, content-driven experience with multiple sections including news articles, educational pathways, school information, research statistics, faculty/student profiles, events, and various content sections for different university programs. The design emphasizes academic authority with approachable elegance, utilizing a carefully crafted typography system and consistent spacing patterns.
 
@@ -75,7 +75,7 @@ Preferred communication style: Simple, everyday language.
 - `GET /api/schools` - School listings
 - `GET /api/research-stats` - Research statistics
 - `GET /api/profiles/:type` - Profile data by type (research, campus, arts)
-- `GET /api/campus-life` - Campus life sections
+- `GET /api/campus-life` - Student Life sections
 - `GET /api/arts` - Arts sections
 - `GET /api/events` - Event listings
 - `GET /api/healthcare` - Healthcare sections

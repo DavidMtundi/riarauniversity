@@ -18,7 +18,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-campus-life-heading">
-              Campus Life
+              Student Life
             </h2>
             <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-campus-life-subheading">
               Building a vibrant community of creative and accomplished people from around the world
@@ -97,7 +97,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
             asChild
           >
             <a href="/campus-life" className="!text-white">
-              More about campus life <ArrowRight className="h-4 w-4 !text-white" />
+              More about Student Life <ArrowRight className="h-4 w-4 !text-white" />
             </a>
           </Button>
         </div>

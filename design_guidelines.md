@@ -138,7 +138,7 @@
 
 **Section Images:**
 - Education sections: Students collaborating, classroom scenes
-- Campus life: Student activities, recreation, facilities
+- Student Life: Student activities, recreation, facilities
 - Arts: Museum interiors, performances, outdoor sculptures
 - Athletics: Action shots, championship celebrations
 - Healthcare: Medical facilities, patient care (stock imagery)

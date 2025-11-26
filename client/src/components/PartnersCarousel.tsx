@@ -105,13 +105,35 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                 >
                   <div className="p-5 md:p-6 h-full border-2 border-[var(--color-border-secondary)] rounded-xl hover:border-[var(--color-stanford-red)] hover:shadow-lg transition-all duration-300 bg-white flex flex-col group">
                     <div className="mb-4 flex-1">
-                      <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-[var(--color-stanford-red)]/10 to-[var(--color-stanford-red)]/5 rounded-xl flex items-center justify-center mb-4 group-hover:from-[var(--color-stanford-red)]/20 group-hover:to-[var(--color-stanford-red)]/10 transition-all duration-300">
-                        <div className="text-center text-muted-foreground">
-                          <svg className="w-7 h-7 md:w-8 md:h-8 mx-auto mb-1 opacity-60 group-hover:opacity-80 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                          </svg>
-                          <p className="text-xs font-medium hidden md:block text-[var(--color-text-secondary)]">Logo</p>
-                        </div>
+                      <div className="w-16 h-16 md:w-20 md:h-20 bg-white border border-[var(--color-border-secondary)] rounded-xl flex items-center justify-center mb-4 overflow-hidden group-hover:border-[var(--color-stanford-red)] transition-all duration-300">
+                        {partner.logoUrl && partner.logoUrl !== "" ? (
+                          <img 
+                            src={partner.logoUrl} 
+                            alt={`${partner.name} logo`}
+                            className="w-full h-full object-contain p-2"
+                            onError={(e) => {
+                              // Fallback to placeholder if image fails to load
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const parent = target.parentElement;
+                              if (parent) {
+                                parent.innerHTML = `
+                                  <div class="text-center text-muted-foreground w-full h-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 md:w-8 md:h-8 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                  </div>
+                                `;
+                              }
+                            }}
+                          />
+                        ) : (
+                          <div className="text-center text-muted-foreground w-full h-full flex items-center justify-center">
+                            <svg className="w-6 h-6 md:w-8 md:h-8 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                          </div>
+                        )}
                       </div>
                       <h4 className="text-base md:text-lg font-bold text-[var(--color-text-primary)] mb-2 line-clamp-2 group-hover:text-[var(--color-stanford-red)] transition-colors" data-testid={`text-partner-name-${partner.id}`}>
                         {partner.name}

@@ -107,7 +107,6 @@ export function Header({ variant = "default" }: HeaderProps) {
                 { href: "/athletics", label: "Athletics", testId: "link-athletics" },
                 { href: "/admission", label: "Admission", testId: "link-admission" },
                 { href: "/about", label: "About", testId: "link-about" },
-                { href: "/partners", label: "Partners", testId: "link-partners" },
                 { href: "/news", label: "News", testId: "link-news" },
                 { href: "/careers", label: "Careers", testId: "link-careers" },
                 { href: "/events", label: "Events", testId: "link-events" },
