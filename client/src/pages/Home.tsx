@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { MissionSection } from "@/components/MissionSection";
 import { ParallaxContainer, ParallaxSection } from "@/components/ParallaxSection";
 import type { NewsArticle, EducationPath, School, ResearchStat, Profile, Event, ContentSection } from "@shared/schema";
+import type { PartnerCategory } from "@/components/PartnersSection";
 import { RetryButton } from "@/components/RetryButton";
 
 // Lazy load below-the-fold components for better initial load performance
@@ -18,6 +19,7 @@ const EventsSection = lazy(() => import("@/components/EventsSection").then(m => 
 const HealthcareSection = lazy(() => import("@/components/HealthcareSection").then(m => ({ default: m.HealthcareSection })));
 const AthleticsSection = lazy(() => import("@/components/AthleticsSection").then(m => ({ default: m.AthleticsSection })));
 const AdmissionSection = lazy(() => import("@/components/AdmissionSection").then(m => ({ default: m.AdmissionSection })));
+const PartnersCarousel = lazy(() => import("@/components/PartnersCarousel").then(m => ({ default: m.PartnersCarousel })));
 
 export default function Home() {
   const { data: newsArticles = [], isLoading: newsLoading, error: newsError } = useQuery<NewsArticle[]>({
@@ -66,6 +68,10 @@ export default function Home() {
 
   const { data: athleticsSections = [], isLoading: athleticsLoading, error: athleticsError } = useQuery<ContentSection[]>({
     queryKey: ['/api/athletics']
+  });
+
+  const { data: partnerCategories = [], isLoading: partnersLoading, error: partnersError } = useQuery<PartnerCategory[]>({
+    queryKey: ['/api/partners']
   });
 
   const [isHeroInView, setIsHeroInView] = useState(true);
@@ -120,10 +126,10 @@ export default function Home() {
 
   const isLoading = newsLoading || educationLoading || schoolsLoading || statsLoading ||
                     researchProfileLoading || campusProfileLoading || artsProfileLoading ||
-                    campusLifeLoading || artsLoading || eventsLoading || healthcareLoading || athleticsLoading;
+                    campusLifeLoading || artsLoading || eventsLoading || healthcareLoading || athleticsLoading || partnersLoading;
   const hasError = newsError || educationError || schoolsError || statsError || 
                    researchProfileError || campusProfileError || artsProfileError ||
-                   campusLifeError || artsError || eventsError || healthcareError || athleticsError;
+                   campusLifeError || artsError || eventsError || healthcareError || athleticsError || partnersError;
 
   if (isLoading) {
     return (
@@ -190,7 +196,7 @@ export default function Home() {
               <ResearchSection stats={researchStats} profile={researchProfile} />
             </Suspense>
 
-            {/* Campus Life */}
+            {/* Student Life */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
             </Suspense>
@@ -223,6 +229,11 @@ export default function Home() {
             {/* Admission */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <AdmissionSection />
+            </Suspense>
+
+            {/* Partners */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <PartnersCarousel categories={partnerCategories} />
             </Suspense>
 
             {/* Footer */}

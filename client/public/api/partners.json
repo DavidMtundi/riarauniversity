@@ -1,0 +1,116 @@
+[
+  {
+    "id": "corporate",
+    "title": "Corporate Partners",
+    "description": "Leading corporations supporting innovation, research, and student development",
+    "imageUrl": "",
+    "link": "#",
+    "partners": [
+      {
+        "id": "airtel",
+        "name": "Airtel Kenya",
+        "description": "Equipped the University with state-of-the-art Robotics and Digital Skills laboratories",
+        "logoUrl": "",
+        "website": "https://www.airtelkenya.com"
+      },
+      {
+        "id": "chandaria",
+        "name": "Chandaria Foundation",
+        "description": "Supporting digital skills development and innovation initiatives",
+        "logoUrl": "",
+        "website": "#"
+      }
+    ]
+  },
+  {
+    "id": "international",
+    "title": "International Universities",
+    "description": "Global academic partnerships for exchange programs and collaborative learning",
+    "imageUrl": "",
+    "link": "#",
+    "partners": [
+      {
+        "id": "sheridan",
+        "name": "Sheridan College (Canada)",
+        "description": "Joint projects, exchange programmes, and international trips",
+        "logoUrl": "",
+        "website": "https://www.sheridancollege.ca"
+      },
+      {
+        "id": "uclan",
+        "name": "University of Central Lancashire (UK)",
+        "description": "Exchange programmes and joint learning through Collaborative Online International Learning (COIL)",
+        "logoUrl": "",
+        "website": "https://www.uclan.ac.uk"
+      },
+      {
+        "id": "uca",
+        "name": "University of Central Arkansas (USA)",
+        "description": "COIL approaches and international collaboration",
+        "logoUrl": "",
+        "website": "https://uca.edu"
+      }
+    ]
+  },
+  {
+    "id": "research",
+    "title": "Research & Innovation Partners",
+    "description": "Organizations advancing knowledge and fostering innovation",
+    "imageUrl": "",
+    "link": "#",
+    "partners": [
+      {
+        "id": "british-council",
+        "name": "British Council",
+        "description": "Funded initiatives including Virtual Accelerator, Project HerIZONS, and PEDAL programme",
+        "logoUrl": "",
+        "website": "https://www.britishcouncil.org"
+      },
+      {
+        "id": "iit-madras",
+        "name": "IIT Madras",
+        "description": "India-Kenya Innovation Nexus collaboration for innovation and entrepreneurship",
+        "logoUrl": "",
+        "website": "https://www.iitm.ac.in"
+      },
+      {
+        "id": "iit-hyderabad",
+        "name": "IIT Hyderabad",
+        "description": "India-Kenya Innovation Nexus collaboration",
+        "logoUrl": "",
+        "website": "https://www.iith.ac.in"
+      },
+      {
+        "id": "mozilla",
+        "name": "Mozilla Foundation",
+        "description": "Supporting curriculum development and open source initiatives",
+        "logoUrl": "",
+        "website": "https://foundation.mozilla.org"
+      }
+    ]
+  },
+  {
+    "id": "networks",
+    "title": "Professional Networks",
+    "description": "Memberships in global educational and entrepreneurial networks",
+    "imageUrl": "",
+    "link": "#",
+    "partners": [
+      {
+        "id": "education-collaborative",
+        "name": "Education Collaborative",
+        "description": "Africa-wide network aiming to train 1.1 million ethical entrepreneurial graduates by 2030",
+        "logoUrl": "",
+        "website": "#"
+      },
+      {
+        "id": "kneil",
+        "name": "Kenya Network of Entrepreneurial Institutional Leaders (KNEIL)",
+        "description": "Transforming into a fully entrepreneurial university",
+        "logoUrl": "",
+        "website": "#"
+      }
+    ]
+  }
+]
+

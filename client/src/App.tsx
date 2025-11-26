@@ -18,6 +18,7 @@ const Careers = lazy(() => import("@/pages/Careers"));
 const HealthCare = lazy(() => import("@/pages/HealthCare"));
 const Athletics = lazy(() => import("@/pages/Athletics"));
 const Arts = lazy(() => import("@/pages/Arts"));
+const Partners = lazy(() => import("@/pages/Partners"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -43,6 +44,7 @@ function Router() {
         <Route path="/healthcare" component={HealthCare} />
         <Route path="/athletics" component={Athletics} />
         <Route path="/arts" component={Arts} />
+        <Route path="/partners" component={Partners} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
