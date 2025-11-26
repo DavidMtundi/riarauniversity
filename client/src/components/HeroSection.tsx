@@ -22,11 +22,11 @@ export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, 
       </div>
       
       {/* Call to Action Bar at Bottom */}
-      <div className="absolute bottom-0 left-0 right-0 bg-[var(--color-bg-maroon)] text-[var(--color-text-inverse)]">
-        <Container className="py-4">
-          <div className="flex items-center justify-center gap-2 text-base sm:text-lg font-medium">
-            <span>Explore Riara University</span>
-            <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5" />
+      <div className="absolute bottom-0 left-0 right-0 bg-[var(--color-bg-maroon)] text-white z-20 shadow-lg">
+        <Container className="py-3 sm:py-4">
+          <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg font-medium !text-white">
+            <span className="!text-white">Explore Riara University</span>
+            <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 !text-white flex-shrink-0" />
           </div>
         </Container>
       </div>
