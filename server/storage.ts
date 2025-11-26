@@ -1,6 +1,15 @@
-import { type User, type InsertUser, type NewsArticle, type EducationPath, type School, type ResearchStat, type Profile, type Event, type ContentSection } from "@shared/schema";
+import { type User, type InsertUser, type NewsArticle, type EducationPath, type School, type ResearchStat, type Profile, type Event, type ContentSection, type PartnerCategory } from "@shared/schema";
 import { randomUUID } from "crypto";
+import { transformImageUrls } from "./repositories/ContentRepository";
+import { getImageUrl } from "./config";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
+/**
+ * Storage Interface - Backward compatible with existing code
+ * This wraps the new repository pattern for easy migration
+ */
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
@@ -17,6 +26,7 @@ export interface IStorage {
   getCareers(): Promise<Event[]>;
   getHealthcareSections(): Promise<ContentSection[]>;
   getAthleticsSections(): Promise<ContentSection[]>;
+  getPartners(): Promise<PartnerCategory[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -368,47 +378,93 @@ export class MemStorage implements IStorage {
   }
 
   async getNewsArticles(): Promise<NewsArticle[]> {
-    return this.newsArticles;
+    // Transform image URLs before returning
+    return transformImageUrls(this.newsArticles);
   }
 
   async getEducationPaths(): Promise<EducationPath[]> {
-    return this.educationPaths;
+    return transformImageUrls(this.educationPaths);
   }
 
   async getSchools(): Promise<School[]> {
+    // Schools don't have imageUrl, return as-is
     return this.schools;
   }
 
   async getResearchStats(): Promise<ResearchStat[]> {
+    // Research stats don't have imageUrl, return as-is
     return this.researchStats;
   }
 
   async getProfile(type: string): Promise<Profile | undefined> {
-    return this.profiles.get(type);
+    const profile = this.profiles.get(type);
+    if (!profile) return undefined;
+    // Transform image URL
+    return {
+      ...profile,
+      imageUrl: profile.imageUrl ? getImageUrl(profile.imageUrl) : profile.imageUrl,
+    };
   }
 
   async getCampusLifeSections(): Promise<ContentSection[]> {
-    return this.campusLifeSections;
+    return transformImageUrls(this.campusLifeSections);
   }
 
   async getArtsSections(): Promise<ContentSection[]> {
-    return this.artsSections;
+    return transformImageUrls(this.artsSections);
   }
 
   async getEvents(): Promise<Event[]> {
-    return this.events;
+    return transformImageUrls(this.events);
   }
 
   async getCareers(): Promise<Event[]> {
-    return this.careers;
+    return transformImageUrls(this.careers);
   }
 
   async getHealthcareSections(): Promise<ContentSection[]> {
-    return this.healthcareSections;
+    return transformImageUrls(this.healthcareSections);
   }
 
   async getAthleticsSections(): Promise<ContentSection[]> {
-    return this.athleticsSections;
+    return transformImageUrls(this.athleticsSections);
+  }
+
+  async getPartners(): Promise<PartnerCategory[]> {
+    // For now, read from JSON file (will be moved to DB later)
+    // This method signature allows easy migration to database
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    
+    try {
+      const publicPath = path.resolve(__dirname, "..", "client", "public", "api", "partners.json");
+      const distPath = path.resolve(__dirname, "..", "dist", "public", "api", "partners.json");
+      
+      let filePath = publicPath;
+      if (!fs.existsSync(publicPath) && fs.existsSync(distPath)) {
+        filePath = distPath;
+      }
+      
+      if (fs.existsSync(filePath)) {
+        const fileContent = await fs.promises.readFile(filePath, "utf-8");
+        const partners: PartnerCategory[] = JSON.parse(fileContent);
+        
+        // Transform image URLs for categories and partners
+        return partners.map((category) => ({
+          ...category,
+          imageUrl: category.imageUrl ? getImageUrl(category.imageUrl) : category.imageUrl,
+          partners: category.partners.map((partner) => ({
+            ...partner,
+            logoUrl: partner.logoUrl ? getImageUrl(partner.logoUrl) : partner.logoUrl,
+          })),
+        }));
+      }
+      
+      return [];
+    } catch (error) {
+      console.error("Error loading partners:", error);
+      return [];
+    }
   }
 }
 

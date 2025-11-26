@@ -1,6 +1,7 @@
 import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MobileMenu } from "./MobileMenu";
+import { SearchDialog } from "./SearchDialog";
 import { useState } from "react";
 import { HEADER_LINKS } from "@/lib/links";
 import { cn } from "@/lib/utils";
@@ -13,6 +14,7 @@ interface HeaderProps {
 
 export function Header({ variant = "default" }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const isOverlay = variant === "overlay";
 
   const toggleMobileMenu = () => {
@@ -64,7 +66,13 @@ export function Header({ variant = "default" }: HeaderProps) {
                 <a href={HEADER_LINKS.ruShop} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden xl:inline">Ru-Shop</a>
               </div>
               {/* Search button - hidden on very small mobile, shown on larger screens */}
-              <Button size="icon" variant="ghost" className="hidden sm:flex text-white hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)]" data-testid="button-search">
+              <Button 
+                size="icon" 
+                variant="ghost" 
+                className="hidden sm:flex text-white hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)]" 
+                data-testid="button-search"
+                onClick={() => setIsSearchOpen(true)}
+              >
                 <Search className="h-4 w-4" />
               </Button>
               {/* Mobile menu button */}
@@ -133,6 +141,9 @@ export function Header({ variant = "default" }: HeaderProps) {
     
     {/* Mobile Menu Overlay */}
     <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+    
+    {/* Search Dialog */}
+    <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </>
   );
 }

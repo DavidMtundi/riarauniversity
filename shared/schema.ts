@@ -73,3 +73,20 @@ export interface ContentSection {
   imageUrl: string;
   link: string;
 }
+
+export interface Partner {
+  id: string;
+  name: string;
+  description: string;
+  logoUrl: string;
+  website: string;
+}
+
+export interface PartnerCategory {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  link: string;
+  partners: Partner[];
+}
