@@ -1,26 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import { useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EventsSection } from "@/components/EventsSection";
 import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
-import { Calendar } from "@/components/ui/calendar";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Clock } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import type { Event } from "@shared/schema";
-import { parse, format, isSameDay, startOfMonth, endOfMonth, eachDayOfInterval } from "date-fns";
+import { parse, format, isBefore, startOfDay } from "date-fns";
 
 export default function Events() {
   const [, setLocation] = useLocation();
   const { data: events = [], isLoading: eventsLoading, error: eventsError } = useQuery<Event[]>({
     queryKey: ['/api/events']
   });
-
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
 
   // Parse event dates and create Date objects
   const eventsWithDates = useMemo(() => {
@@ -75,47 +72,28 @@ export default function Events() {
     }).filter(event => event.parsedDate !== null) as (Event & { parsedDate: Date })[];
   }, [events]);
 
-  // Get dates that have events for calendar highlighting
-  const datesWithEvents = useMemo(() => {
-    const uniqueDates = new Set<string>();
+  // Separate events into upcoming and previous
+  const { upcomingEvents, previousEvents } = useMemo(() => {
+    const now = startOfDay(new Date());
+    const upcoming: (Event & { parsedDate: Date })[] = [];
+    const previous: (Event & { parsedDate: Date })[] = [];
+    
     eventsWithDates.forEach(event => {
-      const dateKey = format(event.parsedDate, "yyyy-MM-dd");
-      uniqueDates.add(dateKey);
+      const eventDate = startOfDay(event.parsedDate);
+      if (isBefore(eventDate, now)) {
+        previous.push(event);
+      } else {
+        upcoming.push(event);
+      }
     });
-    return Array.from(uniqueDates).map(dateStr => {
-      const [year, month, day] = dateStr.split("-").map(Number);
-      return new Date(year, month - 1, day);
-    });
+    
+    // Sort upcoming events by date (earliest first)
+    upcoming.sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
+    // Sort previous events by date (most recent first)
+    previous.sort((a, b) => b.parsedDate.getTime() - a.parsedDate.getTime());
+    
+    return { upcomingEvents: upcoming, previousEvents: previous };
   }, [eventsWithDates]);
-
-  // Filter events by selected date
-  const filteredEvents = useMemo(() => {
-    if (!selectedDate) return eventsWithDates;
-    return eventsWithDates.filter(event => 
-      isSameDay(event.parsedDate, selectedDate)
-    );
-  }, [eventsWithDates, selectedDate]);
-
-  // Get month range for calendar - show current month or month with earliest event
-  const calendarMonth = useMemo(() => {
-    if (eventsWithDates.length === 0) return new Date();
-    const dates = eventsWithDates.map(e => e.parsedDate);
-    const minDate = new Date(Math.min(...dates.map(d => d.getTime())));
-    // If earliest event is in the past, show current month instead
-    const now = new Date();
-    if (minDate < now && minDate.getMonth() !== now.getMonth()) {
-      return now;
-    }
-    return minDate;
-  }, [eventsWithDates]);
-
-  const handleDateSelect = (date: Date | undefined) => {
-    setSelectedDate(date);
-  };
-
-  const clearFilter = () => {
-    setSelectedDate(undefined);
-  };
 
   if (eventsLoading) {
     return (
@@ -167,7 +145,7 @@ export default function Events() {
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--color-text-primary)] mb-4 md:mb-6">
-                Upcoming Events
+                Events
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
                 Discover what's happening at Riara
@@ -176,84 +154,31 @@ export default function Events() {
           </Container>
         </section>
 
-        {/* Calendar and Events Section */}
+        {/* Events Section with Tabs */}
         <section className="py-12 md:py-16 bg-white">
           <Container>
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Calendar View */}
-              <div className="lg:col-span-1">
-                <Card>
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-xl font-serif">Calendar</CardTitle>
-                      {selectedDate && (
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={clearFilter}
-                          className="h-8 w-8 p-0"
-                          aria-label="Clear date filter"
-                        >
-                          <X className="h-4 w-4" />
-                        </Button>
-                      )}
-                    </div>
-                    <CardDescription>
-                      Click on a date to filter events
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Calendar
-                      mode="single"
-                      selected={selectedDate}
-                      onSelect={handleDateSelect}
-                      month={calendarMonth}
-                      modifiers={{
-                        hasEvents: datesWithEvents
-                      }}
-                      modifiersClassNames={{
-                        hasEvents: "bg-[var(--color-stanford-red)]/20 text-[var(--color-stanford-red)] font-semibold hover:bg-[var(--color-stanford-red)]/30 rounded-md"
-                      }}
-                      className="rounded-md border-0"
-                    />
-                    {selectedDate && (
-                      <div className="mt-4 p-3 bg-[var(--color-bg-secondary)] rounded-lg">
-                        <p className="text-sm font-semibold text-[var(--color-text-primary)]">
-                          Showing events for {format(selectedDate, "MMMM d, yyyy")}
-                        </p>
-                        <p className="text-xs text-[var(--color-text-secondary)] mt-1">
-                          {filteredEvents.length} {filteredEvents.length === 1 ? 'event' : 'events'}
-                        </p>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              </div>
+            <Tabs defaultValue="upcoming" className="w-full">
+              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+                <TabsTrigger value="upcoming" className="text-base">
+                  Upcoming ({upcomingEvents.length})
+                </TabsTrigger>
+                <TabsTrigger value="previous" className="text-base">
+                  Previous ({previousEvents.length})
+                </TabsTrigger>
+              </TabsList>
 
-              {/* Events List */}
-              <div className="lg:col-span-2">
-                {filteredEvents.length === 0 ? (
+              <TabsContent value="upcoming" className="mt-0">
+                {upcomingEvents.length === 0 ? (
                   <Card>
                     <CardContent className="py-12 text-center">
                       <p className="text-[var(--color-text-secondary)]">
-                        {selectedDate 
-                          ? `No events found for ${format(selectedDate, "MMMM d, yyyy")}`
-                          : "No events available"}
+                        No upcoming events available
                       </p>
-                      {selectedDate && (
-                        <Button
-                          variant="outline"
-                          onClick={clearFilter}
-                          className="mt-4"
-                        >
-                          Clear filter
-                        </Button>
-                      )}
                     </CardContent>
                   </Card>
                 ) : (
                   <div className="space-y-6">
-                    {filteredEvents.map((event) => (
+                    {upcomingEvents.map((event) => (
                       <Card 
                         key={event.id} 
                         className="hover:shadow-lg transition-shadow cursor-pointer"
@@ -298,8 +223,66 @@ export default function Events() {
                     ))}
                   </div>
                 )}
-              </div>
-            </div>
+              </TabsContent>
+
+              <TabsContent value="previous" className="mt-0">
+                {previousEvents.length === 0 ? (
+                  <Card>
+                    <CardContent className="py-12 text-center">
+                      <p className="text-[var(--color-text-secondary)]">
+                        No previous events available
+                      </p>
+                    </CardContent>
+                  </Card>
+                ) : (
+                  <div className="space-y-6">
+                    {previousEvents.map((event) => (
+                      <Card 
+                        key={event.id} 
+                        className="hover:shadow-lg transition-shadow cursor-pointer"
+                        onClick={() => setLocation(`/events/${event.id}`)}
+                      >
+                        <CardContent className="p-6">
+                          <div className="flex flex-col md:flex-row gap-4">
+                            <div className="flex-shrink-0">
+                              <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center opacity-75">
+                                <div className="text-center">
+                                  <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
+                                    {format(event.parsedDate, "MMM")}
+                                  </p>
+                                  <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+                                    {format(event.parsedDate, "d")}
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-start justify-between gap-4 mb-2">
+                                <Badge variant="secondary" className="mb-2">
+                                  {event.type}
+                                </Badge>
+                              </div>
+                              <h3 className="text-xl font-serif font-semibold mb-2 text-[var(--color-text-primary)]">
+                                {event.title}
+                              </h3>
+                              {event.time && (
+                                <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+                                  <Clock className="h-4 w-4" />
+                                  <span>{event.time}</span>
+                                </div>
+                              )}
+                              <div className="mt-4 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
+                                View details →
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                )}
+              </TabsContent>
+            </Tabs>
           </Container>
         </section>
       </main>

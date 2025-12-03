@@ -20,7 +20,7 @@ export default function About() {
       <Header />
       <main className="flex-1 pt-24">
         {/* Hero Image Section */}
-        <section className="relative w-full h-[65vh] md:h-[75vh] overflow-hidden">
+        <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
           <div className="relative z-10 h-full flex items-center justify-center">

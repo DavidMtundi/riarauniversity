@@ -294,6 +294,14 @@ export class MemStorage implements IStorage {
         time: "07:30 pm EAT",
         imageUrl: "",
         link: "#"
+      },
+      {
+        id: "5",
+        type: "Conference",
+        title: "Riara, A hub of Innovations",
+        date: "Jun 26",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/06/zxcxzczxc.jpg",
+        link: "https://riarauniversity.ac.ke/riara-a-hub-of-innovations/"
       }
     ];
 

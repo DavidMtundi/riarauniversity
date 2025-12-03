@@ -1,8 +1,8 @@
-/* Stanford University Design System - CSS Custom Properties */
+/* Riara University Design System - CSS Custom Properties */
 
 /* Theme tokens live in theme.css. */
 
-/* Stanford Typography - Base Styles */
+/* Riara University Typography - Base Styles */
 body, html {
   font-family: var(--font-family-primary);
   color: var(--color-text-secondary);
@@ -10,7 +10,7 @@ body, html {
   line-height: var(--line-height-body);
 }
 
-/* Stanford Heading Styles */
+/* Riara University Heading Styles */
 h1 {
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-h1);
@@ -59,7 +59,7 @@ h6 {
   line-height: var(--line-height-h6);
 }
 
-/* Stanford Paragraph Styles */
+/* Riara University Paragraph Styles */
 p {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-normal);
@@ -79,7 +79,7 @@ p.small {
   line-height: var(--line-height-body-small);
 }
 
-/* Stanford Navigation Styles */
+/* Riara University Navigation Styles */
 nav a,
 .nav-link-primary {
   font-size: var(--font-size-nav-primary);
@@ -115,7 +115,7 @@ nav a:hover,
   color: var(--color-stanford-red);
 }
 
-/* Stanford Link Styles */
+/* Riara University Link Styles */
 a {
   color: var(--color-stanford-red);
   text-decoration: none;
@@ -134,7 +134,7 @@ a:visited {
   color: var(--color-stanford-red-dark);
 }
 
-/* Stanford Button Styles */
+/* Riara University Button Styles */
 button,
 .btn-primary {
   font-size: var(--font-size-nav-primary);
@@ -178,7 +178,7 @@ button:hover,
   background-color: var(--color-bg-medium-gray);
 }
 
-/* Stanford Special Text Elements */
+/* Riara University Special Text Elements */
 .category-tag {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
@@ -212,7 +212,7 @@ blockquote {
   font-style: italic;
 }
 
-/* Stanford Footer Styles */
+/* Riara University Footer Styles */
 footer,
 .footer-stanford {
   background-color: var(--color-bg-footer);
@@ -322,7 +322,7 @@ footer,
   color: var(--color-text-inverse);
 }
 
-/* Stanford Utility Classes */
+/* Riara University Utility Classes */
 .text-stanford-red {
   color: var(--color-stanford-red);
 }

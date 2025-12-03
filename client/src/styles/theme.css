@@ -85,10 +85,14 @@
   --letter-spacing-h6: 0px;
   --letter-spacing-normal: 0px;
 
-  /* Stanford Brand Colors */
+  /* Riara University Brand Colors */
   --color-stanford-red: #A21D25;
   --color-stanford-red-dark: #7B1519;
   --color-stanford-red-light: #C92A33;
+  /* Aliases for Riara branding */
+  --color-riara-red: var(--color-stanford-red);
+  --color-riara-red-dark: var(--color-stanford-red-dark);
+  --color-riara-red-light: var(--color-stanford-red-light);
 
   /* Text Colors */
   --color-text-primary: #000000;

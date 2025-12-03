@@ -3,7 +3,7 @@
  * Centralized design system for consistent styling across the application
  */
 
-// Typography - Stanford System Font Stack
+// Typography - Riara University System Font Stack
 export const typography = {
   fontFamily: {
     primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
@@ -91,15 +91,15 @@ export const typography = {
   },
 } as const;
 
-// Colors - Stanford Brand Colors
+// Colors - Riara University Brand Colors
 export const colors = {
-  // Stanford Brand Colors
+  // Riara University Brand Colors (using Stanford red as base)
   stanford: {
     red: '#A21D25', // Cardinal Red
     redDark: '#7B1519', // Dark Red (hover/active)
     redLight: '#C92A33',
   },
-  // Text Colors - Stanford
+  // Text Colors - Riara University
   text: {
     primary: '#000000',
     secondary: '#333333',
@@ -110,7 +110,7 @@ export const colors = {
     inverse: '#ffffff',
     inverseSecondary: '#f5f5f5',
   },
-  // Background Colors - Stanford
+  // Background Colors - Riara University
   background: {
     primary: '#ffffff',
     secondary: '#fafafa',
@@ -126,7 +126,7 @@ export const colors = {
     inverse: '#000000',
     maroon: '#800020', // For header background
   },
-  // Border Colors - Stanford
+  // Border Colors - Riara University
   border: {
     light: '#D0D0D0',
     medium: '#CCCCCC',
