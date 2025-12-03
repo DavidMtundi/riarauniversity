@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/Container";
 import { FOOTER_LINKS, SOCIAL_MEDIA_LINKS as SOCIAL_LINKS_CONFIG, SCHOOL_LINKS } from "@/lib/links";
@@ -73,7 +73,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
     title: "ABOUT RIARA",
     links: [
       { label: "Facts", href: "/about/facts", testId: "link-footer-facts" },
-      { label: "History", href: "/about/history", testId: "link-footer-history" },
+      { label: "History", href: "/history", testId: "link-footer-history" },
       { label: "Accreditation", href: "/about/accreditation", testId: "link-footer-accreditation" },
       { label: "Partners", href: "/partners", testId: "link-footer-partners" },
     ],
@@ -161,6 +161,14 @@ const LEGAL_LINKS: FooterLink[] = [
   { label: "Accessibility", href: "/accessibility", testId: "link-footer-accessibility" },
 ];
 
+// Quick Downloads Data
+const QUICK_DOWNLOADS = [
+  { label: "University Brochure", href: "/downloads/brochure.pdf", testId: "link-download-brochure" },
+  { label: "Application Form", href: "/downloads/application-form.pdf", testId: "link-download-application" },
+  { label: "Academic Calendar", href: "/downloads/academic-calendar.pdf", testId: "link-download-calendar" },
+  { label: "Fee Structure", href: "/downloads/fee-structure.pdf", testId: "link-download-fees" },
+];
+
 // Reusable components for better maintainability
 const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
   <ul className="space-y-3 md:space-y-3.5 text-base md:text-lg text-[var(--color-text-secondary)]">
@@ -185,6 +193,37 @@ const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
       {section.title}
     </h3>
     <FooterLinkList links={section.links} />
+  </div>
+);
+
+const QuickDownloadsSection: React.FC = () => (
+  <div className="bg-gradient-to-r from-[var(--color-stanford-red)]/10 to-[var(--color-stanford-red)]/5 border-l-4 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="p-2 bg-[var(--color-stanford-red)]/20 rounded-lg">
+        <Download className="h-5 w-5 text-[var(--color-stanford-red)]" />
+      </div>
+      <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide text-[var(--color-stanford-red)]">
+        Quick Downloads
+      </h3>
+    </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      {QUICK_DOWNLOADS.map((download) => (
+        <a
+          key={download.href}
+          href={download.href}
+          download
+          className="group flex items-center gap-3 p-3 bg-white hover:bg-[var(--color-stanford-red)] rounded-lg border-2 border-gray-200 hover:border-[var(--color-stanford-red)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+          data-testid={download.testId}
+        >
+          <div className="flex-shrink-0 p-2 bg-[var(--color-stanford-red)]/10 group-hover:bg-white rounded-lg transition-colors">
+            <Download className="h-4 w-4 text-[var(--color-stanford-red)] group-hover:text-[var(--color-stanford-red)]" />
+          </div>
+          <span className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors line-clamp-2">
+            {download.label}
+          </span>
+        </a>
+      ))}
+    </div>
   </div>
 );
 
@@ -237,6 +276,13 @@ export function Footer() {
         </Container>
       </div>
 
+      {/* Quick Downloads Section - Prominent Banner */}
+      <div className="bg-gradient-to-b from-white to-[var(--color-bg-secondary)]/30 border-b border-gray-200">
+        <Container className="py-8 md:py-10 px-4 sm:px-6 md:px-8">
+          <QuickDownloadsSection />
+        </Container>
+      </div>
+
       {/* Upper Section - Light Background */}
       <div className="bg-[var(--color-bg-primary)] text-lg sm:text-xl">
         <Container className="py-8 sm:py-10 md:py-12 lg:py-14 px-4 sm:px-6 md:px-8">
@@ -244,7 +290,7 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
             {/* Footer Links */}
             <div className="lg:col-span-10">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8">
                 {FOOTER_SECTIONS.map((section) => (
                   <FooterSection key={section.title} section={section} />
                 ))}

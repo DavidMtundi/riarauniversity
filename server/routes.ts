@@ -321,15 +321,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   app.get("/api/leadership", async (_req, res) => {
     try {
+      console.log("[API] /api/leadership endpoint called");
       const leadership = await storage.getLeadership();
+      console.log("[API] Leadership data loaded:", leadership.length, "members");
       if (leadership.length === 0) {
-        console.warn("Warning: No leadership data loaded. Check if leadership.json exists.");
+        console.warn("[API] Warning: No leadership data loaded. Check if leadership.json exists.");
+        // Still return empty array instead of error, so frontend can handle gracefully
+        return res.json([]);
       }
       res.json(leadership);
     } catch (error) {
-      console.error("Error in /api/leadership endpoint:", error);
+      console.error("[API] Error in /api/leadership endpoint:", error);
       if (error instanceof Error) {
-        console.error("Error details:", error.message, error.stack);
+        console.error("[API] Error details:", error.message);
+        if (error.stack) {
+          console.error("[API] Error stack:", error.stack);
+        }
       }
       res.status(500).json({ error: "Failed to load leadership data", details: error instanceof Error ? error.message : String(error) });
     }

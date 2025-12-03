@@ -11,6 +11,7 @@ interface LeadershipSectionProps {
 }
 
 const roleLabels: Record<string, string> = {
+  "chancellor": "Chancellor",
   "vc": "Vice Chancellor",
   "deputy-vc": "Deputy Vice Chancellor",
   "dean": "Dean",
@@ -33,7 +34,7 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
   }, {} as Record<string, LeadershipMember[]>);
 
   // Sort roles by hierarchy
-  const roleOrder = ["vc", "deputy-vc", "registrar", "dean", "director", "academic", "research", "student-affairs", "finance"];
+  const roleOrder = ["chancellor", "vc", "deputy-vc", "registrar", "dean", "director", "academic", "research", "student-affairs", "finance"];
   const sortedRoles = Object.keys(groupedByRole).sort((a, b) => {
     const aIndex = roleOrder.indexOf(a);
     const bIndex = roleOrder.indexOf(b);
@@ -71,27 +72,35 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                     className="hover:shadow-lg transition-shadow overflow-hidden"
                   >
                     <div className="aspect-[4/5] bg-gradient-to-br from-primary/20 to-primary/5 relative overflow-hidden">
-                      {member.imageUrl ? (
+                      {member.imageUrl && member.imageUrl.trim() !== '' ? (
                         <img
                           src={member.imageUrl}
                           alt={member.name}
                           className="w-full h-full object-cover"
+                          loading="lazy"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';
+                            // Show fallback when image fails to load
+                            const fallback = target.nextElementSibling as HTMLElement;
+                            if (fallback) {
+                              fallback.style.display = 'flex';
+                            }
                           }}
                         />
-                      ) : (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-[var(--color-stanford-red)]/20 flex items-center justify-center">
-                              <span className="text-3xl font-bold text-[var(--color-stanford-red)]">
-                                {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                              </span>
-                            </div>
+                      ) : null}
+                      <div 
+                        className={`absolute inset-0 flex items-center justify-center ${member.imageUrl && member.imageUrl.trim() !== '' ? 'hidden' : ''}`}
+                        style={{ display: member.imageUrl && member.imageUrl.trim() !== '' ? 'none' : 'flex' }}
+                      >
+                        <div className="text-center">
+                          <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-[var(--color-stanford-red)]/20 flex items-center justify-center border-2 border-[var(--color-stanford-red)]/30">
+                            <span className="text-3xl font-bold text-[var(--color-stanford-red)]">
+                              {member.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+                            </span>
                           </div>
                         </div>
-                      )}
+                      </div>
                     </div>
                     <CardContent className="p-6">
                       <h4 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-1">

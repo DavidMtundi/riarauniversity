@@ -502,20 +502,26 @@ export class MemStorage implements IStorage {
       const publicPath = path.resolve(__dirname, "..", "client", "public", "api", "leadership.json");
       const distPath = path.resolve(__dirname, "..", "dist", "public", "api", "leadership.json");
       
-      console.log("[getLeadership] Looking for file at:", { publicPath, distPath, __dirname, cwd: process.cwd() });
+      console.log("[getLeadership] Attempting to load file...");
+      console.log("[getLeadership] __dirname:", __dirname);
+      console.log("[getLeadership] process.cwd():", process.cwd());
+      console.log("[getLeadership] publicPath:", publicPath, "exists:", fs.existsSync(publicPath));
+      console.log("[getLeadership] distPath:", distPath, "exists:", fs.existsSync(distPath));
       
       let filePath = publicPath;
       if (!fs.existsSync(publicPath) && fs.existsSync(distPath)) {
         filePath = distPath;
+        console.log("[getLeadership] Using distPath:", filePath);
+      } else if (fs.existsSync(publicPath)) {
+        console.log("[getLeadership] Using publicPath:", filePath);
       }
       
-      console.log("[getLeadership] Using file path:", filePath, "exists:", fs.existsSync(filePath));
-      
       if (fs.existsSync(filePath)) {
+        console.log("[getLeadership] Reading file from:", filePath);
         const fileContent = await fs.promises.readFile(filePath, "utf-8");
         const leadership: LeadershipMember[] = JSON.parse(fileContent);
         
-        console.log("[getLeadership] Successfully loaded", leadership.length, "leadership members");
+        console.log("[getLeadership] Successfully parsed", leadership.length, "leadership members");
         
         // Transform image URLs
         return leadership.map((member) => ({
@@ -524,12 +530,17 @@ export class MemStorage implements IStorage {
         }));
       }
       
-      console.warn("[getLeadership] File not found at either path");
+      console.error("[getLeadership] File not found at either path!");
+      console.error("[getLeadership] publicPath:", publicPath, "exists:", fs.existsSync(publicPath));
+      console.error("[getLeadership] distPath:", distPath, "exists:", fs.existsSync(distPath));
       return [];
     } catch (error) {
       console.error("[getLeadership] Error loading leadership:", error);
       if (error instanceof Error) {
-        console.error("[getLeadership] Error stack:", error.stack);
+        console.error("[getLeadership] Error details:", error.message);
+        if (error.stack) {
+          console.error("[getLeadership] Error stack:", error.stack);
+        }
       }
       return [];
     }

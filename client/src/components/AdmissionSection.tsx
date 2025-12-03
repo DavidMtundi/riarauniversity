@@ -9,7 +9,7 @@ interface AdmissionSectionProps {
 export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
   return (
     <section id="admission" className="py-20 bg-gray-50">
-      <Container>
+      <Container className={showHeader ? undefined : "px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2 2xl:px-2"}>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-text-primary)]" data-testid="text-admission-heading">

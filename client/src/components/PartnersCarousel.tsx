@@ -97,20 +97,31 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {allPartners.map((partner) => (
-                <CarouselItem
-                  key={partner.id}
-                  className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
-                >
-                  <div className="p-5 md:p-6 h-full border-2 border-[var(--color-border-secondary)] rounded-xl hover:border-[var(--color-stanford-red)] hover:shadow-lg transition-all duration-300 bg-white flex flex-col group">
-                    <div className="mb-4 flex-1">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-white border border-[var(--color-border-secondary)] rounded-xl flex items-center justify-center mb-4 overflow-hidden group-hover:border-[var(--color-stanford-red)] transition-all duration-300">
+            <CarouselContent className="-ml-1 md:-ml-2">
+              {allPartners.map((partner) => {
+                // Split name into words and format for 2 words per line
+                const words = partner.name.split(' ');
+                const formattedName = words.reduce((acc: string[], word: string, index: number) => {
+                  if (index % 2 === 0) {
+                    acc.push(word);
+                  } else {
+                    acc[acc.length - 1] += ' ' + word;
+                  }
+                  return acc;
+                }, []);
+
+                return (
+                  <CarouselItem
+                    key={partner.id}
+                    className="pl-1 md:pl-2 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 xl:basis-1/7 2xl:basis-1/8"
+                  >
+                    <div className="p-3 h-full border border-[var(--color-border-secondary)] rounded-lg hover:border-[var(--color-stanford-red)] hover:shadow-md transition-all duration-200 bg-white flex flex-col items-center text-center group">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white border border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center mb-2 overflow-hidden group-hover:border-[var(--color-stanford-red)] transition-all duration-200">
                         {partner.logoUrl && partner.logoUrl !== "" ? (
                           <img 
                             src={partner.logoUrl} 
                             alt={`${partner.name} logo`}
-                            className="w-full h-full object-contain p-2"
+                            className="w-full h-full object-contain p-1.5"
                             onError={(e) => {
                               // Fallback to placeholder if image fails to load
                               const target = e.target as HTMLImageElement;
@@ -119,7 +130,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                               if (parent) {
                                 parent.innerHTML = `
                                   <div class="text-center text-muted-foreground w-full h-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 md:w-8 md:h-8 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                     </svg>
                                   </div>
@@ -129,34 +140,21 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                           />
                         ) : (
                           <div className="text-center text-muted-foreground w-full h-full flex items-center justify-center">
-                            <svg className="w-6 h-6 md:w-8 md:h-8 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="w-4 h-4 sm:w-5 sm:h-5 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                             </svg>
                           </div>
                         )}
                       </div>
-                      <h4 className="text-base md:text-lg font-bold text-[var(--color-text-primary)] mb-2 line-clamp-2 group-hover:text-[var(--color-stanford-red)] transition-colors" data-testid={`text-partner-name-${partner.id}`}>
-                        {partner.name}
+                      <h4 className="text-xs sm:text-sm font-semibold text-[var(--color-text-primary)] leading-tight min-h-[2.5em] flex flex-col justify-center" data-testid={`text-partner-name-${partner.id}`}>
+                        {formattedName.map((line, index) => (
+                          <span key={index}>{line}</span>
+                        ))}
                       </h4>
-                      <p className="text-xs md:text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3" data-testid={`text-partner-description-${partner.id}`}>
-                        {partner.description}
-                      </p>
                     </div>
-                    {partner.website && partner.website !== "#" && (
-                      <a
-                        href={partner.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs md:text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors inline-flex items-center gap-1 mt-auto group/link"
-                        data-testid={`link-partner-website-${partner.id}`}
-                      >
-                        Visit website
-                        <ArrowRight className="h-3 w-3 transition-transform group-hover/link:translate-x-1" />
-                      </a>
-                    )}
-                  </div>
-                </CarouselItem>
-              ))}
+                  </CarouselItem>
+                );
+              })}
             </CarouselContent>
           </Carousel>
         </div>

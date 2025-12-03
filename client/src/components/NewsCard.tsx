@@ -26,7 +26,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
   if (variant === "featured") {
     return (
       <article
-        className="group relative block overflow-hidden rounded-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-stanford-red)] cursor-pointer"
+        className="group relative block overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-stanford-red)] cursor-pointer shadow-2xl hover:shadow-3xl transition-all duration-300"
         data-testid={`card-featured-${article.id}`}
         onClick={() => setLocation(`/news/${article.id}`)}
       >
@@ -36,7 +36,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
               <img
                 src={article.imageUrl}
                 alt={article.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -63,35 +63,39 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
                 </div>
               </div>
             )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-            <div className="absolute top-4 left-4">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 group-hover:from-black/95 transition-all duration-300" />
+            <div className="absolute top-6 left-6">
               {renderCategory(article.category)}
             </div>
-            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-left text-white">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold leading-tight mb-2">
+            <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 lg:p-12 text-left text-white">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-3 group-hover:text-[var(--color-stanford-red)]/90 transition-colors duration-300">
                 {article.title}
               </h2>
               {article.subtitle && (
-                <p className="text-base sm:text-lg text-white/90 mb-3 font-medium">
+                <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-4 font-medium">
                   {article.subtitle}
                 </p>
               )}
-              <p className="text-sm sm:text-base text-white/80 leading-relaxed line-clamp-2">
+              <p className="text-base sm:text-lg text-white/85 leading-relaxed line-clamp-2 mb-6">
                 {article.excerpt}
               </p>
-              <div className="flex items-center gap-4 mt-4 text-white/70 text-sm">
+              <div className="flex items-center gap-6 text-white/80 text-sm sm:text-base">
                 {article.publishedDate && (
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
                     <Calendar className="h-4 w-4" />
                     <span>{article.publishedDate}</span>
                   </div>
                 )}
                 {article.author && (
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 rounded-lg">
                     <User className="h-4 w-4" />
                     <span>{article.author}</span>
                   </div>
                 )}
+              </div>
+              <div className="mt-6 flex items-center gap-2 text-white/90 font-semibold group-hover:text-[var(--color-stanford-red)] transition-colors duration-300">
+                <span>Read full story</span>
+                <ArrowRight className="h-5 w-5 transform group-hover:translate-x-2 transition-transform duration-300" />
               </div>
             </div>
           </div>
@@ -103,19 +107,19 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
   return (
     <article
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl bg-white shadow-sm transition-all duration-300 hover:shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-stanford-red)] cursor-pointer",
-        variant === "highlight" ? "border-2 border-[var(--color-stanford-red)]/20" : ""
+        "group flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-stanford-red)] cursor-pointer border border-gray-100",
+        variant === "highlight" ? "border-2 border-[var(--color-stanford-red)]/30 shadow-lg" : ""
       )}
       data-testid={`card-${variant}-${article.id}`}
       onClick={() => setLocation(`/news/${article.id}`)}
     >
-      <div className="block">
+        <div className="block relative">
         <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5">
           {article.imageUrl ? (
             <img
               src={article.imageUrl}
               alt={article.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -142,6 +146,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
               </div>
             </div>
           )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
       </div>
       
@@ -151,12 +156,12 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
         </div>
         
         <div className="block flex-1">
-          <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--color-text-primary)] leading-tight mb-2 group-hover:text-[var(--color-stanford-red)] transition-colors line-clamp-2">
+          <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--color-text-primary)] leading-tight mb-3 group-hover:text-[var(--color-stanford-red)] transition-colors duration-300 line-clamp-2">
             {article.title}
           </h3>
           
           {article.subtitle && (
-            <p className="text-base font-medium text-[var(--color-text-secondary)] mb-3 line-clamp-1">
+            <p className="text-base font-medium text-[var(--color-text-secondary)] mb-4 line-clamp-1">
               {article.subtitle}
             </p>
           )}
@@ -201,17 +206,17 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
           )}
         </div>
 
-        <div className="mt-4 pt-4 border-t border-[var(--color-border-secondary)] flex items-center justify-between">
-          <div className="flex items-center gap-4 text-xs text-[var(--color-text-tertiary)]">
+        <div className="mt-6 pt-5 border-t border-gray-200 flex items-center justify-between">
+          <div className="flex items-center gap-4 text-xs sm:text-sm text-[var(--color-text-tertiary)]">
             {article.publishedDate && (
-              <div className="flex items-center gap-1">
-                <Calendar className="h-3 w-3" />
+              <div className="flex items-center gap-1.5 bg-gray-50 px-2.5 py-1.5 rounded-md">
+                <Calendar className="h-3.5 w-3.5" />
                 <span>{article.publishedDate}</span>
               </div>
             )}
             {article.author && (
-              <div className="flex items-center gap-1">
-                <User className="h-3 w-3" />
+              <div className="flex items-center gap-1.5 bg-gray-50 px-2.5 py-1.5 rounded-md">
+                <User className="h-3.5 w-3.5" />
                 <span>{article.author}</span>
               </div>
             )}
@@ -222,11 +227,11 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
               e.stopPropagation();
               setLocation(`/news/${article.id}`);
             }}
-            className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors inline-flex items-center gap-1 group/link"
+            className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-all duration-300 inline-flex items-center gap-1.5 group/link bg-[var(--color-stanford-red)]/5 hover:bg-[var(--color-stanford-red)]/10 px-3 py-1.5 rounded-md"
             data-testid={`link-read-full-${article.id}`}
           >
             Read full story
-            <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
           </button>
         </div>
       </div>

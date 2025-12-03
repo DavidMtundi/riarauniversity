@@ -1,2 +1,78 @@
-[{"id":"c1","type":"Faculty","title":"Assistant Professor of Computer Science","date":"Apply by Nov 30","time":"Full-time","imageUrl":"","link":"#"},{"id":"c2","type":"Research","title":"Senior Research Scientist, Precision Health","date":"Apply by Dec 5","time":"Full-time","imageUrl":"","link":"#"},{"id":"c3","type":"Administration","title":"Director of Student Success Programs","date":"Apply by Dec 12","time":"Full-time","imageUrl":"","link":"#"},{"id":"c4","type":"Staff","title":"Campus Sustainability Project Manager","date":"Apply by Dec 18","time":"Contract","imageUrl":"","link":"#"}]
-
+[
+  {
+    "id": "c1",
+    "type": "Faculty",
+    "title": "Assistant Professor of Computer Science",
+    "date": "Apply by Nov 30",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#"
+  },
+  {
+    "id": "c2",
+    "type": "Research",
+    "title": "Senior Research Scientist, Precision Health",
+    "date": "Apply by Dec 5",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#"
+  },
+  {
+    "id": "c3",
+    "type": "Administration",
+    "title": "Director of Student Success Programs",
+    "date": "Apply by Dec 12",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#"
+  },
+  {
+    "id": "c4",
+    "type": "Staff",
+    "title": "Campus Sustainability Project Manager",
+    "date": "Apply by Dec 18",
+    "time": "Contract",
+    "imageUrl": "",
+    "link": "#"
+  },
+  {
+    "id": "c5",
+    "type": "Faculty",
+    "title": "ICT Senior Lecturer",
+    "date": "Apply by Jan 15, 2025",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#",
+    "department": "School of Computing Science"
+  },
+  {
+    "id": "c6",
+    "type": "Faculty",
+    "title": "Computer Science Lecturer",
+    "date": "Apply by Jan 15, 2025",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#",
+    "department": "School of Computing Science"
+  },
+  {
+    "id": "c7",
+    "type": "Faculty",
+    "title": "Lecturer - Department of International Relations & Diplomacy",
+    "date": "Apply by Jan 20, 2025",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#",
+    "department": "School of International Relations & Diplomacy"
+  },
+  {
+    "id": "c8",
+    "type": "Faculty",
+    "title": "Senior Lecturer - Department of International Relations & Diplomacy",
+    "date": "Apply by Jan 20, 2025",
+    "time": "Full-time",
+    "imageUrl": "",
+    "link": "#",
+    "department": "School of International Relations & Diplomacy"
+  }
+]

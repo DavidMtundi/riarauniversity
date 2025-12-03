@@ -205,42 +205,74 @@ export default function News() {
       <Header />
       <main className="flex-1 pt-24">
         {/* Hero Banner Section */}
-        <section className="relative min-h-[400px] md:min-h-[500px] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[450px] md:min-h-[550px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
             <div className="absolute inset-0 bg-[url('/riara-logo.jpeg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
-            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+          </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
           <div className="relative z-10 w-full">
-            <Container>
-              <div className="max-w-4xl mx-auto px-4">
-                {/* Title */}
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8">
-                  Campus News
-                </h1>
-                
-                {/* Search Bar */}
-                <div className="flex gap-3">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                    <Input
-                      type="text"
-                      placeholder="Search news articles..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-12 pr-4 py-6 text-base bg-white border-white rounded-lg focus:ring-2 focus:ring-white"
-                    />
+          <Container>
+              <div className="max-w-5xl mx-auto px-4">
+                {/* Title with Subtitle */}
+                <div className="text-center mb-10 md:mb-12">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-4 leading-tight">
+                Campus News
+              </h1>
+                  <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-light max-w-2xl mx-auto">
+                    Stay informed with the latest updates, stories, and achievements from Riara University
+              </p>
+            </div>
+
+                {/* Enhanced Search Bar */}
+                <div className="max-w-3xl mx-auto">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex-1 relative group">
+                      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-[var(--color-stanford-red)] transition-colors" />
+                      <Input
+                        type="text"
+                        placeholder="Search news articles, topics, or authors..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="pl-12 pr-4 py-6 md:py-7 text-base md:text-lg bg-white/95 backdrop-blur-sm border-2 border-white/50 rounded-xl focus:ring-2 focus:ring-[var(--color-stanford-red)] focus:border-[var(--color-stanford-red)] shadow-xl transition-all"
+                      />
+                    </div>
+                    <Button
+                      onClick={() => {
+                        document.getElementById('news-content')?.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] px-8 md:px-10 py-6 md:py-7 text-base md:text-lg font-semibold rounded-xl whitespace-nowrap shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                    >
+                      Search
+                    </Button>
                   </div>
-                  <Button
-                    onClick={() => {
-                      document.getElementById('news-content')?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] px-8 py-6 text-base font-semibold rounded-lg whitespace-nowrap"
-                  >
-                    Search
-                  </Button>
+                  
+                  {/* Quick Search Suggestions */}
+                  {!searchQuery && categories.length > 0 && (
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+                      <span className="text-sm text-white/70">Popular:</span>
+                      {categories.slice(0, 4).map((category) => (
+                        <button
+                          key={category}
+                          onClick={() => {
+                            setSelectedCategory(category);
+                            document.getElementById('news-content')?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                          className="px-3 py-1 text-sm text-white/90 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full transition-all border border-white/20"
+                        >
+                          {category}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </Container>
@@ -248,23 +280,29 @@ export default function News() {
         </section>
 
         {/* Filters and Sort Section */}
-        <section className="bg-white border-b py-6" id="news-content">
+        <section className="bg-gradient-to-b from-white to-[var(--color-bg-secondary)]/30 border-b border-gray-200 py-8 md:py-10" id="news-content">
           <Container>
             <div className="max-w-7xl mx-auto">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+              {/* Header with Stats */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-stanford-red)] mb-2">
-                    All news
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-2">
+                    All News
                   </h2>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
-                    {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
-                  </p>
+                  <div className="flex items-center gap-4">
+                    <p className="text-base text-[var(--color-text-secondary)]">
+                      <span className="font-semibold text-[var(--color-stanford-red)]">{filteredArticles.length}</span> {filteredArticles.length === 1 ? 'article' : 'articles'}
+                      {hasActiveFilters && (
+                        <span className="ml-2 text-sm">matching your filters</span>
+                      )}
+                    </p>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3">
                   {/* Sort Dropdown */}
                   <Select value={sortBy} onValueChange={(value) => setSortBy(value as SortOption)}>
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className="w-[180px] bg-white border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/50 transition-colors">
                       <SelectValue placeholder="Sort by" />
                     </SelectTrigger>
                     <SelectContent>
@@ -277,10 +315,10 @@ export default function News() {
                   {/* Clear Filters */}
                   {hasActiveFilters && (
                     <Button
-                      variant="ghost"
+                      variant="outline"
                       size="sm"
                       onClick={clearFilters}
-                      className="text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]"
+                      className="text-[var(--color-stanford-red)] hover:text-white hover:bg-[var(--color-stanford-red)] border-[var(--color-stanford-red)]/30"
                     >
                       <X className="h-4 w-4 mr-2" />
                       Clear filters
@@ -289,15 +327,19 @@ export default function News() {
                 </div>
               </div>
 
-              {/* Category and Author Filters */}
-              <div className="flex flex-wrap items-center gap-3">
-                <Filter className="h-4 w-4 text-[var(--color-text-secondary)]" />
+              {/* Enhanced Category and Author Filters */}
+              <div className="space-y-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex items-center gap-2 text-[var(--color-text-secondary)]">
+                    <Filter className="h-5 w-5" />
+                    <span className="text-sm font-semibold">Filter by:</span>
+                  </div>
                 <button
                   onClick={() => setSelectedCategory(null)}
-                  className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
+                    className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                     selectedCategory === null
-                      ? 'bg-[var(--color-stanford-red)] text-white shadow-md'
-                      : 'bg-gray-100 text-[var(--color-text-secondary)] hover:bg-gray-200'
+                        ? 'bg-[var(--color-stanford-red)] text-white shadow-lg shadow-[var(--color-stanford-red)]/20'
+                        : 'bg-white text-[var(--color-text-secondary)] hover:bg-gray-50 border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/30'
                   }`}
                 >
                   All News
@@ -306,23 +348,26 @@ export default function News() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
+                      className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                       selectedCategory === category
-                        ? 'bg-[var(--color-stanford-red)] text-white shadow-md'
-                        : 'bg-gray-100 text-[var(--color-text-secondary)] hover:bg-gray-200'
+                          ? 'bg-[var(--color-stanford-red)] text-white shadow-lg shadow-[var(--color-stanford-red)]/20'
+                          : 'bg-white text-[var(--color-text-secondary)] hover:bg-gray-50 border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/30'
                     }`}
                   >
-                    {category} ({categoryCounts[category] || 0})
+                      {category} <span className="ml-1.5 opacity-70">({categoryCounts[category] || 0})</span>
                   </button>
                 ))}
+                </div>
                 
                 {authors.length > 0 && (
-                  <>
-                    <div className="w-px h-6 bg-gray-300 mx-2"></div>
+                  <div className="flex flex-wrap items-center gap-3 pt-2 border-t border-gray-200">
+                    <div className="flex items-center gap-2 text-[var(--color-text-secondary)]">
+                      <User className="h-4 w-4" />
+                      <span className="text-sm font-semibold">Author:</span>
+                    </div>
                     <Select value={selectedAuthor || "all"} onValueChange={(value) => setSelectedAuthor(value === "all" ? null : value)}>
-                      <SelectTrigger className="w-[200px]">
+                      <SelectTrigger className="w-[220px] bg-white border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/50 transition-colors">
                         <div className="flex items-center gap-2">
-                          <User className="h-4 w-4" />
                           <SelectValue placeholder="All Authors" />
                         </div>
                       </SelectTrigger>
@@ -333,7 +378,7 @@ export default function News() {
                         ))}
                       </SelectContent>
                     </Select>
-                  </>
+                  </div>
                 )}
               </div>
             </div>
@@ -341,11 +386,18 @@ export default function News() {
         </section>
 
         {/* News Content */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-[var(--color-bg-secondary)]/20">
           <Container>
+            <div className="max-w-7xl mx-auto">
             {/* Featured Article */}
             {featuredArticle && (
-              <div className="mb-12">
+                <div className="mb-16">
+                  <div className="mb-6 flex items-center gap-3">
+                    <div className="h-1 w-12 bg-[var(--color-stanford-red)]"></div>
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-text-primary)] uppercase tracking-wide">
+                      Featured Story
+                    </h3>
+                  </div>
                 <NewsCard article={featuredArticle} variant="featured" />
               </div>
             )}
@@ -353,6 +405,15 @@ export default function News() {
             {/* Regular Articles Grid */}
             {regularArticles.length > 0 ? (
               <>
+                  {featuredArticle && (
+                    <div className="mb-8 flex items-center gap-3">
+                      <div className="h-1 w-12 bg-[var(--color-stanford-red)]"></div>
+                      <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-text-primary)] uppercase tracking-wide">
+                        Latest News
+                      </h3>
+                    </div>
+                  )}
+                  
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
                   {regularArticles.map((article) => (
                     <NewsCard
@@ -365,31 +426,74 @@ export default function News() {
 
                 {/* Load More Button */}
                 {hasMore && (
-                  <div className="text-center">
+                    <div className="text-center pt-8">
                     <Button
                       onClick={() => setVisibleCount(prev => prev + 12)}
                       size="lg"
-                      className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
+                        className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                       data-testid="button-load-more"
                     >
                       Load More News
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                        <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </div>
                 )}
               </>
             ) : (
-              <div className="text-center py-16">
-                <p className="text-lg text-[var(--color-text-secondary)] mb-4">
-                  No news articles found{hasActiveFilters ? ' matching your filters' : ''}.
+                <div className="text-center py-20">
+                  <div className="mb-6">
+                    <svg className="h-24 w-24 mx-auto text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 4a2 2 0 002 2h2a2 2 0 002-2V9a2 2 0 00-2-2h-2a2 2 0 00-2 2v4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-serif font-bold text-[var(--color-text-primary)] mb-3">
+                    No articles found
+                  </h3>
+                  <p className="text-lg text-[var(--color-text-secondary)] mb-6 max-w-md mx-auto">
+                    {hasActiveFilters ? 'No news articles match your current filters. Try adjusting your search criteria.' : 'No news articles are available at this time.'}
+                  </p>
+                  {hasActiveFilters && (
+                    <Button 
+                      variant="outline" 
+                      onClick={clearFilters}
+                      className="border-2 border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+                    >
+                      <X className="h-4 w-4 mr-2" />
+                      Clear all filters
+                    </Button>
+                  )}
+                </div>
+              )}
+            </div>
+          </Container>
+        </section>
+
+        {/* Newsletter Subscription Section */}
+        <section className="py-16 md:py-20 bg-gradient-to-br from-[var(--color-stanford-red)] to-[var(--color-stanford-red-dark)] text-white">
+          <Container>
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4">
+                  Stay Connected
+                </h2>
+                <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+                  Subscribe to our newsletter and never miss an update from Riara University
                 </p>
-                {hasActiveFilters && (
-                  <Button variant="outline" onClick={clearFilters}>
-                    Clear filters
-                  </Button>
-                )}
               </div>
-            )}
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <Input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 py-6 text-base bg-white/95 border-0 rounded-lg focus:ring-2 focus:ring-white/50"
+                />
+                <Button
+                  className="bg-white text-[var(--color-stanford-red)] hover:bg-white/90 px-8 py-6 text-base font-semibold rounded-lg whitespace-nowrap shadow-lg"
+                >
+                  Subscribe
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
           </Container>
         </section>
       </main>

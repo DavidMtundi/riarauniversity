@@ -34,6 +34,7 @@ export function Header({ variant = "default" }: HeaderProps) {
             ? "bg-gradient-to-b from-black/60 via-black/30 to-transparent shadow-none backdrop-blur-[2px]"
             : "bg-[var(--color-bg-primary)] shadow-riara"
         )}
+        style={{ touchAction: 'manipulation' }}
       >
       {/* Top Bar - Riara Style */}
       <div
@@ -48,8 +49,9 @@ export function Header({ variant = "default" }: HeaderProps) {
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-shrink-0">
               <a
                 href="/"
-                className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold !text-white truncate no-underline hover:no-underline focus:no-underline active:no-underline visited:no-underline focus-visible:outline-none"
+                className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold !text-white truncate no-underline hover:no-underline focus:no-underline active:no-underline visited:no-underline focus-visible:outline-none touch-manipulation"
                 data-testid="link-riara-home"
+                style={{ touchAction: 'manipulation' }}
               >
                 Riara University
               </a>
@@ -58,20 +60,26 @@ export function Header({ variant = "default" }: HeaderProps) {
               {/* Information for links - hidden on mobile, shown on tablet+ */}
               <div className="hidden sm:flex items-center gap-2 md:gap-4 lg:gap-6">
                 <span className="text-xs md:text-sm text-white">Information for:</span>
-                <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors">Students</a>
-                <a href={HEADER_LINKS.facultyStaff} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors">Faculty & Staff</a>
-                <a href={HEADER_LINKS.virtualCampus} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden md:inline">Virtual Campus</a>
-                <a href={HEADER_LINKS.studentEmail} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden lg:inline">Student Email</a>
-                <a href={HEADER_LINKS.alumni} className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden lg:inline">Alumni</a>
-                <a href={HEADER_LINKS.ruShop} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden xl:inline">Ru-Shop</a>
+                <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Students</a>
+                <a href={HEADER_LINKS.facultyStaff} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Faculty & Staff</a>
+                <a href="https://library.riarauniversity.ac.ke/" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors font-semibold touch-manipulation" style={{ touchAction: 'manipulation' }}>Library</a>
+                <a href={HEADER_LINKS.virtualCampus} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden md:inline touch-manipulation" style={{ touchAction: 'manipulation' }}>Virtual Campus</a>
+                <a href={HEADER_LINKS.studentEmail} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden lg:inline touch-manipulation" style={{ touchAction: 'manipulation' }}>Student Email</a>
+                <a href={HEADER_LINKS.alumni} className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden lg:inline touch-manipulation" style={{ touchAction: 'manipulation' }}>Alumni</a>
+                <a href={HEADER_LINKS.ruShop} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors hidden xl:inline touch-manipulation" style={{ touchAction: 'manipulation' }}>Ru-Shop</a>
               </div>
               {/* Search button - hidden on very small mobile, shown on larger screens */}
               <Button 
                 size="icon" 
                 variant="ghost" 
-                className="hidden sm:flex text-white hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)]" 
+                className="hidden sm:flex text-white hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)] touch-manipulation" 
                 data-testid="button-search"
-                onClick={() => setIsSearchOpen(true)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setIsSearchOpen(true);
+                }}
+                style={{ touchAction: 'manipulation' }}
               >
                 <Search className="h-4 w-4" />
               </Button>
@@ -79,9 +87,14 @@ export function Header({ variant = "default" }: HeaderProps) {
               <Button 
                 size="icon" 
                 variant="ghost" 
-                className="md:hidden text-white hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)] flex-shrink-0" 
+                className="md:hidden text-white hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)] flex-shrink-0 touch-manipulation" 
                 data-testid="button-menu-mobile"
-                onClick={toggleMobileMenu}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  toggleMobileMenu();
+                }}
+                style={{ touchAction: 'manipulation' }}
               >
                 <Menu className="h-4 w-4" />
               </Button>
@@ -109,7 +122,6 @@ export function Header({ variant = "default" }: HeaderProps) {
             >
               {[
                 { href: "/academics", label: "Academics", testId: "link-academics" },
-                { href: "/research", label: "Research", testId: "link-research" },
                 { href: "/healthcare", label: "Health Care", testId: "link-healthcare" },
                 { href: "/campus-life", label: "Student Life", testId: "link-campus-life" },
                 { href: "/athletics", label: "Athletics", testId: "link-athletics" },
@@ -123,16 +135,32 @@ export function Header({ variant = "default" }: HeaderProps) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors",
+                    "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors touch-manipulation",
                     isOverlay
                       ? "!text-white hover:!text-white"
                       : "text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]"
                   )}
                   data-testid={link.testId}
+                  style={{ touchAction: 'manipulation' }}
                 >
                   {link.label}
                 </a>
               ))}
+              
+              {/* Research Link */}
+              <a
+                href="/research"
+                className={cn(
+                  "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors touch-manipulation",
+                  isOverlay
+                    ? "!text-white hover:!text-white"
+                    : "text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]"
+                )}
+                data-testid="link-research"
+                style={{ touchAction: 'manipulation' }}
+              >
+                Research
+              </a>
             </nav>
           </div>
         </div>

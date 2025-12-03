@@ -22,6 +22,9 @@ const HealthCare = lazy(() => import("@/pages/HealthCare"));
 const Athletics = lazy(() => import("@/pages/Athletics"));
 const Arts = lazy(() => import("@/pages/Arts"));
 const Partners = lazy(() => import("@/pages/Partners"));
+const Leadership = lazy(() => import("@/pages/Leadership"));
+const History = lazy(() => import("@/pages/History"));
+const Founders = lazy(() => import("@/pages/Founders"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function Router() {
@@ -51,6 +54,9 @@ function Router() {
         <Route path="/athletics" component={Athletics} />
         <Route path="/arts" component={Arts} />
         <Route path="/partners" component={Partners} />
+        <Route path="/leadership" component={Leadership} />
+        <Route path="/history" component={History} />
+        <Route path="/founders" component={Founders} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
