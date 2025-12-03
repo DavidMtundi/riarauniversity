@@ -21,10 +21,14 @@ export interface NewsArticle {
   id: string;
   category: string;
   title: string;
+  subtitle?: string;
   excerpt: string;
+  content?: string; // Full article content for read more functionality
   imageUrl: string;
   link: string;
   featured?: boolean;
+  publishedDate?: string;
+  author?: string;
 }
 
 export interface Profile {
@@ -44,6 +48,19 @@ export interface Event {
   time?: string;
   imageUrl: string;
   link: string;
+}
+
+export interface Career {
+  id: string;
+  type: string; // Faculty, Research, Administration, Staff
+  title: string;
+  date: string; // Application deadline
+  time?: string; // Full-time, Contract, Part-time, Temporary
+  imageUrl: string;
+  link: string;
+  department?: string;
+  location?: string;
+  description?: string;
 }
 
 export interface School {
@@ -89,4 +106,19 @@ export interface PartnerCategory {
   imageUrl: string;
   link: string;
   partners: Partner[];
+}
+
+export interface LeadershipMember {
+  id: string;
+  name: string;
+  title: string;
+  role: string; // "vc" | "deputy-vc" | "dean" | "director" | "registrar" | "finance" | "academic" | etc.
+  bio?: string;
+  email?: string;
+  phone?: string;
+  office?: string;
+  imageUrl: string;
+  department?: string; // For deans, which school
+  order: number; // For sorting/display order
+  link?: string; // Optional link to full profile page
 }

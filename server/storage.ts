@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type NewsArticle, type EducationPath, type School, type ResearchStat, type Profile, type Event, type ContentSection, type PartnerCategory } from "@shared/schema";
+import { type User, type InsertUser, type NewsArticle, type EducationPath, type School, type ResearchStat, type Profile, type Event, type ContentSection, type PartnerCategory, type LeadershipMember } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { transformImageUrls } from "./repositories/ContentRepository";
 import { getImageUrl } from "./config";
@@ -27,6 +27,7 @@ export interface IStorage {
   getHealthcareSections(): Promise<ContentSection[]>;
   getAthleticsSections(): Promise<ContentSection[]>;
   getPartners(): Promise<PartnerCategory[]>;
+  getLeadership(): Promise<LeadershipMember[]>;
 }
 
 export class MemStorage implements IStorage {
@@ -54,50 +55,74 @@ export class MemStorage implements IStorage {
         id: "1",
         category: "Research Spotlight",
         title: "Why research matters",
+        subtitle: "Groundbreaking discoveries shaping the future",
         excerpt: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology.",
+        content: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology. Our researchers are at the forefront of innovation, tackling some of the world's most pressing challenges. Through interdisciplinary collaboration and cutting-edge facilities, Riara continues to push the boundaries of knowledge and create solutions that benefit communities locally and globally. From developing sustainable technologies to advancing medical treatments, our research ecosystem fosters creativity and drives meaningful change.",
         imageUrl: "",
         link: "#",
-        featured: true
+        featured: true,
+        publishedDate: "Nov 15, 2024",
+        author: "Research Communications"
       },
       {
         id: "2",
         category: "Health & Medicine",
         title: "Essential questions for patients in the age of AI doctor visits",
+        subtitle: "Navigating healthcare in the digital era",
         excerpt: "As artificial intelligence becomes more prevalent in healthcare, researchers explore critical considerations for patients.",
+        content: "As artificial intelligence becomes more prevalent in healthcare, researchers explore critical considerations for patients. The integration of AI in medical consultations raises important questions about patient privacy, informed consent, and the human element in healthcare. Our medical school faculty are leading discussions on how to balance technological advancement with compassionate care. This research examines patient perspectives, ethical implications, and best practices for implementing AI tools in clinical settings while maintaining trust and quality of care.",
         imageUrl: "",
-        link: "#"
+        link: "#",
+        publishedDate: "Nov 12, 2024",
+        author: "Medical School"
       },
       {
         id: "3",
         category: "Science & Engineering",
         title: "New observation method improves outlook for lithium metal battery",
+        subtitle: "Breakthrough in battery technology research",
         excerpt: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level.",
+        content: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level. This breakthrough allows researchers to observe battery degradation in real-time, leading to more efficient and longer-lasting energy storage solutions. The new method uses advanced imaging techniques combined with machine learning algorithms to predict battery lifespan and optimize performance. This research has significant implications for electric vehicles, renewable energy storage, and portable electronics, potentially revolutionizing how we store and use energy.",
         imageUrl: "",
-        link: "#"
+        link: "#",
+        publishedDate: "Nov 10, 2024",
+        author: "Engineering Department"
       },
       {
         id: "4",
         category: "Health & Medicine",
         title: "Eye prosthesis restores sight to patients with incurable vision loss",
+        subtitle: "Revolutionary medical device brings hope",
         excerpt: "Revolutionary device offers hope to patients with macular degeneration and other vision disorders.",
+        content: "Revolutionary device offers hope to patients with macular degeneration and other vision disorders. Developed through collaboration between our medical school and engineering department, this innovative prosthesis uses advanced neural interfaces to restore partial vision. Clinical trials have shown promising results, with patients reporting improved quality of life and increased independence. The device represents a significant advancement in neuroprosthetics and opens new possibilities for treating previously incurable conditions.",
         imageUrl: "",
-        link: "#"
+        link: "#",
+        publishedDate: "Nov 8, 2024",
+        author: "Medical Research Team"
       },
       {
         id: "5",
         category: "Science & Engineering",
         title: "Common crystal proves ideal for low-temperature light technology",
+        subtitle: "Quantum computing applications expand",
         excerpt: "Research on strontium titanate opens new possibilities for quantum computing and cryogenic photonics.",
+        content: "Research on strontium titanate opens new possibilities for quantum computing and cryogenic photonics. Our physics department has discovered unique properties in this common crystal that make it ideal for low-temperature applications. The findings could lead to more efficient quantum computers and advanced photonic devices. This research demonstrates how fundamental materials science can unlock practical applications in cutting-edge technology fields.",
         imageUrl: "",
-        link: "#"
+        link: "#",
+        publishedDate: "Nov 5, 2024",
+        author: "Physics Department"
       },
       {
         id: "6",
         category: "Awards",
         title: "Riara Professor David Kamau receives MacArthur Fellowship",
+        subtitle: "Prestigious recognition for environmental innovation",
         excerpt: "Recognition for innovative work in environmental engineering and sustainable water treatment.",
+        content: "Recognition for innovative work in environmental engineering and sustainable water treatment. Professor Kamau's research has developed cost-effective solutions for providing clean water to underserved communities. His work combines traditional knowledge with modern engineering principles, creating sustainable systems that can be implemented in resource-limited settings. The MacArthur Fellowship recognizes his commitment to solving real-world problems and his innovative approach to environmental challenges.",
         imageUrl: "",
-        link: "#"
+        link: "#",
+        publishedDate: "Nov 1, 2024",
+        author: "University Communications"
       }
     ];
 
@@ -463,6 +488,49 @@ export class MemStorage implements IStorage {
       return [];
     } catch (error) {
       console.error("Error loading partners:", error);
+      return [];
+    }
+  }
+
+  async getLeadership(): Promise<LeadershipMember[]> {
+    // For now, read from JSON file (will be moved to DB later)
+    // This method signature allows easy migration to database
+    const __filename = fileURLToPath(import.meta.url);
+    const __dirname = path.dirname(__filename);
+    
+    try {
+      const publicPath = path.resolve(__dirname, "..", "client", "public", "api", "leadership.json");
+      const distPath = path.resolve(__dirname, "..", "dist", "public", "api", "leadership.json");
+      
+      console.log("[getLeadership] Looking for file at:", { publicPath, distPath, __dirname, cwd: process.cwd() });
+      
+      let filePath = publicPath;
+      if (!fs.existsSync(publicPath) && fs.existsSync(distPath)) {
+        filePath = distPath;
+      }
+      
+      console.log("[getLeadership] Using file path:", filePath, "exists:", fs.existsSync(filePath));
+      
+      if (fs.existsSync(filePath)) {
+        const fileContent = await fs.promises.readFile(filePath, "utf-8");
+        const leadership: LeadershipMember[] = JSON.parse(fileContent);
+        
+        console.log("[getLeadership] Successfully loaded", leadership.length, "leadership members");
+        
+        // Transform image URLs
+        return leadership.map((member) => ({
+          ...member,
+          imageUrl: member.imageUrl ? getImageUrl(member.imageUrl) : member.imageUrl,
+        }));
+      }
+      
+      console.warn("[getLeadership] File not found at either path");
+      return [];
+    } catch (error) {
+      console.error("[getLeadership] Error loading leadership:", error);
+      if (error instanceof Error) {
+        console.error("[getLeadership] Error stack:", error.stack);
+      }
       return [];
     }
   }

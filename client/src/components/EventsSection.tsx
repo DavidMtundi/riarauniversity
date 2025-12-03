@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { useLocation } from "wouter";
 import type { Event } from "@shared/schema";
 import { Container } from "@/components/Container";
 
@@ -13,6 +14,8 @@ interface EventsSectionProps {
 }
 
 export function EventsSection({ events, showHeader = true, ctaLabel = "More events", ctaTestId = "button-more-events", ctaHref = "/events" }: EventsSectionProps) {
+  const [, setLocation] = useLocation();
+  
   return (
     <section className="py-20 bg-white">
       <Container>
@@ -27,7 +30,12 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {events.slice(0, 4).map((event) => (
-            <div key={event.id} className="cursor-pointer" data-testid={`card-event-${event.id}`}>
+            <div 
+              key={event.id} 
+              className="cursor-pointer hover:shadow-lg transition-shadow" 
+              data-testid={`card-event-${event.id}`}
+              onClick={() => setLocation(`/events/${event.id}`)}
+            >
               <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/5 relative">
                 <div className="absolute top-4 left-4">
                   <div className="bg-primary text-primary-foreground px-3 py-2 text-center">

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { GraduationCap, DollarSign, ArrowRight } from "lucide-react";
+import { GraduationCap, DollarSign, ArrowRight, CheckCircle } from "lucide-react";
 import { Container } from "@/components/Container";
 
 interface AdmissionSectionProps {
@@ -15,9 +15,17 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-text-primary)]" data-testid="text-admission-heading">
               Admission
             </h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-admission-subheading">
+            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)] mb-8" data-testid="text-admission-subheading">
               Join a community of scholars, innovators, and leaders shaping the future
             </p>
+            <a
+              href="/admission/apply"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold bg-[var(--color-stanford-red)] text-white rounded-lg hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-md hover:shadow-lg"
+              data-testid="button-apply-admission-section"
+            >
+              <CheckCircle className="h-5 w-5" />
+              Apply for Admission
+            </a>
           </header>
         )}
 

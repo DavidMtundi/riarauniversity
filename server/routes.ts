@@ -319,6 +319,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  app.get("/api/leadership", async (_req, res) => {
+    try {
+      const leadership = await storage.getLeadership();
+      if (leadership.length === 0) {
+        console.warn("Warning: No leadership data loaded. Check if leadership.json exists.");
+      }
+      res.json(leadership);
+    } catch (error) {
+      console.error("Error in /api/leadership endpoint:", error);
+      if (error instanceof Error) {
+        console.error("Error details:", error.message, error.stack);
+      }
+      res.status(500).json({ error: "Failed to load leadership data", details: error instanceof Error ? error.message : String(error) });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

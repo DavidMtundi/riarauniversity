@@ -93,10 +93,10 @@ export function Header({ variant = "default" }: HeaderProps) {
       {/* Main Navigation - Desktop Only */}
       <div
         className={cn(
-          "hidden md:block border-b",
+          "hidden md:block",
           isOverlay
-            ? "bg-transparent border-white/20"
-            : "bg-[var(--color-bg-primary)] border-[var(--color-border-secondary)]"
+            ? "bg-transparent"
+            : "bg-[var(--color-bg-primary)]"
         )}
       >
         <div className="max-w-7xl mx-auto px-6">

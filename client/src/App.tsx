@@ -13,8 +13,11 @@ const Research = lazy(() => import("@/pages/Research"));
 const CampusLife = lazy(() => import("@/pages/CampusLife"));
 const Admission = lazy(() => import("@/pages/Admission"));
 const News = lazy(() => import("@/pages/News"));
+const ArticleDetail = lazy(() => import("@/pages/ArticleDetail"));
 const Events = lazy(() => import("@/pages/Events"));
+const EventDetail = lazy(() => import("@/pages/EventDetail"));
 const Careers = lazy(() => import("@/pages/Careers"));
+const CareerDetail = lazy(() => import("@/pages/CareerDetail"));
 const HealthCare = lazy(() => import("@/pages/HealthCare"));
 const Athletics = lazy(() => import("@/pages/Athletics"));
 const Arts = lazy(() => import("@/pages/Arts"));
@@ -38,8 +41,11 @@ function Router() {
         <Route path="/research" component={Research} />
         <Route path="/campus-life" component={CampusLife} />
         <Route path="/admission" component={Admission} />
+        <Route path="/news/:id" component={ArticleDetail} />
         <Route path="/news" component={News} />
+        <Route path="/events/:id" component={EventDetail} />
         <Route path="/events" component={Events} />
+        <Route path="/careers/:id" component={CareerDetail} />
         <Route path="/careers" component={Careers} />
         <Route path="/healthcare" component={HealthCare} />
         <Route path="/athletics" component={Athletics} />
