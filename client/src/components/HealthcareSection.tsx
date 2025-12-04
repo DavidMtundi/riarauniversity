@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Heart, BookOpen, Users, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { ContentSection } from "@shared/schema";
 import { Container } from "@/components/Container";
 
@@ -9,58 +9,53 @@ interface HealthcareSectionProps {
 }
 
 export function HealthcareSection({ sections, showHeader = true }: HealthcareSectionProps) {
-  const icons = [Heart, BookOpen, Users];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
       <Container>
         {showHeader && (
-          <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-text-primary)] mb-4" data-testid="text-healthcare-heading">Riara Health Unit</h2>
-            <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)] max-w-3xl mx-auto" data-testid="text-healthcare-description">
+          <header className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-healthcare-heading">Riara Health Unit</h2>
+            <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed max-w-3xl mx-auto" data-testid="text-healthcare-description">
               Promoting mental, emotional, and social well-being for academic success.
             </p>
           </header>
         )}
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {sections.map((section, index) => {
-            const Icon = icons[index % icons.length];
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {sections.map((section) => {
             return (
-              <div key={section.id} data-testid={`card-healthcare-${section.id}`}>
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center">
-                  <Icon className="h-20 w-20 text-primary/30" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3" data-testid={`text-healthcare-title-${section.id}`}>{section.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed" data-testid={`text-healthcare-description-${section.id}`}>
-                    {section.description}
-                  </p>
+              <div key={section.id} className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]" data-testid={`card-healthcare-${section.id}`}>
+                <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid={`text-healthcare-title-${section.id}`}>{section.title}</h3>
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] mb-6 leading-relaxed" data-testid={`text-healthcare-description-${section.id}`}>
+                  {section.description}
+                </p>
+                {section.link && section.link !== "#" && (
                   <Button
                     variant="outline"
-                    className="group inline-flex items-center gap-2 rounded-full border-[var(--color-stanford-red)] px-4 sm:px-5 py-2 text-sm font-semibold text-[var(--color-stanford-red)] transition-all duration-200 hover:bg-[var(--color-stanford-red)] hover:text-white shadow-sm hover:shadow-md"
+                    className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
                     data-testid={`button-healthcare-link-${section.id}`}
                     asChild
                   >
                     <a href={section.link || "/healthcare"}>
-                      Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      Learn more <ArrowRight className="ml-2 h-4 w-4" />
                     </a>
                   </Button>
-                </div>
+                )}
               </div>
             );
           })}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] !text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200"
             data-testid="button-more-healthcare"
             asChild
           >
             <a href="/healthcare" className="!text-white">
-              More about health care <ArrowRight className="h-4 w-4 !text-white" />
+              <span className="!text-white">More about health care</span> <ArrowRight className="h-4 w-4 !text-white" />
             </a>
           </Button>
         </div>
