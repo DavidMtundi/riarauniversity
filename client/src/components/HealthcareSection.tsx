@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Activity, Heart, Baby, ArrowRight } from "lucide-react";
+import { Heart, BookOpen, Users, ArrowRight } from "lucide-react";
 import type { ContentSection } from "@shared/schema";
 import { Container } from "@/components/Container";
 
@@ -9,16 +9,16 @@ interface HealthcareSectionProps {
 }
 
 export function HealthcareSection({ sections, showHeader = true }: HealthcareSectionProps) {
-  const icons = [Activity, Heart, Baby];
+  const icons = [Heart, BookOpen, Users];
 
   return (
     <section className="py-20 bg-gray-50">
       <Container>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-text-primary)] mb-4" data-testid="text-healthcare-heading">Health Care Excellence</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-text-primary)] mb-4" data-testid="text-healthcare-heading">Riara Health Unit</h2>
             <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)] max-w-3xl mx-auto" data-testid="text-healthcare-description">
-              Leading innovations in medicine and delivering exceptional patient care through our world-class health care institutions.
+              Promoting mental, emotional, and social well-being for academic success.
             </p>
           </header>
         )}
@@ -40,8 +40,11 @@ export function HealthcareSection({ sections, showHeader = true }: HealthcareSec
                     variant="outline"
                     className="group inline-flex items-center gap-2 rounded-full border-[var(--color-stanford-red)] px-4 sm:px-5 py-2 text-sm font-semibold text-[var(--color-stanford-red)] transition-all duration-200 hover:bg-[var(--color-stanford-red)] hover:text-white shadow-sm hover:shadow-md"
                     data-testid={`button-healthcare-link-${section.id}`}
+                    asChild
                   >
-                    Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <a href={section.link || "/healthcare"}>
+                      Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </Button>
                 </div>
               </div>

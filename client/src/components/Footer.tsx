@@ -308,7 +308,7 @@ export function Footer() {
       {/* Lower Section - Dark Red Background */}
       <div className="bg-[var(--color-stanford-red)]">
         <Container className="py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6 md:px-8">
-          <div className="flex flex-col md:flex-row md:items-start md:gap-10 lg:gap-16">
+          <div className="flex flex-col md:flex-row md:items-start md:gap-8 lg:gap-12">
             {/* Column 1: Riara University Name */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left text-white min-w-[160px]">
               <span className="text-2xl md:text-[2.25rem] font-serif font-semibold leading-none tracking-tight">Riara</span>
@@ -345,6 +345,27 @@ export function Footer() {
 
               <p className="text-sm md:text-base font-semibold tracking-[0.05em] text-white/90">
                 © Riara University. Riara, Nairobi, Kenya.
+              </p>
+            </div>
+
+            {/* Column 3: Campus Map */}
+            <div className="w-full md:w-auto md:min-w-[280px] lg:min-w-[320px] mt-6 md:mt-0">
+              <h4 className="text-sm md:text-base font-semibold tracking-wide text-white mb-3 uppercase">Campus Location</h4>
+              <div className="aspect-[4/3] rounded overflow-hidden border-2 border-white/20 shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.812!2d36.8069232!3d-1.3148565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f105e9f1c97eb%3A0xd0d8411685ae0273!2s49940%2C%20Raila%20Odinga%20Wy%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1735689600000!5m2!1sen!2ske"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                  title="Riara University Campus Location"
+                ></iframe>
+              </div>
+              <p className="text-xs md:text-sm text-white/80 mt-2 text-center md:text-left">
+                49940, Raila Odinga Way, Nairobi
               </p>
             </div>
           </div>

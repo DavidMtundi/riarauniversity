@@ -19,7 +19,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
               Research
             </h2>
             <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-research-subheading">
-              Advancing knowledge and solving the world's greatest challenges
+              Empowering Knowledge. Inspiring Innovation. Impacting Society.
             </p>
           </header>
         )}

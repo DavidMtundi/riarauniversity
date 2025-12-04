@@ -6,8 +6,6 @@ import { Footer } from "@/components/Footer";
 import { EventsSection } from "@/components/EventsSection";
 import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import type { Event } from "@shared/schema";
@@ -140,86 +138,95 @@ export default function Events() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 pt-24">
-        {/* Page Header */}
-        <section className="bg-[var(--color-bg-secondary)] py-16 md:py-20">
-          <Container>
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--color-text-primary)] mb-4 md:mb-6">
+        {/* Hero Section */}
+        <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
+          {/* Background Image with Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+          </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-10 h-full flex items-center justify-center">
+            <div className="text-center px-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 md:mb-6 drop-shadow-2xl">
                 Events
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-lg font-light">
                 Discover what's happening at Riara
               </p>
             </div>
-          </Container>
+          </div>
         </section>
 
         {/* Events Section with Tabs */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <Tabs defaultValue="upcoming" className="w-full">
-              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
-                <TabsTrigger value="upcoming" className="text-base">
+              <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-10 md:mb-12">
+                <TabsTrigger value="upcoming" className="text-base md:text-lg">
                   Upcoming ({upcomingEvents.length})
                 </TabsTrigger>
-                <TabsTrigger value="previous" className="text-base">
+                <TabsTrigger value="previous" className="text-base md:text-lg">
                   Previous ({previousEvents.length})
                 </TabsTrigger>
               </TabsList>
 
               <TabsContent value="upcoming" className="mt-0">
                 {upcomingEvents.length === 0 ? (
-                  <Card>
-                    <CardContent className="py-12 text-center">
-                      <p className="text-[var(--color-text-secondary)]">
-                        No upcoming events available
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-stanford-red)]">
+                    <p className="text-lg text-[var(--color-text-secondary)]">
+                      No upcoming events available
+                    </p>
+                  </div>
                 ) : (
-                  <div className="space-y-6">
+                  <div className="space-y-6 md:space-y-8">
                     {upcomingEvents.map((event) => (
-                      <Card 
+                      <div 
                         key={event.id} 
-                        className="hover:shadow-lg transition-shadow cursor-pointer"
+                        className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors"
                         onClick={() => setLocation(`/events/${event.id}`)}
                       >
-                        <CardContent className="p-6">
-                          <div className="flex flex-col md:flex-row gap-4">
-                            <div className="flex-shrink-0">
-                              <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center">
-                                <div className="text-center">
-                                  <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
-                                    {format(event.parsedDate, "MMM")}
-                                  </p>
-                                  <p className="text-2xl font-bold text-[var(--color-text-primary)]">
-                                    {format(event.parsedDate, "d")}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-start justify-between gap-4 mb-2">
-                                <Badge variant="secondary" className="mb-2">
-                                  {event.type}
-                                </Badge>
-                              </div>
-                              <h3 className="text-xl font-serif font-semibold mb-2 text-[var(--color-text-primary)]">
-                                {event.title}
-                              </h3>
-                              {event.time && (
-                                <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                                  <Clock className="h-4 w-4" />
-                                  <span>{event.time}</span>
-                                </div>
-                              )}
-                              <div className="mt-4 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
-                                View details →
+                        <div className="flex flex-col md:flex-row gap-6">
+                          <div className="flex-shrink-0">
+                            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-stanford-red)]">
+                              <div className="text-center">
+                                <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
+                                  {format(event.parsedDate, "MMM")}
+                                </p>
+                                <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+                                  {format(event.parsedDate, "d")}
+                                </p>
                               </div>
                             </div>
                           </div>
-                        </CardContent>
-                      </Card>
+                          <div className="flex-1">
+                            <div className="mb-3">
+                              <span className="text-sm font-semibold text-[var(--color-stanford-red)] uppercase">
+                                {event.type}
+                              </span>
+                            </div>
+                            <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">
+                              {event.title}
+                            </h3>
+                            {event.time && (
+                              <div className="flex items-center gap-2 text-base text-[var(--color-text-secondary)] mb-4">
+                                <Clock className="h-4 w-4" />
+                                <span>{event.time}</span>
+                              </div>
+                            )}
+                            <div className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
+                              View details →
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 )}
@@ -227,57 +234,53 @@ export default function Events() {
 
               <TabsContent value="previous" className="mt-0">
                 {previousEvents.length === 0 ? (
-                  <Card>
-                    <CardContent className="py-12 text-center">
-                      <p className="text-[var(--color-text-secondary)]">
-                        No previous events available
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-stanford-red)]">
+                    <p className="text-lg text-[var(--color-text-secondary)]">
+                      No previous events available
+                    </p>
+                  </div>
                 ) : (
-                  <div className="space-y-6">
+                  <div className="space-y-6 md:space-y-8">
                     {previousEvents.map((event) => (
-                      <Card 
+                      <div 
                         key={event.id} 
-                        className="hover:shadow-lg transition-shadow cursor-pointer"
+                        className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors opacity-90"
                         onClick={() => setLocation(`/events/${event.id}`)}
                       >
-                        <CardContent className="p-6">
-                          <div className="flex flex-col md:flex-row gap-4">
-                            <div className="flex-shrink-0">
-                              <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center opacity-75">
-                                <div className="text-center">
-                                  <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
-                                    {format(event.parsedDate, "MMM")}
-                                  </p>
-                                  <p className="text-2xl font-bold text-[var(--color-text-primary)]">
-                                    {format(event.parsedDate, "d")}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="flex-1">
-                              <div className="flex items-start justify-between gap-4 mb-2">
-                                <Badge variant="secondary" className="mb-2">
-                                  {event.type}
-                                </Badge>
-                              </div>
-                              <h3 className="text-xl font-serif font-semibold mb-2 text-[var(--color-text-primary)]">
-                                {event.title}
-                              </h3>
-                              {event.time && (
-                                <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                                  <Clock className="h-4 w-4" />
-                                  <span>{event.time}</span>
-                                </div>
-                              )}
-                              <div className="mt-4 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
-                                View details →
+                        <div className="flex flex-col md:flex-row gap-6">
+                          <div className="flex-shrink-0">
+                            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-stanford-red)] opacity-75">
+                              <div className="text-center">
+                                <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
+                                  {format(event.parsedDate, "MMM")}
+                                </p>
+                                <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+                                  {format(event.parsedDate, "d")}
+                                </p>
                               </div>
                             </div>
                           </div>
-                        </CardContent>
-                      </Card>
+                          <div className="flex-1">
+                            <div className="mb-3">
+                              <span className="text-sm font-semibold text-[var(--color-stanford-red)] uppercase">
+                                {event.type}
+                              </span>
+                            </div>
+                            <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">
+                              {event.title}
+                            </h3>
+                            {event.time && (
+                              <div className="flex items-center gap-2 text-base text-[var(--color-text-secondary)] mb-4">
+                                <Clock className="h-4 w-4" />
+                                <span>{event.time}</span>
+                              </div>
+                            )}
+                            <div className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
+                              View details →
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 )}

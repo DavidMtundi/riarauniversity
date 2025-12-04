@@ -32,7 +32,7 @@ export function Header({ variant = "default" }: HeaderProps) {
           "fixed top-0 w-full z-50 transition-colors duration-300",
           isOverlay
             ? "bg-gradient-to-b from-black/60 via-black/30 to-transparent shadow-none backdrop-blur-[2px]"
-            : "bg-[var(--color-bg-primary)] shadow-riara"
+            : "md:bg-[var(--color-bg-primary)] bg-[var(--color-bg-maroon)] md:shadow-riara"
         )}
         style={{ touchAction: 'manipulation' }}
       >

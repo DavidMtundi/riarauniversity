@@ -346,25 +346,25 @@ export class MemStorage implements IStorage {
 
     this.healthcareSections = [
       {
-        id: "medicine",
-        title: "Riara Medicine",
-        description: "Leading a worldwide revolution in precision health through biomedical research, education, and clinical enterprises",
+        id: "mental-health",
+        title: "Mental Health Support",
+        description: "Access to professional counseling, therapy, and mental health awareness programs",
         imageUrl: "",
-        link: "#"
+        link: "/healthcare"
       },
       {
-        id: "health-care",
-        title: "Riara Health Care",
-        description: "Leveraging expertise and advanced technology to deliver unparalleled care for each patient's unique needs",
+        id: "wellness-education",
+        title: "Wellness Education",
+        description: "Workshops, seminars, and resources on stress management, self-care, healthy relationships, and emotional resilience",
         imageUrl: "",
-        link: "#"
+        link: "/healthcare"
       },
       {
-        id: "childrens",
-        title: "Riara Children's Health",
-        description: "The only health care network in Nairobi exclusively dedicated to pediatric and obstetric care",
+        id: "peer-support",
+        title: "Peer Support Programs",
+        description: "Safe spaces for students to connect, share, and support one another through student-led wellness initiatives",
         imageUrl: "",
-        link: "#"
+        link: "/healthcare"
       }
     ];
 

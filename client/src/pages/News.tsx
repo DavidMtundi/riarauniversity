@@ -221,7 +221,7 @@ export default function News() {
           {/* Content */}
           <div className="relative z-10 w-full">
           <Container>
-              <div className="max-w-5xl mx-auto px-4">
+              <div className="max-w-5xl mx-auto">
                 {/* Title with Subtitle */}
                 <div className="text-center mb-10 md:mb-12">
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-4 leading-tight">
@@ -414,7 +414,7 @@ export default function News() {
                     </div>
                   )}
                   
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-12">
                   {regularArticles.map((article) => (
                     <NewsCard
                       key={article.id}
