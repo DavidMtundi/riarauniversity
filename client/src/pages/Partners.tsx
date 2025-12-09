@@ -60,11 +60,22 @@ export default function Partners() {
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[var(--color-text-primary)] mb-4 md:mb-6">
-                Partners
+                Distinguished Partners
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                 Collaborating with leading organizations worldwide to advance education, research, and innovation
               </p>
+              <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] text-left max-w-3xl mx-auto">
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                  Riara University is a training and research institution committed to developing knowledge, research and excellence in various areas of study including business Administration, International relations and Diplomacy, Law, Education, Multimedia Journalism, Computing Sciences and Education. RU is focused on producing a graduate that is well rounded, confident and equipped for self-development.
+                </p>
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                  RU has strong commitment to excellence in teaching, academic integrity and learning and education of students in general. RU also recognizes the importance of research to expand and build on the areas of its academic interests and places a high value on collaborative activities between itself and other academic parties and industry.
+                </p>
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                  And RU does not work alone in this endeavor, it has partnered with both Public and Private organizations to ensure excellent delivery of a world class learning and research environment. Some of the partners we have worked with and continue to work with are mentioned below.
+                </p>
+              </div>
             </div>
           </Container>
         </section>

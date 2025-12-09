@@ -234,12 +234,30 @@ export default function Careers() {
         {/* Informational Text Section */}
         <section className="bg-gradient-to-b from-white to-[var(--color-bg-secondary)]/30 py-10 md:py-12">
           <Container>
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
+            <div className="text-center mb-8">
+              <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                 Thank you for your interest in Riara University. We are actively recruiting for positions 
                 across our academic and administrative departments. Explore opportunities to join our 
                 community of scholars, innovators, and leaders.
               </p>
+            </div>
+            
+            {/* Employment Policy Statement */}
+            <div className="bg-white rounded-xl border-l-4 border-[var(--color-stanford-red)] p-6 md:p-8 shadow-sm">
+                <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
+                  Employment Policy Statement
+                </h3>
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                  In line with its values and the Employment Act 2007 provisions, Riara University is an <strong className="text-[var(--color-text-primary)]">Equal Opportunity Employer</strong> who strives to promote good and fair employment practices which are intended to achieve the most effective use of all its human resources by tapping the widest sources of talent and eliminating all types of unfair discrimination based on race, colour, sex, language, religion, political or other opinion, nationality, ethnic or social origin, disability, pregnancy, or HIV status.
+                </p>
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                  Particular attention will be paid to monitoring the recruitment process. It is the policy of Riara University that <strong className="text-[var(--color-text-primary)]">performance is linked to rewards</strong>.
+                </p>
+                <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg mt-4">
+                  <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
+                    <strong className="text-[var(--color-text-primary)]">The Importance of Employees to Riara University:</strong> It is now universally recognized that the people in the organization provide the most important competitive advantage of that organization. The concept of "talent management" has been developed to summarize the aim of human resource management policies and practices of searching, identifying, attracting, acquiring, developing, motivating and retaining the organization's key employees who create and sustain the organization's competitive edge.
+                  </p>
+                </div>
             </div>
           </Container>
         </section>

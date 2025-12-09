@@ -10,28 +10,28 @@
         "id": "standard-group",
         "name": "Standard Group",
         "description": "Media and communications partner supporting university initiatives",
-        "logoUrl": "/partners/logos/standard-group.png",
+        "logoUrl": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "nairobi-securities-exchange",
         "name": "Nairobi Securities Exchange",
         "description": "Financial markets and investment education partnership",
-        "logoUrl": "/partners/logos/nse.png",
+        "logoUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "helb",
         "name": "HELB",
         "description": "Higher Education Loans Board supporting student financial aid",
-        "logoUrl": "/partners/logos/helb.png",
+        "logoUrl": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "qwetu-student-residence",
         "name": "QWETU Student Residence",
         "description": "Student accommodation and housing services",
-        "logoUrl": "/partners/logos/qwetu.png",
+        "logoUrl": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       }
     ]
@@ -47,14 +47,14 @@
         "id": "seneca",
         "name": "Seneca",
         "description": "International academic collaboration and exchange programs",
-        "logoUrl": "/partners/logos/seneca.png",
+        "logoUrl": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "griffith-college",
         "name": "Griffith College",
         "description": "Global educational partnership and student exchange",
-        "logoUrl": "/partners/logos/griffith-college.png",
+        "logoUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       }
     ]
@@ -70,21 +70,21 @@
         "id": "mozilla",
         "name": "Mozilla Foundation",
         "description": "Supporting curriculum development and open source initiatives",
-        "logoUrl": "/partners/logos/mozilla.png",
+        "logoUrl": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "https://foundation.mozilla.org"
       },
       {
         "id": "kenet",
         "name": "KENET (Kenya Education Network)",
         "description": "National research and education network supporting academic connectivity",
-        "logoUrl": "/partners/logos/kenet.png",
+        "logoUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "regional-center",
         "name": "Regional Center",
         "description": "Regional collaboration and research initiatives",
-        "logoUrl": "/partners/logos/regional-center.png",
+        "logoUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       }
     ]
@@ -100,28 +100,28 @@
         "id": "education-collaborative",
         "name": "The Education Collaborative",
         "description": "Africa-wide network aiming to train ethical entrepreneurial graduates",
-        "logoUrl": "/partners/logos/education-collaborative.png",
+        "logoUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "arielle-for-africa",
         "name": "Arielle for Africa",
         "description": "Pan-African educational and development initiatives",
-        "logoUrl": "/partners/logos/arielle-for-africa.png",
+        "logoUrl": "https://images.unsplash.com/photo-1532619675605-1ede6c7edf48?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "ciarb-kenya",
         "name": "CIARB Kenya Branch",
         "description": "Chartered Institute of Arbitrators - Kenya Branch",
-        "logoUrl": "/partners/logos/ciarb-kenya.png",
+        "logoUrl": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "kenya-association",
         "name": "Kenya Association",
         "description": "Professional association supporting university programs",
-        "logoUrl": "/partners/logos/kenya-association.png",
+        "logoUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       }
     ]
@@ -137,21 +137,21 @@
         "id": "icdl",
         "name": "ICDL",
         "description": "International Computer Driving Licence certification programs",
-        "logoUrl": "/partners/logos/icdl.png",
+        "logoUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "igm",
         "name": "IGM",
         "description": "Professional training and certification programs",
-        "logoUrl": "/partners/logos/igm.png",
+        "logoUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       },
       {
         "id": "mediation-training",
         "name": "Mediation Training Institute of East Africa",
         "description": "Alternative dispute resolution training and certification",
-        "logoUrl": "/partners/logos/mediation-training.png",
+        "logoUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       }
     ]
@@ -167,7 +167,7 @@
         "id": "kituo-cha-sheria",
         "name": "Kituo cha Sheria",
         "description": "Legal aid and advocacy organization supporting legal education",
-        "logoUrl": "/partners/logos/kituo-cha-sheria.png",
+        "logoUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
         "website": "#"
       }
     ]

@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -13,6 +13,7 @@ const Research = lazy(() => import("@/pages/Research"));
 const CampusLife = lazy(() => import("@/pages/CampusLife"));
 const Admission = lazy(() => import("@/pages/Admission"));
 const News = lazy(() => import("@/pages/News"));
+const NewsAndEvents = lazy(() => import("@/pages/NewsAndEvents"));
 const ArticleDetail = lazy(() => import("@/pages/ArticleDetail"));
 const Events = lazy(() => import("@/pages/Events"));
 const EventDetail = lazy(() => import("@/pages/EventDetail"));
@@ -25,7 +26,17 @@ const Partners = lazy(() => import("@/pages/Partners"));
 const Leadership = lazy(() => import("@/pages/Leadership"));
 const History = lazy(() => import("@/pages/History"));
 const Founders = lazy(() => import("@/pages/Founders"));
+const Alumni = lazy(() => import("@/pages/Alumni"));
+const Courses = lazy(() => import("@/pages/Courses"));
+const QualityAssurance = lazy(() => import("@/pages/QualityAssurance"));
 const NotFound = lazy(() => import("@/pages/not-found"));
+
+// Redirect component
+function Redirect({ to }: { to: string }) {
+  const [, setLocation] = useLocation();
+  setLocation(to);
+  return null;
+}
 
 function Router() {
   return (
@@ -45,9 +56,16 @@ function Router() {
         <Route path="/campus-life" component={CampusLife} />
         <Route path="/admission" component={Admission} />
         <Route path="/news/:id" component={ArticleDetail} />
-        <Route path="/news" component={News} />
         <Route path="/events/:id" component={EventDetail} />
-        <Route path="/events" component={Events} />
+        <Route path="/news-events" component={NewsAndEvents} />
+        <Route path="/news-and-events" component={NewsAndEvents} />
+        {/* Redirect old routes to combined page */}
+        <Route path="/news">
+          {() => <Redirect to="/news-events" />}
+        </Route>
+        <Route path="/events">
+          {() => <Redirect to="/news-events" />}
+        </Route>
         <Route path="/careers/:id" component={CareerDetail} />
         <Route path="/careers" component={Careers} />
         <Route path="/healthcare" component={HealthCare} />
@@ -57,6 +75,9 @@ function Router() {
         <Route path="/leadership" component={Leadership} />
         <Route path="/history" component={History} />
         <Route path="/founders" component={Founders} />
+        <Route path="/alumni" component={Alumni} />
+        <Route path="/courses" component={Courses} />
+        <Route path="/quality-assurance" component={QualityAssurance} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>

@@ -31,12 +31,26 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
             const Icon = icons[index % icons.length];
             return (
               <div key={path.id} data-testid={`card-education-${path.id}`}>
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/5 to-primary/10 relative flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10"></div>
-                  <div className="relative z-10 flex flex-col items-center">
-                    <Icon className="h-24 w-24 text-white/80 mb-2" />
-                    <p className="text-xs font-medium text-white/60">Image Placeholder</p>
-                  </div>
+                <div className="aspect-[4/3] relative flex items-center justify-center overflow-hidden rounded-t-lg">
+                  {path.imageUrl ? (
+                    <>
+                      <img 
+                        src={path.imageUrl} 
+                        alt={path.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-black/10"></div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10"></div>
+                      <div className="relative z-10 flex flex-col items-center">
+                        <Icon className="h-24 w-24 text-white/80 mb-2" />
+                        <p className="text-xs font-medium text-white/60">Image Placeholder</p>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="p-4 sm:p-6 bg-white">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-serif font-semibold mb-2 sm:mb-3 text-[var(--color-text-primary)]" data-testid={`text-education-title-${path.id}`}>{path.title}</h3>
@@ -56,12 +70,12 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
           })}
         </div>
 
-        <div className="mt-12 md:mt-16 p-6 md:p-8 bg-[var(--color-bg-secondary)] rounded-lg">
-          <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-center" data-testid="text-schools-heading">
+        <div className="mt-12 md:mt-16 p-6 md:p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-lg border border-[var(--color-border-secondary)] shadow-sm">
+          <h3 className="text-2xl md:text-3xl font-serif font-bold mb-8 md:mb-10 text-center text-[var(--color-text-primary)]" data-testid="text-schools-heading">
             Six schools in which to pursue your passions
           </h3>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-center mb-6 md:mb-8 py-4 md:py-6">
-            {schools.map((school, index) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
+            {schools.map((school) => {
               const url = school?.url && typeof school.url === 'string' && school.url.trim()
                 ? school.url.trim()
                 : '#';
@@ -72,18 +86,21 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
                   : '#';
               
               return (
-                <div key={school.id} className="flex items-center gap-4 text-sm md:text-base font-semibold text-[var(--color-stanford-red)]">
-                  <a
-                    href={validUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
-                    data-testid={`link-school-${school.id}`}
-                  >
-                    {school.name}
-                  </a>
-                  {index < schools.length - 1 && <span className="text-[var(--color-border-dark)]">|</span>}
-                </div>
+                <a
+                  key={school.id}
+                  href={validUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative p-4 md:p-5 bg-white rounded-lg border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-stanford-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  data-testid={`link-school-${school.id}`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-stanford-red)] transition-colors">
+                      {school.name}
+                    </span>
+                    <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-stanford-red)] group-hover:translate-x-1 transition-all duration-300" />
+                  </div>
+                </a>
               );
             })}
           </div>

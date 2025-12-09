@@ -16,7 +16,7 @@ export const HEADER_LINKS = {
   facultyStaff: "https://staff.ru.ac.ke/login",
   virtualCampus: "https://odel.riarauniversity.ac.ke/?redirect=0",
   studentEmail: "https://accounts.google.com/v3/signin/",
-  alumni: "#", // To be updated later
+  alumni: "/alumni",
   ruShop: "https://ru-shop.riarauniversity.ac.ke/",
 } as const;
 

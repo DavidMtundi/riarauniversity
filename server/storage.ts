@@ -58,7 +58,7 @@ export class MemStorage implements IStorage {
         subtitle: "Groundbreaking discoveries shaping the future",
         excerpt: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology.",
         content: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology. Our researchers are at the forefront of innovation, tackling some of the world's most pressing challenges. Through interdisciplinary collaboration and cutting-edge facilities, Riara continues to push the boundaries of knowledge and create solutions that benefit communities locally and globally. From developing sustainable technologies to advancing medical treatments, our research ecosystem fosters creativity and drives meaningful change.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1532619675605-1ede6c4ed2b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#",
         featured: true,
         publishedDate: "Nov 15, 2024",
@@ -71,7 +71,7 @@ export class MemStorage implements IStorage {
         subtitle: "Navigating healthcare in the digital era",
         excerpt: "As artificial intelligence becomes more prevalent in healthcare, researchers explore critical considerations for patients.",
         content: "As artificial intelligence becomes more prevalent in healthcare, researchers explore critical considerations for patients. The integration of AI in medical consultations raises important questions about patient privacy, informed consent, and the human element in healthcare. Our medical school faculty are leading discussions on how to balance technological advancement with compassionate care. This research examines patient perspectives, ethical implications, and best practices for implementing AI tools in clinical settings while maintaining trust and quality of care.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#",
         publishedDate: "Nov 12, 2024",
         author: "Medical School"
@@ -83,7 +83,7 @@ export class MemStorage implements IStorage {
         subtitle: "Breakthrough in battery technology research",
         excerpt: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level.",
         content: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level. This breakthrough allows researchers to observe battery degradation in real-time, leading to more efficient and longer-lasting energy storage solutions. The new method uses advanced imaging techniques combined with machine learning algorithms to predict battery lifespan and optimize performance. This research has significant implications for electric vehicles, renewable energy storage, and portable electronics, potentially revolutionizing how we store and use energy.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#",
         publishedDate: "Nov 10, 2024",
         author: "Engineering Department"
@@ -95,7 +95,7 @@ export class MemStorage implements IStorage {
         subtitle: "Revolutionary medical device brings hope",
         excerpt: "Revolutionary device offers hope to patients with macular degeneration and other vision disorders.",
         content: "Revolutionary device offers hope to patients with macular degeneration and other vision disorders. Developed through collaboration between our medical school and engineering department, this innovative prosthesis uses advanced neural interfaces to restore partial vision. Clinical trials have shown promising results, with patients reporting improved quality of life and increased independence. The device represents a significant advancement in neuroprosthetics and opens new possibilities for treating previously incurable conditions.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#",
         publishedDate: "Nov 8, 2024",
         author: "Medical Research Team"
@@ -107,7 +107,7 @@ export class MemStorage implements IStorage {
         subtitle: "Quantum computing applications expand",
         excerpt: "Research on strontium titanate opens new possibilities for quantum computing and cryogenic photonics.",
         content: "Research on strontium titanate opens new possibilities for quantum computing and cryogenic photonics. Our physics department has discovered unique properties in this common crystal that make it ideal for low-temperature applications. The findings could lead to more efficient quantum computers and advanced photonic devices. This research demonstrates how fundamental materials science can unlock practical applications in cutting-edge technology fields.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#",
         publishedDate: "Nov 5, 2024",
         author: "Physics Department"
@@ -119,7 +119,7 @@ export class MemStorage implements IStorage {
         subtitle: "Prestigious recognition for environmental innovation",
         excerpt: "Recognition for innovative work in environmental engineering and sustainable water treatment.",
         content: "Recognition for innovative work in environmental engineering and sustainable water treatment. Professor Kamau's research has developed cost-effective solutions for providing clean water to underserved communities. His work combines traditional knowledge with modern engineering principles, creating sustainable systems that can be implemented in resource-limited settings. The MacArthur Fellowship recognizes his commitment to solving real-world problems and his innovative approach to environmental challenges.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#",
         publishedDate: "Nov 1, 2024",
         author: "University Communications"
@@ -131,21 +131,21 @@ export class MemStorage implements IStorage {
         id: "undergraduate",
         title: "Undergraduate Education",
         description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "graduate",
         title: "Graduate Education",
         description: "Unsurpassed opportunities to participate in the advancement of entire fields of knowledge",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1532619675605-1ede6c7edf48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "lifelong",
         title: "Lifelong Learning",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       }
     ];
@@ -164,8 +164,8 @@ export class MemStorage implements IStorage {
       { id: "2", value: "3,029", label: "Kenyan patents based on federally funded Riara research" },
       { id: "3", value: "400+", label: "Start-up companies founded based on federally funded research" },
       { id: "4", value: "350,000+", label: "Jobs created by companies from Riara research" },
-      { id: "5", value: "$94B", label: "Private investment in start-ups from Riara research" },
-      { id: "6", value: "$11T+", label: "Market value of top 30 companies founded by Riara alumni" }
+      { id: "5", value: "kshs 94B", label: "Private investment in start-ups from Riara research" },
+      { id: "6", value: "kshs 11T+", label: "Market value of top 30 companies founded by Riara alumni" }
     ];
 
     this.profiles = new Map([
@@ -174,7 +174,7 @@ export class MemStorage implements IStorage {
         name: "Dr. James Kariuki",
         title: "Assistant Professor of Mechanical Engineering",
         quote: "The truly impactful technologies are always based on the condition that you can freely explore.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         link: "#"
       }],
       ["campus", {
@@ -182,7 +182,7 @@ export class MemStorage implements IStorage {
         name: "Amani Wanjiru, '25",
         title: "Design major and three-time Innovations champion",
         quote: "There's a lot to question – that's one of the most important things I'll take with me from my Riara experience.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         link: "#"
       }],
       ["arts", {
@@ -190,7 +190,7 @@ export class MemStorage implements IStorage {
         name: "Grace Muthoni, '22",
         title: "Graduated with a bachelor's degree in human biology and a minor in art history",
         quote: "Art is an outlet and a starting point for me, for what I have to say.",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         link: "#"
       }],
       ["law", {
@@ -216,21 +216,21 @@ export class MemStorage implements IStorage {
         id: "student-life",
         title: "Student Life",
         description: "A residential campus with diverse housing, exceptional dining, and over 600 student organizations",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "dialogue",
         title: "Constructive Dialogue",
         description: "Uplifting academic freedom and free speech; curiosity and critical inquiry; open, inclusive exchange of ideas",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "wellness",
         title: "Recreation & Wellness",
         description: "State-of-the-art facilities and fitness programs to encourage movement and play",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       }
     ];
@@ -240,21 +240,21 @@ export class MemStorage implements IStorage {
         id: "interdisciplinary",
         title: "Interdisciplinary Scholarship",
         description: "Innovative programs center the arts in research and education and expand the role of art across academic disciplines",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "museums",
         title: "Museums and Public Art",
         description: "Two world-class art museums and more than 80 outdoor installations, accessible to the public 365 days a year",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "performance",
         title: "Live Performance",
         description: "Riara Live presents a wide range of performances by artists from around the world",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       }
     ];
@@ -265,7 +265,7 @@ export class MemStorage implements IStorage {
         type: "Exhibition",
         title: "Branner Library Monthly Book & Map Exhibit - Oceans: Indian Ocean",
         date: "Oct 24",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         link: "#"
       },
       {
@@ -274,7 +274,7 @@ export class MemStorage implements IStorage {
         title: "Spotlight on Special Collections",
         date: "Oct 24",
         time: "09:00 am EAT",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         link: "#"
       },
       {
@@ -283,7 +283,7 @@ export class MemStorage implements IStorage {
         title: "Teaching and Mentoring Academy's 8th Annual Education Day",
         date: "Oct 25",
         time: "08:30 am EAT",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         link: "#"
       },
       {
@@ -292,7 +292,7 @@ export class MemStorage implements IStorage {
         title: "Ensemble OH? x Riara Climate Week",
         date: "Oct 25",
         time: "07:30 pm EAT",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         link: "#"
       },
       {
@@ -300,7 +300,7 @@ export class MemStorage implements IStorage {
         type: "Conference",
         title: "Riara, A hub of Innovations",
         date: "Jun 26",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/06/zxcxzczxc.jpg",
+        imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         link: "https://riarauniversity.ac.ke/riara-a-hub-of-innovations/"
       }
     ];
@@ -312,7 +312,7 @@ export class MemStorage implements IStorage {
         title: "Assistant Professor of Computer Science",
         date: "Apply by Nov 30",
         time: "Full-time",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
@@ -321,7 +321,7 @@ export class MemStorage implements IStorage {
         title: "Senior Research Scientist, Precision Health",
         date: "Apply by Dec 5",
         time: "Full-time",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1532619675605-1ede6c4ed2b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
@@ -330,7 +330,7 @@ export class MemStorage implements IStorage {
         title: "Director of Student Success Programs",
         date: "Apply by Dec 12",
         time: "Full-time",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
@@ -339,7 +339,7 @@ export class MemStorage implements IStorage {
         title: "Campus Sustainability Project Manager",
         date: "Apply by Dec 18",
         time: "Contract",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       }
     ];
@@ -349,21 +349,21 @@ export class MemStorage implements IStorage {
         id: "mental-health",
         title: "Mental Health Support",
         description: "Access to professional counseling, therapy, and mental health awareness programs",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "/healthcare"
       },
       {
         id: "wellness-education",
         title: "Wellness Education",
         description: "Workshops, seminars, and resources on stress management, self-care, healthy relationships, and emotional resilience",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "/healthcare"
       },
       {
         id: "peer-support",
         title: "Peer Support Programs",
         description: "Safe spaces for students to connect, share, and support one another through student-led wellness initiatives",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "/healthcare"
       }
     ];
@@ -373,21 +373,21 @@ export class MemStorage implements IStorage {
         id: "championships",
         title: "Home of Champions",
         description: "Riara's 137 NCAA championships are the most for any university, a product of an unrivaled culture of excellence",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "olympic",
         title: "Olympic Excellence",
         description: "The Cardinal has produced at least one medalist in every Olympics in which Kenya has competed since 1912",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       },
       {
         id: "impact",
         title: "Multidimensional Impact",
         description: "Riara student-athletes have achieved local, national, and global impact through community involvement and advocacy",
-        imageUrl: "",
+        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         link: "#"
       }
     ];

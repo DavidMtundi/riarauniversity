@@ -14,15 +14,39 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
     <section id="research" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
       <Container>
         {showHeader && (
-          <header className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-research-heading">
+          <header className="text-center mb-10 md:mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-3" data-testid="text-research-heading">
               Research
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed max-w-3xl mx-auto" data-testid="text-research-subheading">
-              Empowering Knowledge. Inspiring Innovation. Impacting Society.
+              Research isn't just something we do—it's who we are. We connect labs and classrooms to real-world impact for Kenya and beyond.
             </p>
           </header>
         )}
+
+        {/* Intro from Research page (document content) */}
+        <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg mb-12 md:mb-16">
+          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-3">
+            We're building a place where people aren't afraid to ask hard questions, where innovation happens naturally, and where research actually helps communities move forward.
+          </p>
+          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
+            Every day, faculty and students are tackling conflict patterns, new technologies, and real-world challenges—turning ideas into outcomes.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4 text-sm md:text-base text-[var(--color-text-secondary)]">
+            <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
+              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Solves real problems</p>
+              <p>Policy-shaping insights, community-focused research.</p>
+            </div>
+            <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
+              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Pushes boundaries</p>
+              <p>Interdisciplinary teams linking law, business, tech, and IR.</p>
+            </div>
+            <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
+              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Stays human</p>
+              <p>Research that improves lives—practical, empathetic, impact-driven.</p>
+            </div>
+          </div>
+        </div>
 
         {profile && (
           <div className="mb-16 md:mb-20" data-testid="card-research-profile">

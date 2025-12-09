@@ -32,13 +32,40 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
           {events.slice(0, 4).map((event) => (
             <div 
               key={event.id} 
-              className="cursor-pointer hover:shadow-lg transition-shadow" 
+              className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden bg-white" 
               data-testid={`card-event-${event.id}`}
               onClick={() => setLocation(`/events/${event.id}`)}
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/5 relative">
+              <div className="aspect-square relative overflow-hidden">
+                {event.imageUrl ? (
+                  <>
+                    <img
+                      src={event.imageUrl}
+                      alt={event.title}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          const fallback = parent.querySelector('.fallback-gradient');
+                          if (fallback) {
+                            (fallback as HTMLElement).style.display = 'flex';
+                          }
+                        }
+                      }}
+                    />
+                    <div className="fallback-gradient absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 hidden items-center justify-center">
+                      <Calendar className="h-16 w-16 text-primary/40" />
+                    </div>
+                  </>
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                    <Calendar className="h-16 w-16 text-primary/40" />
+                  </div>
+                )}
                 <div className="absolute top-4 left-4">
-                  <div className="bg-primary text-primary-foreground px-3 py-2 text-center">
+                  <div className="bg-[var(--color-stanford-red)] text-white px-3 py-2 text-center rounded shadow-lg">
                     <p className="text-xs font-semibold uppercase" data-testid={`text-event-date-${event.id}`}>{event.date}</p>
                   </div>
                 </div>

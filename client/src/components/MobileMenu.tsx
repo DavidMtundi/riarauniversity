@@ -71,11 +71,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               About
             </a>
             <a 
-              href="/events" 
+              href="/news-events" 
               className="p-6 text-center border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
               onClick={onClose}
             >
-              Events
+              News & Events
             </a>
           </div>
 
@@ -115,7 +115,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               Admission
             </a>
             <a 
-              href="/news" 
+              href="/news-events" 
               className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
               onClick={(e) => {
                 e.stopPropagation();
@@ -154,7 +154,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Information For Section */}
       <div className="bg-[var(--color-bg-secondary)] p-4">
         <div className="text-center">
-          <p className="text-sm font-medium text-[var(--color-text-secondary)] mb-3">Information for:</p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-[var(--color-text-tertiary)]">
             <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Students</a>
             <a href={HEADER_LINKS.facultyStaff} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Faculty & Staff</a>

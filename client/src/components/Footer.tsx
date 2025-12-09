@@ -50,22 +50,12 @@ const FOOTER_SECTIONS: FooterSection[] = [
     ],
   },
   {
-    title: "RESEARCH",
+    title: "RESOURCES",
     links: [
       { label: "Research Centers A - Z", href: "/research/centers", testId: "link-footer-research-centers" },
       { label: "School Library", href: FOOTER_LINKS.library, testId: "link-footer-School Library" },
-    ],
-  },
-  {
-    title: "HEALTH CARE",
-    links: [
       { label: "Riara Health Care", href: "/healthcare/riara-health", testId: "link-footer-riara-health" },
       { label: "Riara Children's Health", href: "/healthcare/childrens-health", testId: "link-footer-childrens-health" },
-    ],
-  },
-  {
-    title: "ONLINE LEARNING",
-    links: [
       { label: "Riara Online", href: "/online-learning", testId: "link-footer-online-learning" },
     ],
   },
@@ -85,16 +75,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
       { label: "Graduate", href: "/admission/graduate", testId: "link-footer-admission-graduate" },
       { label: "Financial Aid", href: "/admission/financial-aid", testId: "link-footer-financial-aid" },
     ],
-  },
-  {
-    title: "RESOURCES",
-    links: [
-      { label: "Campus Map", href: "/resources/campus-map", testId: "link-footer-campus-map" },
-      { label: "Community Engagement", href: "/resources/community", testId: "link-footer-community" },
-      { label: "Directory", href: "/resources/directory", testId: "link-footer-directory" },
-      { label: "Riara Profiles", href: "/resources/profiles", testId: "link-footer-profiles" },
-    ],
-  },
+  }
 ];
 
 const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
@@ -254,7 +235,7 @@ const ActionButtons: React.FC = () => (
       <Button
         key={button.href}
         variant="outline"
-        className="w-full justify-start font-bold text-[var(--color-text-secondary)] border-[var(--color-border-medium)] hover:border-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red)]"
+        className="w-full justify-start font-bold text-base text-[var(--color-text-secondary)] border-[var(--color-border-medium)] hover:border-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red)]"
         asChild
         data-testid={button.testId}
       >
@@ -290,7 +271,7 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
             {/* Footer Links */}
             <div className="lg:col-span-10">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
                 {FOOTER_SECTIONS.map((section) => (
                   <FooterSection key={section.title} section={section} />
                 ))}
@@ -349,9 +330,8 @@ export function Footer() {
             </div>
 
             {/* Column 3: Campus Map */}
-            <div className="w-full md:w-auto md:min-w-[280px] lg:min-w-[320px] mt-6 md:mt-0">
-              <h4 className="text-sm md:text-base font-semibold tracking-wide text-white mb-3 uppercase">Campus Location</h4>
-              <div className="aspect-[4/3] rounded overflow-hidden border-2 border-white/20 shadow-lg">
+            <div className="w-full md:w-auto md:min-w-[500px] lg:min-w-[600px] mt-6 md:mt-0">
+              <div className="aspect-[3/1] rounded overflow-hidden border-2 border-white/20 shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.812!2d36.8069232!3d-1.3148565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f105e9f1c97eb%3A0xd0d8411685ae0273!2s49940%2C%20Raila%20Odinga%20Wy%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1735689600000!5m2!1sen!2ske"
                   width="100%"

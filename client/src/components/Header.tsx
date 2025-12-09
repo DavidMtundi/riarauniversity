@@ -59,7 +59,6 @@ export function Header({ variant = "default" }: HeaderProps) {
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 text-white flex-shrink-0">
               {/* Information for links - hidden on mobile, shown on tablet+ */}
               <div className="hidden sm:flex items-center gap-2 md:gap-4 lg:gap-6">
-                <span className="text-xs md:text-sm text-white">Information for:</span>
                 <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Students</a>
                 <a href={HEADER_LINKS.facultyStaff} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Faculty & Staff</a>
                 <a href="https://library.riarauniversity.ac.ke/" target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm !text-white hover:text-[var(--color-text-inverse-secondary)] transition-colors font-semibold touch-manipulation" style={{ touchAction: 'manipulation' }}>Library</a>
@@ -127,9 +126,8 @@ export function Header({ variant = "default" }: HeaderProps) {
                 { href: "/athletics", label: "Athletics", testId: "link-athletics" },
                 { href: "/admission", label: "Admission", testId: "link-admission" },
                 { href: "/about", label: "About", testId: "link-about" },
-                { href: "/news", label: "News", testId: "link-news" },
+                { href: "/news-events", label: "News & Events", testId: "link-news-events" },
                 { href: "/careers", label: "Careers", testId: "link-careers" },
-                { href: "/events", label: "Events", testId: "link-events" },
               ].map((link) => (
                 <a
                   key={link.href}

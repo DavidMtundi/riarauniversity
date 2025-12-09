@@ -67,7 +67,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
             data-testid="button-more-news"
             asChild
           >
-            <a href="/news" className="!text-white">
+            <a href="/news-events" className="!text-white">
               More campus news
               <ArrowRight className="ml-2 h-4 w-4 !text-white" aria-hidden />
             </a>
