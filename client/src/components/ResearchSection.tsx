@@ -26,24 +26,24 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
 
         {/* Intro from Research page (document content) */}
         <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg mb-12 md:mb-16">
-          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-3">
-            We're building a place where people aren't afraid to ask hard questions, where innovation happens naturally, and where research actually helps communities move forward.
-          </p>
           <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
-            Every day, faculty and students are tackling conflict patterns, new technologies, and real-world challenges—turning ideas into outcomes.
+            At Riara University, research isn't just something we do—it's who we are. Every day, our faculty and students are asking tough questions, challenging assumptions, and working on research that actually matters. Whether it's understanding conflict patterns in East Africa, developing new technologies, or exploring solutions to real-world problems, our research makes a difference.
+          </p>
+          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">
+            We're not just publishing papers for the sake of it. We're building knowledge that helps communities, informs policy, and creates lasting change. That's what drives us.
           </p>
           <div className="grid sm:grid-cols-3 gap-4 text-sm md:text-base text-[var(--color-text-secondary)]">
             <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Solves real problems</p>
-              <p>Policy-shaping insights, community-focused research.</p>
+              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Solves Real Problems</p>
+              <p>Policy-shaping insights, community-focused research that tackles challenges people face every day.</p>
             </div>
             <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Pushes boundaries</p>
-              <p>Interdisciplinary teams linking law, business, tech, and IR.</p>
+              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Pushes Boundaries</p>
+              <p>Interdisciplinary teams linking law, business, tech, and international relations to create innovative solutions.</p>
             </div>
             <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Stays human</p>
-              <p>Research that improves lives—practical, empathetic, impact-driven.</p>
+              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Stays Human</p>
+              <p>Research that improves lives—practical, empathetic, impact-driven work that makes a real difference.</p>
             </div>
           </div>
         </div>
@@ -51,18 +51,19 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
         {profile && (
           <div className="mb-16 md:mb-20" data-testid="card-research-profile">
             <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="flex flex-col justify-center">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                {/* Image - smaller, positioned on the left */}
+                <div className="flex-shrink-0 w-full md:w-48 lg:w-56">
                   {profile.imageUrl ? (
                     <img 
                       src={profile.imageUrl} 
                       alt={profile.name}
-                      className="w-full max-w-md mx-auto rounded-lg object-cover"
+                      className="w-full aspect-square rounded-lg object-cover shadow-md"
                     />
                   ) : (
-                    <div className="w-full max-w-md mx-auto aspect-[4/3] bg-white border-2 border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center">
+                    <div className="w-full aspect-square bg-white border-2 border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center">
                       <div className="text-center text-[var(--color-text-secondary)]">
-                        <svg className="w-16 h-16 mx-auto mb-2 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-12 h-12 mx-auto mb-2 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <p className="text-xs font-medium">Image Placeholder</p>
@@ -70,7 +71,8 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
                     </div>
                   )}
                 </div>
-                <div className="flex flex-col justify-center">
+                {/* Content - takes remaining space */}
+                <div className="flex-1 flex flex-col justify-center">
                   <p className="text-xl md:text-2xl font-serif italic mb-6 text-[var(--color-text-primary)] leading-relaxed" data-testid="text-profile-quote">
                     "{profile.quote}"
                   </p>
@@ -93,6 +95,38 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
             </div>
           </div>
         )}
+
+        {/* Conflict Observatory & Prediction Lab Section - from document */}
+        <div className="mb-12 md:mb-16">
+          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-conflict-lab-heading">
+              Francis Onditi Conflictology Lab
+            </h3>
+            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
+              The Conflict Observatory & Prediction (COP) Group/Lab conducts scientific research in conflictological studies; the causes, and their occurrence, mechanisms, forecasting of conflict & wars, polemology (war studies), modeling of conflict and resolution scenarios, and patterns of conflict development/evolution.
+            </p>
+            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">
+              We study both international and non-international conflicts (NIAC). Our lab comprises scholars, researchers, scientists, political scientists, and international relations researchers committed to addressing the challenges of conflict using distinct methodological approaches to analytical performance (quantitative) and integrative qualitative analytics.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mb-6">
+              <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
+                <h4 className="font-semibold text-[var(--color-text-primary)] mb-2">Intertribal Border Markets</h4>
+                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
+                  We study both tangible and intangible expressions of social structures binding communities through human relations in time and space, examining how markets serve as both conflict zones and peace-building spaces.
+                </p>
+              </div>
+              <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
+                <h4 className="font-semibold text-[var(--color-text-primary)] mb-2">Transhumance Pastoralism</h4>
+                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
+                  We examine how climate change has disrupted traditional pastoral livelihoods, leading to the evolution of maladaptive strategies such as armament, and explore alternative solutions.
+                </p>
+              </div>
+            </div>
+            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+              Our interdisciplinary work brings together conflictologists, geographers, mathematicians, climate change scientists, GIS experts, economists, and international relations researchers to understand human-human relations and networks that drive behavior in groups and at state levels.
+            </p>
+          </div>
+        </div>
 
         <div className="mb-12 md:mb-16">
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-10 md:mb-12 text-[var(--color-text-primary)]" data-testid="text-research-impact-heading">Research Impact</h3>

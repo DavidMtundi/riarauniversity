@@ -121,13 +121,14 @@ export function Header({ variant = "default" }: HeaderProps) {
             >
               {[
                 { href: "/academics", label: "Academics", testId: "link-academics" },
-                { href: "/healthcare", label: "Health Care", testId: "link-healthcare" },
-                { href: "/campus-life", label: "Student Life", testId: "link-campus-life" },
-                { href: "/athletics", label: "Athletics", testId: "link-athletics" },
                 { href: "/admission", label: "Admission", testId: "link-admission" },
-                { href: "/about", label: "About", testId: "link-about" },
+                { href: "/campus-life", label: "Student Life", testId: "link-campus-life" },
+                { href: "/research", label: "Research", testId: "link-research" },
                 { href: "/news-events", label: "News & Events", testId: "link-news-events" },
+                { href: "/healthcare", label: "Health Care", testId: "link-healthcare" },
+                { href: "/athletics", label: "Athletics", testId: "link-athletics" },
                 { href: "/careers", label: "Careers", testId: "link-careers" },
+                { href: "/about", label: "About", testId: "link-about" },
               ].map((link) => (
                 <a
                   key={link.href}
@@ -144,21 +145,6 @@ export function Header({ variant = "default" }: HeaderProps) {
                   {link.label}
                 </a>
               ))}
-              
-              {/* Research Link */}
-              <a
-                href="/research"
-                className={cn(
-                  "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors touch-manipulation",
-                  isOverlay
-                    ? "!text-white hover:!text-white"
-                    : "text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]"
-                )}
-                data-testid="link-research"
-                style={{ touchAction: 'manipulation' }}
-              >
-                Research
-              </a>
             </nav>
           </div>
         </div>

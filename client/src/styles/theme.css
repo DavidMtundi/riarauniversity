@@ -85,10 +85,10 @@
   --letter-spacing-h6: 0px;
   --letter-spacing-normal: 0px;
 
-  /* Riara University Brand Colors */
-  --color-stanford-red: #A21D25;
-  --color-stanford-red-dark: #7B1519;
-  --color-stanford-red-light: #C92A33;
+  /* Riara University Brand Colors (primary purple) */
+  --color-stanford-red: #a21caf;
+  --color-stanford-red-dark: #86198f;
+  --color-stanford-red-light: #c026d3;
   /* Aliases for Riara branding */
   --color-riara-red: var(--color-stanford-red);
   --color-riara-red-dark: var(--color-stanford-red-dark);
@@ -114,8 +114,8 @@
   --color-bg-footer: #2E2E2E;
   --color-bg-copyright: #1A1A1A;
   --color-bg-inverse: #000000;
-  --color-bg-maroon: #800020;
-  --color-bg-button-primary: #A21D25;
+  --color-bg-maroon: #A21CAF;
+  --color-bg-button-primary: #a21caf;
   --color-bg-button-secondary: #F0F0F0;
   --color-bg-button-search: #E8E8E8;
 
@@ -135,16 +135,16 @@
   --color-riara-gold-dark: #D97706;
 
   /* Semantic Palettes */
-  --color-primary-50: #fef2f2;
-  --color-primary-100: #fee2e2;
-  --color-primary-200: #fecaca;
-  --color-primary-300: #fca5a5;
-  --color-primary-400: #f87171;
-  --color-primary-500: #ef4444;
-  --color-primary-600: #dc2626;
-  --color-primary-700: #b91c1c;
-  --color-primary-800: #991b1b;
-  --color-primary-900: #7f1d1d;
+  --color-primary-50: #fdf4ff;
+  --color-primary-100: #fae8ff;
+  --color-primary-200: #f5d0fe;
+  --color-primary-300: #f0abfc;
+  --color-primary-400: #e879f9;
+  --color-primary-500: #d946ef;
+  --color-primary-600: #c026d3;
+  --color-primary-700: #a21caf;
+  --color-primary-800: #86198f;
+  --color-primary-900: #701a75;
   --color-neutral-50: #fafafa;
   --color-neutral-100: #f5f5f5;
   --color-neutral-200: #e5e5e5;

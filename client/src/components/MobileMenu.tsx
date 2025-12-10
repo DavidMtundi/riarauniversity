@@ -40,112 +40,83 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Main Navigation Grid */}
       <div className="flex-1 p-4">
         <div className="grid grid-cols-2 gap-0 border border-[var(--color-border-secondary)] rounded-lg overflow-hidden">
-          {/* Left Column */}
+          {/* Left Column - Priority items */}
           <div className="flex flex-col">
             <a 
               href="/academics" 
-              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
               onClick={onClose}
+              style={{ touchAction: 'manipulation' }}
             >
               Academics
             </a>
             <a 
-              href="/healthcare" 
-              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
-              onClick={onClose}
-            >
-              Health Care
-            </a>
-            <a 
-              href="/athletics" 
-              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
-              onClick={onClose}
-            >
-              Athletics
-            </a>
-            <a 
-              href="/about" 
-              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
-              onClick={onClose}
-            >
-              About
-            </a>
-            <a 
-              href="/news-events" 
-              className="p-6 text-center border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
-              onClick={onClose}
-            >
-              News & Events
-            </a>
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col">
-            <a 
-              href="/research" 
-              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
-              style={{ touchAction: 'manipulation' }}
-            >
-              Research
-            </a>
-            <a 
-              href="/campus-life" 
-              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
-              style={{ touchAction: 'manipulation' }}
-            >
-              Student Life
-            </a>
-            <a 
               href="/admission" 
-              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
+              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
               style={{ touchAction: 'manipulation' }}
             >
               Admission
             </a>
             <a 
-              href="/news-events" 
-              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
+              href="/campus-life" 
+              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
               style={{ touchAction: 'manipulation' }}
             >
-              News
+              Student Life
+            </a>
+            <a 
+              href="/research" 
+              className="p-6 text-center border-b border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
+              style={{ touchAction: 'manipulation' }}
+            >
+              Research
+            </a>
+            <a 
+              href="/news-events" 
+              className="p-6 text-center border-r border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
+              style={{ touchAction: 'manipulation' }}
+            >
+              News & Events
+            </a>
+          </div>
+
+          {/* Right Column - Secondary items */}
+          <div className="flex flex-col">
+            <a 
+              href="/healthcare" 
+              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
+              style={{ touchAction: 'manipulation' }}
+            >
+              Health Care
+            </a>
+            <a 
+              href="/athletics" 
+              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
+              style={{ touchAction: 'manipulation' }}
+            >
+              Athletics
             </a>
             <a 
               href="/careers" 
               className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
+              onClick={onClose}
               style={{ touchAction: 'manipulation' }}
             >
               Careers
             </a>
             <a 
-              href="/arts" 
+              href="/about" 
               className="p-6 text-center hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
-              onClick={(e) => {
-                e.stopPropagation();
-                onClose();
-              }}
+              onClick={onClose}
               style={{ touchAction: 'manipulation' }}
             >
-              Arts
+              About
             </a>
           </div>
         </div>

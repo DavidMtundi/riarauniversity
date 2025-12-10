@@ -8,9 +8,9 @@ export default function Admission() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-24">
         {/* Hero Section */}
-        <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
+        <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-20"></div>
@@ -24,9 +24,9 @@ export default function Admission() {
           </div>
           
           {/* Content */}
-          <div className="relative z-10 h-full flex items-center justify-center pt-16 pb-8">
-            <div className="text-center px-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 md:mb-6 drop-shadow-2xl pt-8 md:pt-12">
+          <div className="relative z-10 h-full flex items-center justify-center">
+            <div className="text-center px-4 max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 md:mb-6 drop-shadow-2xl">
                 Admission
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-lg font-light mb-6 md:mb-8">
@@ -36,7 +36,7 @@ export default function Admission() {
                 href="https://admissions.ru.ac.ke/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold bg-[var(--color-stanford-red)] !text-white rounded-lg hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 mb-8 md:mb-12"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold bg-[var(--color-stanford-red)] !text-white rounded-lg hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                 data-testid="button-apply-admission-page"
               >
                 <span className="!text-white">Apply Online</span>
