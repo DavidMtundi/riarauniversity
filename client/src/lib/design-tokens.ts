@@ -93,11 +93,11 @@ export const typography = {
 
 // Colors - Riara University Brand Colors
 export const colors = {
-  // Riara University primary brand (purple)
+  // Riara University primary brand (maroon)
   stanford: {
-    red: '#a21caf', // Primary purple
-    redDark: '#86198f', // Darker purple (hover/active)
-    redLight: '#c026d3',
+    red: '#a21984', // Primary maroon
+    redDark: '#7d1466', // Darker maroon (hover/active)
+    redLight: '#c026a0',
   },
   // Text Colors - Riara University
   text: {
@@ -120,11 +120,11 @@ export const colors = {
     darkGray: '#2E2E2E',
     footer: '#2E2E2E',
     copyright: '#1A1A1A',
-    buttonPrimary: '#a21caf',
+    buttonPrimary: '#a21984',
     buttonSecondary: '#F0F0F0',
     buttonSearch: '#E8E8E8',
     inverse: '#000000',
-    maroon: '#800020', // For header background
+    maroon: '#a21984', // Primary maroon for header background
   },
   // Border Colors - Riara University
   border: {
@@ -132,29 +132,29 @@ export const colors = {
     medium: '#CCCCCC',
     secondary: '#E8E8E8',
     dark: '#a3a3a3',
-    maroon: '#A00030',
+    maroon: '#7d1466',
   },
   // Legacy Riara University colors (for backward compatibility)
   riara: {
-    maroon: '#800020', // Riara Maroon
-    maroonLight: '#A00030',
-    maroonDark: '#600015',
+    maroon: '#a21984', // Primary maroon
+    maroonLight: '#c026a0',
+    maroonDark: '#7d1466',
     gold: '#F59E0B', // Riara Gold
     goldLight: '#FBBF24',
     goldDark: '#D97706',
   },
   // Semantic colors (legacy - for backward compatibility)
   primary: {
-    50: '#fdf4ff',
-    100: '#fae8ff',
-    200: '#f5d0fe',
-    300: '#f0abfc',
-    400: '#e879f9',
-    500: '#d946ef',
-    600: '#c026d3',
-    700: '#a21caf',
-    800: '#86198f',
-    900: '#701a75',
+    50: '#fdf2f8',
+    100: '#fce7f3',
+    200: '#fbcfe8',
+    300: '#f9a8d4',
+    400: '#f472b6',
+    500: '#ec4899',
+    600: '#db2777',
+    700: '#a21984',
+    800: '#7d1466',
+    900: '#6b1a5c',
   },
   // Neutral colors (legacy - for backward compatibility)
   neutral: {
@@ -192,7 +192,7 @@ export const shadows = {
   lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
   xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
   // Riara specific shadow
-  riara: '0 0 15px rgba(128, 0, 32, .2), 0 4px 6px rgba(128, 0, 32, .1)',
+  riara: '0 0 15px rgba(162, 25, 132, .2), 0 4px 6px rgba(162, 25, 132, .1)',
 } as const;
 
 // Border radius

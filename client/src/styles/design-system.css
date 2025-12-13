@@ -345,7 +345,7 @@ footer,
 }
 
 .border-riara-maroon {
-  border-color: var(--color-riara-maroon);
+  border-color: var(--color-riara-maroon-dark, var(--color-riara-maroon));
 }
 
 .shadow-riara {

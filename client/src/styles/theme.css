@@ -85,10 +85,10 @@
   --letter-spacing-h6: 0px;
   --letter-spacing-normal: 0px;
 
-  /* Riara University Brand Colors (primary purple) */
-  --color-stanford-red: #a21caf;
-  --color-stanford-red-dark: #86198f;
-  --color-stanford-red-light: #c026d3;
+  /* Riara University Brand Colors (primary maroon) */
+  --color-stanford-red: #a21984;
+  --color-stanford-red-dark: #7d1466;
+  --color-stanford-red-light: #c026a0;
   /* Aliases for Riara branding */
   --color-riara-red: var(--color-stanford-red);
   --color-riara-red-dark: var(--color-stanford-red-dark);
@@ -114,8 +114,8 @@
   --color-bg-footer: #2E2E2E;
   --color-bg-copyright: #1A1A1A;
   --color-bg-inverse: #000000;
-  --color-bg-maroon: #A21CAF;
-  --color-bg-button-primary: #a21caf;
+  --color-bg-maroon: #a21984;
+  --color-bg-button-primary: #a21984;
   --color-bg-button-secondary: #F0F0F0;
   --color-bg-button-search: #E8E8E8;
 
@@ -124,27 +124,27 @@
   --color-border-medium: #CCCCCC;
   --color-border-secondary: #E8E8E8;
   --color-border-dark: #a3a3a3;
-  --color-border-maroon: #A00030;
+  --color-border-maroon: #7d1466;
 
   /* Legacy Riara Colors */
-  --color-riara-maroon: #800020;
-  --color-riara-maroon-light: #A00030;
-  --color-riara-maroon-dark: #600015;
+  --color-riara-maroon: #a21984;
+  --color-riara-maroon-light: #c026a0;
+  --color-riara-maroon-dark: #7d1466;
   --color-riara-gold: #F59E0B;
   --color-riara-gold-light: #FBBF24;
   --color-riara-gold-dark: #D97706;
 
   /* Semantic Palettes */
-  --color-primary-50: #fdf4ff;
-  --color-primary-100: #fae8ff;
-  --color-primary-200: #f5d0fe;
-  --color-primary-300: #f0abfc;
-  --color-primary-400: #e879f9;
-  --color-primary-500: #d946ef;
-  --color-primary-600: #c026d3;
-  --color-primary-700: #a21caf;
-  --color-primary-800: #86198f;
-  --color-primary-900: #701a75;
+  --color-primary-50: #fdf2f8;
+  --color-primary-100: #fce7f3;
+  --color-primary-200: #fbcfe8;
+  --color-primary-300: #f9a8d4;
+  --color-primary-400: #f472b6;
+  --color-primary-500: #ec4899;
+  --color-primary-600: #db2777;
+  --color-primary-700: #a21984;
+  --color-primary-800: #7d1466;
+  --color-primary-900: #6b1a5c;
   --color-neutral-50: #fafafa;
   --color-neutral-100: #f5f5f5;
   --color-neutral-200: #e5e5e5;
@@ -176,7 +176,7 @@
   --shadow-lg: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 4px 6px -1px hsl(0 0% 0% / 0.00);
   --shadow-xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00), 0px 8px 10px -1px hsl(0 0% 0% / 0.00);
   --shadow-2xl: 0px 2px 0px 0px hsl(0 0% 0% / 0.00);
-  --shadow-riara: 0 0 15px rgba(128, 0, 32, .2), 0 4px 6px rgba(128, 0, 32, .1);
+  --shadow-riara: 0 0 15px rgba(162, 25, 132, .2), 0 4px 6px rgba(162, 25, 132, .1);
 
   /* Radius */
   --radius-none: 0;

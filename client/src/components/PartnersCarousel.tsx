@@ -113,10 +113,10 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                 return (
                   <CarouselItem
                     key={partner.id}
-                    className="pl-1 md:pl-2 basis-1/3 sm:basis-1/4 md:basis-1/5 lg:basis-1/6 xl:basis-1/7 2xl:basis-1/8"
+                    className="pl-1 md:pl-2 basis-1/6 sm:basis-1/8 md:basis-1/10 lg:basis-1/12 xl:basis-1/14 2xl:basis-1/16"
                   >
-                    <div className="p-3 h-full border border-[var(--color-border-secondary)] rounded-lg hover:border-[var(--color-stanford-red)] hover:shadow-md transition-all duration-200 bg-white flex flex-col items-center text-center group">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white border border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center mb-2 overflow-hidden group-hover:border-[var(--color-stanford-red)] transition-all duration-200">
+                    <div className="p-0.5 h-full border border-[var(--color-border-secondary)] rounded-lg hover:border-[var(--color-stanford-red)] hover:shadow-md transition-all duration-200 bg-white flex flex-col items-center text-center group">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white border border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center mb-0.5 overflow-hidden group-hover:border-[var(--color-stanford-red)] transition-all duration-200">
                         {partner.logoUrl && partner.logoUrl !== "" ? (
                           <img 
                             src={partner.logoUrl} 
