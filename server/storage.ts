@@ -171,26 +171,26 @@ export class MemStorage implements IStorage {
     this.profiles = new Map([
       ["research", {
         id: "research-profile",
-        name: "Dr. James Kariuki",
-        title: "Assistant Professor of Mechanical Engineering",
-        quote: "The truly impactful technologies are always based on the condition that you can freely explore.",
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        name: "Prof. Gateru",
+        title: "Vice Chancellor, Riara University",
+        quote: "Excellence in research and innovation drives our commitment to advancing knowledge and transforming communities.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Gateru-MGT-Page.jpg",
         link: "#"
       }],
       ["campus", {
         id: "campus-profile",
-        name: "Amani Wanjiru, '25",
-        title: "Design major and three-time Innovations champion",
-        quote: "There's a lot to question – that's one of the most important things I'll take with me from my Riara experience.",
-        imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        name: "Riara University Students",
+        title: "Active student community",
+        quote: "At Riara, we foster a vibrant campus life where students engage in diverse activities, build lasting friendships, and develop skills beyond the classroom.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       }],
       ["arts", {
         id: "arts-profile",
-        name: "Grace Muthoni, '22",
-        title: "Graduated with a bachelor's degree in human biology and a minor in art history",
-        quote: "Art is an outlet and a starting point for me, for what I have to say.",
-        imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        name: "Prof. Wanja Tenambergen",
+        title: "Deputy Vice Chancellor - Academic Affairs",
+        quote: "Arts and culture enrich our academic environment, fostering creativity and critical thinking among our students.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Wanja-MGT-Page.jpg",
         link: "#"
       }],
       ["law", {
