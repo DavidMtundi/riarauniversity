@@ -21,7 +21,7 @@ export default function History() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-30"></div>
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-30"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
           </div>
           
@@ -63,7 +63,7 @@ export default function History() {
                 <div className="order-2 md:order-1">
                   <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Educational journey" 
                       className="w-full h-full object-cover"
                     />
@@ -110,7 +110,7 @@ export default function History() {
                 <div>
                   <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Nature and growth" 
                       className="w-full h-full object-cover"
                     />

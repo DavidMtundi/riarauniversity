@@ -13,7 +13,7 @@ export default function Alumni() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-30"></div>
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-30"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
           </div>
           
@@ -55,7 +55,7 @@ export default function Alumni() {
                 <div className="order-first lg:order-last">
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Riara University Alumni" 
                       className="w-full h-full object-cover"
                     />
@@ -74,7 +74,7 @@ export default function Alumni() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                       alt="Alumni community" 
                       className="w-full h-full object-cover"
                     />
@@ -258,7 +258,7 @@ export default function Alumni() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Giving back to education" 
                       className="w-full h-full object-cover"
                     />
@@ -284,7 +284,7 @@ export default function Alumni() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
                       alt="Community service" 
                       className="w-full h-full object-cover"
                     />
@@ -300,7 +300,7 @@ export default function Alumni() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Library resources" 
                       className="w-full h-full object-cover"
                     />
@@ -316,7 +316,7 @@ export default function Alumni() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                       alt="Scholarship fund" 
                       className="w-full h-full object-cover"
                     />

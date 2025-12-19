@@ -109,7 +109,7 @@ export default function Academics() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Academic excellence at Riara University" 
                       className="w-full h-full object-cover"
                     />

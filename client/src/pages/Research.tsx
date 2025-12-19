@@ -69,7 +69,7 @@ export default function Research() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1532619675605-1ede6c4ed2b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-30"></div>
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-30"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
           </div>
           
@@ -111,7 +111,7 @@ export default function Research() {
                 <div className="order-first lg:order-last">
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Research at Riara University" 
                       className="w-full h-full object-cover"
                     />
@@ -190,7 +190,7 @@ export default function Research() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Research excellence" 
                       className="w-full h-full object-cover"
                     />
@@ -216,7 +216,7 @@ export default function Research() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                       alt="Societal impact research" 
                       className="w-full h-full object-cover"
                     />
@@ -232,7 +232,7 @@ export default function Research() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Innovative research" 
                       className="w-full h-full object-cover"
                     />
@@ -248,7 +248,7 @@ export default function Research() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
                       alt="Collaborative research" 
                       className="w-full h-full object-cover"
                     />
@@ -264,7 +264,7 @@ export default function Research() {
                 <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Sustainable research solutions" 
                       className="w-full h-full object-cover"
                     />
@@ -297,7 +297,7 @@ export default function Research() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1532619675605-1ede6c4ed2b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Research activities" 
                       className="w-full h-full object-cover"
                     />
@@ -372,7 +372,7 @@ export default function Research() {
                 <div className="order-1 lg:order-2">
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Research publications" 
                       className="w-full h-full object-cover"
                     />
@@ -415,7 +415,7 @@ export default function Research() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Conflictology Lab research" 
                       className="w-full h-full object-cover"
                     />
@@ -437,7 +437,7 @@ export default function Research() {
                   <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
                     <div className="aspect-[16/9] rounded-lg overflow-hidden mb-3">
                       <img 
-                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                        src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                         alt="Intertribal border markets" 
                         className="w-full h-full object-cover"
                       />
@@ -452,7 +452,7 @@ export default function Research() {
                   <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
                     <div className="aspect-[16/9] rounded-lg overflow-hidden mb-3">
                       <img 
-                        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                        src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                         alt="Transhumance pastoralism" 
                         className="w-full h-full object-cover"
                       />
@@ -490,7 +490,7 @@ export default function Research() {
                     <div>
                       <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                         <img 
-                          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                          src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                           alt="Pastoralism research" 
                           className="w-full h-full object-cover"
                         />
@@ -501,7 +501,7 @@ export default function Research() {
                     <div className="order-2 md:order-1">
                       <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                         <img 
-                          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                          src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
                           alt="Market research" 
                           className="w-full h-full object-cover"
                         />

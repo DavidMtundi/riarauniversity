@@ -6,7 +6,7 @@ export function MissionSection() {
   return (
     <section className="relative py-8 sm:py-10 md:py-12 bg-[var(--color-bg-primary)] overflow-hidden">
       {/* Parallax Background */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat bg-fixed opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat bg-fixed opacity-10"></div>
       
       {/* Content */}
       <Container className="relative z-10">

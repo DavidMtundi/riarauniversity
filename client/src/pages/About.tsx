@@ -23,7 +23,7 @@ export default function About() {
         <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
           </div>
           
@@ -64,7 +64,7 @@ export default function About() {
                 <div className="order-first lg:order-last">
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
                       alt="Riara University campus" 
                       className="w-full h-full object-cover"
                     />
