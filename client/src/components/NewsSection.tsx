@@ -15,10 +15,10 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
     .filter((article) => article.id !== featuredArticle?.id)
     .slice(0, 6);
 
-  const highlightArticles = remainingArticles.slice(0, 1); // Show 1 highlight for row 1
-  const regularArticles = remainingArticles.slice(1, 6); // Show 5 regular articles: 2 for row 2 (short+long), 3 for row 3
-  const row2Articles = regularArticles.slice(0, 2); // First 2 for row 2 (short, long)
-  const row3Articles = regularArticles.slice(2, 5); // Next 3 for row 3
+  const highlightArticles = remainingArticles.slice(0, 1); // Show 1 highlight for row 1 (short, right)
+  const regularArticles = remainingArticles.slice(1); // Remaining 4 articles
+  const row2Articles = regularArticles.slice(0, 1); // First 1 for row 2 (long, full width or centered)
+  const row3Articles = regularArticles.slice(1, 4); // Next 3 for row 3
 
   return (
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
@@ -52,15 +52,23 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
           </div>
         )}
 
-        {/* Row 2: Short (left) + Long (right) */}
-        {row2Articles.length === 2 && (
+        {/* Row 2: Long article (full width, or can be styled as short+long if we have 2) */}
+        {row2Articles.length > 0 && (
           <div className="grid gap-6 md:grid-cols-3 mb-8 md:mb-10 items-stretch">
-            <div className="md:col-span-1 flex">
-              <NewsCard article={row2Articles[0]} variant="regular" />
-            </div>
-            <div className="md:col-span-2 flex">
-              <NewsCard article={row2Articles[1]} variant="regular" />
-            </div>
+            {row2Articles.length === 2 ? (
+              <>
+                <div className="md:col-span-1 flex">
+                  <NewsCard article={row2Articles[0]} variant="regular" />
+                </div>
+                <div className="md:col-span-2 flex">
+                  <NewsCard article={row2Articles[1]} variant="regular" />
+                </div>
+              </>
+            ) : (
+              <div className="md:col-span-2 md:col-start-1 flex">
+                <NewsCard article={row2Articles[0]} variant="regular" />
+              </div>
+            )}
           </div>
         )}
 
