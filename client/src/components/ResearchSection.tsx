@@ -96,38 +96,6 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
           </div>
         )}
 
-        {/* Conflict Observatory & Prediction Lab Section - from document */}
-        <div className="mb-12 md:mb-16">
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-conflict-lab-heading">
-              Francis Onditi Conflictology Lab
-            </h3>
-            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
-              The Conflict Observatory & Prediction (COP) Group/Lab conducts scientific research in conflictological studies; the causes, and their occurrence, mechanisms, forecasting of conflict & wars, polemology (war studies), modeling of conflict and resolution scenarios, and patterns of conflict development/evolution.
-            </p>
-            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">
-              We study both international and non-international conflicts (NIAC). Our lab comprises scholars, researchers, scientists, political scientists, and international relations researchers committed to addressing the challenges of conflict using distinct methodological approaches to analytical performance (quantitative) and integrative qualitative analytics.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4 mb-6">
-              <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-                <h4 className="font-semibold text-[var(--color-text-primary)] mb-2">Intertribal Border Markets</h4>
-                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
-                  We study both tangible and intangible expressions of social structures binding communities through human relations in time and space, examining how markets serve as both conflict zones and peace-building spaces.
-                </p>
-              </div>
-              <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-                <h4 className="font-semibold text-[var(--color-text-primary)] mb-2">Transhumance Pastoralism</h4>
-                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed">
-                  We examine how climate change has disrupted traditional pastoral livelihoods, leading to the evolution of maladaptive strategies such as armament, and explore alternative solutions.
-                </p>
-              </div>
-            </div>
-            <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
-              Our interdisciplinary work brings together conflictologists, geographers, mathematicians, climate change scientists, GIS experts, economists, and international relations researchers to understand human-human relations and networks that drive behavior in groups and at state levels.
-            </p>
-          </div>
-        </div>
-
         <div className="mb-12 md:mb-16">
           <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-10 md:mb-12 text-[var(--color-text-primary)]" data-testid="text-research-impact-heading">Research Impact</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
