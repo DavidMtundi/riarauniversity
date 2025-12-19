@@ -4,8 +4,8 @@ import { Container } from "@/components/Container";
 
 export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, ref) {
   const [imageError, setImageError] = useState(false);
-  const imageUrl = "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg";
-  const fallbackImageUrl = "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg";
+  const imageUrl = "https://businesstoday.co.ke/wp-content/uploads/2024/06/Riara-University.png";
+  const fallbackImageUrl = "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg";
 
   return (
     <section
