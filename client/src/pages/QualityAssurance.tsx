@@ -38,8 +38,8 @@ export default function QualityAssurance() {
         <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-sm">
-              <div className="grid md:grid-cols-5 gap-6 md:gap-8 items-start">
-                <div className="md:col-span-2 order-1 flex justify-center md:justify-start">
+              <div className="grid md:grid-cols-5 gap-6 md:gap-8 items-center">
+                <div className="md:col-span-2 order-1 flex justify-center">
                   <div className="w-40 md:w-44 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2023/11/Ms.-Dorothy-Oduor-255x340.jpg" 
@@ -48,7 +48,7 @@ export default function QualityAssurance() {
                     />
                   </div>
                 </div>
-                <div className="md:col-span-3 order-2">
+                <div className="md:col-span-3 order-2 text-center md:text-left">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                     Message from the University Quality Assurance Officer
                   </h2>
