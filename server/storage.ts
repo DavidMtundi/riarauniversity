@@ -132,21 +132,21 @@ export class MemStorage implements IStorage {
         title: "Undergraduate Education",
         description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
         imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg",
-        link: "#"
+        link: "/academics#undergraduate",
       },
       {
         id: "graduate",
         title: "Graduate Education",
         description: "Unsurpassed opportunities to participate in the advancement of entire fields of knowledge",
         imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        link: "#"
+        link: "/academics#graduate",
       },
       {
         id: "lifelong",
         title: "Lifelong Learning",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
         imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg",
-        link: "#"
+        link: "/academics#lifelong",
       }
     ];
 
