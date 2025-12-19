@@ -208,7 +208,7 @@ export default function News() {
         <section className="relative min-h-[450px] md:min-h-[550px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('/riara-logo.jpeg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
           </div>
           

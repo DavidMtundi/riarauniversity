@@ -1,15 +1,27 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/Container";
 
 export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, ref) {
+  const [imageError, setImageError] = useState(false);
+  const imageUrl = "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg";
+  const fallbackImageUrl = "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg";
+
   return (
     <section
       ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 sm:pt-14 md:pt-30"
     >
-      {/* Riara University Background Image with Parallax */}
-      <div className="absolute inset-0 bg-[url('/riara-logo.jpeg')] bg-cover bg-center bg-no-repeat bg-fixed"></div>
+      {/* Riara University Background Image with fallback */}
+      <div className="absolute inset-0">
+        <img
+          src={imageError ? fallbackImageUrl : imageUrl}
+          alt="Riara University Campus"
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={() => setImageError(true)}
+          loading="eager"
+        />
+      </div>
       
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-[var(--overlay-dark)]"></div>
