@@ -15,8 +15,10 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
     .filter((article) => article.id !== featuredArticle?.id)
     .slice(0, 6);
 
-  const highlightArticles = remainingArticles.slice(0, 1); // Show 1 highlight to allow 4 regular articles
-  const regularArticles = remainingArticles.slice(1, 5); // Show exactly 4 regular articles for perfect 2x2 grid
+  const highlightArticles = remainingArticles.slice(0, 1); // Show 1 highlight for row 1
+  const regularArticles = remainingArticles.slice(1, 6); // Show 5 regular articles: 2 for row 2 (short+long), 3 for row 3
+  const row2Articles = regularArticles.slice(0, 2); // First 2 for row 2 (short, long)
+  const row3Articles = regularArticles.slice(2, 5); // Next 3 for row 3
 
   return (
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
@@ -50,9 +52,22 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
           </div>
         )}
 
-        {regularArticles.length > 0 && (
-          <div className={`grid gap-6 md:grid-cols-2 mb-10 ${regularArticles.length === 1 ? 'max-w-2xl mx-auto' : ''}`}>
-            {regularArticles.map((article) => (
+        {/* Row 2: Short (left) + Long (right) */}
+        {row2Articles.length === 2 && (
+          <div className="grid gap-6 md:grid-cols-3 mb-8 md:mb-10">
+            <div className="md:col-span-1">
+              <NewsCard article={row2Articles[0]} variant="regular" />
+            </div>
+            <div className="md:col-span-2">
+              <NewsCard article={row2Articles[1]} variant="regular" />
+            </div>
+          </div>
+        )}
+
+        {/* Row 3: 3 equal articles */}
+        {row3Articles.length > 0 && (
+          <div className="grid gap-6 md:grid-cols-3 mb-10">
+            {row3Articles.map((article) => (
               <NewsCard
                 key={article.id}
                 article={article}
