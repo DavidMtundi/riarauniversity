@@ -1,4 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EducationSection } from "@/components/EducationSection";
@@ -7,6 +9,7 @@ import { RetryButton } from "@/components/RetryButton";
 import type { EducationPath, School } from "@shared/schema";
 
 export default function Academics() {
+  const [location] = useLocation();
   const { data: educationPaths = [], isLoading: educationLoading, error: educationError } = useQuery<EducationPath[]>({
     queryKey: ['/api/education-paths']
   });
@@ -17,6 +20,22 @@ export default function Academics() {
 
   const isLoading = educationLoading || schoolsLoading;
   const hasError = educationError || schoolsError;
+
+  // Scroll to education path section if hash is present
+  useEffect(() => {
+    if (!isLoading && location.includes('#')) {
+      const hash = location.split('#')[1];
+      if (hash && ['undergraduate', 'graduate', 'lifelong'].includes(hash)) {
+        // Small delay to ensure content is rendered
+        setTimeout(() => {
+          const element = document.getElementById('academics');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
+    }
+  }, [isLoading, location]);
 
   if (isLoading) {
     return (

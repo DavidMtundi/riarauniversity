@@ -61,8 +61,11 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
                     variant="outline"
                     className="group inline-flex items-center gap-2 rounded-full border-[var(--color-riara-red)] px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base font-semibold text-[var(--color-riara-red)] transition-all duration-200 hover:bg-[var(--color-riara-red)] hover:text-white shadow-sm hover:shadow-md"
                     data-testid={`button-education-link-${path.id}`}
+                    asChild
                   >
-                    Learn more <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
+                    <a href={path.link && path.link !== '#' ? path.link : `/academics#${path.id}`}>
+                      Learn more <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </Button>
                 </div>
               </div>
