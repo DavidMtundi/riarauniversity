@@ -53,76 +53,76 @@ export class MemStorage implements IStorage {
     this.newsArticles = [
       {
         id: "1",
-        category: "Research Spotlight",
-        title: "Why research matters",
-        subtitle: "Groundbreaking discoveries shaping the future",
-        excerpt: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology.",
-        content: "Discover the groundbreaking research happening at Riara and its impact on society, from medicine to technology. Our researchers are at the forefront of innovation, tackling some of the world's most pressing challenges. Through interdisciplinary collaboration and cutting-edge facilities, Riara continues to push the boundaries of knowledge and create solutions that benefit communities locally and globally. From developing sustainable technologies to advancing medical treatments, our research ecosystem fosters creativity and drives meaningful change.",
-        imageUrl: "https://images.unsplash.com/photo-1532619675605-1ede6c4ed2b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#",
+        category: "University Milestone",
+        title: "Riara University Awarded Charter by President William Ruto",
+        subtitle: "Historic recognition marks transition to fully accredited institution",
+        excerpt: "On March 19, 2025, Riara University was granted a Charter by President William Ruto at State House, Nairobi, marking a historic milestone in the university's journey.",
+        content: "On March 19, 2025, Riara University was granted a Charter by President William Ruto at State House, Nairobi. This recognition marks the university's transition to a fully accredited higher learning institution, affirming its commitment to academic excellence and institutional independence. The Charter award ceremony was attended by university leadership, faculty, students, and distinguished guests. This milestone represents years of dedication to providing quality education and demonstrates Riara University's readiness to contribute significantly to Kenya's higher education landscape. The Charter enables the university to operate with full autonomy while maintaining the highest standards of academic integrity and excellence.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/05/char.jpg",
+        link: "https://riarauniversity.ac.ke/charter-award-press-release/",
         featured: true,
-        publishedDate: "Nov 15, 2024",
-        author: "Research Communications"
+        publishedDate: "Mar 19, 2025",
+        author: "University Communications"
       },
       {
         id: "2",
-        category: "Health & Medicine",
-        title: "Essential questions for patients in the age of AI doctor visits",
-        subtitle: "Navigating healthcare in the digital era",
-        excerpt: "As artificial intelligence becomes more prevalent in healthcare, researchers explore critical considerations for patients.",
-        content: "As artificial intelligence becomes more prevalent in healthcare, researchers explore critical considerations for patients. The integration of AI in medical consultations raises important questions about patient privacy, informed consent, and the human element in healthcare. Our medical school faculty are leading discussions on how to balance technological advancement with compassionate care. This research examines patient perspectives, ethical implications, and best practices for implementing AI tools in clinical settings while maintaining trust and quality of care.",
-        imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#",
-        publishedDate: "Nov 12, 2024",
-        author: "Medical School"
+        category: "Partnerships",
+        title: "Riara University Partners with IFC on Employability Program",
+        subtitle: "Enhancing graduate employability and entrepreneurship in Kenya",
+        excerpt: "Riara University has partnered with the International Finance Corporation (IFC) under the Vitae Employability Program to enhance graduate employability and foster entrepreneurship.",
+        content: "In October 2025, Riara University partnered with the International Finance Corporation (IFC) under the Vitae Employability Program. This collaboration aims to enhance graduate employability and foster entrepreneurship in Kenya by aligning academic programs with labor market needs and supporting students in building career skills. The partnership focuses on bridging the gap between education and employment, ensuring that Riara graduates are well-prepared for the job market. Through this initiative, students will have access to career development resources, mentorship programs, and opportunities to connect with potential employers. The program also emphasizes entrepreneurship, encouraging students to develop innovative solutions and start their own businesses.",
+        imageUrl: "https://www.vitaeready.org/wp-content/uploads/2025/10/IMG_2465-scaled.jpg",
+        link: "https://www.vitaeready.org/learning-hub/riara-university-partnership/",
+        publishedDate: "Oct 2025",
+        author: "Partnerships Office"
       },
       {
         id: "3",
-        category: "Science & Engineering",
-        title: "New observation method improves outlook for lithium metal battery",
-        subtitle: "Breakthrough in battery technology research",
-        excerpt: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level.",
-        content: "Riara engineers develop innovative technique for analyzing battery performance at the molecular level. This breakthrough allows researchers to observe battery degradation in real-time, leading to more efficient and longer-lasting energy storage solutions. The new method uses advanced imaging techniques combined with machine learning algorithms to predict battery lifespan and optimize performance. This research has significant implications for electric vehicles, renewable energy storage, and portable electronics, potentially revolutionizing how we store and use energy.",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#",
-        publishedDate: "Nov 10, 2024",
-        author: "Engineering Department"
+        category: "Innovation",
+        title: "Riara University Signs Commercialization and Entrepreneurship Masterplan",
+        subtitle: "Partnership with KeNIA to foster innovation and entrepreneurship",
+        excerpt: "Riara University signed a masterplan with the Kenya National Innovation Agency (KeNIA) during the Kenya Innovation Week 2024.",
+        content: "In November 2024, Riara University signed a masterplan with the Kenya National Innovation Agency (KeNIA) during the Kenya Innovation Week. This partnership focuses on fostering innovation, promoting entrepreneurship, and accelerating the commercialization of creative ideas and technologies within the university. The masterplan establishes a framework for supporting student and faculty innovations, providing resources for startup development, and creating pathways for research commercialization. This initiative aligns with Riara University's vision to become a leading innovation and startup-driven university in Africa, creating an ecosystem where innovative ideas can flourish and transform into viable businesses.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2024/12/MOU-Signing-Cover-Page.jpg",
+        link: "https://riarauniversity.ac.ke/riara-university-signs-commercialization-and-entrepreneurship-masterplan-at-kenya-innovation-week-2024/",
+        publishedDate: "Nov 2024",
+        author: "Innovation Office"
       },
       {
         id: "4",
-        category: "Health & Medicine",
-        title: "Eye prosthesis restores sight to patients with incurable vision loss",
-        subtitle: "Revolutionary medical device brings hope",
-        excerpt: "Revolutionary device offers hope to patients with macular degeneration and other vision disorders.",
-        content: "Revolutionary device offers hope to patients with macular degeneration and other vision disorders. Developed through collaboration between our medical school and engineering department, this innovative prosthesis uses advanced neural interfaces to restore partial vision. Clinical trials have shown promising results, with patients reporting improved quality of life and increased independence. The device represents a significant advancement in neuroprosthetics and opens new possibilities for treating previously incurable conditions.",
-        imageUrl: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#",
-        publishedDate: "Nov 8, 2024",
-        author: "Medical Research Team"
+        category: "Innovation",
+        title: "Riara, A Hub of Innovations",
+        subtitle: "Guest lecture on thriving innovation and startup ecosystems",
+        excerpt: "The School of Computing Sciences hosted Professor Prabhu Rajagopal from IIT Madras for a talk on innovation and startup ecosystems.",
+        content: "In June 2025, the School of Computing Sciences hosted Professor Prabhu Rajagopal from IIT Madras, who delivered a talk on thriving innovation and startup ecosystems. The session emphasized the importance of fostering an entrepreneurial mindset among students and creating an environment where innovation can flourish. Professor Rajagopal shared insights from IIT Madras's successful innovation ecosystem, highlighting best practices for nurturing startups and supporting student entrepreneurs. The lecture inspired students and faculty to think creatively about solving real-world problems and building sustainable businesses. This event is part of Riara University's ongoing commitment to becoming a hub of innovation in Kenya and Africa.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/06/asd-3.jpg",
+        link: "https://riarauniversity.ac.ke/riara-a-hub-of-innovations/",
+        publishedDate: "Jun 2025",
+        author: "School of Computing Sciences"
       },
       {
         id: "5",
-        category: "Science & Engineering",
-        title: "Common crystal proves ideal for low-temperature light technology",
-        subtitle: "Quantum computing applications expand",
-        excerpt: "Research on strontium titanate opens new possibilities for quantum computing and cryogenic photonics.",
-        content: "Research on strontium titanate opens new possibilities for quantum computing and cryogenic photonics. Our physics department has discovered unique properties in this common crystal that make it ideal for low-temperature applications. The findings could lead to more efficient quantum computers and advanced photonic devices. This research demonstrates how fundamental materials science can unlock practical applications in cutting-edge technology fields.",
-        imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        category: "Campus Development",
+        title: "Riara University Commences Construction of New Campus at Konza Technopolis",
+        subtitle: "Kshs 20 billion investment in state-of-the-art facilities",
+        excerpt: "Riara University has commenced the construction of a new campus at Konza Technopolis, with an estimated investment of Kshs 20 billion.",
+        content: "Riara University has commenced the construction of a new campus at Konza Technopolis, with an estimated investment of Kshs 20 billion. The new campus is expected to become the university's main campus, aligning with its vision to become a leading innovation and startup-driven university in Africa. The Konza Technopolis location positions Riara University at the heart of Kenya's technology and innovation hub, providing students with access to cutting-edge facilities and opportunities to collaborate with tech companies and startups. The new campus will feature modern classrooms, research laboratories, innovation centers, and student accommodation facilities designed to support the university's mission of nurturing innovators.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/12/1231313-409x258.jpg",
         link: "#",
-        publishedDate: "Nov 5, 2024",
-        author: "Physics Department"
+        publishedDate: "2025",
+        author: "Campus Development"
       },
       {
         id: "6",
-        category: "Awards",
-        title: "Riara Professor David Kamau receives MacArthur Fellowship",
-        subtitle: "Prestigious recognition for environmental innovation",
-        excerpt: "Recognition for innovative work in environmental engineering and sustainable water treatment.",
-        content: "Recognition for innovative work in environmental engineering and sustainable water treatment. Professor Kamau's research has developed cost-effective solutions for providing clean water to underserved communities. His work combines traditional knowledge with modern engineering principles, creating sustainable systems that can be implemented in resource-limited settings. The MacArthur Fellowship recognizes his commitment to solving real-world problems and his innovative approach to environmental challenges.",
-        imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        category: "Technology",
+        title: "Riara University Launches Cybersecurity Training Hub",
+        subtitle: "ARU Hub strengthens Kenya's defense against cyber threats",
+        excerpt: "The university launched the Acyberschool Riara University (ARU) Hub, a center dedicated to training professionals in cybersecurity.",
+        content: "In December 2023, the university launched the Acyberschool Riara University (ARU) Hub, a center dedicated to training professionals in cybersecurity. This initiative aims to bolster the country's defense against increasing and sophisticated cyber threats. The ARU Hub provides comprehensive cybersecurity training programs, equipping professionals with the skills needed to protect digital infrastructure and data. The hub offers both short-term courses and long-term certification programs, making cybersecurity education accessible to a wide range of professionals. This initiative reflects Riara University's commitment to addressing critical technology challenges and contributing to Kenya's digital security landscape.",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/huawei-409x258.png",
         link: "#",
-        publishedDate: "Nov 1, 2024",
-        author: "University Communications"
+        publishedDate: "Dec 2023",
+        author: "School of Computing Sciences"
       }
     ];
 
@@ -131,21 +131,21 @@ export class MemStorage implements IStorage {
         id: "undergraduate",
         title: "Undergraduate Education",
         description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
-        imageUrl: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "graduate",
         title: "Graduate Education",
         description: "Unsurpassed opportunities to participate in the advancement of entire fields of knowledge",
-        imageUrl: "https://images.unsplash.com/photo-1532619675605-1ede6c7edf48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "lifelong",
         title: "Lifelong Learning",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
-        imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       }
     ];
@@ -216,21 +216,21 @@ export class MemStorage implements IStorage {
         id: "student-life",
         title: "Student Life",
         description: "A residential campus with diverse housing, exceptional dining, and over 600 student organizations",
-        imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "dialogue",
         title: "Constructive Dialogue",
         description: "Uplifting academic freedom and free speech; curiosity and critical inquiry; open, inclusive exchange of ideas",
-        imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "wellness",
         title: "Recreation & Wellness",
         description: "State-of-the-art facilities and fitness programs to encourage movement and play",
-        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       }
     ];
@@ -240,21 +240,21 @@ export class MemStorage implements IStorage {
         id: "interdisciplinary",
         title: "Interdisciplinary Scholarship",
         description: "Innovative programs center the arts in research and education and expand the role of art across academic disciplines",
-        imageUrl: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "museums",
         title: "Museums and Public Art",
         description: "Two world-class art museums and more than 80 outdoor installations, accessible to the public 365 days a year",
-        imageUrl: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "performance",
         title: "Live Performance",
         description: "Riara Live presents a wide range of performances by artists from around the world",
-        imageUrl: "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       }
     ];
@@ -265,7 +265,7 @@ export class MemStorage implements IStorage {
         type: "Exhibition",
         title: "Branner Library Monthly Book & Map Exhibit - Oceans: Indian Ocean",
         date: "Oct 24",
-        imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
@@ -274,7 +274,7 @@ export class MemStorage implements IStorage {
         title: "Spotlight on Special Collections",
         date: "Oct 24",
         time: "09:00 am EAT",
-        imageUrl: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
@@ -283,7 +283,7 @@ export class MemStorage implements IStorage {
         title: "Teaching and Mentoring Academy's 8th Annual Education Day",
         date: "Oct 25",
         time: "08:30 am EAT",
-        imageUrl: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
@@ -292,7 +292,7 @@ export class MemStorage implements IStorage {
         title: "Ensemble OH? x Riara Climate Week",
         date: "Oct 25",
         time: "07:30 pm EAT",
-        imageUrl: "https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
@@ -300,7 +300,7 @@ export class MemStorage implements IStorage {
         type: "Conference",
         title: "Riara, A hub of Innovations",
         date: "Jun 26",
-        imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "https://riarauniversity.ac.ke/riara-a-hub-of-innovations/"
       }
     ];
@@ -353,21 +353,21 @@ export class MemStorage implements IStorage {
         id: "mental-health",
         title: "Mental Health Support",
         description: "Access to professional counseling, therapy, and mental health awareness programs",
-        imageUrl: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "/healthcare"
       },
       {
         id: "wellness-education",
         title: "Wellness Education",
         description: "Workshops, seminars, and resources on stress management, self-care, healthy relationships, and emotional resilience",
-        imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "/healthcare"
       },
       {
         id: "peer-support",
         title: "Peer Support Programs",
         description: "Safe spaces for students to connect, share, and support one another through student-led wellness initiatives",
-        imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "/healthcare"
       }
     ];
@@ -377,21 +377,21 @@ export class MemStorage implements IStorage {
         id: "championships",
         title: "Home of Champions",
         description: "Riara's 137 NCAA championships are the most for any university, a product of an unrivaled culture of excellence",
-        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "olympic",
         title: "Olympic Excellence",
         description: "The Cardinal has produced at least one medalist in every Olympics in which Kenya has competed since 1912",
-        imageUrl: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       },
       {
         id: "impact",
         title: "Multidimensional Impact",
         description: "Riara student-athletes have achieved local, national, and global impact through community involvement and advocacy",
-        imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
         link: "#"
       }
     ];

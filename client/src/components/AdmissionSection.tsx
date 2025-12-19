@@ -23,7 +23,6 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold bg-[var(--color-stanford-red)] !text-white rounded-lg hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-md hover:shadow-lg"
               data-testid="button-apply-admission-section"
             >
-              <CheckCircle className="h-5 w-5 !text-white" />
               <span className="!text-white">Apply for Admission</span>
             </a>
           </header>

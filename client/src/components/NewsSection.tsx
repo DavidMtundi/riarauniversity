@@ -27,7 +27,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
               Campus News
             </h2>
           <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-news-subheading">
-              Stories about people, research, and innovation across the Farm
+              Stories about people, research, and innovation at Riara University
             </p>
           </header>
         )}
