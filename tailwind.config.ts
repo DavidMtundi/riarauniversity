@@ -81,6 +81,37 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        // Riara University Brand Colors - mapped to CSS variables for easy updates
+        // Usage: bg-brand, text-brand, border-brand, bg-brand-dark, etc.
+        brand: {
+          DEFAULT: "var(--color-stanford-red)",
+          dark: "var(--color-stanford-red-dark)",
+          light: "var(--color-stanford-red-light)",
+        },
+        // Riara University Background Colors
+        // Usage: bg-riara-maroon, bg-riara-primary, etc.
+        riara: {
+          maroon: "var(--color-bg-maroon)",
+          primary: "var(--color-bg-primary)",
+          secondary: "var(--color-bg-secondary)",
+          tertiary: "var(--color-bg-tertiary)",
+        },
+        // Riara University Text Colors (use with text- prefix)
+        // Usage: text-riara-text-primary, text-riara-text-secondary, etc.
+        "riara-text": {
+          primary: "var(--color-text-primary)",
+          secondary: "var(--color-text-secondary)",
+          tertiary: "var(--color-text-tertiary)",
+          inverse: "var(--color-text-inverse)",
+        },
+        // Riara University Border Colors (use with border- prefix)
+        // Usage: border-riara-border, border-riara-border-dark, etc.
+        "riara-border": {
+          DEFAULT: "var(--color-stanford-red)",
+          dark: "var(--color-stanford-red-dark)",
+          maroon: "var(--color-border-maroon)",
+          light: "var(--color-border-light)",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
