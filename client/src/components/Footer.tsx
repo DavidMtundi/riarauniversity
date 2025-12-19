@@ -117,11 +117,10 @@ const SOCIAL_MEDIA_LINKS: SocialMediaLink[] = [
 ];
 
 const ACTION_BUTTONS: ActionButton[] = [
-  { label: "Applying", href: "/apply", testId: "button-footer-applying" },
+  { label: "Applying", href: "/admission", testId: "button-footer-applying" },
   { label: "Visiting", href: "/visit", testId: "button-footer-visiting" },
   { label: "Giving", href: "/giving", testId: "button-footer-giving" },
   { label: "Careers", href: "/careers", testId: "button-footer-careers" },
-  { label: "Faculty Positions", href: "/faculty-positions", testId: "button-footer-faculty" },
   { label: "Contact", href: "/contact", testId: "button-footer-contact" },
 ];
 
