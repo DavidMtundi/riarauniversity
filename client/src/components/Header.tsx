@@ -29,7 +29,7 @@ export function Header({ variant = "default" }: HeaderProps) {
     <>
       <header
         className={cn(
-          "fixed top-0 w-full z-50 transition-colors duration-300",
+          "fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300",
           isOverlay
             ? "bg-gradient-to-b from-black/60 via-black/30 to-transparent shadow-none backdrop-blur-[2px]"
             : "md:bg-[var(--color-bg-primary)] bg-[var(--color-bg-maroon)] md:shadow-riara"
@@ -39,6 +39,7 @@ export function Header({ variant = "default" }: HeaderProps) {
       {/* Top Bar - Riara Style */}
       <div
         className={cn(
+          "w-full",
           isOverlay
           ? "text-white"
           : "bg-[var(--color-bg-maroon)]"
@@ -153,7 +154,7 @@ export function Header({ variant = "default" }: HeaderProps) {
     </header>
     
     {/* Mobile Menu Overlay */}
-    <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+    <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} onSearchOpen={() => setIsSearchOpen(true)} />
     
     {/* Search Dialog */}
     <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />

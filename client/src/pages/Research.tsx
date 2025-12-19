@@ -24,7 +24,7 @@ export default function Research() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center pt-24">
+        <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading Research...</p>
@@ -39,7 +39,7 @@ export default function Research() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center pt-24">
+        <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-2 sm:px-3">
             <div className="mb-4 text-[var(--color-stanford-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +64,7 @@ export default function Research() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
         {/* Hero Section */}
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}

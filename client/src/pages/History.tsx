@@ -16,7 +16,7 @@ export default function History() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
         {/* Hero Image Section */}
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}

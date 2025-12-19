@@ -5,9 +5,10 @@ import { HEADER_LINKS } from "@/lib/links";
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onSearchOpen?: () => void;
 }
 
-export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, onSearchOpen }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
@@ -17,7 +18,21 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         <div className="flex items-center justify-between text-[var(--color-text-inverse)]">
           <span className="text-xl font-bold text-[var(--color-text-inverse)]">Riara University</span>
           <div className="flex items-center gap-4">
-            <Button size="icon" variant="ghost" className="text-[var(--color-text-inverse)] hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)]">
+            <Button 
+              size="icon" 
+              variant="ghost" 
+              className="text-[var(--color-text-inverse)] hover:text-[var(--color-text-inverse-secondary)] hover:bg-[var(--overlay-inverse-hover)] touch-manipulation"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (onSearchOpen) {
+                  onSearchOpen();
+                  onClose(); // Close mobile menu when opening search
+                }
+              }}
+              style={{ touchAction: 'manipulation' }}
+              data-testid="button-search-mobile"
+            >
               <Search className="h-4 w-4" />
             </Button>
             <Button 

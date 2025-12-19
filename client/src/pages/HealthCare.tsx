@@ -6,7 +6,7 @@ export default function HealthCare() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
         {/* Hero Section */}
         <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}

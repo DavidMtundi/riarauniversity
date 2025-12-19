@@ -14,7 +14,7 @@ export default function Partners() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center pt-24">
+        <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading Partners...</p>
@@ -29,7 +29,7 @@ export default function Partners() {
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 flex items-center justify-center pt-24">
+        <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
             <div className="mb-4 text-[var(--color-stanford-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +54,7 @@ export default function Partners() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
         {/* Page Header */}
         <section className="bg-[var(--color-bg-secondary)] py-16 md:py-20">
           <Container>
