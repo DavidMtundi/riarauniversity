@@ -107,7 +107,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
   return (
     <article
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-riara-red)] cursor-pointer border border-gray-100",
+        "group flex flex-col h-full overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-riara-red)] cursor-pointer border border-gray-100",
         variant === "highlight" ? "border-2 border-[var(--color-riara-red)]/30 shadow-lg" : ""
       )}
       data-testid={`card-${variant}-${article.id}`}
@@ -150,12 +150,12 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
         </div>
       </div>
       
-      <div className="flex-1 flex flex-col p-6">
-        <div className="mb-3">
+      <div className="flex-1 flex flex-col p-6 min-h-0">
+        <div className="mb-3 flex-shrink-0">
           {renderCategory(article.category)}
         </div>
         
-        <div className="block flex-1">
+        <div className="block flex-shrink-0">
           <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--color-text-primary)] leading-tight mb-3 group-hover:text-[var(--color-riara-red)] transition-colors duration-300 line-clamp-2">
             {article.title}
           </h3>
@@ -167,9 +167,9 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
           )}
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 min-h-0 flex flex-col">
           <p className={cn(
-            "text-sm text-[var(--color-text-secondary)] leading-relaxed",
+            "text-sm text-[var(--color-text-secondary)] leading-relaxed flex-1",
             !isExpanded && !showFullContent ? "line-clamp-3" : ""
           )}>
             {displayContent}
@@ -182,7 +182,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
                 e.stopPropagation();
                 setIsExpanded(true);
               }}
-              className="mt-3 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors inline-flex items-center gap-1"
+              className="mt-3 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors inline-flex items-center gap-1 flex-shrink-0"
               data-testid={`button-read-more-${article.id}`}
             >
               Read more
@@ -197,7 +197,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
                 e.stopPropagation();
                 setIsExpanded(false);
               }}
-              className="mt-3 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors inline-flex items-center gap-1"
+              className="mt-3 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors inline-flex items-center gap-1 flex-shrink-0"
               data-testid={`button-read-less-${article.id}`}
             >
               Read less
@@ -206,7 +206,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
           )}
         </div>
 
-        <div className="mt-6 pt-5 border-t border-gray-200 flex items-center justify-between">
+        <div className="mt-6 pt-5 border-t border-gray-200 flex items-center justify-between flex-shrink-0">
           <div className="flex items-center gap-4 text-xs sm:text-sm text-[var(--color-text-tertiary)]">
             {article.publishedDate && (
               <div className="flex items-center gap-1.5 bg-gray-50 px-2.5 py-1.5 rounded-md">

@@ -35,12 +35,12 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
         )}
 
         {featuredArticle && (
-          <div className="grid gap-6 lg:grid-cols-3 mb-8 md:mb-12">
-            <div className="lg:col-span-2">
+          <div className="grid gap-6 lg:grid-cols-3 mb-8 md:mb-12 items-stretch">
+            <div className="lg:col-span-2 flex">
               <NewsCard article={featuredArticle} variant="featured" />
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 items-stretch">
               {highlightArticles.map((article) => (
                 <NewsCard
                   key={article.id}
@@ -54,11 +54,11 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
 
         {/* Row 2: Short (left) + Long (right) */}
         {row2Articles.length === 2 && (
-          <div className="grid gap-6 md:grid-cols-3 mb-8 md:mb-10">
-            <div className="md:col-span-1">
+          <div className="grid gap-6 md:grid-cols-3 mb-8 md:mb-10 items-stretch">
+            <div className="md:col-span-1 flex">
               <NewsCard article={row2Articles[0]} variant="regular" />
             </div>
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 flex">
               <NewsCard article={row2Articles[1]} variant="regular" />
             </div>
           </div>
@@ -66,7 +66,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
 
         {/* Row 3: 3 equal articles */}
         {row3Articles.length > 0 && (
-          <div className="grid gap-6 md:grid-cols-3 mb-10">
+          <div className="grid gap-6 md:grid-cols-3 mb-10 items-stretch">
             {row3Articles.map((article) => (
               <NewsCard
                 key={article.id}
