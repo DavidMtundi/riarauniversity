@@ -11,7 +11,7 @@ export default function CampusLife() {
         <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
           </div>
           
@@ -48,7 +48,7 @@ export default function CampusLife() {
         {/* Full-Width Image 1 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
             alt="Students at Riara University" 
             className="w-full h-full object-cover"
           />
@@ -150,7 +150,7 @@ export default function CampusLife() {
         {/* Full-Width Image 2 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
             alt="Career development at Riara University" 
             className="w-full h-full object-cover"
           />
@@ -216,7 +216,7 @@ export default function CampusLife() {
         {/* Full-Width Image 3 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
             alt="Sports and activities at Riara University" 
             className="w-full h-full object-cover"
           />
