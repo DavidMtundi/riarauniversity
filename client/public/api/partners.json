@@ -10,22 +10,22 @@
         "id": "standard-group",
         "name": "Standard Group",
         "description": "Media and communications partner supporting university initiatives",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.standardmedia.co.ke/assets/images/logos/standard-logo-web.webp",
+        "website": "https://www.standardmedia.co.ke"
       },
       {
         "id": "nairobi-securities-exchange",
         "name": "Nairobi Securities Exchange",
         "description": "Financial markets and investment education partnership",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.nse.co.ke/wp-content/uploads/2021/09/logo.png",
+        "website": "https://www.nse.co.ke"
       },
       {
         "id": "helb",
         "name": "HELB",
         "description": "Higher Education Loans Board supporting student financial aid",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.helb.co.ke/wp-content/uploads/2022/11/logodark1.png",
+        "website": "https://www.helb.co.ke"
       },
       {
         "id": "qwetu-student-residence",
@@ -47,15 +47,15 @@
         "id": "seneca",
         "name": "Seneca",
         "description": "International academic collaboration and exchange programs",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.senecapolytechnic.ca/content/dam/projects/seneca/seneca-logo.svg",
+        "website": "https://www.senecacollege.ca"
       },
       {
         "id": "griffith-college",
         "name": "Griffith College",
         "description": "Global educational partnership and student exchange",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.griffith.ie/themes/custom/griffith2022/assets/logos/logo-2x-black.webp",
+        "website": "https://www.griffith.ie"
       }
     ]
   },
@@ -70,15 +70,15 @@
         "id": "mozilla",
         "name": "Mozilla Foundation",
         "description": "Supporting curriculum development and open source initiatives",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
+        "logoUrl": "https://assets.mofoprod.net/static/foundation_cms/_images/mf-wordmark.4a6d0825d98f.svg",
         "website": "https://foundation.mozilla.org"
       },
       {
         "id": "kenet",
         "name": "KENET (Kenya Education Network)",
         "description": "National research and education network supporting academic connectivity",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.kenet.or.ke/sites/default/files/kenelogomedium.png",
+        "website": "https://www.kenet.or.ke"
       },
       {
         "id": "regional-center",
@@ -114,8 +114,8 @@
         "id": "ciarb-kenya",
         "name": "CIARB Kenya Branch",
         "description": "Chartered Institute of Arbitrators - Kenya Branch",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.ciarb.org/media/pngbiwd4/ciarb_logo.svg",
+        "website": "https://www.ciarb.org"
       },
       {
         "id": "kenya-association",
@@ -137,8 +137,8 @@
         "id": "icdl",
         "name": "ICDL",
         "description": "International Computer Driving Licence certification programs",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://icdl.org/wp-content/themes/transpose_icdl/dist/images/icdl-logo_4e27340b.svg",
+        "website": "https://www.icdl.org"
       },
       {
         "id": "igm",
@@ -167,8 +167,8 @@
         "id": "kituo-cha-sheria",
         "name": "Kituo cha Sheria",
         "description": "Legal aid and advocacy organization supporting legal education",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://kituochasheria.or.ke/wp-content/uploads/2022/09/KITUO-CHA-SHERIA-Legal-Advice-Centre.png",
+        "website": "https://kituochasheria.or.ke"
       }
     ]
   }
