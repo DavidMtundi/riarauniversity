@@ -131,7 +131,7 @@ export class MemStorage implements IStorage {
         id: "undergraduate",
         title: "Undergraduate Education",
         description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg",
         link: "#"
       },
       {
@@ -145,7 +145,7 @@ export class MemStorage implements IStorage {
         id: "lifelong",
         title: "Lifelong Learning",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg",
         link: "#"
       }
     ];
