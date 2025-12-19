@@ -31,8 +31,8 @@
         "id": "qwetu-student-residence",
         "name": "QWETU Student Residence",
         "description": "Student accommodation and housing services",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://qwetu.co.ke/wp-content/uploads/2023/01/QWETU-Logo.png",
+        "website": "https://qwetu.co.ke"
       }
     ]
   },
@@ -70,7 +70,7 @@
         "id": "mozilla",
         "name": "Mozilla Foundation",
         "description": "Supporting curriculum development and open source initiatives",
-        "logoUrl": "https://assets.mofoprod.net/static/foundation_cms/_images/mf-wordmark.4a6d0825d98f.svg",
+        "logoUrl": "https://www.mozilla.org/media/img/logos/foundation/logo-wordmark.feb7f3b8c0e1.svg",
         "website": "https://foundation.mozilla.org"
       },
       {
@@ -84,7 +84,7 @@
         "id": "regional-center",
         "name": "Regional Center",
         "description": "Regional collaboration and research initiatives",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
+        "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/UNESCO_logo.svg/1200px-UNESCO_logo.svg.png",
         "website": "#"
       }
     ]
@@ -100,15 +100,15 @@
         "id": "education-collaborative",
         "name": "The Education Collaborative",
         "description": "Africa-wide network aiming to train ethical entrepreneurial graduates",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://educationcollaborative.org/wp-content/uploads/2021/06/Education-Collaborative-Logo.png",
+        "website": "https://educationcollaborative.org"
       },
       {
         "id": "arielle-for-africa",
         "name": "Arielle for Africa",
         "description": "Pan-African educational and development initiatives",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://arielleforafrica.org/wp-content/uploads/2023/01/Arielle-Logo.png",
+        "website": "https://arielleforafrica.org"
       },
       {
         "id": "ciarb-kenya",
@@ -121,8 +121,8 @@
         "id": "kenya-association",
         "name": "Kenya Association",
         "description": "Professional association supporting university programs",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://kam.co.ke/wp-content/uploads/2022/01/KAM-Logo.png",
+        "website": "https://kam.co.ke"
       }
     ]
   },
@@ -137,22 +137,22 @@
         "id": "icdl",
         "name": "ICDL",
         "description": "International Computer Driving Licence certification programs",
-        "logoUrl": "https://icdl.org/wp-content/themes/transpose_icdl/dist/images/icdl-logo_4e27340b.svg",
+        "logoUrl": "https://icdl.org/wp-content/uploads/2020/11/ICDL-logo.png",
         "website": "https://www.icdl.org"
       },
       {
         "id": "igm",
         "name": "IGM",
         "description": "Professional training and certification programs",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://www.igm.or.ke/wp-content/uploads/2022/05/IGM-Logo.png",
+        "website": "https://www.igm.or.ke"
       },
       {
         "id": "mediation-training",
         "name": "Mediation Training Institute of East Africa",
         "description": "Alternative dispute resolution training and certification",
-        "logoUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        "website": "#"
+        "logoUrl": "https://mediationtraininginstitute.org/wp-content/uploads/2022/03/MTI-Logo.png",
+        "website": "https://mediationtraininginstitute.org"
       }
     ]
   },
