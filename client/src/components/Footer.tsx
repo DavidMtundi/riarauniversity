@@ -52,10 +52,8 @@ const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: "RESOURCES",
     links: [
-      { label: "Research Centers A - Z", href: "/research/centers", testId: "link-footer-research-centers" },
       { label: "School Library", href: FOOTER_LINKS.library, testId: "link-footer-School Library" },
       { label: "Riara Health Care", href: "/healthcare/riara-health", testId: "link-footer-riara-health" },
-      { label: "Riara Children's Health", href: "/healthcare/childrens-health", testId: "link-footer-childrens-health" },
       { label: "Riara Online", href: "/online-learning", testId: "link-footer-online-learning" },
     ],
   },
