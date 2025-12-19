@@ -287,7 +287,7 @@ export default function About() {
                 asChild
                 className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white"
               >
-                <a href="/quality-assurance">Learn More About Quality Assurance</a>
+                <a href="/quality-assurance" className="!text-white">Learn More About Quality Assurance</a>
               </Button>
             </div>
           </Container>
