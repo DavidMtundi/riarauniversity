@@ -19,10 +19,11 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
             From world-class museums to live performances and interdisciplinary scholarship, the arts are an integral part of the Riara experience.
           </p>
         </header>
+      </Container>
 
-        {profile && (
-          <div className="mb-16 md:mb-20" data-testid="card-arts-profile">
-            <div className="relative group overflow-hidden rounded-lg aspect-[16/9] md:aspect-[21/9]">
+      {profile && (
+        <div className="mb-16 md:mb-20 w-full" data-testid="card-arts-profile">
+          <div className="relative group overflow-hidden aspect-[16/9] md:aspect-[21/9] w-full">
               {/* Background image - blurred on hover */}
               {profile.imageUrl && (
                 <div 
@@ -95,8 +96,9 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
               </div>
             </div>
           </div>
-        )}
+      )}
 
+      <Container>
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {sections.map((section) => {
             return (

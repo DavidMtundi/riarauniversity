@@ -24,10 +24,11 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
             </p>
           </header>
         )}
+      </Container>
 
-        {profile && (
-          <div className="mb-16 md:mb-20" data-testid="card-campus-profile">
-            <div className="relative group overflow-hidden rounded-lg aspect-[16/9] md:aspect-[21/9]">
+      {profile && (
+        <div className="mb-16 md:mb-20 w-full" data-testid="card-campus-profile">
+          <div className="relative group overflow-hidden aspect-[16/9] md:aspect-[21/9] w-full">
               {/* Background image - blurred on hover */}
               {profile.imageUrl && (
                 <div 
@@ -100,8 +101,9 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
               </div>
             </div>
           </div>
-        )}
+      )}
 
+      <Container>
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {sections.map((section) => {
             return (

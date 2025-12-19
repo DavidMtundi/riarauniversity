@@ -91,70 +91,76 @@ export const typography = {
   },
 } as const;
 
-// Colors - Riara University Brand Colors
+// Colors - Riara University Brand Colors (from parent site)
 export const colors = {
-  // Riara University primary brand (maroon)
+  // Riara University primary brand colors (from riarauniversity.ac.ke)
   stanford: {
-    red: '#a21984', // Primary maroon
-    redDark: '#7d1466', // Darker maroon (hover/active)
-    redLight: '#c026a0',
+    red: '#864f7b', // Primary maroon from parent site
+    redDark: '#6d3f63', // Darker maroon (hover/active)
+    redLight: '#ad74a2',
   },
-  // Text Colors - Riara University
+  // Primary blue from parent site
+  primaryBlue: {
+    light: '#46a5e5', // Light blue for buttons/links
+    medium: '#179bd7', // Medium blue
+    dark: '#17376e', // Dark blue
+  },
+  // Text Colors - Riara University (from parent site)
   text: {
-    primary: '#000000',
-    secondary: '#333333',
-    tertiary: '#666666',
-    h5h6: '#1B1B1B',
+    primary: '#222222', // From parent site
+    secondary: '#343434', // From parent site
+    tertiary: '#666666', // From parent site
+    h5h6: '#444444', // From parent site
     muted: '#999999',
     copyright: '#CCCCCC',
     inverse: '#ffffff',
     inverseSecondary: '#f5f5f5',
   },
-  // Background Colors - Riara University
+  // Background Colors - Riara University (from parent site)
   background: {
     primary: '#ffffff',
-    secondary: '#fafafa',
-    tertiary: '#f5f5f5',
-    lightGray: '#F5F5F5',
-    mediumGray: '#E8E8E8',
+    secondary: '#fafafa', // From parent site
+    tertiary: '#f6f6f6', // From parent site
+    lightGray: '#eaeaea', // From parent site
+    mediumGray: '#e5e5e5', // From parent site
     darkGray: '#2E2E2E',
     footer: '#2E2E2E',
     copyright: '#1A1A1A',
-    buttonPrimary: '#a21984',
+    buttonPrimary: '#46a5e5', // Primary blue from parent site
     buttonSecondary: '#F0F0F0',
-    buttonSearch: '#E8E8E8',
+    buttonSearch: '#eaeaea', // From parent site
     inverse: '#000000',
-    maroon: '#a21984', // Primary maroon for header background
+    maroon: '#864f7b', // Primary maroon from parent site for header background
   },
-  // Border Colors - Riara University
+  // Border Colors - Riara University (from parent site)
   border: {
-    light: '#D0D0D0',
-    medium: '#CCCCCC',
-    secondary: '#E8E8E8',
-    dark: '#a3a3a3',
-    maroon: '#7d1466',
+    light: '#eaeaea', // From parent site
+    medium: '#e0e0e0', // From parent site
+    secondary: '#e5e5e5', // From parent site
+    dark: '#666666', // From parent site
+    maroon: '#6d3f63', // Darker maroon from parent site
   },
-  // Legacy Riara University colors (for backward compatibility)
+  // Legacy Riara University colors (for backward compatibility) - Updated from parent site
   riara: {
-    maroon: '#a21984', // Primary maroon
-    maroonLight: '#c026a0',
-    maroonDark: '#7d1466',
+    maroon: '#864f7b', // Primary maroon from parent site
+    maroonLight: '#ad74a2', // From parent site
+    maroonDark: '#6d3f63', // From parent site
     gold: '#F59E0B', // Riara Gold
     goldLight: '#FBBF24',
     goldDark: '#D97706',
   },
-  // Semantic colors (legacy - for backward compatibility)
+  // Semantic colors (legacy - for backward compatibility) - Updated from parent site
   primary: {
-    50: '#fdf2f8',
-    100: '#fce7f3',
-    200: '#fbcfe8',
-    300: '#f9a8d4',
-    400: '#f472b6',
-    500: '#ec4899',
-    600: '#db2777',
-    700: '#a21984',
-    800: '#7d1466',
-    900: '#6b1a5c',
+    50: '#f5e8f2',
+    100: '#e8d1e5',
+    200: '#d4a3cb',
+    300: '#c075b1',
+    400: '#ac4797',
+    500: '#864f7b', // Primary maroon from parent site
+    600: '#6d3f63',
+    700: '#542f4b',
+    800: '#3b1f33',
+    900: '#220f1b',
   },
   // Neutral colors (legacy - for backward compatibility)
   neutral: {
@@ -191,8 +197,8 @@ export const shadows = {
   md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
   lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
   xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-  // Riara specific shadow
-  riara: '0 0 15px rgba(162, 25, 132, .2), 0 4px 6px rgba(162, 25, 132, .1)',
+  // Riara specific shadow (updated maroon color)
+  riara: '0 0 15px rgba(134, 79, 123, .2), 0 4px 6px rgba(134, 79, 123, .1)',
 } as const;
 
 // Border radius
