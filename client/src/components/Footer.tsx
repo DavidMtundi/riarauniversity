@@ -47,6 +47,7 @@ const FOOTER_SECTIONS: FooterSection[] = [
     links: [
       { label: "Undergraduate Majors", href: "/academics/undergraduate", testId: "link-footer-undergraduate" },
       { label: "Graduate Programs", href: "/academics/graduate", testId: "link-footer-graduate" },
+      { label: "Professional Programs", href: "/academics#lifelong", testId: "link-footer-professional" },
     ],
   },
   {
