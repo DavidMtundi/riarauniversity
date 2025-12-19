@@ -38,8 +38,8 @@ export default function QualityAssurance() {
         <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-sm">
-              <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
-                <div className="md:col-span-2 order-2 md:order-1">
+              <div className="grid md:grid-cols-5 gap-6 md:gap-8 items-start">
+                <div className="md:col-span-3 order-2 md:order-1">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                     Message from the University Quality Assurance Officer
                   </h2>
@@ -47,8 +47,8 @@ export default function QualityAssurance() {
                     The Quality Assurance Department plays a pivotal role in ensuring that Riara University upholds the highest standards of service delivery. The Office focuses on maintaining quality in the services provided, continuous improvement, and putting students and other stakeholders first.
                   </p>
                 </div>
-                <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                  <div className="w-48 md:w-56 lg:w-64 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                <div className="md:col-span-2 order-1 md:order-2 flex justify-center md:justify-start">
+                  <div className="w-40 md:w-44 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2023/11/Ms.-Dorothy-Oduor-255x340.jpg" 
                       alt="Ms. Dorothy Oduor, Quality Assurance Officer" 
