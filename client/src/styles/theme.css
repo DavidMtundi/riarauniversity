@@ -86,9 +86,9 @@
   --letter-spacing-normal: 0px;
 
   /* Riara University Brand Colors (from parent site riarauniversity.ac.ke) */
-  --color-stanford-red: #864f7b; /* Primary maroon from parent site */
-  --color-stanford-red-dark: #6d3f63; /* Darker maroon from parent site */
-  --color-stanford-red-light: #ad74a2; /* Lighter maroon from parent site */
+  --color-stanford-red: #a10e83; /* Primary brand color from parent site (vibrant purple/magenta) */
+  --color-stanford-red-dark: #7d0a65; /* Darker variant from parent site */
+  --color-stanford-red-light: #c515a0; /* Lighter variant from parent site */
   /* Primary blue from parent site */
   --color-primary-blue-light: #46a5e5;
   --color-primary-blue-medium: #179bd7;
@@ -128,12 +128,12 @@
   --color-border-medium: #e0e0e0; /* From parent site */
   --color-border-secondary: #e5e5e5; /* From parent site */
   --color-border-dark: #666666; /* From parent site */
-  --color-border-maroon: #6d3f63; /* Darker maroon from parent site */
+  --color-border-maroon: #7d0a65; /* Darker brand color from parent site */
 
   /* Legacy Riara Colors (updated from parent site) */
-  --color-riara-maroon: #864f7b; /* Primary maroon from parent site */
-  --color-riara-maroon-light: #ad74a2; /* From parent site */
-  --color-riara-maroon-dark: #6d3f63; /* From parent site */
+  --color-riara-maroon: #a10e83; /* Primary brand color from parent site */
+  --color-riara-maroon-light: #c515a0; /* From parent site */
+  --color-riara-maroon-dark: #7d0a65; /* From parent site */
   --color-riara-gold: #F59E0B;
   --color-riara-gold-light: #FBBF24;
   --color-riara-gold-dark: #D97706;
@@ -144,8 +144,8 @@
   --color-primary-200: #d4a3cb;
   --color-primary-300: #c075b1;
   --color-primary-400: #ac4797;
-  --color-primary-500: #864f7b; /* Primary maroon from parent site */
-  --color-primary-600: #6d3f63;
+  --color-primary-500: #a10e83; /* Primary brand color from parent site */
+  --color-primary-600: #7d0a65;
   --color-primary-700: #542f4b;
   --color-primary-800: #3b1f33;
   --color-primary-900: #220f1b;

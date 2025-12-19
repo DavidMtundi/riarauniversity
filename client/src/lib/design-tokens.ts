@@ -95,9 +95,9 @@ export const typography = {
 export const colors = {
   // Riara University primary brand colors (from riarauniversity.ac.ke)
   stanford: {
-    red: '#864f7b', // Primary maroon from parent site
-    redDark: '#6d3f63', // Darker maroon (hover/active)
-    redLight: '#ad74a2',
+    red: '#a10e83', // Primary brand color from parent site (vibrant purple/magenta)
+    redDark: '#7d0a65', // Darker variant (hover/active)
+    redLight: '#c515a0',
   },
   // Primary blue from parent site
   primaryBlue: {
@@ -130,7 +130,7 @@ export const colors = {
     buttonSecondary: '#F0F0F0',
     buttonSearch: '#eaeaea', // From parent site
     inverse: '#000000',
-    maroon: '#864f7b', // Primary maroon from parent site for header background
+    maroon: '#a10e83', // Primary brand color from parent site for header background
   },
   // Border Colors - Riara University (from parent site)
   border: {
@@ -138,13 +138,13 @@ export const colors = {
     medium: '#e0e0e0', // From parent site
     secondary: '#e5e5e5', // From parent site
     dark: '#666666', // From parent site
-    maroon: '#6d3f63', // Darker maroon from parent site
+    maroon: '#7d0a65', // Darker brand color from parent site
   },
   // Legacy Riara University colors (for backward compatibility) - Updated from parent site
   riara: {
-    maroon: '#864f7b', // Primary maroon from parent site
-    maroonLight: '#ad74a2', // From parent site
-    maroonDark: '#6d3f63', // From parent site
+    maroon: '#a10e83', // Primary brand color from parent site
+    maroonLight: '#c515a0', // From parent site
+    maroonDark: '#7d0a65', // From parent site
     gold: '#F59E0B', // Riara Gold
     goldLight: '#FBBF24',
     goldDark: '#D97706',
@@ -156,8 +156,8 @@ export const colors = {
     200: '#d4a3cb',
     300: '#c075b1',
     400: '#ac4797',
-    500: '#864f7b', // Primary maroon from parent site
-    600: '#6d3f63',
+    500: '#a10e83', // Primary brand color from parent site
+    600: '#7d0a65',
     700: '#542f4b',
     800: '#3b1f33',
     900: '#220f1b',
@@ -197,8 +197,8 @@ export const shadows = {
   md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
   lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
   xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-  // Riara specific shadow (updated maroon color)
-  riara: '0 0 15px rgba(134, 79, 123, .2), 0 4px 6px rgba(134, 79, 123, .1)',
+  // Riara specific shadow (updated brand color)
+  riara: '0 0 15px rgba(161, 14, 131, .2), 0 4px 6px rgba(161, 14, 131, .1)',
 } as const;
 
 // Border radius
