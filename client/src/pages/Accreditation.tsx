@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
-import { Award, ExternalLink, CheckCircle2 } from "lucide-react";
+import { Award, ExternalLink, CheckCircle2, Quote, GraduationCap, TrendingUp, Shield } from "lucide-react";
 
 export default function Accreditation() {
   const accreditations = [
@@ -113,9 +113,12 @@ export default function Accreditation() {
         <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto text-center mb-12">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
-                Our Accreditations
-              </h2>
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Shield className="h-10 w-10 text-[var(--color-riara-red)]" />
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)]">
+                  Our Accreditations
+                </h2>
+              </div>
               <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                 Accreditation is a mark of quality and recognition that validates our commitment to excellence in education. 
                 Riara University is proud to be accredited by leading regulatory bodies and professional organizations, 
@@ -125,6 +128,66 @@ export default function Accreditation() {
                 These accreditations affirm our dedication to providing quality education, maintaining rigorous academic standards, 
                 and preparing our students for successful careers in their chosen fields.
               </p>
+            </div>
+
+            {/* Accreditation Timeline */}
+            <div className="max-w-5xl mx-auto mt-16">
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                Our Accreditation Journey
+              </h3>
+              <div className="relative">
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[var(--color-riara-red)] to-[var(--color-riara-red)]/50 hidden md:block"></div>
+                <div className="space-y-8">
+                  <div className="relative flex flex-col md:flex-row items-center gap-6">
+                    <div className="w-full md:w-1/2 md:text-right md:pr-8">
+                      <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 rounded-lg shadow-md border-l-4 border-[var(--color-riara-red)]">
+                        <div className="flex items-center gap-2 mb-2 md:justify-end">
+                          <CheckCircle2 className="h-5 w-5 text-green-600" />
+                          <span className="text-sm font-semibold text-green-600">2012</span>
+                        </div>
+                        <h4 className="text-lg font-semibold text-[var(--color-text-primary)] mb-2">Initial Accreditation</h4>
+                        <p className="text-sm text-[var(--color-text-secondary)]">
+                          Riara University received its first accreditations from CUE, CLE, and KASNEB, establishing our foundation of excellence.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--color-riara-red)] rounded-full border-4 border-white shadow-lg hidden md:block"></div>
+                    <div className="w-full md:w-1/2"></div>
+                  </div>
+                  <div className="relative flex flex-col md:flex-row items-center gap-6">
+                    <div className="w-full md:w-1/2"></div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--color-riara-red)] rounded-full border-4 border-white shadow-lg hidden md:block"></div>
+                    <div className="w-full md:w-1/2 md:text-left md:pl-8">
+                      <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 rounded-lg shadow-md border-l-4 border-[var(--color-riara-red)]">
+                        <div className="flex items-center gap-2 mb-2">
+                          <CheckCircle2 className="h-5 w-5 text-green-600" />
+                          <span className="text-sm font-semibold text-green-600">2012</span>
+                        </div>
+                        <h4 className="text-lg font-semibold text-[var(--color-text-primary)] mb-2">SAP Partnership</h4>
+                        <p className="text-sm text-[var(--color-text-secondary)]">
+                          Joined the SAP University Alliance Programme, becoming one of the few universities in Kenya accredited for SAP training.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="relative flex flex-col md:flex-row items-center gap-6">
+                    <div className="w-full md:w-1/2 md:text-right md:pr-8">
+                      <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 rounded-lg shadow-md border-l-4 border-[var(--color-riara-red)]">
+                        <div className="flex items-center gap-2 mb-2 md:justify-end">
+                          <TrendingUp className="h-5 w-5 text-[var(--color-riara-red)]" />
+                          <span className="text-sm font-semibold text-[var(--color-riara-red)]">Ongoing</span>
+                        </div>
+                        <h4 className="text-lg font-semibold text-[var(--color-text-primary)] mb-2">Continuous Excellence</h4>
+                        <p className="text-sm text-[var(--color-text-secondary)]">
+                          Maintaining and renewing all accreditations through continuous improvement and quality assurance.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[var(--color-riara-red)] rounded-full border-4 border-white shadow-lg hidden md:block"></div>
+                    <div className="w-full md:w-1/2"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </Container>
         </section>
@@ -280,8 +343,51 @@ export default function Accreditation() {
           </Container>
         </section>
 
-        {/* Contact Section */}
+        {/* Student Testimonials Section */}
         <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+          <Container>
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-10 text-center">
+                What Accreditation Means to Our Students
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex items-center gap-3 mb-4">
+                    <GraduationCap className="h-8 w-8 text-[var(--color-riara-red)]" />
+                    <div>
+                      <p className="font-semibold text-[var(--color-text-primary)]">Law Graduate</p>
+                      <p className="text-sm text-[var(--color-text-secondary)]">Class of 2021</p>
+                    </div>
+                  </div>
+                  <Quote className="h-6 w-6 text-[var(--color-riara-red)]/30 mb-3" />
+                  <p className="text-base text-[var(--color-text-secondary)] italic mb-4">
+                    "Riara's CLE accreditation was crucial for my career. It meant my degree was recognized by the legal profession, 
+                    and I could immediately pursue my legal practice license. The quality of education here truly prepared me for the real world."
+                  </p>
+                  <p className="text-sm font-semibold text-[var(--color-text-primary)]">— David K., Attorney</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex items-center gap-3 mb-4">
+                    <GraduationCap className="h-8 w-8 text-[var(--color-riara-red)]" />
+                    <div>
+                      <p className="font-semibold text-[var(--color-text-primary)]">Business Graduate</p>
+                      <p className="text-sm text-[var(--color-text-secondary)]">Class of 2022</p>
+                    </div>
+                  </div>
+                  <Quote className="h-6 w-6 text-[var(--color-riara-red)]/30 mb-3" />
+                  <p className="text-base text-[var(--color-text-secondary)] italic mb-4">
+                    "The KASNEB accreditation allowed me to sit for professional exams right on campus. This convenience, 
+                    combined with the quality education, helped me pass my CPA exams and land my dream job at a top accounting firm."
+                  </p>
+                  <p className="text-sm font-semibold text-[var(--color-text-primary)]">— Mary N., CPA</p>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
@@ -294,13 +400,13 @@ export default function Accreditation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/quality-assurance"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-riara-red)] text-white font-semibold rounded-lg hover:bg-[var(--color-riara-red-dark)] transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-riara-red)] text-white font-semibold rounded-lg hover:bg-[var(--color-riara-red-dark)] transition-colors shadow-md hover:shadow-lg"
                 >
                   Quality Assurance Office
                 </a>
                 <a
                   href="mailto:info@riarauniversity.ac.ke"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-[var(--color-riara-red)] font-semibold rounded-lg border-2 border-[var(--color-riara-red)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-[var(--color-riara-red)] font-semibold rounded-lg border-2 border-[var(--color-riara-red)] hover:bg-[var(--color-bg-secondary)] transition-colors shadow-md hover:shadow-lg"
                 >
                   Contact Us
                 </a>

@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, HelpCircle, MessageCircle, User, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,30 @@ export default function Contact() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "How do I apply for admission?",
+      answer: "You can apply online through our admissions portal at admissions.ru.ac.ke. For more information, visit our Admission page or contact the admissions office directly."
+    },
+    {
+      question: "What are the admission requirements?",
+      answer: "Admission requirements vary by program. Generally, you'll need your KCSE certificate or equivalent, and meet the minimum grade requirements. Visit our Admission page for specific requirements for each program."
+    },
+    {
+      question: "Do you offer financial aid?",
+      answer: "Yes, we offer various financial aid options including scholarships, bursaries, and student loans. Contact our Financial Aid office for more information about eligibility and application procedures."
+    },
+    {
+      question: "Can I schedule a campus tour?",
+      answer: "Absolutely! We welcome prospective students and their families to visit our campus. You can schedule a tour by emailing admissions@riarauniversity.ac.ke or calling +254 703 038 000."
+    },
+    {
+      question: "What programs do you offer?",
+      answer: "We offer a wide range of undergraduate and graduate programs across six schools: Business, Education, Law, Computing Science, International Relations, and Communication & Journalism. Visit our Academics page for detailed information."
+    }
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -72,8 +97,10 @@ export default function Contact() {
         <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg text-center">
-                <MapPin className="h-10 w-10 text-[var(--color-riara-red)] mx-auto mb-4" />
+              <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg text-center shadow-md hover:shadow-xl transition-all">
+                <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-full w-fit mx-auto mb-4">
+                  <MapPin className="h-10 w-10 text-[var(--color-riara-red)]" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                   Address
                 </h3>
@@ -85,20 +112,24 @@ export default function Contact() {
                 </p>
               </div>
 
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg text-center">
-                <Phone className="h-10 w-10 text-[var(--color-riara-red)] mx-auto mb-4" />
+              <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg text-center shadow-md hover:shadow-xl transition-all">
+                <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-full w-fit mx-auto mb-4">
+                  <Phone className="h-10 w-10 text-[var(--color-riara-red)]" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                   Phone
                 </h3>
                 <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                  <a href="tel:+254703038000" className="hover:text-[var(--color-riara-red)] transition-colors">
+                  <a href="tel:+254703038000" className="hover:text-[var(--color-riara-red)] transition-colors font-semibold">
                     +254 703 038 000
                   </a>
                 </p>
               </div>
 
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg text-center">
-                <Mail className="h-10 w-10 text-[var(--color-riara-red)] mx-auto mb-4" />
+              <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg text-center shadow-md hover:shadow-xl transition-all">
+                <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-full w-fit mx-auto mb-4">
+                  <Mail className="h-10 w-10 text-[var(--color-riara-red)]" />
+                </div>
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                   Email
                 </h3>
@@ -107,6 +138,36 @@ export default function Contact() {
                     info@riarauniversity.ac.ke
                   </a>
                 </p>
+              </div>
+            </div>
+
+            {/* Department Contacts */}
+            <div className="bg-gradient-to-r from-[var(--color-riara-red)]/5 to-[var(--color-riara-red)]/10 rounded-xl p-8 md:p-10 mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <MessageCircle className="h-6 w-6 text-[var(--color-riara-red)]" />
+                <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)]">
+                  Department Contacts
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <p className="font-semibold text-[var(--color-text-primary)] mb-1">Admissions</p>
+                  <a href="mailto:admissions@riarauniversity.ac.ke" className="text-sm text-[var(--color-riara-red)] hover:underline">
+                    admissions@riarauniversity.ac.ke
+                  </a>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <p className="font-semibold text-[var(--color-text-primary)] mb-1">Financial Aid</p>
+                  <a href="mailto:financialaid@riarauniversity.ac.ke" className="text-sm text-[var(--color-riara-red)] hover:underline">
+                    financialaid@riarauniversity.ac.ke
+                  </a>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm">
+                  <p className="font-semibold text-[var(--color-text-primary)] mb-1">Alumni Relations</p>
+                  <a href="mailto:alumni@riarauniversity.ac.ke" className="text-sm text-[var(--color-riara-red)] hover:underline">
+                    alumni@riarauniversity.ac.ke
+                  </a>
+                </div>
               </div>
             </div>
           </Container>
@@ -258,24 +319,64 @@ export default function Contact() {
                   <div className="space-y-3">
                     <a
                       href="/admission"
-                      className="block text-base md:text-lg text-[var(--color-riara-red)] hover:underline"
+                      className="block text-base md:text-lg text-[var(--color-riara-red)] hover:underline transition-colors"
                     >
                       Admissions
                     </a>
                     <a
                       href="/visit"
-                      className="block text-base md:text-lg text-[var(--color-riara-red)] hover:underline"
+                      className="block text-base md:text-lg text-[var(--color-riara-red)] hover:underline transition-colors"
                     >
                       Campus Tours
                     </a>
                     <a
                       href="mailto:admissions@riarauniversity.ac.ke"
-                      className="block text-base md:text-lg text-[var(--color-riara-red)] hover:underline"
+                      className="block text-base md:text-lg text-[var(--color-riara-red)] hover:underline transition-colors"
                     >
                       admissions@riarauniversity.ac.ke
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 md:py-20 bg-white">
+          <Container>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-8">
+                <HelpCircle className="h-8 w-8 text-[var(--color-riara-red)]" />
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)]">
+                  Frequently Asked Questions
+                </h2>
+              </div>
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="bg-[var(--color-bg-secondary)] rounded-lg overflow-hidden shadow-sm">
+                    <button
+                      onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                      className="w-full p-6 text-left flex items-center justify-between hover:bg-[var(--color-bg-tertiary)] transition-colors"
+                    >
+                      <span className="text-lg font-semibold text-[var(--color-text-primary)] pr-4">
+                        {faq.question}
+                      </span>
+                      <ChevronDown 
+                        className={`h-5 w-5 text-[var(--color-riara-red)] flex-shrink-0 transition-transform ${
+                          openFaq === index ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {openFaq === index && (
+                      <div className="px-6 pb-6">
+                        <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           </Container>

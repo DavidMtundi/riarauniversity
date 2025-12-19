@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/ui/button";
-import { Heart, GraduationCap, Building2, Users, ArrowRight, Mail, Phone, Gift } from "lucide-react";
+import { Heart, GraduationCap, Building2, Users, ArrowRight, Mail, Phone, Gift, Quote, Star, TrendingUp, Award } from "lucide-react";
 
 export default function Giving() {
   return (
@@ -192,22 +192,63 @@ export default function Giving() {
         {/* Impact Section */}
         <section className="py-16 md:py-20 bg-white">
           <Container>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-10 text-center">
                 Your Impact
               </h2>
-              <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-                <div className="text-center p-6 bg-[var(--color-bg-secondary)] rounded-lg">
+              <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-16">
+                <div className="text-center p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[var(--color-riara-red)]">
+                  <TrendingUp className="h-12 w-12 text-[var(--color-riara-red)] mx-auto mb-4" />
                   <div className="text-4xl md:text-5xl font-bold text-[var(--color-riara-red)] mb-2">2,500+</div>
-                  <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Students supported through scholarships</p>
+                  <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Students Supported</p>
+                  <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Through scholarships and financial aid</p>
                 </div>
-                <div className="text-center p-6 bg-[var(--color-bg-secondary)] rounded-lg">
+                <div className="text-center p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[var(--color-riara-red)]">
+                  <Award className="h-12 w-12 text-[var(--color-riara-red)] mx-auto mb-4" />
                   <div className="text-4xl md:text-5xl font-bold text-[var(--color-riara-red)] mb-2">50+</div>
-                  <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Research projects funded</p>
+                  <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Research Projects</p>
+                  <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Funded and supported by donors</p>
                 </div>
-                <div className="text-center p-6 bg-[var(--color-bg-secondary)] rounded-lg">
+                <div className="text-center p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[var(--color-riara-red)]">
+                  <Heart className="h-12 w-12 text-[var(--color-riara-red)] mx-auto mb-4" />
                   <div className="text-4xl md:text-5xl font-bold text-[var(--color-riara-red)] mb-2">100%</div>
+                  <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Direct Impact</p>
                   <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Of donations go directly to programs</p>
+                </div>
+              </div>
+
+              {/* Success Stories */}
+              <div className="bg-gradient-to-r from-[var(--color-riara-red)]/5 via-[var(--color-riara-red)]/10 to-[var(--color-riara-red)]/5 rounded-xl p-8 md:p-10">
+                <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                  Stories of Impact
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="flex items-center gap-2 mb-4">
+                      <GraduationCap className="h-6 w-6 text-[var(--color-riara-red)]" />
+                      <h4 className="text-lg font-semibold text-[var(--color-text-primary)]">Scholarship Recipient</h4>
+                    </div>
+                    <Quote className="h-6 w-6 text-[var(--color-riara-red)]/30 mb-3" />
+                    <p className="text-base text-[var(--color-text-secondary)] italic mb-4">
+                      "Thanks to the scholarship I received, I was able to pursue my dream of studying law at Riara. 
+                      Without this support, I wouldn't have been able to afford university. Today, I'm a practicing lawyer 
+                      making a difference in my community."
+                    </p>
+                    <p className="text-sm font-semibold text-[var(--color-text-primary)]">— Grace W., Law Graduate '2020</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-lg shadow-md">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Building2 className="h-6 w-6 text-[var(--color-riara-red)]" />
+                      <h4 className="text-lg font-semibold text-[var(--color-text-primary)]">Infrastructure Donor</h4>
+                    </div>
+                    <Quote className="h-6 w-6 text-[var(--color-riara-red)]/30 mb-3" />
+                    <p className="text-base text-[var(--color-text-secondary)] italic mb-4">
+                      "Supporting the new computer lab was one of the best decisions I've made. Seeing students use 
+                      the facilities I helped build and knowing they're getting world-class education fills me with pride. 
+                      Education truly transforms lives."
+                    </p>
+                    <p className="text-sm font-semibold text-[var(--color-text-primary)]">— Dr. Michael O., Alumni & Donor</p>
+                  </div>
                 </div>
               </div>
             </div>

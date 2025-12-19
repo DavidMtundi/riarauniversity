@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/ui/button";
-import { MapPin, Clock, Phone, Mail, Calendar, Users, Building2, Car, Bus, Navigation } from "lucide-react";
+import { MapPin, Clock, Phone, Mail, Calendar, Users, Building2, Car, Bus, Navigation, Star, Quote, Camera, Sparkles } from "lucide-react";
 
 export default function Visit() {
   return (
@@ -49,10 +49,12 @@ export default function Visit() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-4">
-                  <Calendar className="h-8 w-8 text-[var(--color-riara-red)]" />
+                  <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                    <Calendar className="h-8 w-8 text-[var(--color-riara-red)]" />
+                  </div>
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)]">
                     Schedule a Tour
                   </h3>
@@ -62,7 +64,7 @@ export default function Visit() {
                   Monday through Friday, and can be customized based on your interests.
                 </p>
                 <Button
-                  className="bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)]"
+                  className="bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] w-full sm:w-auto"
                   asChild
                 >
                   <a href="mailto:admissions@riarauniversity.ac.ke?subject=Campus Tour Request">
@@ -71,9 +73,11 @@ export default function Visit() {
                 </Button>
               </div>
 
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
+              <div className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-4">
-                  <Users className="h-8 w-8 text-[var(--color-riara-red)]" />
+                  <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                    <Users className="h-8 w-8 text-[var(--color-riara-red)]" />
+                  </div>
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)]">
                     Group Visits
                   </h3>
@@ -84,13 +88,115 @@ export default function Visit() {
                 </p>
                 <Button
                   variant="outline"
-                  className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
+                  className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white w-full sm:w-auto"
                   asChild
                 >
                   <a href="mailto:admissions@riarauniversity.ac.ke?subject=Group Visit Request">
                     Arrange Group Visit
                   </a>
                 </Button>
+              </div>
+            </div>
+
+            {/* What to Expect Section */}
+            <div className="bg-gradient-to-r from-[var(--color-riara-red)]/5 via-[var(--color-riara-red)]/10 to-[var(--color-riara-red)]/5 rounded-xl p-8 md:p-10 mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <Sparkles className="h-8 w-8 text-[var(--color-riara-red)]" />
+                <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)]">
+                  What to Expect on Your Visit
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-[var(--color-riara-red)] mb-2">1-2</div>
+                  <p className="text-base font-semibold text-[var(--color-text-primary)] mb-2">Hours</p>
+                  <p className="text-sm text-[var(--color-text-secondary)]">Comprehensive tour of our facilities and campus</p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-[var(--color-riara-red)] mb-2">Meet</div>
+                  <p className="text-base font-semibold text-[var(--color-text-primary)] mb-2">Students & Faculty</p>
+                  <p className="text-sm text-[var(--color-text-secondary)]">Connect with current students and professors</p>
+                </div>
+                <div className="bg-white/80 backdrop-blur-sm p-6 rounded-lg">
+                  <div className="text-3xl font-bold text-[var(--color-riara-red)] mb-2">See</div>
+                  <p className="text-base font-semibold text-[var(--color-text-primary)] mb-2">Campus Life</p>
+                  <p className="text-sm text-[var(--color-text-secondary)]">Experience our vibrant community firsthand</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Campus Image Gallery */}
+            <div className="mb-12">
+              <div className="flex items-center gap-3 mb-6">
+                <Camera className="h-6 w-6 text-[var(--color-riara-red)]" />
+                <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)]">
+                  Explore Our Campus
+                </h3>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
+                    alt="Campus building" 
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
+                    alt="Campus grounds" 
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
+                    alt="Student activities" 
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                  <img 
+                    src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
+                    alt="Campus facilities" 
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Visitor Testimonials */}
+            <div className="bg-[var(--color-bg-secondary)] rounded-xl p-8 md:p-10">
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                What Visitors Say
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="h-8 w-8 text-[var(--color-riara-red)]/30 mb-3" />
+                  <p className="text-base text-[var(--color-text-secondary)] italic mb-4">
+                    "The campus tour was amazing! Our student guide was so welcoming and showed us everything. 
+                    I could really see myself studying here. The facilities are modern and the atmosphere is so vibrant."
+                  </p>
+                  <p className="text-sm font-semibold text-[var(--color-text-primary)]">— Sarah M., Prospective Student</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="h-8 w-8 text-[var(--color-riara-red)]/30 mb-3" />
+                  <p className="text-base text-[var(--color-text-secondary)] italic mb-4">
+                    "As a parent, I was impressed by the dedication of the staff and the quality of the facilities. 
+                    The tour helped us understand what makes Riara special. We're confident this is the right place for our daughter."
+                  </p>
+                  <p className="text-sm font-semibold text-[var(--color-text-primary)]">— James K., Parent</p>
+                </div>
               </div>
             </div>
           </Container>
