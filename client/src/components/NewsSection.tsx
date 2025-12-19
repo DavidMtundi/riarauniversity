@@ -15,8 +15,8 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
     .filter((article) => article.id !== featuredArticle?.id)
     .slice(0, 6);
 
-  const highlightArticles = remainingArticles.slice(0, 2);
-  const regularArticles = remainingArticles.slice(2); // Shows remaining articles (typically 3)
+  const highlightArticles = remainingArticles.slice(0, 1); // Show 1 highlight to allow 4 regular articles
+  const regularArticles = remainingArticles.slice(1, 5); // Show exactly 4 regular articles for perfect 2x2 grid
 
   return (
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
