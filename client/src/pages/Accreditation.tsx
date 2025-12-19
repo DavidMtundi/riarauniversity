@@ -1,0 +1,316 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Container } from "@/components/Container";
+import { Award, ExternalLink, CheckCircle2 } from "lucide-react";
+
+export default function Accreditation() {
+  const accreditations = [
+    {
+      id: "cue",
+      name: "Commission for University Education (CUE)",
+      abbreviation: "CUE",
+      description: "Riara University is accredited by the Commission for University Education (CUE), the official regulator for university education in Kenya. This accreditation affirms the university's commitment to providing quality education and meeting the high standards set for academic institutions in the country.",
+      website: "https://www.cue.or.ke",
+      logoUrl: "https://www.cue.or.ke/images/logo/logo.png",
+      status: "Fully Accredited",
+      year: "2012",
+      scope: "Institutional Accreditation",
+      benefits: [
+        "Recognition as a legitimate university in Kenya",
+        "Eligibility for government funding and support",
+        "Student access to government loans and scholarships",
+        "International recognition of degrees"
+      ]
+    },
+    {
+      id: "cle",
+      name: "Council of Legal Education (CLE)",
+      abbreviation: "CLE",
+      description: "Riara University is accredited by the Council of Legal Education (CLE). This is the statutory regulator of Legal Education and Training in Kenya, among other functions as stipulated in the Legal Education Act (2012). Riara University is proud to have held the status of Accreditation from its inception in 2012.",
+      website: "https://www.counciloflegaleducation.or.ke",
+      logoUrl: "https://www.counciloflegaleducation.or.ke/wp-content/uploads/2021/06/cle-logo.png",
+      status: "Fully Accredited",
+      year: "2012",
+      scope: "Law School Programs",
+      benefits: [
+        "Recognition of law degrees for legal practice",
+        "Graduates eligible for admission to the Bar",
+        "Compliance with Legal Education Act (2012)",
+        "Quality assurance in legal education"
+      ]
+    },
+    {
+      id: "kasneb",
+      name: "Kenya Accountants and Secretaries National Examinations Board (KASNEB)",
+      abbreviation: "KASNEB",
+      description: "Riara University holds Accreditation status from the Kenya Accountants and Secretaries National Examinations Board (KASNEB) as both a Training Centre as well as an Examinations Centre.",
+      website: "https://www.kasneb.or.ke",
+      logoUrl: "https://www.kasneb.or.ke/images/kasneb-logo.png",
+      status: "Accredited Training & Examinations Centre",
+      year: "2012",
+      scope: "Professional Accounting Programs (CPA, CS, ATD)",
+      benefits: [
+        "Authorized to offer KASNEB courses",
+        "Students can sit for examinations on campus",
+        "Professional certification pathways",
+        "Industry-recognized qualifications"
+      ]
+    },
+    {
+      id: "sap",
+      name: "SAP University Alliance Programme",
+      abbreviation: "SAP",
+      description: "Riara University is accredited by SAP under the SAP University Alliance Programme. SAP is a global leader in ICT Enterprise Application Software. Major Corporates globally run on SAP Systems, including Riara University. RU is one of only a couple of universities accredited by SAP to train in SAP Business One Applications.",
+      website: "https://www.sap.com/africa/education/university-alliances.html",
+      logoUrl: "https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg",
+      status: "SAP University Alliance Partner",
+      year: "2012",
+      scope: "SAP Business One Applications Training",
+      benefits: [
+        "Access to SAP software and training materials",
+        "Industry-relevant ICT skills development",
+        "Enhanced employability for graduates",
+        "Partnership with global technology leader"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
+        {/* Hero Section */}
+        <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
+          {/* Background Image with Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+          </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-10 h-full flex items-center justify-center">
+            <div className="text-center px-4">
+              <div className="flex items-center justify-center mb-4">
+                <Award className="h-12 w-12 md:h-16 md:w-16 text-white/90 mr-3" />
+                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 md:mb-6 drop-shadow-2xl">
+                  Accreditation
+                </h1>
+              </div>
+              <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-lg font-light">
+                Recognized excellence in education and professional training
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Section */}
+        <section className="py-16 md:py-20 bg-white">
+          <Container>
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
+                Our Accreditations
+              </h2>
+              <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
+                Accreditation is a mark of quality and recognition that validates our commitment to excellence in education. 
+                Riara University is proud to be accredited by leading regulatory bodies and professional organizations, 
+                ensuring that our programs meet the highest standards of academic and professional excellence.
+              </p>
+              <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                These accreditations affirm our dedication to providing quality education, maintaining rigorous academic standards, 
+                and preparing our students for successful careers in their chosen fields.
+              </p>
+            </div>
+          </Container>
+        </section>
+
+        {/* Accreditation Cards Section */}
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+          <Container>
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+              {accreditations.map((accreditation) => (
+                <div
+                  key={accreditation.id}
+                  className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-l-4 border-[var(--color-riara-red)]"
+                >
+                  <div className="p-6 md:p-8">
+                    {/* Header with Logo */}
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-[var(--color-bg-secondary)] rounded-lg flex items-center justify-center border-2 border-[var(--color-border-light)] overflow-hidden">
+                        {accreditation.logoUrl ? (
+                          <img
+                            src={accreditation.logoUrl}
+                            alt={`${accreditation.name} logo`}
+                            className="w-full h-full object-contain p-2"
+                            onError={(e) => {
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const parent = target.parentElement;
+                              if (parent) {
+                                parent.innerHTML = `
+                                  <div class="text-center text-muted-foreground w-full h-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 md:w-10 md:h-10 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                  </div>
+                                `;
+                              }
+                            }}
+                          />
+                        ) : (
+                          <Award className="h-8 w-8 md:h-10 md:w-10 text-[var(--color-riara-red)] opacity-50" />
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-2">
+                          {accreditation.name}
+                        </h3>
+                        <div className="flex items-center gap-2 mb-3">
+                          <CheckCircle2 className="h-4 w-4 text-green-600" />
+                          <span className="text-sm md:text-base font-semibold text-green-600">
+                            {accreditation.status}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">
+                      {accreditation.description}
+                    </p>
+
+                    {/* Details Grid */}
+                    <div className="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-[var(--color-border-light)]">
+                      <div>
+                        <p className="text-xs md:text-sm text-[var(--color-text-tertiary)] mb-1">Year Accredited</p>
+                        <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)]">{accreditation.year}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs md:text-sm text-[var(--color-text-tertiary)] mb-1">Scope</p>
+                        <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)]">{accreditation.scope}</p>
+                      </div>
+                    </div>
+
+                    {/* Benefits */}
+                    <div className="mb-6">
+                      <h4 className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] mb-3">
+                        Key Benefits:
+                      </h4>
+                      <ul className="space-y-2">
+                        {accreditation.benefits.map((benefit, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <CheckCircle2 className="h-4 w-4 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
+                            <span className="text-sm md:text-base text-[var(--color-text-secondary)]">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Website Link */}
+                    <a
+                      href={accreditation.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm md:text-base font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors"
+                    >
+                      Visit {accreditation.abbreviation} Website
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* Why Accreditation Matters Section */}
+        <section className="py-16 md:py-20 bg-white">
+          <Container>
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-10 text-center">
+                Why Accreditation Matters
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
+                    Quality Assurance
+                  </h3>
+                  <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                    Accreditation ensures that our programs meet rigorous academic and professional standards, 
+                    providing students with a high-quality education that is recognized and valued by employers and institutions worldwide.
+                  </p>
+                </div>
+
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
+                    Student Benefits
+                  </h3>
+                  <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                    Accredited programs provide students with access to financial aid, government scholarships, 
+                    professional certifications, and enhanced career opportunities in their chosen fields.
+                  </p>
+                </div>
+
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
+                    International Recognition
+                  </h3>
+                  <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                    Our accreditations ensure that degrees and certificates from Riara University are recognized 
+                    internationally, enabling graduates to pursue further studies or careers anywhere in the world.
+                  </p>
+                </div>
+
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
+                  <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
+                    Continuous Improvement
+                  </h3>
+                  <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                    Accreditation requires ongoing assessment and improvement, ensuring that our programs remain 
+                    current, relevant, and aligned with industry needs and best practices.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+          <Container>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
+                Questions About Accreditation?
+              </h2>
+              <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-8">
+                For more information about our accreditations or to verify our accredited status, 
+                please contact our Quality Assurance Office or visit the official websites of our accrediting bodies.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/quality-assurance"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-riara-red)] text-white font-semibold rounded-lg hover:bg-[var(--color-riara-red-dark)] transition-colors"
+                >
+                  Quality Assurance Office
+                </a>
+                <a
+                  href="mailto:info@riarauniversity.ac.ke"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-[var(--color-riara-red)] font-semibold rounded-lg border-2 border-[var(--color-riara-red)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </Container>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+

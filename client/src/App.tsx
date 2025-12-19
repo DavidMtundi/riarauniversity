@@ -30,6 +30,7 @@ const Alumni = lazy(() => import("@/pages/Alumni"));
 const Courses = lazy(() => import("@/pages/Courses"));
 const QualityAssurance = lazy(() => import("@/pages/QualityAssurance"));
 const Facts = lazy(() => import("@/pages/Facts"));
+const Accreditation = lazy(() => import("@/pages/Accreditation"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 // Redirect component
@@ -80,6 +81,7 @@ function Router() {
         <Route path="/courses" component={Courses} />
         <Route path="/quality-assurance" component={QualityAssurance} />
         <Route path="/about/facts" component={Facts} />
+        <Route path="/about/accreditation" component={Accreditation} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
