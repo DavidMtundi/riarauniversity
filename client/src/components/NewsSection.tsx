@@ -16,7 +16,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
     .slice(0, 6);
 
   const highlightArticles = remainingArticles.slice(0, 2);
-  const regularArticles = remainingArticles.slice(2);
+  const regularArticles = remainingArticles.slice(2); // Shows remaining articles (typically 3)
 
   return (
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
@@ -50,15 +50,17 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
           </div>
         )}
 
-        <div className="grid gap-6 md:grid-cols-2 mb-10">
-          {regularArticles.map((article) => (
-            <NewsCard
-              key={article.id}
-              article={article}
-              variant="regular"
-            />
-          ))}
-        </div>
+        {regularArticles.length > 0 && (
+          <div className={`grid gap-6 md:grid-cols-2 mb-10 ${regularArticles.length === 1 ? 'max-w-2xl mx-auto' : ''}`}>
+            {regularArticles.map((article) => (
+              <NewsCard
+                key={article.id}
+                article={article}
+                variant="regular"
+              />
+            ))}
+          </div>
+        )}
 
         <div className="text-center">
           <Button
