@@ -34,11 +34,11 @@ export default function QualityAssurance() {
           </div>
         </section>
 
-        {/* Director Section */}
+        {/* Director Section - Message Style */}
         <section className="py-16 md:py-20 bg-white">
           <Container>
-            <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-sm">
-              <div className="grid md:grid-cols-5 gap-6 md:gap-8 items-center">
+            <div className="bg-white p-8 md:p-12 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-sm">
+              <div className="grid md:grid-cols-5 gap-6 md:gap-10 items-start">
                 <div className="md:col-span-2 order-1 flex justify-center">
                   <div className="w-40 md:w-44 lg:w-48 aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                     <img 
@@ -48,13 +48,34 @@ export default function QualityAssurance() {
                     />
                   </div>
                 </div>
-                <div className="md:col-span-3 order-2 text-center md:text-left">
-                  <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
-                    Message from the University Quality Assurance Officer
-                  </h2>
-                  <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                    The Quality Assurance Department plays a pivotal role in ensuring that Riara University upholds the highest standards of service delivery. The Office focuses on maintaining quality in the services provided, continuous improvement, and putting students and other stakeholders first.
-                  </p>
+                <div className="md:col-span-3 order-2">
+                  <div className="mb-6">
+                    <p className="text-sm md:text-base text-[var(--color-text-secondary)] mb-2 font-medium">
+                      A Message from
+                    </p>
+                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
+                      The University Quality Assurance Officer
+                    </h2>
+                  </div>
+                  
+                  <div className="space-y-4 text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                    <p className="italic text-[var(--color-text-primary)]">
+                      "The Quality Assurance Department plays a pivotal role in ensuring that Riara University upholds the highest standards of service delivery."
+                    </p>
+                    <p>
+                      The Office focuses on maintaining quality in the services provided, continuous improvement, and putting students and other stakeholders first.
+                    </p>
+                  </div>
+                  
+                  <div className="mt-8 pt-6 border-t border-[var(--color-border-secondary)]">
+                    <p className="text-base font-semibold text-[var(--color-text-primary)] mb-1">
+                      Ms. Dorothy Oduor
+                    </p>
+                    <p className="text-sm text-[var(--color-text-secondary)]">
+                      Quality Assurance Officer<br />
+                      Riara University
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
