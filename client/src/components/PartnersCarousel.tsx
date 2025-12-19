@@ -157,12 +157,12 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                     >
                       <div className="h-full p-4 md:p-5 border-2 border-[var(--color-border-secondary)] rounded-xl hover:border-[var(--color-stanford-red)] hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group cursor-pointer transform hover:-translate-y-1">
                         {/* Logo Container */}
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-[var(--color-bg-tertiary)] to-white border-2 border-[var(--color-border-light)] rounded-xl flex items-center justify-center mb-3 md:mb-4 overflow-hidden group-hover:border-[var(--color-stanford-red)] group-hover:shadow-md transition-all duration-300 p-2">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-[var(--color-bg-tertiary)] to-white border-2 border-[var(--color-border-light)] rounded-xl flex items-center justify-center mb-3 md:mb-4 overflow-hidden group-hover:border-[var(--color-stanford-red)] group-hover:shadow-md transition-all duration-300 p-1">
                           {partner.logoUrl && partner.logoUrl !== "" ? (
                             <img 
                               src={partner.logoUrl} 
                               alt={`${partner.name} logo`}
-                              className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                              className="w-full h-full object-contain object-center transition-transform duration-300 group-hover:scale-110"
                               loading="lazy"
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
