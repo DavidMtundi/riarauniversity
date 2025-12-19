@@ -300,7 +300,7 @@ export default function Academics() {
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
                         <span className="text-[var(--color-riara-red)] mt-1">•</span>
-                        <span>Francis Onditi Conflictology Lab</span>
+                        <span>Conflictology Lab</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[var(--color-riara-red)] mt-1">•</span>

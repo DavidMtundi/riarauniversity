@@ -392,12 +392,12 @@ export default function Research() {
           />
         </section>
 
-        {/* Francis Onditi Conflictology Lab Section */}
+        {/* Conflictology Lab Section */}
         <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-8">
-                Francis Onditi Conflictology Lab
+                Conflictology Lab
               </h2>
               
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-8">
