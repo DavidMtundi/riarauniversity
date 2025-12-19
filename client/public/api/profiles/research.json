@@ -1,1 +1,8 @@
-{"id":"research-profile","name":"Prof. Gateru","title":"Vice Chancellor, Riara University","quote":"Excellence in research and innovation drives our commitment to advancing knowledge and transforming communities.","imageUrl":"https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Gateru-MGT-Page.jpg","link":"#"}
+{
+  "id": "research-profile",
+  "name": "Prof. Gateru",
+  "title": "Vice Chancellor, Riara University",
+  "quote": "Excellence in research and innovation drives our commitment to advancing knowledge and transforming communities.",
+  "imageUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Gateru-MGT-Page.jpg",
+  "link": "#"
+}
