@@ -41,17 +41,17 @@ export default function QualityAssurance() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="order-2 md:order-1">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-3">
-                    Director, Quality Assurance Office
+                    Message from the University Quality Assurance Officer
                   </h2>
                   <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-4">
-                    Leading the university's commitment to excellence in education, research, and service delivery.
+                    The Quality Assurance Department plays a pivotal role in ensuring that Riara University upholds the highest standards of service delivery. The Office focuses on maintaining quality in the services provided, continuous improvement, and putting students and other stakeholders first.
                   </p>
                 </div>
                 <div className="order-1 md:order-2">
                   <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
-                      alt="Director, Quality Assurance Office" 
+                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/11/Ms.-Dorothy-Oduor-255x340.jpg" 
+                      alt="Ms. Dorothy Oduor, Quality Assurance Officer" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -71,7 +71,7 @@ export default function QualityAssurance() {
                     Vision
                   </h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                    To ensure satisfaction among all our stakeholders. Stakeholders include students, faculty, staff, industry, parents, partners, and the wider community.
+                    To ensure satisfaction among all stakeholders, including students, faculty, staff, industry partners, parents, and the wider community. By addressing their needs and expectations, Riara University aims to be a trusted and respected institution contributing positively to society and the advancement of humanity.
                   </p>
                 </div>
                 <div>
@@ -79,7 +79,7 @@ export default function QualityAssurance() {
                     Mission
                   </h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                    The Quality Assurance department advocates for innovation in teaching and learning in order to assure graduates who are not only academically proficient but also equipped with the skills and values needed for the future workforce.
+                    The Quality Assurance Department advocates for innovation in teaching and learning to produce graduates who are not only academically proficient but also equipped with the skills and values needed for the future workforce. This mission aligns with the University's guiding mantra: "Quality Education is the solid bedrock for National Development," and its core purpose of "Empowering Lives; Impacting Communities."
                   </p>
                 </div>
               </div>
@@ -95,12 +95,12 @@ export default function QualityAssurance() {
                 The Role of the Quality Assurance Office
               </h3>
               <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
-                The University is committed to setting high scholarly and service standards while providing impactful learning opportunities for students, and excellent, value-driven service to all stakeholders. This is achieved through:
+                The University is committed to setting high scholarly and service standards while providing impactful learning opportunities for students and excellent, value-driven service to all stakeholders. This is achieved through promoting and resourcing good practices, focusing on the following areas:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
-                  <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Policies:</strong> Fostering an environment of academic excellence by crafting, implementing, and continually refining well-defined policies</span>
+                  <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Policies:</strong> Crafting, implementing, and continually refining well-defined policies that serve as guides, ensuring a cohesive and standardized approach to academic affairs</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
@@ -108,7 +108,7 @@ export default function QualityAssurance() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
-                  <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Standards Maintenance:</strong> Overseeing and maintaining high service standards, ensuring they are adaptive to evolving academic expectations</span>
+                  <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Standards Maintenance:</strong> Overseeing and maintaining high service standards, ensuring they are adaptive to the evolving landscape of academic expectations and global best practices</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
@@ -136,7 +136,7 @@ export default function QualityAssurance() {
                     Continuous Improvement
                   </h4>
                   <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
-                    Regular assessments of academic programs, teaching methodologies, and administrative processes are conducted to identify areas for enhancement. Feedback from students, faculty, and industry partners is actively sought and carefully analyzed. The Office also welcomes unsolicited feedback on any matter related to the business of the University.
+                    Regular assessments of academic programs, teaching methodologies, and administrative processes are conducted to identify areas for enhancement. Feedback from students, faculty, and industry partners is actively sought and analyzed, allowing the university to adapt to emerging trends in education and industry. The Office also welcomes unsolicited feedback on any matter related to the business of the University.
                   </p>
                 </div>
                 <div>
@@ -144,7 +144,7 @@ export default function QualityAssurance() {
                     Innovation in Teaching and Learning
                   </h4>
                   <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
-                    The Quality Assurance Department actively promotes innovation in teaching and learning. By fostering a culture of innovation, the university ensures that its students not only acquire academic knowledge but also the adaptive skills required in a rapidly evolving global landscape.
+                    Promoting innovation in teaching and learning to ensure that students acquire not only academic knowledge but also the adaptive skills required in a rapidly evolving global landscape.
                   </p>
                 </div>
                 <div>
@@ -157,8 +157,11 @@ export default function QualityAssurance() {
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-[var(--color-border-secondary)]">
+                <p className="text-base text-[var(--color-text-secondary)] mb-2">
+                  The Riara University Quality Assurance Office cherishes and continues to covet the partnership and support of all stakeholders in the never-ending journey towards total quality.
+                </p>
                 <p className="text-base text-[var(--color-text-secondary)]">
-                  For any queries, partnerships, or feedback, please contact us at <a href="mailto:feedback@riarauniversity.ac.ke" className="text-[var(--color-riara-red)] hover:underline font-semibold">feedback@riarauniversity.ac.ke</a>
+                  For any queries, partnerships, or feedback, please feel free to contact us at <a href="mailto:feedback@riarauniversity.ac.ke" className="text-[var(--color-riara-red)] hover:underline font-semibold">feedback@riarauniversity.ac.ke</a> or call <a href="tel:0703038433" className="text-[var(--color-riara-red)] hover:underline font-semibold">0703038433</a>
                 </p>
               </div>
             </div>
