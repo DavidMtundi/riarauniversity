@@ -126,7 +126,8 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div className="bg-[var(--color-bg-secondary)] p-4">
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 text-sm text-[var(--color-text-tertiary)]">
-            <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Students</a>
+            <a href="/admission" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }} onClick={onClose} data-testid="link-future-students-mobile">Future Students</a>
+            <a href={HEADER_LINKS.students} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Current Students</a>
             <a href={HEADER_LINKS.facultyStaff} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Faculty & Staff</a>
             <a href="https://library.riarauniversity.ac.ke/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors font-semibold text-[var(--color-stanford-red)] touch-manipulation" style={{ touchAction: 'manipulation' }}>Library</a>
             <a href={HEADER_LINKS.virtualCampus} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-text-primary)] transition-colors touch-manipulation" style={{ touchAction: 'manipulation' }}>Virtual Campus</a>

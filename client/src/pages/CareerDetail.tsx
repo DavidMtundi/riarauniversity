@@ -8,10 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Briefcase, ArrowLeft, ExternalLink, Clock } from "lucide-react";
-import type { Event } from "@shared/schema";
-
-// Career uses Event interface for now
-type Career = Event;
+import type { Career } from "@shared/schema";
 
 export default function CareerDetail() {
   const [, setLocation] = useLocation();

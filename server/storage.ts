@@ -1,4 +1,4 @@
-import { type User, type InsertUser, type NewsArticle, type EducationPath, type School, type ResearchStat, type Profile, type Event, type ContentSection, type PartnerCategory, type LeadershipMember } from "@shared/schema";
+import { type User, type InsertUser, type NewsArticle, type EducationPath, type School, type ResearchStat, type Profile, type Event, type Career, type ContentSection, type PartnerCategory, type LeadershipMember } from "@shared/schema";
 import { randomUUID } from "crypto";
 import { transformImageUrls } from "./repositories/ContentRepository";
 import { getImageUrl } from "./config";
@@ -23,7 +23,7 @@ export interface IStorage {
   getCampusLifeSections(): Promise<ContentSection[]>;
   getArtsSections(): Promise<ContentSection[]>;
   getEvents(): Promise<Event[]>;
-  getCareers(): Promise<Event[]>;
+  getCareers(): Promise<Career[]>;
   getHealthcareSections(): Promise<ContentSection[]>;
   getAthleticsSections(): Promise<ContentSection[]>;
   getPartners(): Promise<PartnerCategory[]>;
@@ -40,7 +40,7 @@ export class MemStorage implements IStorage {
   private campusLifeSections: ContentSection[] = [];
   private artsSections: ContentSection[] = [];
   private events: Event[] = [];
-  private careers: Event[] = [];
+  private careers: Career[] = [];
   private healthcareSections: ContentSection[] = [];
   private athleticsSections: ContentSection[] = [];
 
@@ -309,38 +309,42 @@ export class MemStorage implements IStorage {
       {
         id: "c1",
         type: "Faculty",
-        title: "Assistant Professor of Computer Science",
-        date: "Apply by Nov 30",
+        title: "ICT Senior Lecturer",
+        date: "Open",
         time: "Full-time",
-        imageUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#"
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/02/ENQUIRY-FORM-WEBPAGE-4.jpg",
+        link: "https://riarauniversity.ac.ke/wp-content/uploads/2025/05/ICT-Senior-Lecturer-Job-Opportunity-1-2.pdf",
+        department: "School of Computing Sciences"
       },
       {
         id: "c2",
-        type: "Research",
-        title: "Senior Research Scientist, Precision Health",
-        date: "Apply by Dec 5",
+        type: "Faculty",
+        title: "Computer Science Lecturer",
+        date: "Open",
         time: "Full-time",
-        imageUrl: "https://images.unsplash.com/photo-1532619675605-1ede6c4ed2b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#"
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/02/ENQUIRY-FORM-WEBPAGE-4.jpg",
+        link: "https://riarauniversity.ac.ke/wp-content/uploads/2025/10/ICT-Lecturer-Job-Opportunity.pdf",
+        department: "School of Computing Sciences"
       },
       {
         id: "c3",
-        type: "Administration",
-        title: "Director of Student Success Programs",
-        date: "Apply by Dec 12",
+        type: "Faculty",
+        title: "Lecturer - Department of International Relations & Diplomacy",
+        date: "Open",
         time: "Full-time",
-        imageUrl: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#"
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/02/ENQUIRY-FORM-WEBPAGE-4.jpg",
+        link: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/IRD-Lecturer-Job-Opportunity.pdf",
+        department: "School of International Relations & Diplomacy"
       },
       {
         id: "c4",
-        type: "Staff",
-        title: "Campus Sustainability Project Manager",
-        date: "Apply by Dec 18",
-        time: "Contract",
-        imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        link: "#"
+        type: "Faculty",
+        title: "Senior Lecturer - Department of International Relations & Diplomacy",
+        date: "Open",
+        time: "Full-time",
+        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/02/ENQUIRY-FORM-WEBPAGE-4.jpg",
+        link: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/IRD-Senior-Lecturer-Job-Opportunity.pdf",
+        department: "School of International Relations & Diplomacy"
       }
     ];
 
@@ -451,7 +455,7 @@ export class MemStorage implements IStorage {
     return transformImageUrls(this.events);
   }
 
-  async getCareers(): Promise<Event[]> {
+  async getCareers(): Promise<Career[]> {
     return transformImageUrls(this.careers);
   }
 

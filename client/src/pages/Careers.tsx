@@ -10,10 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Search, Briefcase, ChevronUp, ChevronDown, X, ArrowRight, MapPin, Clock, Calendar } from "lucide-react";
-import type { Event } from "@shared/schema";
-
-// Career uses Event interface for now
-type Career = Event;
+import type { Career } from "@shared/schema";
 
 const EMPLOYMENT_TYPES = ["Full-time", "Contract", "Part-time", "Temporary"] as const;
 const JOB_TYPES = ["Faculty", "Research", "Administration", "Staff"] as const;

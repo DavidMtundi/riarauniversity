@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple, Download } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, Apple, Download, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/Container";
 import { FOOTER_LINKS, SOCIAL_MEDIA_LINKS as SOCIAL_LINKS_CONFIG, SCHOOL_LINKS } from "@/lib/links";
@@ -245,6 +245,52 @@ const ActionButtons: React.FC = () => (
   </div>
 );
 
+const ContactInfoSection: React.FC = () => (
+  <div className="flex flex-col gap-4 text-white">
+    <h3 className="font-bold text-sm md:text-base uppercase tracking-wide text-white mb-2">
+      OUR CONTACTS
+    </h3>
+    <div className="space-y-3 md:space-y-4">
+      {/* Email */}
+      <div className="flex items-start gap-3">
+        <Mail className="h-5 w-5 text-white/90 flex-shrink-0 mt-0.5" />
+        <a
+          href="mailto:info@riarauniversity.ac.ke"
+          className="text-sm md:text-base text-white/90 hover:text-white transition-colors break-all"
+          data-testid="link-footer-email"
+        >
+          info@riarauniversity.ac.ke
+        </a>
+      </div>
+      
+      {/* Telephone */}
+      <div className="flex items-start gap-3">
+        <Phone className="h-5 w-5 text-white/90 flex-shrink-0 mt-0.5" />
+        <a
+          href="tel:+254703038000"
+          className="text-sm md:text-base text-white/90 hover:text-white transition-colors"
+          data-testid="link-footer-phone"
+        >
+          +254703 038 000
+        </a>
+      </div>
+      
+      {/* Address */}
+      <div className="flex items-start gap-3">
+        <MapPin className="h-5 w-5 text-white/90 flex-shrink-0 mt-0.5" />
+        <div className="text-sm md:text-base text-white/90">
+          <p className="leading-relaxed">
+            49940 – 00100, Nairobi
+          </p>
+          <p className="leading-relaxed mt-1">
+            Raila Odinga Road, formally Mbagathi Way
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 export function Footer() {
   return (
     <footer className="bg-[var(--color-bg-primary)] riara-footer">
@@ -289,15 +335,15 @@ export function Footer() {
       {/* Lower Section - Dark Red Background */}
       <div className="bg-[var(--color-stanford-red)]">
         <Container className="py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6 md:px-8">
-          <div className="flex flex-col md:flex-row md:items-start md:gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Column 1: Riara University Name */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left text-white min-w-[160px]">
+            <div className="flex flex-col items-center md:items-start text-center md:text-left text-white">
               <span className="text-2xl md:text-[2.25rem] font-serif font-semibold leading-none tracking-tight">Riara</span>
               <span className="text-xl md:text-[1.75rem] font-serif font-semibold leading-tight tracking-tight mt-1">University</span>
             </div>
 
             {/* Column 2: Links + Legal + Copyright */}
-            <div className="flex flex-col gap-5 text-white flex-1">
+            <div className="flex flex-col gap-5 text-white">
               <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm md:text-base font-semibold tracking-[0.05em] text-white">
                 {PRIMARY_FOOTER_LINKS.map((link) => (
                   <a
@@ -329,8 +375,13 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Column 3: Campus Map */}
-            <div className="w-full md:w-auto md:min-w-[500px] lg:min-w-[600px] mt-6 md:mt-0">
+            {/* Column 3: Contact Information */}
+            <div>
+              <ContactInfoSection />
+            </div>
+
+            {/* Column 4: Campus Map */}
+            <div className="w-full">
               <div className="aspect-[3/1] rounded overflow-hidden border-2 border-white/20 shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.812!2d36.8069232!3d-1.3148565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f105e9f1c97eb%3A0xd0d8411685ae0273!2s49940%2C%20Raila%20Odinga%20Wy%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1735689600000!5m2!1sen!2ske"
