@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import type { ResearchStat, Profile } from "@shared/schema";
 import { Container } from "@/components/Container";
+import { CountUp } from "@/components/CountUp";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 interface ResearchSectionProps {
   stats: ResearchStat[];
@@ -14,7 +16,8 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
     <section id="research" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
       <Container>
         {showHeader && (
-          <header className="text-center mb-10 md:mb-14">
+          <AnimatedSection direction="fade-up">
+            <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-3" data-testid="text-research-heading">
               Research
             </h2>
@@ -22,10 +25,12 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
               Research isn't just something we do—it's who we are. We connect labs and classrooms to real-world impact for Kenya and beyond.
             </p>
           </header>
+          </AnimatedSection>
         )}
 
         {/* Intro from Research page (document content) */}
-        <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg mb-12 md:mb-16">
+        <AnimatedSection direction="fade-up" delay={100}>
+          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg mb-12 md:mb-16">
           <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
             At Riara University, research isn't just something we do—it's who we are. Every day, our faculty and students are asking tough questions, challenging assumptions, and working on research that actually matters. Whether it's understanding conflict patterns in East Africa, developing new technologies, or exploring solutions to real-world problems, our research makes a difference.
           </p>
@@ -47,8 +52,10 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
             </div>
           </div>
         </div>
+        </AnimatedSection>
 
         {profile && (
+          <AnimatedSection direction="fade-up" delay={200}>
           <div className="mb-16 md:mb-20" data-testid="card-research-profile">
             <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
@@ -94,19 +101,47 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
               </div>
             </div>
           </div>
+          </AnimatedSection>
         )}
 
-        <div className="mb-12 md:mb-16">
-          <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-10 md:mb-12 text-[var(--color-text-primary)]" data-testid="text-research-impact-heading">Research Impact</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
-            {stats.map((stat) => (
-              <div key={stat.id} className="text-center" data-testid={`stat-${stat.id}`}>
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>{stat.value}</p>
-                <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed" data-testid={`text-stat-label-${stat.id}`}>{stat.label}</p>
-              </div>
-            ))}
+        <AnimatedSection direction="fade-up" delay={300}>
+          <div className="mb-12 md:mb-16">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-10 md:mb-12 text-[var(--color-text-primary)]" data-testid="text-research-impact-heading">Research Impact</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+              {stats.map((stat, index) => {
+                // Extract number from stat.value (could be "50+" or "100" or "1,000")
+                const numericValue = parseInt(stat.value.replace(/[^0-9]/g, '')) || 0;
+                const hasPlus = stat.value.includes('+');
+                const hasComma = stat.value.includes(',');
+                
+                // If value is not numeric or is 0, just display the original value
+                if (numericValue === 0 || !numericValue) {
+                  return (
+                    <AnimatedSection key={stat.id} direction="fade-up" delay={index * 100}>
+                      <div className="text-center" data-testid={`stat-${stat.id}`}>
+                        <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>
+                          {stat.value}
+                        </p>
+                        <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed" data-testid={`text-stat-label-${stat.id}`}>{stat.label}</p>
+                      </div>
+                    </AnimatedSection>
+                  );
+                }
+                
+                return (
+                  <AnimatedSection key={stat.id} direction="fade-up" delay={index * 100}>
+                    <div className="text-center" data-testid={`stat-${stat.id}`}>
+                      <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>
+                        <CountUp end={numericValue} suffix={hasPlus ? '+' : ''} />
+                      </p>
+                      <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed" data-testid={`text-stat-label-${stat.id}`}>{stat.label}</p>
+                    </div>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
 
         <div className="text-center">
           <Button
