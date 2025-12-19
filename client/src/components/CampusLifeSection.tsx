@@ -107,7 +107,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {sections.map((section) => {
             return (
-              <div key={section.id} className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]" data-testid={`card-campus-${section.id}`}>
+              <div key={section.id} className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid={`card-campus-${section.id}`}>
                 <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid={`text-campus-title-${section.id}`}>{section.title}</h3>
                 <p className="text-base md:text-lg text-[var(--color-text-secondary)] mb-6 leading-relaxed" data-testid={`text-campus-description-${section.id}`}>
                   {section.description}
@@ -115,7 +115,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
                 {section.link && section.link !== "#" && (
                   <Button
                     variant="outline"
-                    className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+                    className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
                     data-testid={`button-campus-link-${section.id}`}
                     asChild
                   >
@@ -132,7 +132,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
         <div className="text-center pt-8 md:pt-12">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] !text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] !text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200"
             data-testid="button-more-campus-life"
             asChild
           >

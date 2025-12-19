@@ -20,7 +20,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             </p>
             <a
               href="/admission/apply"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold bg-[var(--color-stanford-red)] !text-white rounded-lg hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-md hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-bold bg-[var(--color-riara-red)] !text-white rounded-lg hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-md hover:shadow-lg"
               data-testid="button-apply-admission-section"
             >
               <span className="!text-white">Apply for Admission</span>
@@ -29,7 +29,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
         )}
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]" data-testid="card-admission-explore">
+          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid="card-admission-explore">
             <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid="text-admission-explore-title">
               Explore the possibilities of a Riara education
             </h3>
@@ -38,7 +38,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             </p>
             <Button 
               variant="outline"
-              className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+              className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
               data-testid="button-admission-explore"
               asChild
             >
@@ -48,7 +48,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             </Button>
           </div>
 
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]" data-testid="card-admission-financial">
+          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid="card-admission-financial">
             <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid="text-admission-financial-title">
               Riara meets the full financial need of every admitted undergrad
             </h3>
@@ -57,7 +57,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             </p>
             <Button 
               variant="outline"
-              className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+              className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
               data-testid="button-admission-financial"
               asChild
             >

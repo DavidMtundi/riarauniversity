@@ -86,17 +86,13 @@
   --letter-spacing-normal: 0px;
 
   /* Riara University Brand Colors (from parent site riarauniversity.ac.ke) */
-  --color-stanford-red: #a10e83; /* Primary brand color from parent site (vibrant purple/magenta) */
-  --color-stanford-red-dark: #7d0a65; /* Darker variant from parent site */
-  --color-stanford-red-light: #c515a0; /* Lighter variant from parent site */
+  --color-riara-red: #a10e83; /* Primary brand color from parent site (vibrant purple/magenta) */
+  --color-riara-red-dark: #7d0a65; /* Darker variant from parent site */
+  --color-riara-red-light: #c515a0; /* Lighter variant from parent site */
   /* Primary blue from parent site */
   --color-primary-blue-light: #46a5e5;
   --color-primary-blue-medium: #179bd7;
   --color-primary-blue-dark: #17376e;
-  /* Aliases for Riara branding */
-  --color-riara-red: var(--color-stanford-red);
-  --color-riara-red-dark: var(--color-stanford-red-dark);
-  --color-riara-red-light: var(--color-stanford-red-light);
 
   /* Text Colors (from parent site) */
   --color-text-primary: #222222; /* From parent site */

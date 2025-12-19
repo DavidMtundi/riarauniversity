@@ -381,7 +381,7 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
                               </Badge>
                             )}
                             {result.pageUrl && (
-                              <span className="text-xs text-[var(--color-stanford-red)] flex items-center gap-1">
+                              <span className="text-xs text-[var(--color-riara-red)] flex items-center gap-1">
                                 {result.pageTitle || "Page"}
                               </span>
                             )}

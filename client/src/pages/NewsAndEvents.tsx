@@ -252,7 +252,7 @@ export default function NewsAndEvents() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading News & Events...</p>
           </div>
         </main>
@@ -267,7 +267,7 @@ export default function NewsAndEvents() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -299,8 +299,8 @@ export default function NewsAndEvents() {
           </div>
           
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           <div className="relative z-10 w-full">
@@ -319,13 +319,13 @@ export default function NewsAndEvents() {
                 <div className="max-w-3xl mx-auto">
                   <div className="flex flex-col sm:flex-row gap-3">
                     <div className="flex-1 relative group">
-                      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-[var(--color-stanford-red)] transition-colors" />
+                      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-[var(--color-riara-red)] transition-colors" />
                       <Input
                         type="text"
                         placeholder="Search news, events, topics..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-12 pr-4 py-6 md:py-7 text-base md:text-lg bg-white/95 backdrop-blur-sm border-2 border-white/50 rounded-xl focus:ring-2 focus:ring-[var(--color-stanford-red)] focus:border-[var(--color-stanford-red)] shadow-xl transition-all"
+                        className="pl-12 pr-4 py-6 md:py-7 text-base md:text-lg bg-white/95 backdrop-blur-sm border-2 border-white/50 rounded-xl focus:ring-2 focus:ring-[var(--color-riara-red)] focus:border-[var(--color-riara-red)] shadow-xl transition-all"
                       />
                     </div>
                   </div>
@@ -345,21 +345,21 @@ export default function NewsAndEvents() {
                   <TabsList className="grid w-full md:w-auto grid-cols-3">
                     <TabsTrigger value="all" className="flex items-center gap-2">
                       <span>All</span>
-                      <span className="text-xs bg-[var(--color-stanford-red)]/10 text-[var(--color-stanford-red)] px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[var(--color-riara-red)]/10 text-[var(--color-riara-red)] px-2 py-0.5 rounded-full">
                         {timelineItems.length}
                       </span>
                     </TabsTrigger>
                     <TabsTrigger value="news" className="flex items-center gap-2">
                       <Newspaper className="h-4 w-4" />
                       <span>News</span>
-                      <span className="text-xs bg-[var(--color-stanford-red)]/10 text-[var(--color-stanford-red)] px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[var(--color-riara-red)]/10 text-[var(--color-riara-red)] px-2 py-0.5 rounded-full">
                         {newsArticles.length}
                       </span>
                     </TabsTrigger>
                     <TabsTrigger value="events" className="flex items-center gap-2">
                       <Calendar className="h-4 w-4" />
                       <span>Events</span>
-                      <span className="text-xs bg-[var(--color-stanford-red)]/10 text-[var(--color-stanford-red)] px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[var(--color-riara-red)]/10 text-[var(--color-riara-red)] px-2 py-0.5 rounded-full">
                         {events.length}
                       </span>
                     </TabsTrigger>
@@ -408,7 +408,7 @@ export default function NewsAndEvents() {
                 {/* Timeline Content */}
                 <TabsContent value={activeTab} className="mt-0">
                   {visibleItems.length === 0 ? (
-                    <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-stanford-red)] rounded-lg">
+                    <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-riara-red)] rounded-lg">
                       <p className="text-lg text-[var(--color-text-secondary)]">
                         No {activeTab === "all" ? "content" : activeTab} found matching your criteria.
                       </p>
@@ -421,11 +421,11 @@ export default function NewsAndEvents() {
                           return (
                             <div key={item.id} className="relative">
                               <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-1 bg-[var(--color-stanford-red)] rounded-full"></div>
+                                <div className="flex-shrink-0 w-1 bg-[var(--color-riara-red)] rounded-full"></div>
                                 <div className="flex-1">
                                   <div className="flex items-center gap-2 mb-2">
-                                    <Newspaper className="h-4 w-4 text-[var(--color-stanford-red)]" />
-                                    <span className="text-xs font-semibold text-[var(--color-stanford-red)] uppercase">
+                                    <Newspaper className="h-4 w-4 text-[var(--color-riara-red)]" />
+                                    <span className="text-xs font-semibold text-[var(--color-riara-red)] uppercase">
                                       News
                                     </span>
                                     {item.date && (
@@ -449,17 +449,17 @@ export default function NewsAndEvents() {
                           return (
                             <div key={item.id} className="relative">
                               <div className="flex gap-4">
-                                <div className="flex-shrink-0 w-1 bg-[var(--color-stanford-red)] rounded-full"></div>
+                                <div className="flex-shrink-0 w-1 bg-[var(--color-riara-red)] rounded-full"></div>
                                 <div className="flex-1">
                                   <div 
-                                    className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors"
+                                    className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors"
                                     onClick={() => setLocation(`/events/${event.id}`)}
                                   >
                                     <div className="flex flex-col md:flex-row gap-6">
                                       <div className="flex-shrink-0">
-                                        <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-stanford-red)]">
+                                        <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-riara-red)]">
                                           <div className="text-center">
-                                            <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
+                                            <p className="text-xs font-semibold uppercase text-[var(--color-riara-red)]">
                                               {format(event.parsedDate, "MMM")}
                                             </p>
                                             <p className="text-2xl font-bold text-[var(--color-text-primary)]">
@@ -470,13 +470,13 @@ export default function NewsAndEvents() {
                                       </div>
                                       <div className="flex-1">
                                         <div className="flex items-center gap-2 mb-2">
-                                          <Calendar className="h-4 w-4 text-[var(--color-stanford-red)]" />
-                                          <span className="text-xs font-semibold text-[var(--color-stanford-red)] uppercase">
+                                          <Calendar className="h-4 w-4 text-[var(--color-riara-red)]" />
+                                          <span className="text-xs font-semibold text-[var(--color-riara-red)] uppercase">
                                             {isUpcoming ? "Upcoming Event" : "Past Event"}
                                           </span>
                                         </div>
                                         <div className="mb-3">
-                                          <span className="text-sm font-semibold text-[var(--color-stanford-red)] uppercase">
+                                          <span className="text-sm font-semibold text-[var(--color-riara-red)] uppercase">
                                             {event.type}
                                           </span>
                                         </div>
@@ -494,7 +494,7 @@ export default function NewsAndEvents() {
                                             {event.description}
                                           </p>
                                         )}
-                                        <div className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors flex items-center gap-2">
+                                        <div className="text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors flex items-center gap-2">
                                           View details <ArrowRight className="h-4 w-4" />
                                         </div>
                                       </div>
@@ -515,7 +515,7 @@ export default function NewsAndEvents() {
                       <Button
                         variant="outline"
                         onClick={() => setVisibleCount(prev => prev + 12)}
-                        className="px-8 py-6 text-base font-semibold border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+                        className="px-8 py-6 text-base font-semibold border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
                       >
                         Load More
                       </Button>

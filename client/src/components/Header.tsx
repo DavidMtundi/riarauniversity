@@ -139,7 +139,7 @@ export function Header({ variant = "default" }: HeaderProps) {
                     "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors touch-manipulation",
                     isOverlay
                       ? "!text-white hover:!text-white"
-                      : "text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)]"
+                      : "text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)]"
                   )}
                   data-testid={link.testId}
                   style={{ touchAction: 'manipulation' }}

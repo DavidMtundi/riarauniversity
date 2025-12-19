@@ -51,7 +51,7 @@ export default function EventDetail() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading Event...</p>
           </div>
         </main>
@@ -66,7 +66,7 @@ export default function EventDetail() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -92,7 +92,7 @@ export default function EventDetail() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -103,7 +103,7 @@ export default function EventDetail() {
             </p>
             <Button
               onClick={() => setLocation("/events")}
-              className="bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)]"
+              className="bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)]"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Events
@@ -149,7 +149,7 @@ export default function EventDetail() {
               <div className="flex flex-wrap gap-6 text-[var(--color-text-secondary)]">
                 {parsedDate && (
                   <div className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5 text-[var(--color-stanford-red)]" />
+                    <Calendar className="h-5 w-5 text-[var(--color-riara-red)]" />
                     <span className="font-semibold">
                       {format(parsedDate, "EEEE, MMMM d, yyyy")}
                     </span>
@@ -157,7 +157,7 @@ export default function EventDetail() {
                 )}
                 {event.time && (
                   <div className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-[var(--color-stanford-red)]" />
+                    <Clock className="h-5 w-5 text-[var(--color-riara-red)]" />
                     <span className="font-semibold">{event.time}</span>
                   </div>
                 )}
@@ -251,7 +251,7 @@ export default function EventDetail() {
                           <div className="pt-4 border-t">
                             <Button
                               asChild
-                              className="w-full bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)]"
+                              className="w-full bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)]"
                             >
                               <a href={event.link} target="_blank" rel="noopener noreferrer">
                                 <ExternalLink className="mr-2 h-4 w-4" />

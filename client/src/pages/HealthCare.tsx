@@ -17,8 +17,8 @@ export default function HealthCare() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -55,7 +55,7 @@ export default function HealthCare() {
                 Services Offered
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">
                     Mental Health Support
                   </h3>
@@ -64,7 +64,7 @@ export default function HealthCare() {
                   </p>
                 </div>
 
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">
                     Wellness Education
                   </h3>
@@ -73,7 +73,7 @@ export default function HealthCare() {
                   </p>
                 </div>
 
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">
                     Peer Support Programs
                   </h3>
@@ -82,7 +82,7 @@ export default function HealthCare() {
                   </p>
                 </div>
 
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">
                     Confidential Counseling
                   </h3>
@@ -99,7 +99,7 @@ export default function HealthCare() {
         <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                   <div className="flex-shrink-0">
                     <img 
@@ -112,7 +112,7 @@ export default function HealthCare() {
                     <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-2">
                       Ms. Leah Mbuyah
                     </h3>
-                    <p className="text-lg font-semibold text-[var(--color-stanford-red)] mb-6">
+                    <p className="text-lg font-semibold text-[var(--color-riara-red)] mb-6">
                       The University Nurse
                     </p>
                     <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">

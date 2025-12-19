@@ -27,8 +27,8 @@ export default function History() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -132,7 +132,7 @@ export default function History() {
               {/* Timeline */}
               <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[var(--color-stanford-red)]/30 transform md:-translate-x-1/2"></div>
+                <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-[var(--color-riara-red)]/30 transform md:-translate-x-1/2"></div>
                 
                 <div className="space-y-12">
                   {milestones.map((milestone, index) => (
@@ -143,7 +143,7 @@ export default function History() {
                       }`}
                     >
                       {/* Timeline Dot */}
-                      <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-[var(--color-stanford-red)] rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10"></div>
+                      <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-[var(--color-riara-red)] rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10"></div>
                       
                       {/* Content Card */}
                       <div className={`flex-1 ml-12 md:ml-0 ${
@@ -153,7 +153,7 @@ export default function History() {
                           <div className={`flex items-center gap-4 mb-4 ${
                             index % 2 === 0 ? 'md:flex-row-reverse' : ''
                           }`}>
-                            <div className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-stanford-red)]">
+                            <div className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-riara-red)]">
                               {milestone.year}
                             </div>
                             <div className="h-px flex-1 bg-[var(--color-border-secondary)]"></div>
@@ -183,15 +183,15 @@ export default function History() {
               </h2>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center p-6 bg-[var(--color-bg-secondary)] rounded-lg">
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--color-stanford-red)] mb-2">93%</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[var(--color-riara-red)] mb-2">93%</div>
                   <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Alumni securing employment, entrepreneurship, or further studies within a year</p>
                 </div>
                 <div className="text-center p-6 bg-[var(--color-bg-secondary)] rounded-lg">
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--color-stanford-red)] mb-2">2,500+</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[var(--color-riara-red)] mb-2">2,500+</div>
                   <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Alumni graduated, including global achievers</p>
                 </div>
                 <div className="text-center p-6 bg-[var(--color-bg-secondary)] rounded-lg">
-                  <div className="text-4xl md:text-5xl font-bold text-[var(--color-stanford-red)] mb-2">50</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[var(--color-riara-red)] mb-2">50</div>
                   <p className="text-sm md:text-base text-[var(--color-text-secondary)]">Years of quality education (Golden Jubilee 2024)</p>
                 </div>
               </div>

@@ -18,7 +18,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
   const shouldShowReadMore = hasFullContent && !isExpanded;
 
   const renderCategory = (category: string) => (
-    <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] bg-[var(--color-stanford-red)]/10 text-[var(--color-stanford-red)] rounded-full">
+    <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] bg-[var(--color-riara-red)]/10 text-[var(--color-riara-red)] rounded-full">
       {category}
     </span>
   );
@@ -26,7 +26,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
   if (variant === "featured") {
     return (
       <article
-        className="group relative block overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-stanford-red)] cursor-pointer shadow-2xl hover:shadow-3xl transition-all duration-300"
+        className="group relative block overflow-hidden rounded-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-riara-red)] cursor-pointer shadow-2xl hover:shadow-3xl transition-all duration-300"
         data-testid={`card-featured-${article.id}`}
         onClick={() => setLocation(`/news/${article.id}`)}
       >
@@ -68,7 +68,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
               {renderCategory(article.category)}
             </div>
             <div className="absolute inset-x-0 bottom-0 p-8 sm:p-10 lg:p-12 text-left text-white">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-3 group-hover:text-[var(--color-stanford-red)]/90 transition-colors duration-300">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-3 group-hover:text-[var(--color-riara-red)]/90 transition-colors duration-300">
                 {article.title}
               </h2>
               {article.subtitle && (
@@ -93,7 +93,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
                   </div>
                 )}
               </div>
-              <div className="mt-6 flex items-center gap-2 text-white/90 font-semibold group-hover:text-[var(--color-stanford-red)] transition-colors duration-300">
+              <div className="mt-6 flex items-center gap-2 text-white/90 font-semibold group-hover:text-[var(--color-riara-red)] transition-colors duration-300">
                 <span>Read full story</span>
                 <ArrowRight className="h-5 w-5 transform group-hover:translate-x-2 transition-transform duration-300" />
               </div>
@@ -107,8 +107,8 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
   return (
     <article
       className={cn(
-        "group flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-stanford-red)] cursor-pointer border border-gray-100",
-        variant === "highlight" ? "border-2 border-[var(--color-stanford-red)]/30 shadow-lg" : ""
+        "group flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-riara-red)] cursor-pointer border border-gray-100",
+        variant === "highlight" ? "border-2 border-[var(--color-riara-red)]/30 shadow-lg" : ""
       )}
       data-testid={`card-${variant}-${article.id}`}
       onClick={() => setLocation(`/news/${article.id}`)}
@@ -156,7 +156,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
         </div>
         
         <div className="block flex-1">
-          <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--color-text-primary)] leading-tight mb-3 group-hover:text-[var(--color-stanford-red)] transition-colors duration-300 line-clamp-2">
+          <h3 className="text-xl sm:text-2xl font-serif font-bold text-[var(--color-text-primary)] leading-tight mb-3 group-hover:text-[var(--color-riara-red)] transition-colors duration-300 line-clamp-2">
             {article.title}
           </h3>
           
@@ -182,7 +182,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
                 e.stopPropagation();
                 setIsExpanded(true);
               }}
-              className="mt-3 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors inline-flex items-center gap-1"
+              className="mt-3 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors inline-flex items-center gap-1"
               data-testid={`button-read-more-${article.id}`}
             >
               Read more
@@ -197,7 +197,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
                 e.stopPropagation();
                 setIsExpanded(false);
               }}
-              className="mt-3 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors inline-flex items-center gap-1"
+              className="mt-3 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors inline-flex items-center gap-1"
               data-testid={`button-read-less-${article.id}`}
             >
               Read less
@@ -227,7 +227,7 @@ export function NewsCard({ article, variant = "regular", showFullContent = false
               e.stopPropagation();
               setLocation(`/news/${article.id}`);
             }}
-            className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-all duration-300 inline-flex items-center gap-1.5 group/link bg-[var(--color-stanford-red)]/5 hover:bg-[var(--color-stanford-red)]/10 px-3 py-1.5 rounded-md"
+            className="text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-all duration-300 inline-flex items-center gap-1.5 group/link bg-[var(--color-riara-red)]/5 hover:bg-[var(--color-riara-red)]/10 px-3 py-1.5 rounded-md"
             data-testid={`link-read-full-${article.id}`}
           >
             Read full story

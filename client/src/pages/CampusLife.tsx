@@ -17,8 +17,8 @@ export default function CampusLife() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -58,7 +58,7 @@ export default function CampusLife() {
         <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-6xl mx-auto">
-              <div className="border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+              <div className="border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                   Experience Riara. Live the Difference
                 </h2>
@@ -77,7 +77,7 @@ export default function CampusLife() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                 Externships & Practical Learning
               </h2>
-              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                   We believe in preparing students for the real world. That's why every programme includes a built-in attachment or externship experience designed to provide hands-on training and workplace readiness.
                 </p>
@@ -112,7 +112,7 @@ export default function CampusLife() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                 Career Preparation & Placement
               </h2>
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-xl md:text-2xl text-[var(--color-text-primary)] leading-relaxed mb-4 font-light">
                   We don't just teach—we help you launch your career.
                 </p>
@@ -122,19 +122,19 @@ export default function CampusLife() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <h3 className="text-lg font-serif font-semibold text-[var(--color-text-primary)]">Career coaching & mentorship</h3>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <h3 className="text-lg font-serif font-semibold text-[var(--color-text-primary)]">Resume and interview skills training</h3>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <h3 className="text-lg font-serif font-semibold text-[var(--color-text-primary)]">Internship & graduate placement opportunities</h3>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <h3 className="text-lg font-serif font-semibold text-[var(--color-text-primary)]">Networking events with employers</h3>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function CampusLife() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                 Student Leadership
               </h2>
-              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-4">
                   At the heart of student life at Riara University is <strong className="text-[var(--color-text-primary)]">RUSA</strong> – the Riara University Student Association – a vibrant and dynamic body that represents the voice, vision, and values of the student community.
                 </p>
@@ -171,8 +171,8 @@ export default function CampusLife() {
                   RUSA is more than just a student government; it is a platform for leadership, empowerment, and transformative action. Through RUSA, students are given the opportunity to lead with integrity, champion student welfare, and collaborate with university management on key issues that affect campus life and learning.
                 </p>
               </div>
-              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
-                <p className="text-base font-semibold text-[var(--color-stanford-red)] mb-2">RUSA GOVERNMENT 2024-2025</p>
+              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
+                <p className="text-base font-semibold text-[var(--color-riara-red)] mb-2">RUSA GOVERNMENT 2024-2025</p>
                 <p className="text-[var(--color-text-secondary)]">
                   Empowering student voices and driving positive change across campus.
                 </p>
@@ -192,7 +192,7 @@ export default function CampusLife() {
                 Riara University champions holistic education. Our students are not just known for academic excellence but also for their passion in the field, on stage, and in the community.
               </p>
 
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">Sports</h3>
@@ -229,7 +229,7 @@ export default function CampusLife() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                 Community Service
               </h2>
-              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                   At Riara University, we believe that education extends beyond the classroom walls. Community service is an integral part of our holistic approach to learning, fostering a sense of social responsibility, empathy, and civic engagement among our students.
                 </p>
@@ -239,7 +239,7 @@ export default function CampusLife() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     Academic Integration
                   </h3>
@@ -248,21 +248,21 @@ export default function CampusLife() {
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                       <span className="text-[var(--color-text-secondary)]">Hands-on experience in real-world community settings</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                       <span className="text-[var(--color-text-secondary)]">Credit hours that count toward graduation</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                       <span className="text-[var(--color-text-secondary)]">Structured reflection and learning outcomes</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     Impact & Recognition
                   </h3>
@@ -275,7 +275,7 @@ export default function CampusLife() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                   Service Opportunities
                 </h3>
@@ -284,27 +284,27 @@ export default function CampusLife() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Educational support and tutoring programs</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Environmental conservation initiatives</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Healthcare and wellness outreach</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Community development projects</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Advocacy and awareness campaigns</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Support for vulnerable populations</span>
                   </div>
                 </div>
@@ -333,7 +333,7 @@ export default function CampusLife() {
                       className="w-full h-auto rounded"
                     />
                   </div>
-                  <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                  <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                     <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                       Student Center
                     </h3>
@@ -345,30 +345,30 @@ export default function CampusLife() {
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]">Study spaces and quiet areas</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]">Student services and information desk</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]">Meeting rooms and event spaces</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]">Cafeteria and dining facilities</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]">Recreational areas and lounges</span>
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div>
-                  <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                  <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                     <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                       Campus Map
                     </h3>
@@ -411,37 +411,37 @@ export default function CampusLife() {
               <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-8">
                 Riara University is the latest innovation in higher education in Kenya. With its ultra-modern physical infrastructure and state-of-the-art ICT facilities, together with the rigor in the development of its academic programmes, Riara University is undoubtedly the regional university of choice.
               </p>
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-base md:text-lg font-semibold text-[var(--color-text-primary)] mb-4">
                   The University is well equipped with the following facilities among others:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Modern ICT facilities (The entire Campus is a Wi-Fi hotspot)</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Innovations Centre</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Audio Visual lecture rooms</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Well-stocked Modern Library with state-of-the-art reading space designs</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">State-of-the-art Cafeteria (open from 6:30 am – 8:00 pm) offering a wide variety of foods and drinks at affordable prices</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">A Students' Centre equipped with a common room fitted with a TV screen and indoor gaming facilities</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Fully dedicated bus for students use when need arises</span>
                   </div>
                 </div>
@@ -466,7 +466,7 @@ export default function CampusLife() {
                   />
                 </div>
                 <div>
-                  <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                  <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                     <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                       Riara University is located in Nairobi, a modern, cosmopolitan city that offers a range of secure, comfortable, and affordable student housing options.
                     </p>
@@ -475,19 +475,19 @@ export default function CampusLife() {
                     </p>
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Qwetu Student Residences</strong> – Call: 0800730333</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Studyville</strong></span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">ParallelFour</strong></span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                         <span className="text-[var(--color-text-secondary)]"><strong className="text-[var(--color-text-primary)]">Efoca Hostels</strong> and other certified housing providers</span>
                       </li>
                     </ul>
@@ -508,25 +508,25 @@ export default function CampusLife() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                 International Students
               </h2>
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                   Riara University warmly welcomes students from across Africa and beyond. We celebrate diversity and offer dedicated support services for international learners, including assistance with:
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Accommodation and orientation</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Legal documentation (e.g. student visas)</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Language support and academic integration</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Cultural exchange programs and mentorship</span>
                   </div>
                 </div>
@@ -550,7 +550,7 @@ export default function CampusLife() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Excellence in Leadership Award
                   </h3>
@@ -559,7 +559,7 @@ export default function CampusLife() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Vice Chancellor's Roll of Honor
                   </h3>
@@ -568,7 +568,7 @@ export default function CampusLife() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     University's Sports Award
                   </h3>
@@ -577,7 +577,7 @@ export default function CampusLife() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Community Service Award
                   </h3>
@@ -586,7 +586,7 @@ export default function CampusLife() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Njeri Global Children Award
                   </h3>
@@ -595,7 +595,7 @@ export default function CampusLife() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Innovator's Merit Award
                   </h3>
@@ -612,7 +612,7 @@ export default function CampusLife() {
         <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white p-6 md:p-8 lg:p-10 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 lg:p-10 border-l-4 border-[var(--color-riara-red)]">
                 <blockquote className="text-lg md:text-xl lg:text-2xl text-[var(--color-text-secondary)] leading-relaxed mb-8 italic">
                   "Words cannot fully capture how I'm feeling right now. They say a journey of a thousand miles begins with a single step, and mine began the day I walked through the gates of Riara University: wide-eyed, hopeful, and ready to chase something greater than myself. I had no idea how much this place would shape me, not just into a graduate, but into a creative, a communicator, and most importantly, someone who believes in their own voice."
                 </blockquote>

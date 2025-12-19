@@ -94,8 +94,8 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                         style={{ display: member.imageUrl && member.imageUrl.trim() !== '' ? 'none' : 'flex' }}
                       >
                         <div className="text-center">
-                          <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-[var(--color-stanford-red)]/20 flex items-center justify-center border-2 border-[var(--color-stanford-red)]/30">
-                            <span className="text-3xl font-bold text-[var(--color-stanford-red)]">
+                          <div className="w-24 h-24 mx-auto mb-3 rounded-full bg-[var(--color-riara-red)]/20 flex items-center justify-center border-2 border-[var(--color-riara-red)]/30">
+                            <span className="text-3xl font-bold text-[var(--color-riara-red)]">
                               {member.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
                             </span>
                           </div>
@@ -106,7 +106,7 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                       <h4 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-1">
                         {member.name}
                       </h4>
-                      <p className="text-base font-medium text-[var(--color-stanford-red)] mb-3">
+                      <p className="text-base font-medium text-[var(--color-riara-red)] mb-3">
                         {member.title}
                       </p>
                       {member.department && (
@@ -122,10 +122,10 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                       <div className="space-y-2 pt-4 border-t border-[var(--color-border-secondary)]">
                         {member.email && (
                           <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                            <Mail className="h-4 w-4 text-[var(--color-stanford-red)]" />
+                            <Mail className="h-4 w-4 text-[var(--color-riara-red)]" />
                             <a
                               href={`mailto:${member.email}`}
-                              className="hover:text-[var(--color-stanford-red)] transition-colors"
+                              className="hover:text-[var(--color-riara-red)] transition-colors"
                             >
                               {member.email}
                             </a>
@@ -133,10 +133,10 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                         )}
                         {member.phone && (
                           <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                            <Phone className="h-4 w-4 text-[var(--color-stanford-red)]" />
+                            <Phone className="h-4 w-4 text-[var(--color-riara-red)]" />
                             <a
                               href={`tel:${member.phone}`}
-                              className="hover:text-[var(--color-stanford-red)] transition-colors"
+                              className="hover:text-[var(--color-riara-red)] transition-colors"
                             >
                               {member.phone}
                             </a>
@@ -144,7 +144,7 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                         )}
                         {member.office && (
                           <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
-                            <MapPin className="h-4 w-4 text-[var(--color-stanford-red)]" />
+                            <MapPin className="h-4 w-4 text-[var(--color-riara-red)]" />
                             <span>{member.office}</span>
                           </div>
                         )}
@@ -153,7 +153,7 @@ export function LeadershipSection({ members, title = "Leadership & Management", 
                             href={member.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors mt-2"
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors mt-2"
                           >
                             View Full Profile
                             <ExternalLink className="h-4 w-4" />

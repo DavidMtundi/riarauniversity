@@ -24,7 +24,7 @@ export default function Academics() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading Academics...</p>
           </div>
         </main>
@@ -39,7 +39,7 @@ export default function Academics() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -73,8 +73,8 @@ export default function Academics() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -140,7 +140,7 @@ export default function Academics() {
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                 {/* Riara Law School */}
-                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     Riara Law School
                   </h3>
@@ -154,19 +154,19 @@ export default function Academics() {
                     <p className="text-sm font-semibold text-[var(--color-text-primary)] mb-2">Key Features:</p>
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>State-of-the-art moot courtroom</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Rigorous legal writing program</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Socratic Method & case studies</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Full CLE accreditation</span>
                       </li>
                     </ul>
@@ -175,14 +175,14 @@ export default function Academics() {
                     href="https://law.riarauniversity.ac.ke/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] hover:underline transition-colors"
                   >
                     Visit Law School →
                   </a>
                 </div>
 
                 {/* School of Business */}
-                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     School of Business
                   </h3>
@@ -196,19 +196,19 @@ export default function Academics() {
                     <p className="text-sm font-semibold text-[var(--color-text-primary)] mb-2">Key Features:</p>
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>International exchange programs</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Entrepreneurial skills development</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Riara Business Club</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Community engagement projects</span>
                       </li>
                     </ul>
@@ -217,14 +217,14 @@ export default function Academics() {
                     href="https://sob.riarauniversity.ac.ke/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] hover:underline transition-colors"
                   >
                     Visit Business School →
                   </a>
                 </div>
 
                 {/* School of Computing Sciences */}
-                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     School of Computing Sciences
                   </h3>
@@ -238,19 +238,19 @@ export default function Academics() {
                     <p className="text-sm font-semibold text-[var(--color-text-primary)] mb-2">Key Features:</p>
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Industry-standard laboratories</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Animation & robotics facilities</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Dean's Scholarship for A students (40% tuition)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Innovation Centre (iCentre)</span>
                       </li>
                     </ul>
@@ -259,14 +259,14 @@ export default function Academics() {
                     href="https://scs.riarauniversity.ac.ke/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] hover:underline transition-colors"
                   >
                     Visit Computing School →
                   </a>
                 </div>
 
                 {/* School of International Relations & Diplomacy */}
-                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     School of International Relations & Diplomacy
                   </h3>
@@ -280,19 +280,19 @@ export default function Academics() {
                     <p className="text-sm font-semibold text-[var(--color-text-primary)] mb-2">Key Features:</p>
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Francis Onditi Conflictology Lab</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Simulation exercises & diplomatic clinics</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>International academic advisory team</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Vibrant seminar series</span>
                       </li>
                     </ul>
@@ -301,14 +301,14 @@ export default function Academics() {
                     href="https://ird.riarauniversity.ac.ke/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] hover:underline transition-colors"
                   >
                     Visit IRD School →
                   </a>
                 </div>
 
                 {/* School of Communication & Multimedia Journalism */}
-                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     School of Communication & Multimedia Journalism
                   </h3>
@@ -322,19 +322,19 @@ export default function Academics() {
                     <p className="text-sm font-semibold text-[var(--color-text-primary)] mb-2">Key Features:</p>
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Practical studio settings</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Real-world reporting experience</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Industry stakeholder engagement</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Portfolio development (RFC 305: Community Service)</span>
                       </li>
                     </ul>
@@ -343,14 +343,14 @@ export default function Academics() {
                     href="https://cmj.riarauniversity.ac.ke/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] hover:underline transition-colors"
                   >
                     Visit Communication School →
                   </a>
                 </div>
 
                 {/* School of Education */}
-                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-white p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     School of Education
                   </h3>
@@ -364,19 +364,19 @@ export default function Academics() {
                     <p className="text-sm font-semibold text-[var(--color-text-primary)] mb-2">Key Features:</p>
                     <ul className="text-sm text-[var(--color-text-secondary)] space-y-1">
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Practical teaching experience</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Modern pedagogical approaches</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Commitment to educational excellence</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-[var(--color-stanford-red)] mt-1">•</span>
+                        <span className="text-[var(--color-riara-red)] mt-1">•</span>
                         <span>Focus on 21st century skills</span>
                       </li>
                     </ul>
@@ -385,7 +385,7 @@ export default function Academics() {
                     href="https://soe.riarauniversity.ac.ke/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] hover:underline transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] hover:underline transition-colors"
                   >
                     Visit Education School →
                   </a>

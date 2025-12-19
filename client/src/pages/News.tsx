@@ -165,7 +165,7 @@ export default function News() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading News...</p>
           </div>
         </main>
@@ -180,7 +180,7 @@ export default function News() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -214,8 +214,8 @@ export default function News() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -236,20 +236,20 @@ export default function News() {
                 <div className="max-w-3xl mx-auto">
                   <div className="flex flex-col sm:flex-row gap-3">
                     <div className="flex-1 relative group">
-                      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-[var(--color-stanford-red)] transition-colors" />
+                      <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 group-focus-within:text-[var(--color-riara-red)] transition-colors" />
                       <Input
                         type="text"
                         placeholder="Search news articles, topics, or authors..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="pl-12 pr-4 py-6 md:py-7 text-base md:text-lg bg-white/95 backdrop-blur-sm border-2 border-white/50 rounded-xl focus:ring-2 focus:ring-[var(--color-stanford-red)] focus:border-[var(--color-stanford-red)] shadow-xl transition-all"
+                        className="pl-12 pr-4 py-6 md:py-7 text-base md:text-lg bg-white/95 backdrop-blur-sm border-2 border-white/50 rounded-xl focus:ring-2 focus:ring-[var(--color-riara-red)] focus:border-[var(--color-riara-red)] shadow-xl transition-all"
                       />
                     </div>
                     <Button
                       onClick={() => {
                         document.getElementById('news-content')?.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] px-8 md:px-10 py-6 md:py-7 text-base md:text-lg font-semibold rounded-xl whitespace-nowrap shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+                      className="bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] px-8 md:px-10 py-6 md:py-7 text-base md:text-lg font-semibold rounded-xl whitespace-nowrap shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
                     >
                       Search
                     </Button>
@@ -291,7 +291,7 @@ export default function News() {
                   </h2>
                   <div className="flex items-center gap-4">
                     <p className="text-base text-[var(--color-text-secondary)]">
-                      <span className="font-semibold text-[var(--color-stanford-red)]">{filteredArticles.length}</span> {filteredArticles.length === 1 ? 'article' : 'articles'}
+                      <span className="font-semibold text-[var(--color-riara-red)]">{filteredArticles.length}</span> {filteredArticles.length === 1 ? 'article' : 'articles'}
                       {hasActiveFilters && (
                         <span className="ml-2 text-sm">matching your filters</span>
                       )}
@@ -302,7 +302,7 @@ export default function News() {
                 <div className="flex flex-wrap items-center gap-3">
                   {/* Sort Dropdown */}
                   <Select value={sortBy} onValueChange={(value) => setSortBy(value as SortOption)}>
-                    <SelectTrigger className="w-[180px] bg-white border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/50 transition-colors">
+                    <SelectTrigger className="w-[180px] bg-white border-2 border-gray-200 hover:border-[var(--color-riara-red)]/50 transition-colors">
                       <SelectValue placeholder="Sort by" />
                     </SelectTrigger>
                     <SelectContent>
@@ -318,7 +318,7 @@ export default function News() {
                       variant="outline"
                       size="sm"
                       onClick={clearFilters}
-                      className="text-[var(--color-stanford-red)] hover:text-white hover:bg-[var(--color-stanford-red)] border-[var(--color-stanford-red)]/30"
+                      className="text-[var(--color-riara-red)] hover:text-white hover:bg-[var(--color-riara-red)] border-[var(--color-riara-red)]/30"
                     >
                       <X className="h-4 w-4 mr-2" />
                       Clear filters
@@ -338,8 +338,8 @@ export default function News() {
                   onClick={() => setSelectedCategory(null)}
                     className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                     selectedCategory === null
-                        ? 'bg-[var(--color-stanford-red)] text-white shadow-lg shadow-[var(--color-stanford-red)]/20'
-                        : 'bg-white text-[var(--color-text-secondary)] hover:bg-gray-50 border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/30'
+                        ? 'bg-[var(--color-riara-red)] text-white shadow-lg shadow-[var(--color-riara-red)]/20'
+                        : 'bg-white text-[var(--color-text-secondary)] hover:bg-gray-50 border-2 border-gray-200 hover:border-[var(--color-riara-red)]/30'
                   }`}
                 >
                   All News
@@ -350,8 +350,8 @@ export default function News() {
                     onClick={() => setSelectedCategory(category)}
                       className={`px-5 py-2.5 text-sm font-semibold rounded-lg transition-all ${
                       selectedCategory === category
-                          ? 'bg-[var(--color-stanford-red)] text-white shadow-lg shadow-[var(--color-stanford-red)]/20'
-                          : 'bg-white text-[var(--color-text-secondary)] hover:bg-gray-50 border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/30'
+                          ? 'bg-[var(--color-riara-red)] text-white shadow-lg shadow-[var(--color-riara-red)]/20'
+                          : 'bg-white text-[var(--color-text-secondary)] hover:bg-gray-50 border-2 border-gray-200 hover:border-[var(--color-riara-red)]/30'
                     }`}
                   >
                       {category} <span className="ml-1.5 opacity-70">({categoryCounts[category] || 0})</span>
@@ -366,7 +366,7 @@ export default function News() {
                       <span className="text-sm font-semibold">Author:</span>
                     </div>
                     <Select value={selectedAuthor || "all"} onValueChange={(value) => setSelectedAuthor(value === "all" ? null : value)}>
-                      <SelectTrigger className="w-[220px] bg-white border-2 border-gray-200 hover:border-[var(--color-stanford-red)]/50 transition-colors">
+                      <SelectTrigger className="w-[220px] bg-white border-2 border-gray-200 hover:border-[var(--color-riara-red)]/50 transition-colors">
                         <div className="flex items-center gap-2">
                           <SelectValue placeholder="All Authors" />
                         </div>
@@ -393,7 +393,7 @@ export default function News() {
             {featuredArticle && (
                 <div className="mb-16">
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="h-1 w-12 bg-[var(--color-stanford-red)]"></div>
+                    <div className="h-1 w-12 bg-[var(--color-riara-red)]"></div>
                     <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-text-primary)] uppercase tracking-wide">
                       Featured Story
                     </h3>
@@ -407,7 +407,7 @@ export default function News() {
               <>
                   {featuredArticle && (
                     <div className="mb-8 flex items-center gap-3">
-                      <div className="h-1 w-12 bg-[var(--color-stanford-red)]"></div>
+                      <div className="h-1 w-12 bg-[var(--color-riara-red)]"></div>
                       <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-text-primary)] uppercase tracking-wide">
                         Latest News
                       </h3>
@@ -430,7 +430,7 @@ export default function News() {
                     <Button
                       onClick={() => setVisibleCount(prev => prev + 12)}
                       size="lg"
-                        className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                        className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                       data-testid="button-load-more"
                     >
                       Load More News
@@ -456,7 +456,7 @@ export default function News() {
                     <Button 
                       variant="outline" 
                       onClick={clearFilters}
-                      className="border-2 border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+                      className="border-2 border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
                     >
                       <X className="h-4 w-4 mr-2" />
                       Clear all filters
@@ -469,7 +469,7 @@ export default function News() {
         </section>
 
         {/* Newsletter Subscription Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-[var(--color-stanford-red)] to-[var(--color-stanford-red-dark)] text-white">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-[var(--color-riara-red)] to-[var(--color-riara-red-dark)] text-white">
           <Container>
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-6">
@@ -487,7 +487,7 @@ export default function News() {
                   className="flex-1 py-6 text-base bg-white/95 border-0 rounded-lg focus:ring-2 focus:ring-white/50"
                 />
                 <Button
-                  className="bg-white text-[var(--color-stanford-red)] hover:bg-white/90 px-8 py-6 text-base font-semibold rounded-lg whitespace-nowrap shadow-lg"
+                  className="bg-white text-[var(--color-riara-red)] hover:bg-white/90 px-8 py-6 text-base font-semibold rounded-lg whitespace-nowrap shadow-lg"
                 >
                   Subscribe
                   <ArrowRight className="ml-2 h-4 w-4" />

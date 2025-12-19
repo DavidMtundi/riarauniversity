@@ -19,8 +19,8 @@ export default function Alumni() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -84,7 +84,7 @@ export default function Alumni() {
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                     Who Can Join?
                   </h2>
-                  <div className="space-y-4 border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+                  <div className="space-y-4 border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                     <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
                       If you've graduated from Riara University—whether with a certificate, diploma, or degree—you're automatically part of our alumni community. Former staff members are welcome too.
                     </p>
@@ -111,10 +111,10 @@ export default function Alumni() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {/* Professional Development */}
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                      <Briefcase className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                    <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                      <Briefcase className="h-6 w-6 text-[var(--color-riara-red)]" />
                     </div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)]">
                       Professional Development
@@ -126,10 +126,10 @@ export default function Alumni() {
                 </div>
 
                 {/* Networking & Events */}
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                      <Network className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                    <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                      <Network className="h-6 w-6 text-[var(--color-riara-red)]" />
                     </div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)]">
                       Networking & Events
@@ -141,10 +141,10 @@ export default function Alumni() {
                 </div>
 
                 {/* Career Support */}
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                      <Users className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                    <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                      <Users className="h-6 w-6 text-[var(--color-riara-red)]" />
                     </div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)]">
                       Career Support
@@ -156,10 +156,10 @@ export default function Alumni() {
                 </div>
 
                 {/* Library Membership */}
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                      <BookOpen className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                    <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                      <BookOpen className="h-6 w-6 text-[var(--color-riara-red)]" />
                     </div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)]">
                       Library Membership
@@ -171,10 +171,10 @@ export default function Alumni() {
                 </div>
 
                 {/* Mentorship & Coaching */}
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                      <GraduationCap className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                    <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                      <GraduationCap className="h-6 w-6 text-[var(--color-riara-red)]" />
                     </div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)]">
                       Mentorship & Coaching
@@ -186,10 +186,10 @@ export default function Alumni() {
                 </div>
 
                 {/* Community Engagement */}
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                      <Heart className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                    <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                      <Heart className="h-6 w-6 text-[var(--color-riara-red)]" />
                     </div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)]">
                       Community Engagement
@@ -202,11 +202,11 @@ export default function Alumni() {
               </div>
 
               {/* Additional Benefits */}
-              <div className="mt-12 bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg">
+              <div className="mt-12 bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-3 flex items-center gap-2">
-                      <Gift className="h-5 w-5 text-[var(--color-stanford-red)]" />
+                      <Gift className="h-5 w-5 text-[var(--color-riara-red)]" />
                       Merchandising & Alumni Gift Shop
                     </h3>
                     <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
@@ -215,7 +215,7 @@ export default function Alumni() {
                   </div>
                   <div>
                     <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-3 flex items-center gap-2">
-                      <Mail className="h-5 w-5 text-[var(--color-stanford-red)]" />
+                      <Mail className="h-5 w-5 text-[var(--color-riara-red)]" />
                       Regular Updates
                     </h3>
                     <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
@@ -246,7 +246,7 @@ export default function Alumni() {
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6">
                     Giving Back to Riara
                   </h2>
-                  <div className="space-y-6 border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+                  <div className="space-y-6 border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                     <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
                       Riara University relies on the generosity of its alumni, partners, and friends to continue advancing education, research, and community service. While we receive financial support from institutional partners, your contributions make a real difference.
                     </p>
@@ -281,7 +281,7 @@ export default function Alumni() {
               </p>
 
               <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
@@ -297,7 +297,7 @@ export default function Alumni() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
@@ -313,7 +313,7 @@ export default function Alumni() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
@@ -333,7 +333,7 @@ export default function Alumni() {
               <div className="mt-12 text-center">
                 <Button
                   size="lg"
-                  className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white font-semibold text-base md:text-lg px-8 py-6"
+                  className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white font-semibold text-base md:text-lg px-8 py-6"
                   asChild
                 >
                   <a href="mailto:alumni@riarauniversity.ac.ke" className="flex items-center gap-2 !text-white hover:!text-white">

@@ -25,7 +25,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
         )}
 
         {/* Intro from Research page (document content) */}
-        <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg mb-12 md:mb-16">
+        <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg mb-12 md:mb-16">
           <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
             At Riara University, research isn't just something we do—it's who we are. Every day, our faculty and students are asking tough questions, challenging assumptions, and working on research that actually matters. Whether it's understanding conflict patterns in East Africa, developing new technologies, or exploring solutions to real-world problems, our research makes a difference.
           </p>
@@ -50,7 +50,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
 
         {profile && (
           <div className="mb-16 md:mb-20" data-testid="card-research-profile">
-            <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+            <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                 {/* Image - smaller, positioned on the left */}
                 <div className="flex-shrink-0 w-full md:w-48 lg:w-56">
@@ -81,7 +81,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
                     <p className="text-[var(--color-text-secondary)] mb-6" data-testid="text-profile-title">{profile.title}</p>
                     <Button
                       variant="outline"
-                      className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+                      className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
                       data-testid="button-profile-read-more"
                       asChild
                     >
@@ -98,7 +98,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
 
         {/* Conflict Observatory & Prediction Lab Section - from document */}
         <div className="mb-12 md:mb-16">
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg">
+          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-conflict-lab-heading">
               Francis Onditi Conflictology Lab
             </h3>
@@ -133,7 +133,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
             {stats.map((stat) => (
               <div key={stat.id} className="text-center" data-testid={`stat-${stat.id}`}>
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-stanford-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>{stat.value}</p>
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>{stat.value}</p>
                 <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed" data-testid={`text-stat-label-${stat.id}`}>{stat.label}</p>
               </div>
             ))}
@@ -143,7 +143,7 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
         <div className="text-center">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] !text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] !text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200"
             data-testid="button-more-research"
             asChild
           >

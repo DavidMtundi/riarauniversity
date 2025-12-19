@@ -183,8 +183,8 @@ export default function Courses() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -245,7 +245,7 @@ export default function Courses() {
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-full font-semibold text-sm md:text-base transition-all ${
                       selectedCategory === category.id
-                        ? 'bg-[var(--color-stanford-red)] text-white shadow-lg'
+                        ? 'bg-[var(--color-riara-red)] text-white shadow-lg'
                         : 'bg-white text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)] border border-[var(--color-border-secondary)]'
                     }`}
                   >
@@ -265,14 +265,14 @@ export default function Courses() {
                 {filteredCourses.map((course) => (
                   <div
                     key={course.id}
-                    className="bg-white rounded-lg border-l-4 border-[var(--color-stanford-red)] p-6 md:p-8 hover:shadow-xl transition-all group"
+                    className="bg-white rounded-lg border-l-4 border-[var(--color-riara-red)] p-6 md:p-8 hover:shadow-xl transition-all group"
                   >
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg text-[var(--color-stanford-red)] group-hover:bg-[var(--color-stanford-red)] group-hover:text-white transition-colors">
+                      <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg text-[var(--color-riara-red)] group-hover:bg-[var(--color-riara-red)] group-hover:text-white transition-colors">
                         {course.icon}
                       </div>
                       <div className="flex-1">
-                        <span className="text-xs font-semibold text-[var(--color-stanford-red)] uppercase tracking-wide">
+                        <span className="text-xs font-semibold text-[var(--color-riara-red)] uppercase tracking-wide">
                           {course.category === 'professional' ? 'Professional' : course.category === 'certificate' ? 'Certificate' : 'Diploma'}
                         </span>
                       </div>
@@ -295,7 +295,7 @@ export default function Courses() {
                     </p>
                     <Button
                       variant="outline"
-                      className="w-full border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white group-hover:border-[var(--color-stanford-red-dark)]"
+                      className="w-full border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white group-hover:border-[var(--color-riara-red-dark)]"
                       asChild
                     >
                       <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
@@ -328,7 +328,7 @@ export default function Courses() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white font-semibold text-base md:text-lg px-8 py-6"
+                  className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white font-semibold text-base md:text-lg px-8 py-6"
                   asChild
                 >
                   <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !text-white hover:!text-white">
@@ -338,7 +338,7 @@ export default function Courses() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white font-semibold text-base md:text-lg px-8 py-6"
+                  className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white font-semibold text-base md:text-lg px-8 py-6"
                   asChild
                 >
                   <a href="/admission" className="flex items-center gap-2">

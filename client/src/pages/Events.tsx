@@ -99,7 +99,7 @@ export default function Events() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading Events...</p>
           </div>
         </main>
@@ -114,7 +114,7 @@ export default function Events() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-6">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -148,8 +148,8 @@ export default function Events() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -180,7 +180,7 @@ export default function Events() {
 
               <TabsContent value="upcoming" className="mt-0">
                 {upcomingEvents.length === 0 ? (
-                  <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-stanford-red)]">
+                  <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-riara-red)]">
                     <p className="text-lg text-[var(--color-text-secondary)]">
                       No upcoming events available
                     </p>
@@ -190,14 +190,14 @@ export default function Events() {
                     {upcomingEvents.map((event) => (
                       <div 
                         key={event.id} 
-                        className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors"
+                        className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors"
                         onClick={() => setLocation(`/events/${event.id}`)}
                       >
                         <div className="flex flex-col md:flex-row gap-6">
                           <div className="flex-shrink-0">
-                            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-stanford-red)]">
+                            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-riara-red)]">
                               <div className="text-center">
-                                <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
+                                <p className="text-xs font-semibold uppercase text-[var(--color-riara-red)]">
                                   {format(event.parsedDate, "MMM")}
                                 </p>
                                 <p className="text-2xl font-bold text-[var(--color-text-primary)]">
@@ -208,7 +208,7 @@ export default function Events() {
                           </div>
                           <div className="flex-1">
                             <div className="mb-3">
-                              <span className="text-sm font-semibold text-[var(--color-stanford-red)] uppercase">
+                              <span className="text-sm font-semibold text-[var(--color-riara-red)] uppercase">
                                 {event.type}
                               </span>
                             </div>
@@ -221,7 +221,7 @@ export default function Events() {
                                 <span>{event.time}</span>
                               </div>
                             )}
-                            <div className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
+                            <div className="text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors">
                               View details →
                             </div>
                           </div>
@@ -234,7 +234,7 @@ export default function Events() {
 
               <TabsContent value="previous" className="mt-0">
                 {previousEvents.length === 0 ? (
-                  <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-stanford-red)]">
+                  <div className="bg-[var(--color-bg-secondary)] p-12 text-center border-l-4 border-[var(--color-riara-red)]">
                     <p className="text-lg text-[var(--color-text-secondary)]">
                       No previous events available
                     </p>
@@ -244,14 +244,14 @@ export default function Events() {
                     {previousEvents.map((event) => (
                       <div 
                         key={event.id} 
-                        className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors opacity-90"
+                        className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] cursor-pointer hover:bg-[var(--color-bg-secondary)]/80 transition-colors opacity-90"
                         onClick={() => setLocation(`/events/${event.id}`)}
                       >
                         <div className="flex flex-col md:flex-row gap-6">
                           <div className="flex-shrink-0">
-                            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-stanford-red)] opacity-75">
+                            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center border-2 border-[var(--color-riara-red)] opacity-75">
                               <div className="text-center">
-                                <p className="text-xs font-semibold uppercase text-[var(--color-stanford-red)]">
+                                <p className="text-xs font-semibold uppercase text-[var(--color-riara-red)]">
                                   {format(event.parsedDate, "MMM")}
                                 </p>
                                 <p className="text-2xl font-bold text-[var(--color-text-primary)]">
@@ -262,7 +262,7 @@ export default function Events() {
                           </div>
                           <div className="flex-1">
                             <div className="mb-3">
-                              <span className="text-sm font-semibold text-[var(--color-stanford-red)] uppercase">
+                              <span className="text-sm font-semibold text-[var(--color-riara-red)] uppercase">
                                 {event.type}
                               </span>
                             </div>
@@ -275,7 +275,7 @@ export default function Events() {
                                 <span>{event.time}</span>
                               </div>
                             )}
-                            <div className="text-sm font-semibold text-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red-dark)] transition-colors">
+                            <div className="text-sm font-semibold text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)] transition-colors">
                               View details →
                             </div>
                           </div>

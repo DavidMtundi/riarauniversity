@@ -29,8 +29,8 @@ export default function About() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -52,7 +52,7 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
                 <div>
                   <p className="text-xl md:text-2xl lg:text-3xl text-[var(--color-text-primary)] leading-relaxed mb-6">
-                    From its founding in Kenya in the early 21st century until today, Riara University has been infused with the <span className="font-semibold text-[var(--color-stanford-red)]">spirit of innovation and possibility</span>.
+                    From its founding in Kenya in the early 21st century until today, Riara University has been infused with the <span className="font-semibold text-[var(--color-riara-red)]">spirit of innovation and possibility</span>.
                   </p>
                   <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-4">
                     We believe strongly in the mission of higher education – to create and share knowledge and to prepare students to be curious, to think critically, and to contribute to the world.
@@ -72,12 +72,12 @@ export default function About() {
                 </div>
               </div>
               
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)] rounded-lg">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg">
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                   Our Commitment
                 </h3>
                 <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
-                  It also is an <span className="font-semibold text-[var(--color-stanford-red)]">engine of innovation</span>, blending theory and practice to move ideas and discoveries from labs and classrooms out into the world.
+                  It also is an <span className="font-semibold text-[var(--color-riara-red)]">engine of innovation</span>, blending theory and practice to move ideas and discoveries from labs and classrooms out into the world.
                 </p>
                 <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                   We strive to foster a culture of <span className="font-semibold text-[var(--color-text-primary)]">expansive inquiry, fresh thinking, searching discussion, and freedom of thought</span> – preparing students for leadership and engaged citizenship in the world.
@@ -95,7 +95,7 @@ export default function About() {
 
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12">
                 {/* Mission */}
-                <div className="border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+                <div className="border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                     Our Mission
                   </h2>
@@ -105,7 +105,7 @@ export default function About() {
                 </div>
 
                 {/* Vision */}
-                <div className="border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+                <div className="border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                     Our Vision
                   </h2>
@@ -118,7 +118,7 @@ export default function About() {
               {/* Core Purpose and Guiding Mantra */}
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {/* Core Purpose */}
-                <div className="border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+                <div className="border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                     Our Core Purpose
                   </h2>
@@ -128,7 +128,7 @@ export default function About() {
                 </div>
 
                 {/* Guiding Mantra */}
-                <div className="border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+                <div className="border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                     Guiding Mantra
                   </h2>
@@ -148,31 +148,31 @@ export default function About() {
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-stanford-red)] mb-3">Excellence</h3>
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-riara-red)] mb-3">Excellence</h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     We have only one standard <strong className="text-[var(--color-text-primary)]">EXCELLENCE!</strong>
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-stanford-red)] mb-3">Leading by Example</h3>
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-riara-red)] mb-3">Leading by Example</h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     We strive to lead by <strong className="text-[var(--color-text-primary)]">EXAMPLE</strong>.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-stanford-red)] mb-3">Teamwork</h3>
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-riara-red)] mb-3">Teamwork</h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     We cultivate the spirit of <strong className="text-[var(--color-text-primary)]">TEAMWORK</strong>.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-stanford-red)] mb-3">Integrity</h3>
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-riara-red)] mb-3">Integrity</h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     We are <strong className="text-[var(--color-text-primary)]">ETHICAL</strong> and <strong className="text-[var(--color-text-primary)]">PROFESSIONAL</strong> in our <strong className="text-[var(--color-text-primary)]">CONDUCT</strong>.
                   </p>
                 </div>
                 <div className="md:col-span-2 lg:col-span-1">
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-stanford-red)] mb-3">Innovation</h3>
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-riara-red)] mb-3">Innovation</h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     We encourage and reward <strong className="text-[var(--color-text-primary)]">INNOVATION</strong>, especially <strong className="text-[var(--color-text-primary)]">BREAKTHROUGH IDEAS</strong>.
                   </p>
@@ -187,22 +187,22 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-8">
                 The Riara Story
               </h2>
-              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                   The Riara Group of Schools was founded by Mr. Daniel and Prof. Eddah Gachukia in 1974 as a commitment to the development of a whole learner. The education concept at Riara is one that goes beyond the conventional classroom and syllabus-based learning.
                 </p>
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                   The process of developing education flows like the perennial Riara River which is forever challenging, forever nourishing, forever fulfilling. This has seen the Riara Group of schools grow from Kindergarten level, then to Primary School, proceeded to Secondary level and now to University and International School levels. Each level of growth of the Riara experience has then become a fountain that has sprung from fertile ground, showering all those it reaches who in turn impact others with enthusiasm, courage and God given brilliance that has continually been embodied by the ever-flowing Riara River.
                 </p>
-                <div className="relative bg-gradient-to-br from-[var(--color-bg-secondary)] via-white to-[var(--color-bg-secondary)] p-8 md:p-10 rounded-xl border-2 border-[var(--color-stanford-red)]/20 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                <div className="relative bg-gradient-to-br from-[var(--color-bg-secondary)] via-white to-[var(--color-bg-secondary)] p-8 md:p-10 rounded-xl border-2 border-[var(--color-riara-red)]/20 shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                   {/* Decorative background elements */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[var(--color-stanford-red)]/5 rounded-full blur-2xl"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[var(--color-riara-red)]/5 rounded-full blur-2xl"></div>
                   
                   {/* Quote icon */}
                   <div className="relative z-10 flex justify-center mb-6">
-                    <div className="bg-[var(--color-stanford-red)]/10 p-4 rounded-full">
-                      <svg className="w-8 h-8 md:w-10 md:h-10 text-[var(--color-stanford-red)]" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="bg-[var(--color-riara-red)]/10 p-4 rounded-full">
+                      <svg className="w-8 h-8 md:w-10 md:h-10 text-[var(--color-riara-red)]" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 9.59-9.57V2.581c-4.615 0-8.963 2.718-11.017 7.39v7.029H2.017V21h12zm6.983 0v-7.391c0-5.704 3.731-9.57 9.59-9.57V2.581c-4.615 0-8.963 2.718-11.017 7.39v7.029H9V21h12z"/>
                       </svg>
                     </div>
@@ -215,12 +215,12 @@ export default function About() {
                   
                   {/* Divider */}
                   <div className="relative z-10 flex items-center justify-center mb-6">
-                    <div className="w-16 h-1 bg-[var(--color-stanford-red)] rounded-full"></div>
+                    <div className="w-16 h-1 bg-[var(--color-riara-red)] rounded-full"></div>
                   </div>
                   
                   {/* Description text */}
                   <p className="relative z-10 text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed text-center">
-                    Guided by the vision of this mantra, the founders of Riara established first the Riara Group of Schools 40 years ago and then the Riara University 6 years ago. Today, we have young Kenyans who came to; Riara Kindergarten then went to; the Riara Primary School and later went to; the Riara Secondary School and today they are at; the Riara University. We invite you to join us in realizing our vision of <span className="font-bold text-[var(--color-stanford-red)]">QUALITY EDUCATION FOR THE DEVELOPMENT OF KENYA</span>.
+                    Guided by the vision of this mantra, the founders of Riara established first the Riara Group of Schools 40 years ago and then the Riara University 6 years ago. Today, we have young Kenyans who came to; Riara Kindergarten then went to; the Riara Primary School and later went to; the Riara Secondary School and today they are at; the Riara University. We invite you to join us in realizing our vision of <span className="font-bold text-[var(--color-riara-red)]">QUALITY EDUCATION FOR THE DEVELOPMENT OF KENYA</span>.
                   </p>
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function About() {
               Accreditation
             </h2>
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Commission for University Education (CUE)
                   </h3>
@@ -243,7 +243,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Council of Legal Education (CLE)
                   </h3>
@@ -252,7 +252,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     Kenya Accountants and Secretaries National Examinations Board (KASNEB)
                   </h3>
@@ -261,7 +261,7 @@ export default function About() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                     SAP University Alliance Programme
                   </h3>
@@ -276,7 +276,7 @@ export default function About() {
         {/* Quality Assurance Section - Link */}
         <section className="py-16 md:py-20 bg-white">
           <Container>
-            <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+            <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
               <h2 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4">
                 Quality Assurance Office
               </h2>
@@ -285,7 +285,7 @@ export default function About() {
               </p>
               <Button 
                 asChild
-                className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white"
+                className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white"
               >
                 <a href="/quality-assurance">Learn More About Quality Assurance</a>
               </Button>
@@ -307,21 +307,21 @@ export default function About() {
                 <Button 
                   asChild
                   size="lg"
-                  className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white hover:text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
+                  className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white hover:text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
                 >
                   <a href="/leadership" className="!text-white hover:!text-white">Leadership and Governance</a>
                 </Button>
                 <Button 
                   asChild
                   size="lg"
-                  className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white hover:text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
+                  className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white hover:text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
                 >
                   <a href="/history" className="!text-white hover:!text-white">Our History</a>
                 </Button>
                 <Button 
                   asChild
                   size="lg"
-                  className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white hover:text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
+                  className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white hover:text-white px-8 sm:px-10 text-base sm:text-lg font-semibold"
                 >
                   <a href="/founders" className="!text-white hover:!text-white">Our Founders</a>
                 </Button>

@@ -10,18 +10,18 @@ export const typography = {
     serif: 'serif',
   },
   fontSize: {
-    // Stanford Heading Sizes
+    // Riara University Heading Sizes
     h1: '3rem', // 48px (32-48px range)
     h2: '2.25rem', // 36px (28-36px range)
     h3: '1.75rem', // 28px (24-28px range)
     h4: '1.375rem', // 22px (20-22px range)
     h5: '1.125rem', // 18px (16-18px range)
     h6: '1rem', // 16px (14-16px range)
-    // Stanford Paragraph Sizes
+    // Riara University Paragraph Sizes
     body: '0.875rem', // 14px (14-16px range)
     bodyLarge: '1.125rem', // 18px (18-20px range)
     bodySmall: '0.75rem', // 12px (12-13px range)
-    // Stanford Navigation Sizes
+    // Riara University Navigation Sizes
     navPrimary: '1rem', // 16px
     navSecondary: '0.875rem', // 14px
     navGateway: '0.8125rem', // 13px
@@ -62,14 +62,14 @@ export const typography = {
     black: '900',
   },
   lineHeight: {
-    // Stanford Heading Line Heights
+    // Riara University Heading Line Heights
     h1: '1.2', // 1.2-1.3 range
     h2: '1.25',
     h3: '1.3',
     h4: '1.35',
     h5: '1.4',
     h6: '1.4',
-    // Stanford Paragraph Line Heights
+    // Riara University Paragraph Line Heights
     body: '1.6',
     bodyLarge: '1.7',
     bodySmall: '1.5',
@@ -94,7 +94,7 @@ export const typography = {
 // Colors - Riara University Brand Colors (from parent site)
 export const colors = {
   // Riara University primary brand colors (from riarauniversity.ac.ke)
-  stanford: {
+  riara: {
     red: '#a10e83', // Primary brand color from parent site (vibrant purple/magenta)
     redDark: '#7d0a65', // Darker variant (hover/active)
     redLight: '#c515a0',

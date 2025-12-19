@@ -84,9 +84,9 @@ export default {
         // Riara University Brand Colors - mapped to CSS variables for easy updates
         // Usage: bg-brand, text-brand, border-brand, bg-brand-dark, etc.
         brand: {
-          DEFAULT: "var(--color-stanford-red)",
-          dark: "var(--color-stanford-red-dark)",
-          light: "var(--color-stanford-red-light)",
+          DEFAULT: "var(--color-riara-red)",
+          dark: "var(--color-riara-red-dark)",
+          light: "var(--color-riara-red-light)",
         },
         // Riara University Background Colors
         // Usage: bg-riara-maroon, bg-riara-primary, etc.
@@ -107,8 +107,8 @@ export default {
         // Riara University Border Colors (use with border- prefix)
         // Usage: border-riara-border, border-riara-border-dark, etc.
         "riara-border": {
-          DEFAULT: "var(--color-stanford-red)",
-          dark: "var(--color-stanford-red-dark)",
+          DEFAULT: "var(--color-riara-red)",
+          dark: "var(--color-riara-red-dark)",
           maroon: "var(--color-border-maroon)",
           light: "var(--color-border-light)",
         },

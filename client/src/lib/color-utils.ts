@@ -13,7 +13,7 @@
  */
 export function getBrandColor(): string {
   return getComputedStyle(document.documentElement)
-    .getPropertyValue('--color-stanford-red')
+    .getPropertyValue('--color-riara-red')
     .trim();
 }
 
@@ -22,7 +22,7 @@ export function getBrandColor(): string {
  */
 export function getBrandColorDark(): string {
   return getComputedStyle(document.documentElement)
-    .getPropertyValue('--color-stanford-red-dark')
+    .getPropertyValue('--color-riara-red-dark')
     .trim();
 }
 
@@ -31,7 +31,7 @@ export function getBrandColorDark(): string {
  */
 export function getBrandColorLight(): string {
   return getComputedStyle(document.documentElement)
-    .getPropertyValue('--color-stanford-red-light')
+    .getPropertyValue('--color-riara-red-light')
     .trim();
 }
 

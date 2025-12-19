@@ -102,7 +102,7 @@ export function AdmissionActions() {
                   text-left
                   ${
                     isActive
-                      ? "bg-[var(--color-stanford-red)] text-white shadow-md"
+                      ? "bg-[var(--color-riara-red)] text-white shadow-md"
                       : "bg-transparent hover:bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)]"
                   }
                 `}
@@ -112,7 +112,7 @@ export function AdmissionActions() {
                 <div className="flex-shrink-0">
                   <Icon className={`
                     w-5 h-5 transition-colors duration-200
-                    ${isActive ? "text-white" : "text-[var(--color-stanford-red)]"}
+                    ${isActive ? "text-white" : "text-[var(--color-riara-red)]"}
                   `} />
                 </div>
                 
@@ -132,12 +132,12 @@ export function AdmissionActions() {
                   {action.type === "download" ? (
                     <Download className={`
                       w-4 h-4 transition-colors duration-200
-                      ${isActive ? "text-white" : "text-[var(--color-stanford-red)]"}
+                      ${isActive ? "text-white" : "text-[var(--color-riara-red)]"}
                     `} />
                   ) : (
                     <ExternalLink className={`
                       w-4 h-4 transition-colors duration-200
-                      ${isActive ? "text-white" : "text-[var(--color-stanford-red)]"}
+                      ${isActive ? "text-white" : "text-[var(--color-riara-red)]"}
                     `} />
                   )}
                 </div>

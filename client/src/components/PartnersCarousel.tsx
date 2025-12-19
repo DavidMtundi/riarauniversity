@@ -93,7 +93,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-10 w-10 rounded-full border-2 border-[var(--color-stanford-red)] bg-white hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
+                className="h-10 w-10 rounded-full border-2 border-[var(--color-riara-red)] bg-white hover:bg-[var(--color-riara-red)] hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
                 onClick={() => {
                   setIsAutoScrolling(false);
                   api?.scrollPrev();
@@ -106,7 +106,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-10 w-10 rounded-full border-2 border-[var(--color-stanford-red)] bg-white hover:bg-[var(--color-stanford-red)] hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
+                className="h-10 w-10 rounded-full border-2 border-[var(--color-riara-red)] bg-white hover:bg-[var(--color-riara-red)] hover:text-white transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md"
                 onClick={() => {
                   setIsAutoScrolling(false);
                   api?.scrollNext();
@@ -155,9 +155,9 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                       className="block h-full"
                       onClick={() => setIsAutoScrolling(false)}
                     >
-                      <div className="h-full p-4 md:p-5 border-2 border-[var(--color-border-secondary)] rounded-xl hover:border-[var(--color-stanford-red)] hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group cursor-pointer transform hover:-translate-y-1">
+                      <div className="h-full p-4 md:p-5 border-2 border-[var(--color-border-secondary)] rounded-xl hover:border-[var(--color-riara-red)] hover:shadow-lg transition-all duration-300 bg-white flex flex-col items-center text-center group cursor-pointer transform hover:-translate-y-1">
                         {/* Logo Container */}
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-[var(--color-bg-tertiary)] to-white border-2 border-[var(--color-border-light)] rounded-xl flex items-center justify-center mb-3 md:mb-4 overflow-hidden group-hover:border-[var(--color-stanford-red)] group-hover:shadow-md transition-all duration-300 p-1">
+                        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-[var(--color-bg-tertiary)] to-white border-2 border-[var(--color-border-light)] rounded-xl flex items-center justify-center mb-3 md:mb-4 overflow-hidden group-hover:border-[var(--color-riara-red)] group-hover:shadow-md transition-all duration-300 p-1">
                           {partner.logoUrl && partner.logoUrl !== "" ? (
                             <img 
                               src={partner.logoUrl} 
@@ -190,7 +190,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                         
                         {/* Partner Name */}
                         <h4 
-                          className="text-xs sm:text-sm md:text-base font-semibold text-[var(--color-text-primary)] leading-tight mb-2 group-hover:text-[var(--color-stanford-red)] transition-colors duration-300 line-clamp-2" 
+                          className="text-xs sm:text-sm md:text-base font-semibold text-[var(--color-text-primary)] leading-tight mb-2 group-hover:text-[var(--color-riara-red)] transition-colors duration-300 line-clamp-2" 
                           data-testid={`text-partner-name-${partner.id}`}
                         >
                           {partner.name}
@@ -198,7 +198,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                         
                         {/* Category Badge */}
                         <div className="mt-auto pt-2">
-                          <span className="inline-flex items-center gap-1 text-[10px] sm:text-xs px-2 py-1 rounded-full bg-[var(--color-stanford-red)]/10 text-[var(--color-stanford-red)] font-medium">
+                          <span className="inline-flex items-center gap-1 text-[10px] sm:text-xs px-2 py-1 rounded-full bg-[var(--color-riara-red)]/10 text-[var(--color-riara-red)] font-medium">
                             {partner.categoryTitle}
                             {isExternalLink && (
                               <ExternalLink className="w-3 h-3 opacity-70" />
@@ -222,8 +222,8 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
                   key={index}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     isActive 
-                      ? 'w-8 bg-[var(--color-stanford-red)]' 
-                      : 'w-2 bg-[var(--color-border-medium)] hover:bg-[var(--color-stanford-red)]/50'
+                      ? 'w-8 bg-[var(--color-riara-red)]' 
+                      : 'w-2 bg-[var(--color-border-medium)] hover:bg-[var(--color-riara-red)]/50'
                   }`}
                   onClick={() => {
                     setIsAutoScrolling(false);
@@ -240,7 +240,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
         <div className="text-center mt-10 md:mt-12">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid="button-view-all-partners"
             asChild
           >

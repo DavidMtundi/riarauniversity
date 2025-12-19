@@ -55,8 +55,8 @@ export function PartnersSection({ categories, showHeader = true }: PartnersSecti
               return (
                 <div key={category.id} className="mb-16" data-testid={`category-${category.id}`}>
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="p-3 bg-[var(--color-stanford-red)]/10 rounded-lg">
-                    <Icon className="h-6 w-6 text-[var(--color-stanford-red)]" />
+                  <div className="p-3 bg-[var(--color-riara-red)]/10 rounded-lg">
+                    <Icon className="h-6 w-6 text-[var(--color-riara-red)]" />
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)]" data-testid={`text-category-title-${category.id}`}>
@@ -72,7 +72,7 @@ export function PartnersSection({ categories, showHeader = true }: PartnersSecti
                   {category.partners.map((partner) => (
                     <div
                       key={partner.id}
-                      className="p-4 border border-[var(--color-border-secondary)] rounded-lg hover:border-[var(--color-stanford-red)] hover:shadow-md transition-all duration-200 flex flex-col items-center text-center"
+                      className="p-4 border border-[var(--color-border-secondary)] rounded-lg hover:border-[var(--color-riara-red)] hover:shadow-md transition-all duration-200 flex flex-col items-center text-center"
                       data-testid={`partner-${partner.id}`}
                     >
                       <div className="w-16 h-16 md:w-20 md:h-20 bg-white border border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center mb-3 overflow-hidden">
@@ -123,7 +123,7 @@ export function PartnersSection({ categories, showHeader = true }: PartnersSecti
           <div className="text-center mt-12">
             <Button
               variant="outline"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
               data-testid="button-more-partners"
               asChild
             >

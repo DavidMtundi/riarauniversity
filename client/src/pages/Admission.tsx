@@ -19,8 +19,8 @@ export default function Admission() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -36,7 +36,7 @@ export default function Admission() {
                 href="https://admissions.ru.ac.ke/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold bg-[var(--color-stanford-red)] !text-white rounded-lg hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold bg-[var(--color-riara-red)] !text-white rounded-lg hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                 data-testid="button-apply-admission-page"
               >
                 <span className="!text-white">Apply Online</span>
@@ -69,27 +69,27 @@ export default function Admission() {
                     Undergraduates
                   </h2>
                   <div className="space-y-8">
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Undergraduate Admission
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         About 1,700 freshmen and 30 transfer students enroll at Riara each year. We review each applicant with an eye to academic excellence, intellectual vitality, and personal context.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer">
                           Undergraduate Admission <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
                     </div>
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Undergraduate Financial Aid
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         Riara meets the full financial need of every admitted undergrad who qualifies for assistance. We offer various scholarship and financial aid programs to support students in their academic journey.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer">
                           Undergraduate Financial Aid <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
@@ -113,27 +113,27 @@ export default function Admission() {
                     Graduate Studies
                   </h2>
                   <div className="space-y-8">
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Graduate Admission
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         About 150 degree programs are offered across seven schools at Riara. Admission requirements vary greatly among them.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer">
                           Graduate Admissions <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
                     </div>
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Financing Graduate Study
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         The cost of graduate study at Riara — and the resources available for financial support — vary by degree, school and enrollment status. About 85% of Riara graduate students receive financial assistance.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer">
                           Graduate Student Funding <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
@@ -177,27 +177,27 @@ export default function Admission() {
                     Special Courses
                   </h2>
                   <div className="space-y-8">
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Professional Development Programs
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         Riara offers a range of specialized courses and professional development programs designed to enhance skills and knowledge in specific fields. These programs are tailored for working professionals and those seeking career advancement.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="/courses">
                           View Special Courses <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
                     </div>
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Short Courses & Certificates
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         Explore our certificate programs and short courses that provide focused learning experiences in various disciplines, from technology to business and beyond.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="/courses">
                           Certificate Programs <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
@@ -228,9 +228,9 @@ export default function Admission() {
                   <div className="flex items-start gap-4">
                     {/* Step 1 */}
                     <div className="flex-1">
-                      <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
+                      <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                          <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                          <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             1
                           </div>
                         </div>
@@ -242,23 +242,23 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Application forms</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Certificates & transcripts</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>ID/Passport & birth certificate</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Passport photo</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Application fee (Kshs. 2,000)</span>
                           </div>
                         </div>
@@ -273,14 +273,14 @@ export default function Admission() {
 
                     {/* Arrow 1 */}
                     <div className="flex items-center justify-center pt-8">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)]" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)]" />
                     </div>
 
                     {/* Step 2 */}
                     <div className="flex-1">
-                      <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
+                      <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                          <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                          <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             2
                           </div>
                         </div>
@@ -292,15 +292,15 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Document verification</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>School/Department approval</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Qualification recognition (if needed)</span>
                           </div>
                         </div>
@@ -314,14 +314,14 @@ export default function Admission() {
 
                     {/* Arrow 2 */}
                     <div className="flex items-center justify-center pt-8">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)]" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)]" />
                     </div>
 
                     {/* Step 3 */}
                     <div className="flex-1">
-                      <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
+                      <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                          <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                          <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             3
                           </div>
                         </div>
@@ -333,15 +333,15 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Admission letter issued</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Original document verification date set</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Programme admission confirmed</span>
                           </div>
                         </div>
@@ -358,9 +358,9 @@ export default function Admission() {
                   <div className="flex items-start gap-4 mt-8">
                     {/* Step 4 */}
                     <div className="flex-1">
-                      <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
+                      <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                          <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                          <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             4
                           </div>
                         </div>
@@ -372,15 +372,15 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Academic policies overview</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Support services introduction</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Campus resources tour</span>
                           </div>
                         </div>
@@ -394,14 +394,14 @@ export default function Admission() {
 
                     {/* Arrow 3 */}
                     <div className="flex items-center justify-center pt-8">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)]" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)]" />
                     </div>
 
                     {/* Step 5 */}
                     <div className="flex-1">
-                      <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
+                      <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-all relative">
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                          <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                          <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                             5
                           </div>
                         </div>
@@ -413,19 +413,19 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Select units with School guidance</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Enter units into Student Management System</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Pay fees (full or partial)</span>
                           </div>
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Submit payment slip to Finance Department</span>
                           </div>
                         </div>
@@ -446,9 +446,9 @@ export default function Admission() {
                 <div className="lg:hidden space-y-8">
                   {/* Step 1 */}
                   <div className="relative">
-                    <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
+                    <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
                       <div className="absolute -left-4 top-8 md:-left-6 md:top-10">
-                        <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                           1
                         </div>
                       </div>
@@ -461,22 +461,22 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Application forms, certificates, ID, photo, fee (Kshs. 2,000)</span>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="flex justify-center my-4">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)] rotate-90" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)] rotate-90" />
                     </div>
                   </div>
 
                   {/* Step 2 */}
                   <div className="relative">
-                    <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
+                    <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
                       <div className="absolute -left-4 top-8 md:-left-6 md:top-10">
-                        <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                           2
                         </div>
                       </div>
@@ -490,15 +490,15 @@ export default function Admission() {
                       </div>
                     </div>
                     <div className="flex justify-center my-4">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)] rotate-90" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)] rotate-90" />
                     </div>
                   </div>
 
                   {/* Step 3 */}
                   <div className="relative">
-                    <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
+                    <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
                       <div className="absolute -left-4 top-8 md:-left-6 md:top-10">
-                        <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                           3
                         </div>
                       </div>
@@ -512,15 +512,15 @@ export default function Admission() {
                       </div>
                     </div>
                     <div className="flex justify-center my-4">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)] rotate-90" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)] rotate-90" />
                     </div>
                   </div>
 
                   {/* Step 4 */}
                   <div className="relative">
-                    <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
+                    <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
                       <div className="absolute -left-4 top-8 md:-left-6 md:top-10">
-                        <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                           4
                         </div>
                       </div>
@@ -534,15 +534,15 @@ export default function Admission() {
                       </div>
                     </div>
                     <div className="flex justify-center my-4">
-                      <ArrowRight className="h-8 w-8 text-[var(--color-stanford-red)] rotate-90" />
+                      <ArrowRight className="h-8 w-8 text-[var(--color-riara-red)] rotate-90" />
                     </div>
                   </div>
 
                   {/* Step 5 */}
                   <div className="relative">
-                    <div className="bg-white border-2 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
+                    <div className="bg-white border-2 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8 shadow-lg relative">
                       <div className="absolute -left-4 top-8 md:-left-6 md:top-10">
-                        <div className="w-12 h-12 bg-[var(--color-stanford-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <div className="w-12 h-12 bg-[var(--color-riara-red)] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                           5
                         </div>
                       </div>
@@ -555,7 +555,7 @@ export default function Admission() {
                         </p>
                         <div className="space-y-2 text-sm text-[var(--color-text-secondary)]">
                           <div className="flex items-start gap-2">
-                            <span className="text-[var(--color-stanford-red)] mt-1">✓</span>
+                            <span className="text-[var(--color-riara-red)] mt-1">✓</span>
                             <span>Select units, enter into Student Management System, pay fees, submit to Finance Department</span>
                           </div>
                         </div>
@@ -579,27 +579,27 @@ export default function Admission() {
                     Other Programs
                   </h2>
                   <div className="space-y-8">
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Continuing Education
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         Riara University offers continuing education programs for lifelong learners seeking to expand their knowledge, update their skills, or explore new areas of interest.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer">
                           Continuing Education <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
                     </div>
-                    <div className="border-l-4 border-[var(--color-stanford-red)] pl-6">
+                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         International Programs
                       </h3>
                       <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
                         Discover our international exchange programs, study abroad opportunities, and partnerships with institutions worldwide that provide global learning experiences.
                       </p>
-                      <Button variant="outline" className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white" asChild>
+                      <Button variant="outline" className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white" asChild>
                         <a href="https://admissions.ru.ac.ke/" target="_blank" rel="noopener noreferrer">
                           International Programs <ArrowRight className="ml-2 h-4 w-4" />
                         </a>

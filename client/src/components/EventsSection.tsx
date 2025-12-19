@@ -65,7 +65,7 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
                   </div>
                 )}
                 <div className="absolute top-4 left-4">
-                  <div className="bg-[var(--color-stanford-red)] text-white px-3 py-2 text-center rounded shadow-lg">
+                  <div className="bg-[var(--color-riara-red)] text-white px-3 py-2 text-center rounded shadow-lg">
                     <p className="text-xs font-semibold uppercase" data-testid={`text-event-date-${event.id}`}>{event.date}</p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
         <div className="text-center">
           <Button
             variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
             data-testid={ctaTestId}
             asChild
           >

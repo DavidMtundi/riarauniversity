@@ -90,7 +90,7 @@ nav a,
 
 nav a:hover,
 .nav-link-primary:hover {
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
 }
 
 .nav-link-secondary {
@@ -101,7 +101,7 @@ nav a:hover,
 }
 
 .nav-link-secondary:hover {
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
 }
 
 .nav-link-gateway {
@@ -112,26 +112,26 @@ nav a:hover,
 }
 
 .nav-link-gateway:hover {
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
 }
 
 /* Riara University Link Styles */
 a {
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: var(--color-stanford-red-dark);
+  color: var(--color-riara-red-dark);
 }
 
 a:active {
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
 }
 
 a:visited {
-  color: var(--color-stanford-red-dark);
+  color: var(--color-riara-red-dark);
 }
 
 /* Riara University Button Styles */
@@ -148,7 +148,7 @@ button,
 
 button:hover,
 .btn-primary:hover {
-  background-color: var(--color-stanford-red-dark);
+  background-color: var(--color-riara-red-dark);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -182,7 +182,7 @@ button:hover,
 .category-tag {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
   text-transform: uppercase;
 }
 
@@ -324,15 +324,15 @@ footer,
 
 /* Riara University Utility Classes */
 .text-stanford-red {
-  color: var(--color-stanford-red);
+  color: var(--color-riara-red);
 }
 
 .bg-stanford-red {
-  background-color: var(--color-stanford-red);
+  background-color: var(--color-riara-red);
 }
 
 .border-stanford-red {
-  border-color: var(--color-stanford-red);
+  border-color: var(--color-riara-red);
 }
 
 /* Legacy Utility Classes (for backward compatibility) */

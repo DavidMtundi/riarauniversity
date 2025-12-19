@@ -19,8 +19,8 @@ export default function Founders() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -70,8 +70,8 @@ export default function Founders() {
                             parent.innerHTML = `
                               <div class="w-full h-full flex items-center justify-center">
                                 <div class="text-center">
-                                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-stanford-red)]/20 flex items-center justify-center border-4 border-[var(--color-stanford-red)]/30">
-                                    <span class="text-4xl font-bold text-[var(--color-stanford-red)]">DG</span>
+                                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-riara-red)]/20 flex items-center justify-center border-4 border-[var(--color-riara-red)]/30">
+                                    <span class="text-4xl font-bold text-[var(--color-riara-red)]">DG</span>
                                   </div>
                                 </div>
                               </div>
@@ -80,14 +80,14 @@ export default function Founders() {
                         }}
                       />
                     </div>
-                    <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[var(--color-stanford-red)]">
+                    <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[var(--color-riara-red)]">
                       <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                         Mr. Daniel Gachukia
                       </h3>
                       <p className="text-base text-[var(--color-text-secondary)] mb-4">
                         Co-Founder, Riara University
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-[var(--color-stanford-red)]">
+                      <div className="flex items-center gap-2 text-sm text-[var(--color-riara-red)]">
                         <Award className="h-4 w-4" />
                         <span className="font-semibold">Elder of the Order of the Burning Spear (EBS)</span>
                       </div>
@@ -107,7 +107,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <Globe className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Globe className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Diplomatic Career
@@ -121,7 +121,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <Building2 className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Building2 className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Business and Education Leadership
@@ -138,7 +138,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <Users className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Users className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Kenya Private Schools' Association
@@ -150,9 +150,9 @@ export default function Founders() {
                         </div>
                       </div>
 
-                      <div className="pt-6 border-t-2 border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)]/5 rounded-lg p-6">
+                      <div className="pt-6 border-t-2 border-[var(--color-riara-red)] bg-[var(--color-riara-red)]/5 rounded-lg p-6">
                         <div className="flex items-start gap-4">
-                          <Award className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Award className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               National Recognition
@@ -192,8 +192,8 @@ export default function Founders() {
                             parent.innerHTML = `
                               <div class="w-full h-full flex items-center justify-center">
                                 <div class="text-center">
-                                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-stanford-red)]/20 flex items-center justify-center border-4 border-[var(--color-stanford-red)]/30">
-                                    <span class="text-4xl font-bold text-[var(--color-stanford-red)]">EG</span>
+                                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-riara-red)]/20 flex items-center justify-center border-4 border-[var(--color-riara-red)]/30">
+                                    <span class="text-4xl font-bold text-[var(--color-riara-red)]">EG</span>
                                   </div>
                                 </div>
                               </div>
@@ -202,14 +202,14 @@ export default function Founders() {
                         }}
                       />
                     </div>
-                    <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[var(--color-stanford-red)]">
+                    <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[var(--color-riara-red)]">
                       <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                         Prof. Eddah Gachukia
                       </h3>
                       <p className="text-base text-[var(--color-text-secondary)] mb-4">
                         Co-Founder, Riara University
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-[var(--color-stanford-red)] mb-2">
+                      <div className="flex items-center gap-2 text-sm text-[var(--color-riara-red)] mb-2">
                         <Award className="h-4 w-4" />
                         <span className="font-semibold">Elder of the Order of the Burning Spear (EBS)</span>
                       </div>
@@ -232,7 +232,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <Globe className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Globe className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Forum for African Women Educationalists (FAWE)
@@ -246,7 +246,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <GraduationCap className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <GraduationCap className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               National Education Leadership
@@ -263,7 +263,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <Users className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Users className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Starehe Girls' Centre
@@ -277,7 +277,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <BookOpen className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <BookOpen className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Public Service and Advocacy
@@ -294,7 +294,7 @@ export default function Founders() {
 
                       <div className="pt-6 border-t border-[var(--color-border-secondary)]">
                         <div className="flex items-start gap-4 mb-4">
-                          <GraduationCap className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <GraduationCap className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               Academic Contributions
@@ -306,9 +306,9 @@ export default function Founders() {
                         </div>
                       </div>
 
-                      <div className="pt-6 border-t-2 border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)]/5 rounded-lg p-6">
+                      <div className="pt-6 border-t-2 border-[var(--color-riara-red)] bg-[var(--color-riara-red)]/5 rounded-lg p-6">
                         <div className="flex items-start gap-4">
-                          <Award className="h-6 w-6 text-[var(--color-stanford-red)] mt-1 flex-shrink-0" />
+                          <Award className="h-6 w-6 text-[var(--color-riara-red)] mt-1 flex-shrink-0" />
                           <div>
                             <h4 className="text-lg font-serif font-semibold text-[var(--color-text-primary)] mb-2">
                               National Recognition

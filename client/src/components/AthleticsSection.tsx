@@ -24,7 +24,7 @@ export function AthleticsSection({ sections, showHeader = true }: AthleticsSecti
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
           {sections.map((section) => {
             return (
-              <div key={section.id} className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]" data-testid={`card-athletics-${section.id}`}>
+              <div key={section.id} className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid={`card-athletics-${section.id}`}>
                 <h3 className="text-xl md:text-2xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid={`text-athletics-title-${section.id}`}>
                   {section.title}
                 </h3>
@@ -34,7 +34,7 @@ export function AthleticsSection({ sections, showHeader = true }: AthleticsSecti
                 {section.link && section.link !== "#" && (
                   <Button
                     variant="outline"
-                    className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red)] hover:text-white"
+                    className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
                     data-testid={`button-athletics-link-${section.id}`}
                     asChild
                   >

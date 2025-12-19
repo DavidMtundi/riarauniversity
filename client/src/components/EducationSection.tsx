@@ -59,7 +59,7 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
                   </p>
                   <Button
                     variant="outline"
-                    className="group inline-flex items-center gap-2 rounded-full border-[var(--color-stanford-red)] px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base font-semibold text-[var(--color-stanford-red)] transition-all duration-200 hover:bg-[var(--color-stanford-red)] hover:text-white shadow-sm hover:shadow-md"
+                    className="group inline-flex items-center gap-2 rounded-full border-[var(--color-riara-red)] px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base font-semibold text-[var(--color-riara-red)] transition-all duration-200 hover:bg-[var(--color-riara-red)] hover:text-white shadow-sm hover:shadow-md"
                     data-testid={`button-education-link-${path.id}`}
                   >
                     Learn more <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
@@ -91,14 +91,14 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
                   href={validUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative p-4 md:p-5 bg-white rounded-lg border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-stanford-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  className="group relative p-4 md:p-5 bg-white rounded-lg border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   data-testid={`link-school-${school.id}`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-stanford-red)] transition-colors">
+                    <span className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-riara-red)] transition-colors">
                       {school.name}
                     </span>
-                    <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-stanford-red)] group-hover:translate-x-1 transition-all duration-300" />
+                    <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-riara-red)] group-hover:translate-x-1 transition-all duration-300" />
                   </div>
                 </a>
               );
@@ -107,7 +107,7 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
           <div className="text-center">
             <Button
               variant="outline"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-stanford-red)] bg-[var(--color-stanford-red)] text-white hover:bg-[var(--color-stanford-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
               data-testid="button-more-academics"
               asChild
             >

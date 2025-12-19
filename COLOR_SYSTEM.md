@@ -25,7 +25,7 @@ Instead of using inline CSS variables, use the Tailwind brand utilities:
 </div>
 
 // ❌ Avoid - Harder to maintain
-<button className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)]">
+<button className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)]">
   Click me
 </button>
 ```
@@ -63,7 +63,7 @@ For cases where Tailwind utilities aren't sufficient, you can still use CSS vari
 
 ```tsx
 // For opacity or complex calculations
-<div className="bg-[var(--color-stanford-red)]/10">
+<div className="bg-[var(--color-riara-red)]/10">
   Light background
 </div>
 ```
@@ -74,14 +74,14 @@ To update the brand colors across the entire application:
 
 1. **Update CSS Variables** in `client/src/styles/theme.css`:
    ```css
-   --color-stanford-red: #a10e83; /* Change this value */
-   --color-stanford-red-dark: #7d0a65; /* Change this value */
-   --color-stanford-red-light: #c515a0; /* Change this value */
+   --color-riara-red: #a10e83; /* Change this value */
+   --color-riara-red-dark: #7d0a65; /* Change this value */
+   --color-riara-red-light: #c515a0; /* Change this value */
    ```
 
 2. **Update Design Tokens** in `client/src/lib/design-tokens.ts`:
    ```typescript
-   stanford: {
+   riara: {
      red: '#a10e83', // Change this value
      redDark: '#7d0a65', // Change this value
      redLight: '#c515a0', // Change this value
@@ -101,11 +101,11 @@ To migrate existing components from inline CSS variables to Tailwind utilities:
 
 ### Before:
 ```tsx
-<div className="bg-[var(--color-stanford-red)] text-[var(--color-text-inverse)]">
+<div className="bg-[var(--color-riara-red)] text-[var(--color-text-inverse)]">
   Content
 </div>
 
-<button className="border-[var(--color-stanford-red)] text-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)]">
+<button className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)]">
   Click me
 </button>
 ```

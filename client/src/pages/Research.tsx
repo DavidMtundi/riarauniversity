@@ -26,7 +26,7 @@ export default function Research() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-stanford-red)] border-r-transparent mb-4"></div>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
             <p className="text-[var(--color-text-secondary)]">Loading Research...</p>
           </div>
         </main>
@@ -41,7 +41,7 @@ export default function Research() {
         <Header />
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center max-w-md mx-auto px-2 sm:px-3">
-            <div className="mb-4 text-[var(--color-stanford-red)]">
+            <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -75,8 +75,8 @@ export default function Research() {
           
           {/* Decorative Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-stanford-red)]/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-stanford-red)]/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl"></div>
           </div>
           
           {/* Content */}
@@ -119,7 +119,7 @@ export default function Research() {
                 </div>
               </div>
               
-              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                   How We Approach Research
                 </h3>
@@ -134,23 +134,23 @@ export default function Research() {
                 </p>
                 <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Supporting our faculty and students to tackle research that matters to real people</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Building partnerships with universities and institutions here in Kenya and around the world</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Helping researchers find funding—whether it's from the university or external sources</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Publishing journals across our different Schools so great research gets shared</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Hosting regular seminars where faculty and students can share what they're working on and learn from each other</span>
                   </li>
                 </ul>
@@ -179,7 +179,7 @@ export default function Research() {
                 Our Vision for Research
               </h2>
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="space-y-6 border-l-4 border-[var(--color-stanford-red)] pl-6 md:pl-8">
+              <div className="space-y-6 border-l-4 border-[var(--color-riara-red)] pl-6 md:pl-8">
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
                     We want to be a leading university and a Centre of Excellence in Scholarship, Research, and Training. But here's the thing—we're not just saying that. We're building it, one research project at a time.
                 </p>
@@ -213,7 +213,7 @@ export default function Research() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
@@ -229,7 +229,7 @@ export default function Research() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
@@ -245,7 +245,7 @@ export default function Research() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
@@ -261,7 +261,7 @@ export default function Research() {
                   </p>
                 </div>
 
-                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-stanford-red)] hover:shadow-lg transition-shadow">
+                <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 rounded-lg border-l-4 border-[var(--color-riara-red)] hover:shadow-lg transition-shadow">
                   <div className="aspect-[16/9] rounded-lg overflow-hidden mb-4">
                     <img 
                       src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
@@ -307,37 +307,37 @@ export default function Research() {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     Cheering on faculty and students who are working on research that matters—the kind that tackles real problems people face
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     Connecting researchers with partners—both here in Kenya and internationally—because great research often happens when people work together
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     Helping researchers find the funding they need, whether that's from the university or from external grants and organizations
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     Supporting the publication of journals across our Schools so important research gets shared with the world
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     Hosting regular seminars and discussions where researchers can share their work, get feedback, and spark new ideas
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
                     Getting researchers out into communities to work directly with people on projects that make a difference
                   </p>
@@ -361,7 +361,7 @@ export default function Research() {
               </p>
               <Button
                 size="lg"
-                className="bg-[var(--color-stanford-red)] hover:bg-[var(--color-stanford-red-dark)] text-white font-semibold text-base md:text-lg px-8 py-6"
+                className="bg-[var(--color-riara-red)] hover:bg-[var(--color-riara-red-dark)] text-white font-semibold text-base md:text-lg px-8 py-6"
                 asChild
               >
                 <a href="https://repository.ru.ac.ke/communities/1a3fbb88-440d-40af-8cd0-fe7d7f5ad253" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 !text-white hover:!text-white">
@@ -401,7 +401,7 @@ export default function Research() {
               </h2>
               
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-8">
-                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+                <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                   <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                     About the Lab
                   </h3>
@@ -423,7 +423,7 @@ export default function Research() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 mb-8 border-l-4 border-[var(--color-riara-red)]">
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                   What We're Studying
                 </h3>
@@ -470,7 +470,7 @@ export default function Research() {
                 </p>
               </div>
 
-              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-6">
                   Projects & Fieldwork
                 </h3>
@@ -519,7 +519,7 @@ export default function Research() {
                 </div>
               </div>
 
-              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-stanford-red)]">
+              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
                 <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">
                   Association for the Advancement of Scientific International Relations Studies (AASIRS)
                 </h3>
@@ -528,19 +528,19 @@ export default function Research() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Building a network of researchers, scholars, and practitioners who believe in using science and evidence to understand international relations—not just opinions or assumptions</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Creating spaces where academics can actually talk to policymakers and practitioners, because research should inform decisions</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Raising the bar on how we teach, research, and discuss African issues in international relations—because African perspectives matter</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[var(--color-stanford-red)] mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-riara-red)] mt-2 flex-shrink-0"></div>
                     <span className="text-[var(--color-text-secondary)]">Building a library of knowledge from African scholars—through journals and books—so African voices are part of the global conversation</span>
                   </li>
                 </ul>

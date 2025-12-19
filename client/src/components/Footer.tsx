@@ -157,7 +157,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
       <li key={link.href}>
         <a
           href={link.href}
-          className="font-semibold hover:text-[var(--color-stanford-red)] transition-colors leading-relaxed md:leading-loose"
+          className="font-semibold hover:text-[var(--color-riara-red)] transition-colors leading-relaxed md:leading-loose"
           data-testid={link.testId}
           {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         >
@@ -170,7 +170,7 @@ const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
 
 const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
   <div>
-    <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4 uppercase tracking-wide text-[var(--color-stanford-red)]">
+    <h3 className="font-bold text-sm md:text-base mb-3 md:mb-4 uppercase tracking-wide text-[var(--color-riara-red)]">
       {section.title}
     </h3>
     <FooterLinkList links={section.links} />
@@ -178,12 +178,12 @@ const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
 );
 
 const QuickDownloadsSection: React.FC = () => (
-  <div className="bg-gradient-to-r from-[var(--color-stanford-red)]/10 to-[var(--color-stanford-red)]/5 border-l-4 border-[var(--color-stanford-red)] rounded-lg p-6 md:p-8">
+  <div className="bg-gradient-to-r from-[var(--color-riara-red)]/10 to-[var(--color-riara-red)]/5 border-l-4 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8">
     <div className="flex items-center gap-3 mb-4">
-      <div className="p-2 bg-[var(--color-stanford-red)]/20 rounded-lg">
-        <Download className="h-5 w-5 text-[var(--color-stanford-red)]" />
+      <div className="p-2 bg-[var(--color-riara-red)]/20 rounded-lg">
+        <Download className="h-5 w-5 text-[var(--color-riara-red)]" />
       </div>
-      <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide text-[var(--color-stanford-red)]">
+      <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide text-[var(--color-riara-red)]">
         Quick Downloads
       </h3>
     </div>
@@ -193,11 +193,11 @@ const QuickDownloadsSection: React.FC = () => (
           key={download.href}
           href={download.href}
           download
-          className="group flex items-center gap-3 p-3 bg-white hover:bg-[var(--color-stanford-red)] rounded-lg border-2 border-gray-200 hover:border-[var(--color-stanford-red)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+          className="group flex items-center gap-3 p-3 bg-white hover:bg-[var(--color-riara-red)] rounded-lg border-2 border-gray-200 hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
           data-testid={download.testId}
         >
-          <div className="flex-shrink-0 p-2 bg-[var(--color-stanford-red)]/10 group-hover:bg-white rounded-lg transition-colors">
-            <Download className="h-4 w-4 text-[var(--color-stanford-red)] group-hover:text-[var(--color-stanford-red)]" />
+          <div className="flex-shrink-0 p-2 bg-[var(--color-riara-red)]/10 group-hover:bg-white rounded-lg transition-colors">
+            <Download className="h-4 w-4 text-[var(--color-riara-red)] group-hover:text-[var(--color-riara-red)]" />
           </div>
           <span className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors line-clamp-2">
             {download.label}
@@ -216,7 +216,7 @@ const SocialMediaIcons: React.FC = () => (
         <a
           key={social.href}
           href={social.href}
-          className="text-[var(--color-text-tertiary)] hover:text-[var(--color-stanford-red)] transition-colors hover:scale-110"
+          className="text-[var(--color-text-tertiary)] hover:text-[var(--color-riara-red)] transition-colors hover:scale-110"
           aria-label={social.label}
           data-testid={social.testId}
           target="_blank"
@@ -235,7 +235,7 @@ const ActionButtons: React.FC = () => (
       <Button
         key={button.href}
         variant="outline"
-        className="w-full justify-start font-bold text-base text-[var(--color-text-secondary)] border-[var(--color-border-medium)] hover:border-[var(--color-stanford-red)] hover:text-[var(--color-stanford-red)]"
+        className="w-full justify-start font-bold text-base text-[var(--color-text-secondary)] border-[var(--color-border-medium)] hover:border-[var(--color-riara-red)] hover:text-[var(--color-riara-red)]"
         asChild
         data-testid={button.testId}
       >
@@ -333,7 +333,7 @@ export function Footer() {
       </div>
 
       {/* Lower Section - Dark Red Background */}
-      <div className="bg-[var(--color-stanford-red)]">
+      <div className="bg-[var(--color-riara-red)]">
         <Container className="py-6 sm:py-8 md:py-10 lg:py-12 px-4 sm:px-6 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Column 1: Riara University Name */}
