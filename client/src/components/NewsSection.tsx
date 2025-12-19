@@ -50,7 +50,7 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
           </div>
         )}
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-10">
+        <div className="grid gap-6 md:grid-cols-2 mb-10">
           {regularArticles.map((article) => (
             <NewsCard
               key={article.id}
