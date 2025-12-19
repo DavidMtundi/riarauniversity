@@ -13,12 +13,23 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
   const featuredArticle = articles.find((article) => article.featured) ?? articles[0];
   const remainingArticles = articles
     .filter((article) => article.id !== featuredArticle?.id)
-    .slice(0, 6);
-
-  const highlightArticles = remainingArticles.slice(0, 1); // Show 1 highlight for row 1 (short, right)
-  const regularArticles = remainingArticles.slice(1); // Remaining 4 articles
-  const row2Articles = regularArticles.slice(0, 1); // First 1 for row 2 (long, full width or centered)
-  const row3Articles = regularArticles.slice(1, 4); // Next 3 for row 3
+    .slice(0, 5);
+  
+  // Reuse articles if needed to fill all rows
+  const getArticle = (index: number) => remainingArticles[index % remainingArticles.length];
+  
+  // Row 1: 1 article (featured)
+  // Row 2: 2 articles (short + long)
+  const row2Articles = [
+    getArticle(0), // Short (left)
+    getArticle(1) // Long (right)
+  ];
+  // Row 3: 3 articles
+  const row3Articles = [
+    getArticle(2),
+    getArticle(3),
+    getArticle(4)
+  ];
 
   return (
     <section className="bg-[var(--color-bg-secondary)] py-14 sm:py-16 md:py-20">
@@ -34,50 +45,31 @@ export function NewsSection({ articles, showHeader = true }: NewsSectionProps) {
           </header>
         )}
 
+        {/* Row 1: 1 article (featured, full width) */}
         {featuredArticle && (
-          <div className="grid gap-6 lg:grid-cols-3 mb-8 md:mb-12 items-stretch">
-            <div className="lg:col-span-2 flex">
-              <NewsCard article={featuredArticle} variant="featured" />
-            </div>
-
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1 items-stretch">
-              {highlightArticles.map((article) => (
-                <NewsCard
-                  key={article.id}
-                  article={article}
-                  variant="highlight"
-                />
-              ))}
-            </div>
+          <div className="mb-8 md:mb-12">
+            <NewsCard article={featuredArticle} variant="featured" />
           </div>
         )}
 
-        {/* Row 2: Long article (full width, or can be styled as short+long if we have 2) */}
-        {row2Articles.length > 0 && (
+        {/* Row 2: 2 articles (short + long) */}
+        {row2Articles.length === 2 && (
           <div className="grid gap-6 md:grid-cols-3 mb-8 md:mb-10 items-stretch">
-            {row2Articles.length === 2 ? (
-              <>
-                <div className="md:col-span-1 flex">
-                  <NewsCard article={row2Articles[0]} variant="regular" />
-                </div>
-                <div className="md:col-span-2 flex">
-                  <NewsCard article={row2Articles[1]} variant="regular" />
-                </div>
-              </>
-            ) : (
-              <div className="md:col-span-2 md:col-start-1 flex">
-                <NewsCard article={row2Articles[0]} variant="regular" />
-              </div>
-            )}
+            <div className="md:col-span-1 flex">
+              <NewsCard article={row2Articles[0]} variant="regular" />
+            </div>
+            <div className="md:col-span-2 flex">
+              <NewsCard article={row2Articles[1]} variant="regular" />
+            </div>
           </div>
         )}
 
         {/* Row 3: 3 equal articles */}
-        {row3Articles.length > 0 && (
+        {row3Articles.length === 3 && (
           <div className="grid gap-6 md:grid-cols-3 mb-10 items-stretch">
-            {row3Articles.map((article) => (
+            {row3Articles.map((article, index) => (
               <NewsCard
-                key={article.id}
+                key={`${article.id}-${index}`}
                 article={article}
                 variant="regular"
               />
