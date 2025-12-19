@@ -1,1 +1,8 @@
-{"id":"arts-profile","name":"Prof. Wanja Tenambergen","title":"Deputy Vice Chancellor - Academic Affairs","quote":"Arts and culture enrich our academic environment, fostering creativity and critical thinking among our students.","imageUrl":"https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Wanja-MGT-Page.jpg","link":"#"}
+{
+  "id": "arts-profile",
+  "name": "Prof. Wanja Tenambergen",
+  "title": "Deputy Vice Chancellor - Academic Affairs",
+  "quote": "Arts and culture enrich our academic environment, fostering creativity and critical thinking among our students.",
+  "imageUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Wanja-MGT-Page.jpg",
+  "link": "#"
+}

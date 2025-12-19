@@ -1,1 +1,8 @@
-{"id":"campus-profile","name":"Riara University Students","title":"Active student community","quote":"At Riara, we foster a vibrant campus life where students engage in diverse activities, build lasting friendships, and develop skills beyond the classroom.","imageUrl":"https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg","link":"#"}
+{
+  "id": "campus-profile",
+  "name": "Riara University Students",
+  "title": "Active student community",
+  "quote": "At Riara, we foster a vibrant campus life where students engage in diverse activities, build lasting friendships, and develop skills beyond the classroom.",
+  "imageUrl": "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
+  "link": "#"
+}
