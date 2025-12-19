@@ -214,7 +214,7 @@ blockquote {
 
 /* Riara University Footer Styles */
 footer,
-.footer-stanford {
+.footer-riara {
   background-color: var(--color-bg-footer);
   color: var(--color-text-inverse);
 }
@@ -323,15 +323,15 @@ footer,
 }
 
 /* Riara University Utility Classes */
-.text-stanford-red {
+.text-riara-red {
   color: var(--color-riara-red);
 }
 
-.bg-stanford-red {
+.bg-riara-red {
   background-color: var(--color-riara-red);
 }
 
-.border-stanford-red {
+.border-riara-red {
   border-color: var(--color-riara-red);
 }
 
