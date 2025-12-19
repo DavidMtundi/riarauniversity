@@ -151,16 +151,16 @@ export const colors = {
   },
   // Semantic colors (legacy - for backward compatibility) - Updated from parent site
   primary: {
-    50: '#f5e8f2',
-    100: '#e8d1e5',
-    200: '#d4a3cb',
-    300: '#c075b1',
-    400: '#ac4797',
+    50: '#f5e8f4',
+    100: '#e8d1e2',
+    200: '#d4a3c5',
+    300: '#c075a8',
+    400: '#ac478b',
     500: '#a10e83', // Primary brand color from parent site
     600: '#7d0a65',
-    700: '#542f4b',
-    800: '#3b1f33',
-    900: '#220f1b',
+    700: '#5d084b',
+    800: '#3d0531',
+    900: '#1d0317',
   },
   // Neutral colors (legacy - for backward compatibility)
   neutral: {
