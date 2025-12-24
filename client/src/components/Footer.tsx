@@ -141,11 +141,18 @@ const LEGAL_LINKS: FooterLink[] = [
 ];
 
 // Quick Downloads Data
-const QUICK_DOWNLOADS = [
-  { label: "University Brochure", href: "/downloads/brochure.pdf", testId: "link-download-brochure" },
-  { label: "Application Form", href: "/downloads/application-form.pdf", testId: "link-download-application" },
-  { label: "Academic Calendar", href: "/downloads/academic-calendar.pdf", testId: "link-download-calendar" },
-  { label: "Fee Structure", href: "/downloads/fee-structure.pdf", testId: "link-download-fees" },
+interface QuickDownload {
+  label: string;
+  href: string;
+  testId: string;
+  downloadFilename?: string;
+}
+
+const QUICK_DOWNLOADS: QuickDownload[] = [
+  { label: "University Brochure", href: "/docs/RU%20GENERIC%20BROCHURE.pdf", testId: "link-download-brochure", downloadFilename: "RU-Generic-Brochure.pdf" },
+  { label: "Application Form", href: "/docs/Riara%20University%20Application%20Form%20%281%29.pdf", testId: "link-download-application", downloadFilename: "Riara-University-Application-Form.pdf" },
+  { label: "Academic Calendar", href: "/docs/RU%20GENERIC%20BROCHURE.pdf", testId: "link-download-calendar", downloadFilename: "RU-Generic-Brochure.pdf" },
+  { label: "Fee Structure", href: "/docs/RU%20GENERIC%20BROCHURE.pdf", testId: "link-download-fees", downloadFilename: "RU-Generic-Brochure.pdf" },
 ];
 
 // Reusable components for better maintainability
@@ -190,7 +197,7 @@ const QuickDownloadsSection: React.FC = () => (
         <a
           key={download.href}
           href={download.href}
-          download
+          download={download.downloadFilename || undefined}
           className="group flex items-center gap-3 p-3 bg-white hover:bg-[var(--color-riara-red)] rounded-lg border-2 border-gray-200 hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
           data-testid={download.testId}
         >
