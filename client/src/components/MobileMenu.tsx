@@ -115,7 +115,7 @@ export function MobileMenu({ isOpen, onClose, onSearchOpen }: MobileMenuProps) {
               onClick={onClose}
               style={{ touchAction: 'manipulation' }}
             >
-              Athletics
+              Sports
             </a>
             <a 
               href="/careers" 

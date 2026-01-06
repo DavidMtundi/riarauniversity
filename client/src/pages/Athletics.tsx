@@ -18,7 +18,7 @@ export default function Athletics() {
         <main className="flex-1 flex items-center justify-center pt-12 sm:pt-14 md:pt-24">
           <div className="text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
-            <p className="text-[var(--color-text-secondary)]">Loading Athletics...</p>
+            <p className="text-[var(--color-text-secondary)]">Loading Sports...</p>
           </div>
         </main>
         <Footer />
@@ -39,7 +39,7 @@ export default function Athletics() {
             </div>
             <h2 className="text-2xl font-serif font-bold text-[var(--color-text-primary)] mb-2">Unable to Load Content</h2>
             <p className="text-[var(--color-text-secondary)] mb-6">
-              We're experiencing technical difficulties loading the Athletics page. Please try refreshing the page.
+              We're experiencing technical difficulties loading the Sports page. Please try refreshing the page.
             </p>
             <RetryButton
               onClick={() => window.location.reload()}
@@ -74,7 +74,7 @@ export default function Athletics() {
           <div className="relative z-10 h-full flex items-center justify-center">
             <div className="text-center px-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-white mb-4 md:mb-6 drop-shadow-2xl">
-                Athletics
+                Sports
               </h1>
               <p className="text-lg md:text-xl lg:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-lg font-light">
                 Providing student-athletes the opportunity to achieve excellence both in competition and in the classroom

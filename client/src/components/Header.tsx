@@ -128,7 +128,7 @@ export function Header({ variant = "default" }: HeaderProps) {
                 { href: "/research", label: "Research", testId: "link-research" },
                 { href: "/news-events", label: "News & Events", testId: "link-news-events" },
                 { href: "/healthcare", label: "Health Care", testId: "link-healthcare" },
-                { href: "/athletics", label: "Athletics", testId: "link-athletics" },
+                { href: "/athletics", label: "Sports", testId: "link-athletics" },
                 { href: "/careers", label: "Careers", testId: "link-careers" },
                 { href: "/about", label: "About", testId: "link-about" },
               ].map((link) => (

@@ -14,9 +14,9 @@ export function AthleticsSection({ sections, showHeader = true }: AthleticsSecti
       <Container>
         {showHeader && (
           <header className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-athletics-heading">Cardinal Athletics</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-athletics-heading">Cardinal Sports</h2>
             <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed" data-testid="text-athletics-description">
-              Home to champions, Riara Athletics combines competitive excellence with academic achievement.
+              Home to champions, Riara Sports combines competitive excellence with academic achievement.
             </p>
           </header>
         )}

@@ -58,7 +58,7 @@ const STATIC_PAGES: SearchResult[] = [
   { id: "admission", title: "Admission", description: "Apply to Riara University", type: "page", url: "/admission", pageUrl: "/admission", pageTitle: "Admission", icon: <FileText className="h-4 w-4" /> },
   { id: "campus-life", title: "Student Life", description: "Campus activities and student resources", type: "page", url: "/campus-life", pageUrl: "/campus-life", pageTitle: "Student Life", icon: <Users className="h-4 w-4" /> },
   { id: "healthcare", title: "Health Care", description: "Health services and resources", type: "page", url: "/healthcare", pageUrl: "/healthcare", pageTitle: "Health Care", icon: <Heart className="h-4 w-4" /> },
-  { id: "athletics", title: "Athletics", description: "Sports and athletic programs", type: "page", url: "/athletics", pageUrl: "/athletics", pageTitle: "Athletics", icon: <Trophy className="h-4 w-4" /> },
+  { id: "athletics", title: "Sports", description: "Sports and athletic programs", type: "page", url: "/athletics", pageUrl: "/athletics", pageTitle: "Sports", icon: <Trophy className="h-4 w-4" /> },
   { id: "careers", title: "Careers", description: "Job opportunities and career services", type: "page", url: "/careers", pageUrl: "/careers", pageTitle: "Careers", icon: <Briefcase className="h-4 w-4" /> },
   { id: "news", title: "News", description: "Latest university news and updates", type: "page", url: "/news", pageUrl: "/news", pageTitle: "News", icon: <FileText className="h-4 w-4" /> },
   { id: "events", title: "Events", description: "Upcoming events and activities", type: "page", url: "/events", pageUrl: "/events", pageTitle: "Events", icon: <Calendar className="h-4 w-4" /> },
@@ -76,7 +76,7 @@ const TYPE_LABELS: Record<SearchResultType, string> = {
   "campus-life": "Campus Life",
   research: "Research",
   healthcare: "Healthcare",
-  athletics: "Athletics",
+  athletics: "Sports",
   arts: "Arts",
 };
 
