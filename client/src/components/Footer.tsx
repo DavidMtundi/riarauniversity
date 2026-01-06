@@ -284,10 +284,10 @@ const ContactInfoSection: React.FC = () => (
       <div className="flex items-start gap-3">
         <MapPin className="h-5 w-5 text-white/90 flex-shrink-0 mt-0.5" />
         <div className="text-sm md:text-base text-white/90">
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-white">
             49940 – 00100, Nairobi
           </p>
-          <p className="leading-relaxed mt-1">
+          <p className="leading-relaxed mt-1 text-white">
             Raila Odinga Road, formally Mbagathi Way
           </p>
         </div>
