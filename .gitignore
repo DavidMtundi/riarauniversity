@@ -4,3 +4,19 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Firebase cache files (but keep config files)
+.firebase/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.backup
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
