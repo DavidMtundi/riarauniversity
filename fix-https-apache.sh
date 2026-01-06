@@ -44,12 +44,99 @@ fi
 echo -e "${YELLOW}Enabling Apache modules...${NC}"
 a2enmod proxy proxy_http headers ssl 2>/dev/null || sudo a2enmod proxy proxy_http headers ssl
 
-# Create or update Apache SSL virtual host configuration
-APACHE_SSL_CONF="/etc/apache2/sites-available/riara-frontend-ssl.conf"
-
-echo -e "${YELLOW}Creating/updating Apache SSL configuration...${NC}"
-
-sudo tee "$APACHE_SSL_CONF" > /dev/null << EOF
+# Check if ru.ac.ke.conf already exists and handles HTTPS
+EXISTING_SSL_CONF="/etc/apache2/sites-available/ru.ac.ke.conf"
+if [ -f "$EXISTING_SSL_CONF" ] && grep -q "<VirtualHost.*:443" "$EXISTING_SSL_CONF"; then
+    echo -e "${YELLOW}Found existing ru.ac.ke.conf with HTTPS configuration${NC}"
+    echo -e "${YELLOW}Updating it to proxy to Docker instead of showing directory listing...${NC}"
+    
+    # Extract SSL certificate paths from existing config if available
+    if grep -q "SSLCertificateFile" "$EXISTING_SSL_CONF"; then
+        EXISTING_CERT=$(grep "SSLCertificateFile" "$EXISTING_SSL_CONF" | head -1 | awk '{print $2}' | tr -d ' ')
+        EXISTING_KEY=$(grep "SSLCertificateKeyFile" "$EXISTING_SSL_CONF" | head -1 | awk '{print $2}' | tr -d ' ')
+        
+        if [ -n "$EXISTING_CERT" ] && [ -f "$EXISTING_CERT" ]; then
+            SSL_CERT="$EXISTING_CERT"
+            echo -e "${GREEN}Using existing SSL certificate: $SSL_CERT${NC}"
+        fi
+        if [ -n "$EXISTING_KEY" ] && [ -f "$EXISTING_KEY" ]; then
+            SSL_KEY="$EXISTING_KEY"
+            echo -e "${GREEN}Using existing SSL key: $SSL_KEY${NC}"
+        fi
+    fi
+    
+    # Create a backup
+    BACKUP_FILE="${EXISTING_SSL_CONF}.backup.$(date +%Y%m%d_%H%M%S)"
+    sudo cp "$EXISTING_SSL_CONF" "$BACKUP_FILE"
+    echo -e "${GREEN}✅ Created backup: $BACKUP_FILE${NC}"
+    
+    # Use awk to replace the 443 VirtualHost section
+    # This preserves any other VirtualHost blocks (like port 80)
+    sudo awk -v domain="$DOMAIN" -v cert="$SSL_CERT" -v key="$SSL_KEY" -v port="$DOCKER_PORT" '
+    BEGIN { in_443_block = 0; skip_until_close = 0 }
+    /<VirtualHost\s+\*:443/ { 
+        in_443_block = 1
+        skip_until_close = 1
+        print "<VirtualHost *:443>"
+        print "    ServerName " domain
+        print "    ServerAlias www." domain
+        print ""
+        print "    # SSL Configuration"
+        print "    SSLEngine on"
+        print "    SSLCertificateFile " cert
+        print "    SSLCertificateKeyFile " key
+        print ""
+        print "    # Modern SSL configuration"
+        print "    SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1"
+        print "    SSLCipherSuite ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384"
+        print "    SSLHonorCipherOrder off"
+        print "    SSLSessionTickets off"
+        print ""
+        print "    # Security headers"
+        print "    Header always set Strict-Transport-Security \"max-age=63072000; includeSubDomains; preload\""
+        print "    Header always set X-Frame-Options \"SAMEORIGIN\""
+        print "    Header always set X-Content-Type-Options \"nosniff\""
+        print "    Header always set X-XSS-Protection \"1; mode=block\""
+        print ""
+        print "    # Reverse proxy to Docker container"
+        print "    ProxyPreserveHost On"
+        print "    ProxyPass / http://localhost:" port "/"
+        print "    ProxyPassReverse / http://localhost:" port "/"
+        print ""
+        print "    # Headers for proper proxying"
+        print "    RequestHeader set X-Forwarded-Proto \"https\""
+        print "    RequestHeader set X-Forwarded-Port \"443\""
+        print "    RequestHeader set X-Forwarded-For \"%{REMOTE_ADDR}s\""
+        print ""
+        print "    # Logging"
+        print "    ErrorLog ${APACHE_LOG_DIR}/riara-frontend-ssl-error.log"
+        print "    CustomLog ${APACHE_LOG_DIR}/riara-frontend-ssl-access.log combined"
+        next
+    }
+    /<\/VirtualHost>/ {
+        if (skip_until_close) {
+            skip_until_close = 0
+            in_443_block = 0
+            print "</VirtualHost>"
+            next
+        }
+    }
+    {
+        if (!skip_until_close) {
+            print
+        }
+    }
+    ' "$EXISTING_SSL_CONF" > /tmp/ru.ac.ke.conf.new
+    
+    sudo mv /tmp/ru.ac.ke.conf.new "$EXISTING_SSL_CONF"
+    APACHE_SSL_CONF="$EXISTING_SSL_CONF"
+    echo -e "${GREEN}✅ Updated existing ru.ac.ke.conf${NC}"
+else
+    # Create new SSL virtual host configuration
+    APACHE_SSL_CONF="/etc/apache2/sites-available/riara-frontend-ssl.conf"
+    echo -e "${YELLOW}Creating new Apache SSL configuration...${NC}"
+    
+    sudo tee "$APACHE_SSL_CONF" > /dev/null << EOF
 <VirtualHost *:443>
     ServerName ${DOMAIN}
     ServerAlias www.${DOMAIN}
@@ -99,8 +186,10 @@ sudo tee "$APACHE_SSL_CONF" > /dev/null << EOF
     CustomLog \${APACHE_LOG_DIR}/riara-frontend-redirect-access.log combined
 </VirtualHost>
 EOF
+    echo -e "${GREEN}✅ Created new Apache SSL configuration${NC}"
+fi
 
-echo -e "${GREEN}✅ Created/updated Apache SSL configuration${NC}"
+echo -e "${GREEN}✅ Apache SSL configuration ready${NC}"
 
 # Disable default SSL site if it exists (this is likely causing the directory listing)
 if [ -f /etc/apache2/sites-enabled/000-default-ssl.conf ]; then
@@ -115,32 +204,19 @@ if [ -f /etc/apache2/sites-enabled/default-ssl.conf ]; then
     echo -e "${GREEN}✅ Disabled default-ssl site${NC}"
 fi
 
-# Enable the SSL site
-echo -e "${YELLOW}Enabling riara-frontend SSL site...${NC}"
-a2ensite riara-frontend-ssl.conf 2>/dev/null || sudo a2ensite riara-frontend-ssl.conf
-
-# Also ensure HTTP site is configured (update existing if needed)
-APACHE_HTTP_CONF="/etc/apache2/sites-available/riara-frontend.conf"
-if [ -f "$APACHE_HTTP_CONF" ]; then
-    # Update existing HTTP config to redirect to HTTPS
-    if ! grep -q "Redirect permanent" "$APACHE_HTTP_CONF"; then
-        echo -e "${YELLOW}Updating HTTP configuration to redirect to HTTPS...${NC}"
-        sudo tee "$APACHE_HTTP_CONF" > /dev/null << EOF
-<VirtualHost *:80>
-    ServerName ${DOMAIN}
-    ServerAlias www.${DOMAIN}
-    
-    # Redirect all HTTP traffic to HTTPS
-    Redirect permanent / https://${DOMAIN}/
-    
-    # Logging
-    ErrorLog \${APACHE_LOG_DIR}/riara-frontend-redirect-error.log
-    CustomLog \${APACHE_LOG_DIR}/riara-frontend-redirect-access.log combined
-</VirtualHost>
-EOF
-        echo -e "${GREEN}✅ Updated HTTP configuration${NC}"
-    fi
+# Enable the SSL site (only if it's a new file, ru.ac.ke.conf is already enabled)
+if [ "$APACHE_SSL_CONF" != "/etc/apache2/sites-available/ru.ac.ke.conf" ]; then
+    echo -e "${YELLOW}Enabling riara-frontend SSL site...${NC}"
+    SITE_NAME=$(basename "$APACHE_SSL_CONF")
+    a2ensite "$SITE_NAME" 2>/dev/null || sudo a2ensite "$SITE_NAME"
+    echo -e "${GREEN}✅ Enabled $SITE_NAME${NC}"
+else
+    echo -e "${GREEN}✅ ru.ac.ke.conf is already enabled${NC}"
 fi
+
+# Note: HTTP (port 80) is already handled by riara-frontend.conf
+# which proxies to Docker. We can optionally update it to redirect to HTTPS
+# but that's a separate decision. For now, we keep it as-is since it's working.
 
 # Test Apache configuration
 echo ""

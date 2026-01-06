@@ -4,7 +4,7 @@
 When accessing `https://ru.ac.ke`, you see a directory listing instead of the web application. HTTP works correctly.
 
 ## Root Cause
-Apache has a default SSL virtual host (port 443) that's serving a directory listing instead of proxying to your Docker container.
+Apache has an existing SSL virtual host configuration (`ru.ac.ke.conf` on port 443) that's serving a directory listing instead of proxying to your Docker container. HTTP works correctly because `riara-frontend.conf` is already configured to proxy to Docker.
 
 ## Solution
 
@@ -39,11 +39,13 @@ sudo ./fix-https-apache.sh
 
 The script will:
 1. ✅ Enable required Apache modules (proxy, ssl, headers)
-2. ✅ Create/update SSL virtual host configuration
-3. ✅ Disable default SSL site (that shows directory listing)
-4. ✅ Configure HTTPS to proxy to Docker container
-5. ✅ Set up HTTP to HTTPS redirect
-6. ✅ Test and reload Apache
+2. ✅ Detect existing `ru.ac.ke.conf` and update its HTTPS (443) configuration
+3. ✅ Or create new `riara-frontend-ssl.conf` if no existing config found
+4. ✅ Extract SSL certificate paths from existing config if available
+5. ✅ Create backup of existing configuration before modifying
+6. ✅ Configure HTTPS to proxy to Docker container
+7. ✅ Disable default SSL sites (that show directory listing)
+8. ✅ Test and reload Apache
 
 ### Step 4: Verify
 
