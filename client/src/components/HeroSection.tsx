@@ -1,11 +1,28 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/Container";
 
 export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, ref) {
   const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const imageUrl = "https://businesstoday.co.ke/wp-content/uploads/2024/06/Riara-University.png";
   const fallbackImageUrl = "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg";
+
+  // Preload the image for faster display
+  useEffect(() => {
+    const img = new Image();
+    img.src = imageUrl;
+    img.onload = () => setImageLoaded(true);
+    img.onerror = () => {
+      // Try fallback if primary fails
+      const fallbackImg = new Image();
+      fallbackImg.src = fallbackImageUrl;
+      fallbackImg.onload = () => {
+        setImageLoaded(true);
+        setImageError(true);
+      };
+    };
+  }, [imageUrl, fallbackImageUrl]);
 
   return (
     <section
@@ -14,12 +31,23 @@ export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, 
     >
       {/* Riara University Background Image with fallback */}
       <div className="absolute inset-0">
+        {/* Placeholder background color while image loads */}
+        <div 
+          className={`absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800 transition-opacity duration-500 ${
+            imageLoaded ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
         <img
           src={imageError ? fallbackImageUrl : imageUrl}
           alt="Riara University Campus"
-          className="absolute inset-0 w-full h-full object-cover"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+            imageLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
           onError={() => setImageError(true)}
+          onLoad={() => setImageLoaded(true)}
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
       
