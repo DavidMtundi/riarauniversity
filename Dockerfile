@@ -16,7 +16,6 @@ COPY components.json ./
 # Copy source files
 COPY client ./client
 COPY shared ./shared
-COPY attached_assets ./attached_assets
 
 # Install dependencies
 RUN npm ci
