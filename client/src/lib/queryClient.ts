@@ -57,14 +57,10 @@ export const queryClient = new QueryClient({
       queryFn: getQueryFn({ on401: "throw" }),
       refetchInterval: false,
       refetchOnWindowFocus: false,
-      refetchOnReconnect: false,
-      refetchOnMount: false, // Don't refetch if data exists in cache
-      staleTime: Infinity, // Data never becomes stale (static content)
+      staleTime: Infinity,
       retry: false,
       // Enable parallel queries for faster loading
       gcTime: 1000 * 60 * 60 * 24, // 24 hours (formerly cacheTime)
-      // Network mode: prefer cache, fallback to network
-      networkMode: 'offlineFirst',
     },
     mutations: {
       retry: false,
