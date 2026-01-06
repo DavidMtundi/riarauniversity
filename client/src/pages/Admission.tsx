@@ -82,7 +82,7 @@ export default function Admission() {
                         </a>
                       </Button>
                     </div>
-                    <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
+                    {/* <div className="border-l-4 border-[var(--color-riara-red)] pl-6">
                       <h3 className="text-xl md:text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-3">
                         Undergraduate Financial Aid
                       </h3>
@@ -94,7 +94,7 @@ export default function Admission() {
                           Undergraduate Financial Aid <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

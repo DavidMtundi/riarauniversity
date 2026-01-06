@@ -48,7 +48,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
             </Button>
           </div>
 
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid="card-admission-financial">
+          {/* <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid="card-admission-financial">
             <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid="text-admission-financial-title">
               Riara meets the full financial need of every admitted undergrad
             </h3>
@@ -65,7 +65,7 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
                 Learn about financial aid <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-          </div>
+          </div> */}
         </div>
       </Container>
     </section>
