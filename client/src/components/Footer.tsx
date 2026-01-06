@@ -45,17 +45,17 @@ const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: "ACADEMICS",
     links: [
-      { label: "Undergraduate Majors", href: "/academics/undergraduate", testId: "link-footer-undergraduate" },
-      { label: "Graduate Programs", href: "/academics/graduate", testId: "link-footer-graduate" },
+      { label: "Undergraduate Majors", href: "/academics#undergraduate", testId: "link-footer-undergraduate" },
+      { label: "Graduate Programs", href: "/academics#graduate", testId: "link-footer-graduate" },
       { label: "Professional Programs", href: "/academics#lifelong", testId: "link-footer-professional" },
     ],
   },
   {
     title: "RESOURCES",
     links: [
-      { label: "School Library", href: FOOTER_LINKS.library, testId: "link-footer-School Library" },
-      { label: "Riara Health Care", href: "/healthcare/riara-health", testId: "link-footer-riara-health" },
-      { label: "Riara Online", href: "/online-learning", testId: "link-footer-online-learning" },
+      { label: "School Library", href: FOOTER_LINKS.library, testId: "link-footer-library", external: true },
+      { label: "Riara Health Care", href: "/healthcare", testId: "link-footer-riara-health" },
+      { label: "Virtual Campus", href: "https://odel.riarauniversity.ac.ke/?redirect=0", testId: "link-footer-online-learning", external: true },
     ],
   },
   {
@@ -70,9 +70,9 @@ const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: "ADMISSION",
     links: [
-      { label: "Undergraduate", href: "/admission/undergraduate", testId: "link-footer-admission-undergraduate" },
-      { label: "Graduate", href: "/admission/graduate", testId: "link-footer-admission-graduate" },
-      { label: "Financial Aid", href: "/admission/financial-aid", testId: "link-footer-financial-aid" },
+      { label: "Apply Online", href: "https://admissions.ru.ac.ke/", testId: "link-footer-admission-apply", external: true },
+      { label: "Admission Information", href: "/admission", testId: "link-footer-admission-info" },
+      { label: "Visit Campus", href: "/visit", testId: "link-footer-visit" },
     ],
   }
 ];
@@ -126,18 +126,16 @@ const ACTION_BUTTONS: ActionButton[] = [
 
 const PRIMARY_FOOTER_LINKS: FooterLink[] = [
   { label: "Riara Home", href: "/", testId: "link-footer-home" },
-  { label: "Maps & Directions", href: "/maps", testId: "link-footer-maps" },
-      { label: "Search Riara", href: "/search", testId: "link-footer-search" },
-  { label: "Emergency Info", href: "/emergency", testId: "link-footer-emergency" },
+  { label: "Maps & Directions", href: "/visit", testId: "link-footer-maps" },
+  { label: "Search Riara", href: "#", testId: "link-footer-search", external: false }, // Opens search dialog via header
+  { label: "Emergency Info", href: "/contact", testId: "link-footer-emergency" },
 ];
 
 const LEGAL_LINKS: FooterLink[] = [
-  { label: "Terms of Use", href: "/terms", testId: "link-footer-terms" },
-  { label: "Privacy", href: "/privacy", testId: "link-footer-privacy" },
-  { label: "Copyright", href: "/copyright", testId: "link-footer-copyright" },
-  { label: "Trademarks", href: "/trademarks", testId: "link-footer-trademarks" },
-  { label: "Non-Discrimination", href: "/non-discrimination", testId: "link-footer-non-discrimination" },
-  { label: "Accessibility", href: "/accessibility", testId: "link-footer-accessibility" },
+  { label: "About", href: "/about", testId: "link-footer-about" },
+  { label: "Contact", href: "/contact", testId: "link-footer-contact" },
+  { label: "Accreditation", href: "/about/accreditation", testId: "link-footer-accreditation" },
+  { label: "Quality Assurance", href: "/quality-assurance", testId: "link-footer-quality" },
 ];
 
 // Quick Downloads Data
@@ -156,22 +154,41 @@ const QUICK_DOWNLOADS: QuickDownload[] = [
 ];
 
 // Reusable components for better maintainability
-const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => (
-  <ul className="space-y-3 md:space-y-3.5 text-base md:text-lg text-[var(--color-text-secondary)]">
-    {links.map((link) => (
-      <li key={link.href}>
-        <a
-          href={link.href}
-          className="font-semibold hover:text-[var(--color-riara-red)] transition-colors leading-relaxed md:leading-loose"
-          data-testid={link.testId}
-          {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        >
-          {link.label}
-        </a>
-      </li>
-    ))}
-  </ul>
-);
+const FooterLinkList: React.FC<{ links: FooterLink[] }> = ({ links }) => {
+  const handleSearchClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Only prevent default for search link (#)
+    if (href === "#") {
+      e.preventDefault();
+      // Trigger search dialog - this will be handled by the header search button
+      // For now, just scroll to top where search is available
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Try to trigger search if available
+      const searchButton = document.querySelector('[data-testid="button-search"]') as HTMLButtonElement;
+      if (searchButton) {
+        setTimeout(() => searchButton.click(), 500);
+      }
+    }
+    // For all other links, allow normal navigation
+  };
+
+  return (
+    <ul className="space-y-3 md:space-y-3.5 text-base md:text-lg text-[var(--color-text-secondary)]">
+      {links.map((link) => (
+        <li key={link.href}>
+          <a
+            href={link.href}
+            onClick={(e) => handleSearchClick(e, link.href)}
+            className="font-semibold hover:text-[var(--color-riara-red)] transition-colors leading-relaxed md:leading-loose cursor-pointer"
+            data-testid={link.testId}
+            {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
   <div>

@@ -25,14 +25,14 @@ export default function Academics() {
   useEffect(() => {
     if (!isLoading && location.includes('#')) {
       const hash = location.split('#')[1];
-      if (hash && ['undergraduate', 'graduate', 'lifelong'].includes(hash)) {
+      if (hash && ['undergraduate', 'graduate', 'lifelong', 'academics'].includes(hash)) {
         // Small delay to ensure content is rendered
         setTimeout(() => {
-          const element = document.getElementById('academics');
+          const element = document.getElementById(hash);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
-        }, 100);
+        }, 300);
       }
     }
   }, [isLoading, location]);
@@ -413,7 +413,42 @@ export default function Academics() {
           </Container>
         </section>
 
-        <EducationSection paths={educationPaths} schools={schools} showHeader={false} />
+        {/* Education Paths Section with hash anchors */}
+        <section id="academics" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+          <Container>
+            {/* Undergraduate Programs */}
+            <div id="undergraduate" className="scroll-mt-24">
+              <EducationSection paths={educationPaths.filter(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'))} schools={schools} showHeader={false} />
+            </div>
+            
+            {/* Graduate Programs */}
+            <div id="graduate" className="scroll-mt-24 mt-16">
+              <EducationSection paths={educationPaths.filter(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate'))} schools={schools} showHeader={false} />
+            </div>
+            
+            {/* Lifelong Learning / Professional Programs */}
+            <div id="lifelong" className="scroll-mt-24 mt-16">
+              <EducationSection paths={educationPaths.filter(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional'))} schools={schools} showHeader={false} />
+            </div>
+            
+            {/* All paths if no specific filter matches */}
+            {educationPaths.length > 0 && (
+              <div className="mt-16">
+                {/* Education Paths Section - with hash navigation support */}
+        <section id="academics" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+          <Container>
+            <EducationSection paths={educationPaths} schools={schools} showHeader={false} />
+          </Container>
+        </section>
+        
+        {/* Add anchor points for hash navigation */}
+        <div id="undergraduate" className="scroll-mt-24" />
+        <div id="graduate" className="scroll-mt-24" />
+        <div id="lifelong" className="scroll-mt-24" />
+              </div>
+            )}
+          </Container>
+        </section>
       </main>
       <Footer />
     </div>
