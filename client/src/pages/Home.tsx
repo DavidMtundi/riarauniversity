@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HeroSection } from "@/components/HeroSection";
@@ -77,59 +77,78 @@ export default function Home() {
   const [isHeroInView, setIsHeroInView] = useState(true);
   const heroRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    let lastKnownScrollY = window.scrollY;
-    let ticking = false;
-
-    const handleScroll = () => {
-      lastKnownScrollY = window.scrollY;
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const heroElement = heroRef.current;
-          if (heroElement) {
-            const heroHeight = heroElement.offsetHeight;
-            const headerHeight = 120; // total combined header height
-            const isVisible = lastKnownScrollY < Math.max(heroHeight - headerHeight, 0);
-            setIsHeroInView(isVisible);
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    const handleResize = () => {
-      const heroElement = heroRef.current;
-      if (!heroElement) {
-        return;
-      }
-      const heroHeight = heroElement.offsetHeight;
-      const headerHeight = 120;
-      const isVisible = window.scrollY < Math.max(heroHeight - headerHeight, 0);
-      setIsHeroInView(isVisible);
-    };
-
-    handleResize();
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
+  // Memoize scroll handler to prevent recreation
+  const handleScroll = useCallback(() => {
+    const heroElement = heroRef.current;
+    if (!heroElement) return;
+    
+    const heroHeight = heroElement.offsetHeight;
+    const headerHeight = 120;
+    const isVisible = window.scrollY < Math.max(heroHeight - headerHeight, 0);
+    setIsHeroInView(isVisible);
   }, []);
 
-  const isLoading = newsLoading || educationLoading || schoolsLoading || statsLoading ||
-                    researchProfileLoading || campusProfileLoading || artsProfileLoading ||
-                    campusLifeLoading || artsLoading || eventsLoading || healthcareLoading || athleticsLoading || partnersLoading;
-  const hasError = newsError || educationError || schoolsError || statsError || 
-                   researchProfileError || campusProfileError || artsProfileError ||
-                   campusLifeError || artsError || eventsError || healthcareError || athleticsError || partnersError;
+  // Use IntersectionObserver for better performance
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.IntersectionObserver) {
+      // Fallback for older browsers
+      let ticking = false;
+      const scrollHandler = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+      window.addEventListener("scroll", scrollHandler, { passive: true });
+      return () => window.removeEventListener("scroll", scrollHandler);
+    }
+
+    // Use IntersectionObserver for better performance
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsHeroInView(entry.isIntersecting);
+        });
+      },
+      {
+        rootMargin: '-120px 0px 0px 0px', // Header height
+        threshold: 0,
+      }
+    );
+
+    const heroElement = heroRef.current;
+    if (heroElement) {
+      observer.observe(heroElement);
+    }
+
+    return () => {
+      if (heroElement) {
+        observer.unobserve(heroElement);
+      }
+    };
+  }, [handleScroll]);
+
+  // Memoize loading and error states to prevent unnecessary recalculations
+  const isLoading = useMemo(() => 
+    newsLoading || educationLoading || schoolsLoading || statsLoading ||
+    researchProfileLoading || campusProfileLoading || artsProfileLoading ||
+    campusLifeLoading || artsLoading || eventsLoading || healthcareLoading || athleticsLoading || partnersLoading,
+    [newsLoading, educationLoading, schoolsLoading, statsLoading,
+     researchProfileLoading, campusProfileLoading, artsProfileLoading,
+     campusLifeLoading, artsLoading, eventsLoading, healthcareLoading, athleticsLoading, partnersLoading]
+  );
+
+  const hasError = useMemo(() =>
+    newsError || educationError || schoolsError || statsError || 
+    researchProfileError || campusProfileError || artsProfileError ||
+    campusLifeError || artsError || eventsError || healthcareError || athleticsError || partnersError,
+    [newsError, educationError, schoolsError, statsError,
+     researchProfileError, campusProfileError, artsProfileError,
+     campusLifeError, artsError, eventsError, healthcareError, athleticsError, partnersError]
+  );
 
   if (isLoading) {
     return (
