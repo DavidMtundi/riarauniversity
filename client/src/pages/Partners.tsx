@@ -7,9 +7,7 @@ import { RetryButton } from "@/components/RetryButton";
 
 export default function Partners() {
   const { data: partnerCategories = [], isLoading, error } = useQuery<PartnerCategory[]>({
-    queryKey: ['/api/partners'],
-    retry: 1, // Retry once on failure
-    retryDelay: 1000,
+    queryKey: ['/api/partners']
   });
 
   if (isLoading) {
@@ -28,9 +26,6 @@ export default function Partners() {
   }
 
   if (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    const isForbidden = errorMessage.includes('403') || errorMessage.includes('Forbidden');
-    
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
@@ -38,23 +33,17 @@ export default function Partners() {
           <div className="text-center max-w-md mx-auto px-6">
             <div className="mb-4 text-[var(--color-riara-red)]">
               <svg className="h-12 w-12 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
             </div>
-            <h2 className="text-2xl font-serif font-bold text-[var(--color-text-primary)] mb-2">
-              {isForbidden ? 'Access Forbidden' : 'Unable to Load Content'}
-            </h2>
+            <h2 className="text-2xl font-serif font-bold text-[var(--color-text-primary)] mb-2">Unable to Load Content</h2>
             <p className="text-[var(--color-text-secondary)] mb-6">
-              {isForbidden 
-                ? 'Unable to access the partners data. This may be a server configuration issue. Please contact support if the problem persists.'
-                : 'We\'re experiencing technical difficulties loading the Partners page. Please try refreshing the page.'}
+              We're experiencing technical difficulties loading the Partners page. Please try refreshing the page.
             </p>
-            {!isForbidden && (
-              <RetryButton
-                onClick={() => window.location.reload()}
-                data-testid="button-reload"
-              />
-            )}
+            <RetryButton
+              onClick={() => window.location.reload()}
+              data-testid="button-reload"
+            />
           </div>
         </main>
         <Footer />

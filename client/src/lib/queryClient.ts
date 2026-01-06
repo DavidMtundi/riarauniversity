@@ -33,41 +33,18 @@ export const getQueryFn: <T>(options: {
     const url = queryKey.join("/") as string;
     
     // In development, use regular API endpoints (Express server)
-    // In production, try both .json and without .json for static file serving
+    // In production, append .json for static file serving (Firebase Hosting)
     const isDevelopment = import.meta.env.DEV || window.location.hostname === 'localhost';
+    const finalUrl = isDevelopment 
+      ? url 
+      : (url.endsWith(".json") ? url : `${url}.json`);
     
-    let finalUrl = url;
-    if (!isDevelopment && !url.endsWith(".json")) {
-      finalUrl = `${url}.json`;
-    }
-    
-    let res = await fetch(finalUrl, {
+    const res = await fetch(finalUrl, {
       credentials: "include",
     });
 
-    // If 404 and in production, try without .json extension
-    if (!res.ok && res.status === 404 && !isDevelopment && finalUrl.endsWith(".json")) {
-      const urlWithoutJson = url;
-      res = await fetch(urlWithoutJson, {
-        credentials: "include",
-      });
-    }
-
     if (unauthorizedBehavior === "returnNull" && res.status === 401) {
       return null;
-    }
-
-    // Handle 403 Forbidden - might be a static file serving issue
-    if (res.status === 403) {
-      // Try alternative URL patterns
-      if (!finalUrl.endsWith(".json")) {
-        const jsonUrl = `${finalUrl}.json`;
-        const jsonRes = await fetch(jsonUrl, { credentials: "include" });
-        if (jsonRes.ok) {
-          return await jsonRes.json();
-        }
-      }
-      throw new Error(`403: Forbidden - Unable to access ${finalUrl}. Please check server configuration.`);
     }
 
     await throwIfResNotOk(res);
