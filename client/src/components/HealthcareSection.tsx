@@ -47,7 +47,7 @@ export function HealthcareSection({ sections, showHeader = true }: HealthcareSec
           })}
         </div>
 
-        <div className="text-center">
+        <div className="text-center pt-8 md:pt-12">
           <Button
             variant="outline"
             className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] !text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200"
