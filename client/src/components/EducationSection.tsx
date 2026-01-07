@@ -7,14 +7,14 @@ interface EducationSectionProps {
   paths: EducationPath[];
   schools: School[];
   showHeader?: boolean;
+  showSchools?: boolean;
 }
 
-export function EducationSection({ paths, schools, showHeader = true }: EducationSectionProps) {
+export function EducationSection({ paths, schools, showHeader = true, showSchools = true }: EducationSectionProps) {
   const icons = [GraduationCap, BookOpen, Lightbulb];
 
-  return (
-    <section id="academics" className="py-12 sm:py-16 md:py-20 bg-white">
-      <Container>
+  const content = (
+    <>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-education-heading">
@@ -73,54 +73,70 @@ export function EducationSection({ paths, schools, showHeader = true }: Educatio
           })}
         </div>
 
-        <div className="mt-12 md:mt-16 p-6 md:p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-lg border border-[var(--color-border-secondary)] shadow-sm">
-          <h3 className="text-2xl md:text-3xl font-serif font-bold mb-8 md:mb-10 text-center text-[var(--color-text-primary)]" data-testid="text-schools-heading">
-            Six schools in which to pursue your passions
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
-            {schools.map((school) => {
-              const url = school?.url && typeof school.url === 'string' && school.url.trim()
-                ? school.url.trim()
-                : '#';
-              const validUrl = url && url !== '#' && (url.startsWith('http://') || url.startsWith('https://'))
-                ? url
-                : url && url !== '#'
-                  ? `https://${url.replace(/^\/+/, '')}`
+        {showSchools && (
+          <div className="mt-12 md:mt-16 p-6 md:p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-lg border border-[var(--color-border-secondary)] shadow-sm">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold mb-8 md:mb-10 text-center text-[var(--color-text-primary)]" data-testid="text-schools-heading">
+              Six schools in which to pursue your passions
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-10">
+              {schools.map((school) => {
+                const url = school?.url && typeof school.url === 'string' && school.url.trim()
+                  ? school.url.trim()
                   : '#';
-              
-              return (
-                <a
-                  key={school.id}
-                  href={validUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative p-4 md:p-5 bg-white rounded-lg border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  data-testid={`link-school-${school.id}`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-riara-red)] transition-colors">
-                      {school.name}
-                    </span>
-                    <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-riara-red)] group-hover:translate-x-1 transition-all duration-300" />
-                  </div>
+                const validUrl = url && url !== '#' && (url.startsWith('http://') || url.startsWith('https://'))
+                  ? url
+                  : url && url !== '#'
+                    ? `https://${url.replace(/^\/+/, '')}`
+                    : '#';
+                
+                return (
+                  <a
+                    key={school.id}
+                    href={validUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-4 md:p-5 bg-white rounded-lg border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                    data-testid={`link-school-${school.id}`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-riara-red)] transition-colors">
+                        {school.name}
+                      </span>
+                      <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-riara-red)] group-hover:translate-x-1 transition-all duration-300" />
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+            <div className="text-center">
+              <Button
+                variant="outline"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
+                data-testid="button-more-academics"
+                asChild
+              >
+                <a href="/academics" className="!text-white">
+                  More about academics <ArrowRight className="h-4 w-4 !text-white" />
                 </a>
-              );
-            })}
+              </Button>
+            </div>
           </div>
-          <div className="text-center">
-            <Button
-              variant="outline"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200 shadow-sm hover:shadow-md"
-              data-testid="button-more-academics"
-              asChild
-            >
-              <a href="/academics" className="!text-white">
-                More about academics <ArrowRight className="h-4 w-4 !text-white" />
-              </a>
-            </Button>
-          </div>
-        </div>
-      </Container>
-    </section>
+        )}
+    </>
   );
+
+  // Wrap in section only if showHeader is true (for standalone use)
+  if (showHeader) {
+    return (
+      <section id="academics" className="py-12 sm:py-16 md:py-20 bg-white">
+        <Container>
+          {content}
+        </Container>
+      </section>
+    );
+  }
+
+  // Return content without section/container wrapper when embedded in another page
+  // (parent page will provide Container)
+  return <>{content}</>;
 }

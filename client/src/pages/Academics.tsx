@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
+import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EducationSection } from "@/components/EducationSection";
@@ -414,37 +415,113 @@ export default function Academics() {
         </section>
 
         {/* Education Paths Section with hash anchors */}
-        <section id="academics" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             {/* Undergraduate Programs */}
-            <div id="undergraduate" className="scroll-mt-24">
-              <EducationSection paths={educationPaths.filter(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'))} schools={schools} showHeader={false} />
-            </div>
+            {educationPaths.filter(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate')).length > 0 && (
+              <div id="undergraduate" className="scroll-mt-24 mb-16">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                  Undergraduate Programs
+                </h2>
+                <EducationSection 
+                  paths={educationPaths.filter(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'))} 
+                  schools={schools} 
+                  showHeader={false}
+                  showSchools={false}
+                />
+              </div>
+            )}
             
             {/* Graduate Programs */}
-            <div id="graduate" className="scroll-mt-24 mt-16">
-              <EducationSection paths={educationPaths.filter(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate'))} schools={schools} showHeader={false} />
-            </div>
+            {educationPaths.filter(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate')).length > 0 && (
+              <div id="graduate" className="scroll-mt-24 mb-16">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                  Graduate Programs
+                </h2>
+                <EducationSection 
+                  paths={educationPaths.filter(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate'))} 
+                  schools={schools} 
+                  showHeader={false}
+                  showSchools={false}
+                />
+              </div>
+            )}
             
             {/* Lifelong Learning / Professional Programs */}
-            <div id="lifelong" className="scroll-mt-24 mt-16">
-              <EducationSection paths={educationPaths.filter(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional'))} schools={schools} showHeader={false} />
-            </div>
+            {educationPaths.filter(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional')).length > 0 && (
+              <div id="lifelong" className="scroll-mt-24 mb-16">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                  Professional & Lifelong Learning Programs
+                </h2>
+                <EducationSection 
+                  paths={educationPaths.filter(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional'))} 
+                  schools={schools} 
+                  showHeader={false}
+                  showSchools={false}
+                />
+              </div>
+            )}
             
-            {/* All paths if no specific filter matches */}
-            {educationPaths.length > 0 && (
-              <div className="mt-16">
-                {/* Education Paths Section - with hash navigation support */}
-        <section id="academics" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
-          <Container>
-            <EducationSection paths={educationPaths} schools={schools} showHeader={false} />
-          </Container>
-        </section>
-        
-        {/* Add anchor points for hash navigation */}
-        <div id="undergraduate" className="scroll-mt-24" />
-        <div id="graduate" className="scroll-mt-24" />
-        <div id="lifelong" className="scroll-mt-24" />
+            {/* Show all other paths that don't match categories */}
+            {educationPaths.filter(p => {
+              const id = p.id?.toLowerCase() || '';
+              const title = p.title.toLowerCase();
+              return !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
+                     !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
+            }).length > 0 && (
+              <div className="mt-16 mb-16">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                  Additional Programs
+                </h2>
+                <EducationSection 
+                  paths={educationPaths.filter(p => {
+                    const id = p.id?.toLowerCase() || '';
+                    const title = p.title.toLowerCase();
+                    return !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
+                           !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
+                  })} 
+                  schools={schools} 
+                  showHeader={false}
+                  showSchools={false}
+                />
+              </div>
+            )}
+
+            {/* Schools Section - Show once at the end */}
+            {schools.length > 0 && (
+              <div className="mt-16 p-6 md:p-8 bg-gradient-to-br from-[var(--color-bg-secondary)] to-white rounded-lg border border-[var(--color-border-secondary)] shadow-sm">
+                <h3 className="text-2xl md:text-3xl font-serif font-bold mb-8 md:mb-10 text-center text-[var(--color-text-primary)]">
+                  Six schools in which to pursue your passions
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  {schools.map((school) => {
+                    const url = school?.url && typeof school.url === 'string' && school.url.trim()
+                      ? school.url.trim()
+                      : '#';
+                    const validUrl = url && url !== '#' && (url.startsWith('http://') || url.startsWith('https://'))
+                      ? url
+                      : url && url !== '#'
+                        ? `https://${url.replace(/^\/+/, '')}`
+                        : '#';
+                    
+                    return (
+                      <a
+                        key={school.id}
+                        href={validUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative p-4 md:p-5 bg-white rounded-lg border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm md:text-base font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-riara-red)] transition-colors">
+                            {school.name}
+                          </span>
+                          <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-riara-red)] group-hover:translate-x-1 transition-all duration-300" />
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </Container>
