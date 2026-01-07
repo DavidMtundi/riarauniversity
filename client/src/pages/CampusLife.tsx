@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function CampusLife() {
   return (
@@ -46,11 +47,12 @@ export default function CampusLife() {
         </section>
 
         {/* Full-Width Image 1 */}
-        <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
-          <img 
-            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/basketball-court/IMG_8802.jpg" 
-            alt="Students at Riara University" 
-            className="w-full h-full object-cover"
+        <section className="w-full">
+          <ImageContainer
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/basketball-court/IMG_8802.jpg"
+            alt="Students at Riara University"
+            containerClassName="h-[40vh] md:h-[50vh] lg:h-[60vh]"
+            objectFit="cover"
           />
         </section>
 
@@ -148,11 +150,12 @@ export default function CampusLife() {
         </section>
 
         {/* Full-Width Image 2 */}
-        <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
-          <img 
-            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6021.jpg" 
-            alt="Career development at Riara University" 
-            className="w-full h-full object-cover"
+        <section className="w-full">
+          <ImageContainer
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6021.jpg"
+            alt="Career development at Riara University"
+            containerClassName="h-[40vh] md:h-[50vh] lg:h-[60vh]"
+            objectFit="cover"
           />
         </section>
 
@@ -213,12 +216,38 @@ export default function CampusLife() {
           </Container>
         </section>
 
+        {/* Clubs & Societies */}
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+          <Container>
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
+                <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
+                  The Riara University experience goes beyond academics, offering students a holistic and enriching personal development journey. This is achieved through a wide range of student-driven activities, including sports, recreation, community service, as well as diverse clubs and societies that cater to varied interests and talents.
+                </p>
+                <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
+                  Students are encouraged to explore their passions, build leadership skills and connect with peers by joining a club or society of their choice. Register for clubs and societies here:{" "}
+                  <a 
+                    href="https://forms.gle/ZARhGDRETmyXGYui7" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[var(--color-riara-red)] font-semibold hover:text-[var(--color-riara-red-dark)] underline transition-colors"
+                  >
+                    Clubs Registration Link
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </Container>
+        </section>
+
         {/* Full-Width Image 3 */}
-        <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
-          <img 
-            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/MEDIA%20%26%20JOURNALISM/VKCL6849.jpg" 
-            alt="Sports and activities at Riara University" 
-            className="w-full h-full object-cover"
+        <section className="w-full">
+          <ImageContainer
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/MEDIA%20%26%20JOURNALISM/VKCL6849.jpg"
+            alt="Sports and activities at Riara University"
+            containerClassName="h-[40vh] md:h-[50vh] lg:h-[60vh]"
+            objectFit="cover"
           />
         </section>
 
@@ -327,10 +356,11 @@ export default function CampusLife() {
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-8">
                 <div>
                   <div className="mb-6">
-                    <img 
-                      src="https://ru.ac.ke/wp-content/uploads/2025/06/IMG_5189-800x533.jpg" 
-                      alt="Student Center at Riara University" 
-                      className="w-full h-auto rounded"
+                    <ImageContainer
+                      src="https://ru.ac.ke/wp-content/uploads/2025/06/IMG_5189-800x533.jpg"
+                      alt="Student Center at Riara University"
+                      containerClassName="rounded"
+                      objectFit="cover"
                     />
                   </div>
                   <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
@@ -459,10 +489,11 @@ export default function CampusLife() {
               </h2>
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-8">
                 <div>
-                  <img 
-                    src="https://www.symbion-int.com/wp-content/uploads/2023/09/1-1.jpg?width=588&quality=95" 
-                    alt="Student accommodation at Riara University" 
-                    className="w-full h-auto rounded mb-6"
+                  <ImageContainer
+                    src="https://www.symbion-int.com/wp-content/uploads/2023/09/1-1.jpg?width=588&quality=95"
+                    alt="Student accommodation at Riara University"
+                    containerClassName="rounded mb-6"
+                    objectFit="cover"
                   />
                 </div>
                 <div>

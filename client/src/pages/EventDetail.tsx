@@ -10,6 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, ArrowLeft, MapPin, ExternalLink } from "lucide-react";
 import type { Event } from "@shared/schema";
 import { parse, format } from "date-fns";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function EventDetail() {
   const [, setLocation] = useLocation();
@@ -173,19 +174,16 @@ export default function EventDetail() {
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Main Content */}
                 <div className="md:col-span-2">
-                  {event.imageUrl && event.imageUrl !== "" ? (
-                    <div className="mb-8 rounded-lg overflow-hidden">
-                      <img
-                        src={event.imageUrl}
-                        alt={event.title}
-                        className="w-full h-auto object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="mb-8 aspect-video bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center">
-                      <Calendar className="h-24 w-24 text-primary/40" />
-                    </div>
-                  )}
+                  <div className="mb-8">
+                    <ImageContainer
+                      src={event.imageUrl}
+                      alt={event.title}
+                      aspectRatio="16/9"
+                      objectFit="cover"
+                      containerClassName="rounded-lg"
+                      placeholderIcon={<Calendar className="h-24 w-24 text-primary/40" />}
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none">
                     <h2 className="text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">

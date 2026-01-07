@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Briefcase, ArrowLeft, ExternalLink, Clock } from "lucide-react";
 import type { Career } from "@shared/schema";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function CareerDetail() {
   const [, setLocation] = useLocation();
@@ -151,19 +152,16 @@ export default function CareerDetail() {
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Main Content */}
                 <div className="md:col-span-2">
-                  {career.imageUrl && career.imageUrl !== "" ? (
-                    <div className="mb-8 rounded-lg overflow-hidden">
-                      <img
-                        src={career.imageUrl}
-                        alt={career.title}
-                        className="w-full h-auto object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="mb-8 aspect-video bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center">
-                      <Briefcase className="h-24 w-24 text-primary/40" />
-                    </div>
-                  )}
+                  <div className="mb-8">
+                    <ImageContainer
+                      src={career.imageUrl}
+                      alt={career.title}
+                      aspectRatio="16/9"
+                      objectFit="cover"
+                      containerClassName="rounded-lg"
+                      placeholderIcon={<Briefcase className="h-24 w-24 text-primary/40" />}
+                    />
+                  </div>
 
                   <div className="prose prose-lg max-w-none">
                     <h2 className="text-2xl font-serif font-semibold text-[var(--color-text-primary)] mb-4">

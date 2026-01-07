@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import type { ContentSection, Profile } from "@shared/schema";
 import { Container } from "@/components/Container";
+import { ImageContainer } from "@/components/ImageContainer";
 
 interface ArtsSectionProps {
   sections: ContentSection[];
@@ -36,23 +37,14 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 transition-all duration-500" />
               
               {/* Default state - show image */}
-              <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-500">
-                {profile.imageUrl ? (
-                  <img 
-                    src={profile.imageUrl} 
-                    alt={profile.name}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-white border-2 border-[var(--color-border-secondary)] flex items-center justify-center">
-                    <div className="text-center text-[var(--color-text-secondary)]">
-                      <svg className="w-16 h-16 mx-auto mb-2 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <p className="text-xs font-medium">Image Placeholder</p>
-                    </div>
-                  </div>
-                )}
+              <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
+                <ImageContainer
+                  src={profile.imageUrl}
+                  alt={profile.name}
+                  containerClassName="absolute inset-0 w-full h-full"
+                  objectFit="cover"
+                  showSkeleton={false}
+                />
               </div>
               
               {/* Hover state - show content overlay */}
@@ -63,20 +55,15 @@ export function ArtsSection({ sections, profile }: ArtsSectionProps) {
                 </p>
                 
                 {/* Profile picture - circular */}
-                <div className="mb-6 md:mb-8">
-                  {profile.imageUrl ? (
-                    <img 
-                      src={profile.imageUrl} 
-                      alt={profile.name}
-                      className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white/30 shadow-lg"
-                    />
-                  ) : (
-                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white/20 border-4 border-white/30 flex items-center justify-center">
-                      <svg className="w-12 h-12 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                      </svg>
-                    </div>
-                  )}
+                <div className="mb-6 md:mb-8 w-24 h-24 md:w-32 md:h-32">
+                  <ImageContainer
+                    src={profile.imageUrl}
+                    alt={profile.name}
+                    aspectRatio="1/1"
+                    objectFit="cover"
+                    containerClassName="rounded-full border-4 border-white/30 shadow-lg"
+                    showSkeleton={false}
+                  />
                 </div>
                 
                 {/* Name and title */}

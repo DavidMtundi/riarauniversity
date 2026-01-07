@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, GraduationCap, Building2, Users, Globe, BookOpen } from "lucide-react";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function Founders() {
   return (
@@ -57,19 +58,14 @@ export default function Founders() {
                 {/* Image/Profile Section */}
                 <div className="md:col-span-1">
                   <div className="sticky top-24">
-                    <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="https://riarauniversity.ac.ke/wp-content/uploads/2017/07/Mr.-Daniel-Gachukia-Chairman.jpg" 
+                    <div className="mb-6">
+                      <ImageContainer
+                        src="https://riarauniversity.ac.ke/wp-content/uploads/2017/07/Mr.-Daniel-Gachukia-Chairman.jpg"
                         alt="Mr. Daniel Gachukia"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `
-                              <div class="w-full h-full flex items-center justify-center">
-                                <div class="text-center">
+                        aspectRatio="3/4"
+                        objectFit="cover"
+                        containerClassName="rounded-lg bg-gradient-to-br from-primary/20 to-primary/5"
+                      />
                                   <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-riara-red)]/20 flex items-center justify-center border-4 border-[var(--color-riara-red)]/30">
                                     <span class="text-4xl font-bold text-[var(--color-riara-red)]">DG</span>
                                   </div>
@@ -179,27 +175,13 @@ export default function Founders() {
                 {/* Image/Profile Section */}
                 <div className="md:col-span-1">
                   <div className="sticky top-24">
-                    <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden mb-6">
-                      <img 
-                        src="https://riarauniversity.ac.ke/wp-content/uploads/2021/08/EG.jpg" 
+                    <div className="mb-6">
+                      <ImageContainer
+                        src="https://riarauniversity.ac.ke/wp-content/uploads/2021/08/EG.jpg"
                         alt="Prof. Eddah Gachukia"
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = `
-                              <div class="w-full h-full flex items-center justify-center">
-                                <div class="text-center">
-                                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-riara-red)]/20 flex items-center justify-center border-4 border-[var(--color-riara-red)]/30">
-                                    <span class="text-4xl font-bold text-[var(--color-riara-red)]">EG</span>
-                                  </div>
-                                </div>
-                              </div>
-                            `;
-                          }
-                        }}
+                        aspectRatio="3/4"
+                        objectFit="cover"
+                        containerClassName="rounded-lg bg-gradient-to-br from-primary/20 to-primary/5"
                       />
                     </div>
                     <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[var(--color-riara-red)]">

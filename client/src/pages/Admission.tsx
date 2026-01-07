@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function Admission() {
   return (
@@ -55,13 +56,13 @@ export default function Admission() {
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Image Left */}
                 <div className="order-2 lg:order-1">
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <img 
-                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/PARASOL%20GARDEN/VKCL8999.jpg" 
-                      alt="Students in the garden at Riara University" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer
+                    src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/PARASOL%20GARDEN/VKCL8999.jpg"
+                    alt="Students in the garden at Riara University"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                    containerClassName="rounded-lg"
+                  />
                 </div>
                 {/* Text Right */}
                 <div className="order-1 lg:order-2">
@@ -143,13 +144,13 @@ export default function Admission() {
                 </div>
                 {/* Image Right */}
                 <div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <img 
-                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6050.jpg" 
-                      alt="Robotics engineering at Riara University" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer
+                    src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6050.jpg"
+                    alt="Robotics engineering at Riara University"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                    containerClassName="rounded-lg"
+                  />
                 </div>
               </div>
             </div>
@@ -163,13 +164,13 @@ export default function Admission() {
               <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Image Left */}
                 <div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <img 
-                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6042.jpg" 
-                      alt="Robotics development at Riara University" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer
+                    src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6042.jpg"
+                    alt="Robotics development at Riara University"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                    containerClassName="rounded-lg"
+                  />
                 </div>
                 {/* Text Right */}
                 <div>
@@ -609,13 +610,13 @@ export default function Admission() {
                 </div>
                 {/* Image Right */}
                 <div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <img 
-                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6562.jpg" 
-                      alt="Library at Riara University" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer
+                    src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6562.jpg"
+                    alt="Library at Riara University"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                    containerClassName="rounded-lg"
+                  />
                 </div>
               </div>
             </div>

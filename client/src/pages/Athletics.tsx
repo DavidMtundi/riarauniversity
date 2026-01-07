@@ -6,6 +6,7 @@ import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
 import { PAGE_HERO_IMAGES, CONTENT_IMAGES } from "@/lib/images";
 import type { ContentSection } from "@shared/schema";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function Athletics() {
   const { data: athleticsSections = [], isLoading: athleticsLoading, error: athleticsError } = useQuery<ContentSection[]>({
@@ -61,13 +62,16 @@ export default function Athletics() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <img 
-              src={PAGE_HERO_IMAGES.sports}
-              alt="Riara University Basketball Court"
-              className="absolute inset-0 w-full h-full object-cover opacity-40"
-              loading="eager"
-              fetchPriority="high"
-            />
+            <div className="absolute inset-0 opacity-40">
+              <ImageContainer
+                src={PAGE_HERO_IMAGES.sports}
+                alt="Riara University Basketball Court"
+                containerClassName="absolute inset-0 w-full h-full"
+                objectFit="cover"
+                lazy={false}
+                showSkeleton={false}
+              />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
           </div>
           
@@ -91,16 +95,14 @@ export default function Athletics() {
         </section>
 
         {/* Full-Width Basketball Court Showcase */}
-        <section className="w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden relative">
-          <div className="absolute inset-0">
-            <img 
-              src={CONTENT_IMAGES.basketballCourt}
-              alt="Riara University Basketball Court - State-of-the-art sports facilities"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          </div>
+        <section className="w-full relative">
+          <ImageContainer
+            src={CONTENT_IMAGES.basketballCourt}
+            alt="Riara University Basketball Court - State-of-the-art sports facilities"
+            containerClassName="h-[50vh] md:h-[60vh] lg:h-[70vh]"
+            objectFit="cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
           <div className="relative z-10 h-full flex items-end">
             <Container className="pb-8 md:pb-12 lg:pb-16">
               <div className="max-w-3xl">

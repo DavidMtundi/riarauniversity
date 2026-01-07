@@ -8,6 +8,7 @@ import { EducationSection } from "@/components/EducationSection";
 import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
 import { PAGE_HERO_IMAGES, CONTENT_IMAGES } from "@/lib/images";
+import { ImageContainer } from "@/components/ImageContainer";
 import type { EducationPath, School } from "@shared/schema";
 
 export default function Academics() {
@@ -135,13 +136,13 @@ export default function Academics() {
                   </p>
                 </div>
                 <div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-                    <img 
-                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/IR/VKCL6682.jpg" 
-                      alt="Academic excellence at Riara University" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer
+                    src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/IR/VKCL6682.jpg"
+                    alt="Academic excellence at Riara University"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                    containerClassName="rounded-lg shadow-xl"
+                  />
                 </div>
               </div>
             </div>
@@ -149,11 +150,12 @@ export default function Academics() {
         </section>
 
         {/* Full-Width Image Section */}
-        <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
-          <img 
-            src={CONTENT_IMAGES.academics} 
-            alt="Academic excellence at Riara University" 
-            className="w-full h-full object-cover"
+        <section className="w-full">
+          <ImageContainer
+            src={CONTENT_IMAGES.academics}
+            alt="Academic excellence at Riara University"
+            containerClassName="h-[40vh] md:h-[50vh] lg:h-[60vh]"
+            objectFit="cover"
           />
         </section>
 

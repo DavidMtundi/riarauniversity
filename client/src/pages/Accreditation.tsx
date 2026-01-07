@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Award, ExternalLink, CheckCircle2, Quote, GraduationCap, TrendingUp, Shield } from "lucide-react";
 import { PAGE_HERO_IMAGES, ACCREDITATION_LOGOS } from "@/lib/images";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function Accreditation() {
   const accreditations = [
@@ -207,24 +208,12 @@ export default function Accreditation() {
                     <div className="flex items-start gap-4 mb-6">
                       <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 bg-[var(--color-bg-secondary)] rounded-lg flex items-center justify-center border-2 border-[var(--color-border-light)] overflow-hidden">
                         {accreditation.logoUrl ? (
-                          <img
+                          <ImageContainer
                             src={accreditation.logoUrl}
                             alt={`${accreditation.name} logo`}
-                            className="w-full h-full object-contain p-2"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                              const parent = target.parentElement;
-                              if (parent) {
-                                parent.innerHTML = `
-                                  <div class="text-center text-muted-foreground w-full h-full flex items-center justify-center">
-                                    <svg class="w-8 h-8 md:w-10 md:h-10 mx-auto opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                    </svg>
-                                  </div>
-                                `;
-                              }
-                            }}
+                            containerClassName="w-full h-full p-2"
+                            objectFit="contain"
+                            showSkeleton={false}
                           />
                         ) : (
                           <Award className="h-8 w-8 md:h-10 md:w-10 text-[var(--color-riara-red)] opacity-50" />

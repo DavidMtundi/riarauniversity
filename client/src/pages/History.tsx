@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
+import { ImageContainer } from "@/components/ImageContainer";
 
 export default function History() {
   const milestones = [
@@ -61,13 +62,13 @@ export default function History() {
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div className="order-2 md:order-1">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg overflow-hidden shadow-lg">
-                    <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
-                      alt="Educational journey" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer
+                    src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg"
+                    alt="Educational journey"
+                    aspectRatio="4/3"
+                    objectFit="cover"
+                    containerClassName="rounded-lg shadow-lg bg-gradient-to-br from-primary/20 to-primary/5"
+                  />
                 </div>
                 <div className="order-1 md:order-2">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4 text-[var(--color-text-primary)]">
