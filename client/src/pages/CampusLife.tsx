@@ -48,7 +48,7 @@ export default function CampusLife() {
         {/* Full-Width Image 1 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/PARASOL%20GARDEN/VKCL8999.jpg" 
             alt="Students at Riara University" 
             className="w-full h-full object-cover"
           />
@@ -150,7 +150,7 @@ export default function CampusLife() {
         {/* Full-Width Image 2 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6021.jpg" 
             alt="Career development at Riara University" 
             className="w-full h-full object-cover"
           />
@@ -216,7 +216,7 @@ export default function CampusLife() {
         {/* Full-Width Image 3 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/MEDIA%20%26%20JOURNALISM/VKCL6849.jpg" 
             alt="Sports and activities at Riara University" 
             className="w-full h-full object-cover"
           />

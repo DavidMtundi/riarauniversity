@@ -137,7 +137,7 @@ export default function Academics() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src={PAGE_HERO_IMAGES.default} 
+                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/IR/VKCL6682.jpg" 
                       alt="Academic excellence at Riara University" 
                       className="w-full h-full object-cover"
                     />
