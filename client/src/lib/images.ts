@@ -37,6 +37,9 @@ export const PAGE_HERO_IMAGES = {
   
   /** Student life alternative */
   studentLifeAlt: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg",
+  
+  /** Sports/Athletics hero background - Basketball court */
+  sports: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/basketball-court/IMG_8763.jpg",
 } as const;
 
 // ============================================================================
@@ -55,6 +58,9 @@ export const CONTENT_IMAGES = {
   
   /** Research images */
   research: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+  
+  /** Sports facilities */
+  basketballCourt: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/basketball-court/IMG_8763.jpg",
 } as const;
 
 // ============================================================================

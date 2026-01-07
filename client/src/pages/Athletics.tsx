@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { AthleticsSection } from "@/components/AthleticsSection";
 import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
-import { PAGE_HERO_IMAGES } from "@/lib/images";
+import { PAGE_HERO_IMAGES, CONTENT_IMAGES } from "@/lib/images";
 import type { ContentSection } from "@shared/schema";
 
 export default function Athletics() {
@@ -61,8 +61,14 @@ export default function Athletics() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className={`absolute inset-0 bg-[url('${PAGE_HERO_IMAGES.studentLife}')] bg-cover bg-center bg-no-repeat opacity-20`}></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+            <img 
+              src={PAGE_HERO_IMAGES.sports}
+              alt="Riara University Basketball Court"
+              className="absolute inset-0 w-full h-full object-cover opacity-40"
+              loading="eager"
+              fetchPriority="high"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
           </div>
           
           {/* Decorative Elements */}
@@ -81,6 +87,31 @@ export default function Athletics() {
                 Providing student-athletes the opportunity to achieve excellence both in competition and in the classroom
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Full-Width Basketball Court Showcase */}
+        <section className="w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden relative">
+          <div className="absolute inset-0">
+            <img 
+              src={CONTENT_IMAGES.basketballCourt}
+              alt="Riara University Basketball Court - State-of-the-art sports facilities"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+          <div className="relative z-10 h-full flex items-end">
+            <Container className="pb-8 md:pb-12 lg:pb-16">
+              <div className="max-w-3xl">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4 drop-shadow-2xl">
+                  World-Class Sports Facilities
+                </h2>
+                <p className="text-lg md:text-xl text-white/95 drop-shadow-lg leading-relaxed">
+                  Our state-of-the-art basketball court and sports facilities provide student-athletes with the perfect environment to train, compete, and excel.
+                </p>
+              </div>
+            </Container>
           </div>
         </section>
 
