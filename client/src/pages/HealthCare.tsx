@@ -8,7 +8,7 @@ export default function HealthCare() {
       <Header />
       <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
         {/* Hero Section */}
-        <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
+        <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
             <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
@@ -51,7 +51,7 @@ export default function HealthCare() {
         <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-12 text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-12 text-center">
                 Services Offered
               </h2>
               <div className="grid md:grid-cols-2 gap-8">

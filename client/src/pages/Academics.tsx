@@ -157,7 +157,7 @@ export default function Academics() {
         </section>
 
         {/* Schools Overview Section */}
-        <section className="py-12 sm:py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-6 text-center">
               Our Schools
@@ -448,7 +448,7 @@ export default function Academics() {
                      !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
             }).length > 0 && (
               <div className="mt-16 mb-16">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
                   Additional Programs
                 </h2>
                 <EducationSection 

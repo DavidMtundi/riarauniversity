@@ -265,7 +265,7 @@ export default function Careers() {
             <div className="max-w-7xl mx-auto">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-2">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-2">
                     All Jobs
                   </h2>
                   <div className="flex items-center gap-4">
@@ -296,7 +296,7 @@ export default function Careers() {
         </section>
 
         {/* Main Content - Two Column Layout */}
-        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-[var(--color-bg-secondary)]/20">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-white to-[var(--color-bg-secondary)]/20">
           <Container>
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">

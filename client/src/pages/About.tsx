@@ -20,7 +20,7 @@ export default function About() {
       <Header />
       <main className="flex-1 pt-12 sm:pt-14 md:pt-24">
         {/* Hero Image Section */}
-        <section className="relative w-full h-[32.5vh] md:h-[37.5vh] overflow-hidden">
+        <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
             <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
@@ -47,7 +47,7 @@ export default function About() {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-20 md:py-24 lg:py-28 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
                 <div>
@@ -294,7 +294,7 @@ export default function About() {
         </section>
 
         {/* Learn More Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="text-center">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold mb-8 text-[var(--color-text-primary)]">

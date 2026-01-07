@@ -132,7 +132,7 @@ export default function ArticleDetail() {
         </section>
 
         {/* Article Header */}
-        <section className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white py-12 md:py-16">
+        <section className="bg-gradient-to-br from-[var(--color-bg-secondary)] to-white py-16 md:py-20">
           <Container>
             <div className="max-w-4xl mx-auto">
               <div className="mb-6">
@@ -170,7 +170,7 @@ export default function ArticleDetail() {
         </section>
 
         {/* Article Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-16 md:py-20">
           <Container>
             <div className="max-w-4xl mx-auto">
               {article.imageUrl && article.imageUrl !== "" ? (

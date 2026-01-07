@@ -37,7 +37,7 @@ export default function Founders() {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none">
@@ -50,7 +50,7 @@ export default function Founders() {
         </section>
 
         {/* Mr. Daniel Gachukia Section */}
-        <section className="py-12 md:py-16 bg-[var(--color-bg-secondary)]">
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -172,7 +172,7 @@ export default function Founders() {
         </section>
 
         {/* Prof. Eddah Gachukia Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-3 gap-8 md:gap-12">

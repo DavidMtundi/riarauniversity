@@ -45,7 +45,7 @@ export default function History() {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
@@ -56,7 +56,7 @@ export default function History() {
         </section>
 
         {/* The Riara Story - Image Left */}
-        <section className="py-12 md:py-16 bg-[var(--color-bg-secondary)]">
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -70,7 +70,7 @@ export default function History() {
                   </div>
                 </div>
                 <div className="order-1 md:order-2">
-                  <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4 text-[var(--color-text-primary)]">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4 text-[var(--color-text-primary)]">
                     The Riara Story
                   </h2>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
@@ -89,12 +89,12 @@ export default function History() {
         </section>
 
         {/* The Riara River Philosophy - Image Right */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4 text-[var(--color-text-primary)]">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-4 text-[var(--color-text-primary)]">
                     The Riara River Philosophy
                   </h2>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
@@ -122,10 +122,10 @@ export default function History() {
         </section>
 
         {/* Timeline Section */}
-        <section className="py-12 md:py-16 bg-[var(--color-bg-secondary)]">
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-12 text-[var(--color-text-primary)] text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-12 text-[var(--color-text-primary)] text-center">
                 Key Milestones
               </h2>
               
@@ -175,10 +175,10 @@ export default function History() {
         </section>
 
         {/* Achievements Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-8 text-[var(--color-text-primary)] text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-8 text-[var(--color-text-primary)] text-center">
                 Our Achievements
               </h2>
               <div className="grid md:grid-cols-3 gap-6 mb-8">

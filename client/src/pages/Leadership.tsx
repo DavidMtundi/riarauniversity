@@ -45,7 +45,7 @@ export default function Leadership() {
         </section>
 
         {/* Introduction Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
               <div className="prose prose-lg max-w-none">
@@ -61,7 +61,7 @@ export default function Leadership() {
         </section>
 
         {/* Leadership Content */}
-        <section className="py-12 md:py-16 bg-[var(--color-bg-secondary)]">
+        <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
           <Container>
             {leadershipLoading ? (
               <div className="text-center py-12">
@@ -87,10 +87,10 @@ export default function Leadership() {
         </section>
 
         {/* Governance Structure Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-16 md:py-20 bg-white">
           <Container>
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-8 text-[var(--color-text-primary)] text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-8 text-[var(--color-text-primary)] text-center">
                 Governance Structure
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
