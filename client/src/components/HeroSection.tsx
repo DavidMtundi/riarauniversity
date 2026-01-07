@@ -5,20 +5,21 @@ import { Container } from "@/components/Container";
 export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, ref) {
   const [imageError, setImageError] = useState(false);
   
-  // Use local image if available, fallback to external
-  // Priority: WebP (smaller) > JPG (fallback) > External (last resort)
-  const imageUrl = "/images/hero-background.webp";
-  const fallbackJpg = "/images/hero-background.jpg";
+  // Use drone image as primary, with fallbacks
+  // Priority: Drone image > Local images > External fallback
+  const droneImageUrl = "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/drone-images/DJI_0634.JPG";
+  const localWebp = "/images/hero-background.webp";
+  const localJpg = "/images/hero-background.jpg";
   const externalFallback = "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg";
   const fallbackGradient = "bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800";
 
   // Determine which image to use
   const getImageSrc = () => {
     if (imageError) {
-      // If WebP failed, try JPG, then external
-      return fallbackJpg;
+      // If drone image failed, try local images, then external
+      return localJpg;
     }
-    return imageUrl;
+    return droneImageUrl;
   };
 
   return (
@@ -29,17 +30,19 @@ export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, 
       {/* Riara University Background Image with fallback */}
       <div className={`absolute inset-0 ${fallbackGradient}`}>
         <picture>
-          {/* WebP format (smallest, best quality) */}
-          <source srcSet={imageUrl} type="image/webp" />
-          {/* JPEG fallback */}
-          <source srcSet={fallbackJpg} type="image/jpeg" />
-          {/* Final fallback to external or gradient */}
+          {/* Primary: Drone image */}
+          <source srcSet={droneImageUrl} type="image/jpeg" />
+          {/* Fallback: Local WebP */}
+          <source srcSet={localWebp} type="image/webp" />
+          {/* Fallback: Local JPG */}
+          <source srcSet={localJpg} type="image/jpeg" />
+          {/* Final fallback */}
           <img
-            src={imageError ? externalFallback : getImageSrc()}
-            alt="Riara University Campus"
+            src={imageError ? (localJpg || externalFallback) : getImageSrc()}
+            alt="Riara University Campus - Aerial View"
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => {
-              // Try external fallback if local images fail
+              // Try fallback images if primary fails
               if (!imageError) {
                 setImageError(true);
               }
