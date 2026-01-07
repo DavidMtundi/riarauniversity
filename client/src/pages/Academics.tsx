@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { EducationSection } from "@/components/EducationSection";
 import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
+import { PAGE_HERO_IMAGES, CONTENT_IMAGES } from "@/lib/images";
 import type { EducationPath, School } from "@shared/schema";
 
 export default function Academics() {
@@ -94,7 +95,7 @@ export default function Academics() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-30"></div>
+            <div className={`absolute inset-0 bg-[url('${PAGE_HERO_IMAGES.default}')] bg-cover bg-center bg-no-repeat opacity-30`}></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
           </div>
           
@@ -136,7 +137,7 @@ export default function Academics() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                     <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
+                      src={PAGE_HERO_IMAGES.default} 
                       alt="Academic excellence at Riara University" 
                       className="w-full h-full object-cover"
                     />
@@ -150,7 +151,7 @@ export default function Academics() {
         {/* Full-Width Image Section */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+            src={CONTENT_IMAGES.academics} 
             alt="Academic excellence at Riara University" 
             className="w-full h-full object-cover"
           />

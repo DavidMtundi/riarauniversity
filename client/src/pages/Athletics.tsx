@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { AthleticsSection } from "@/components/AthleticsSection";
 import { Container } from "@/components/Container";
 import { RetryButton } from "@/components/RetryButton";
+import { PAGE_HERO_IMAGES } from "@/lib/images";
 import type { ContentSection } from "@shared/schema";
 
 export default function Athletics() {
@@ -60,7 +61,7 @@ export default function Athletics() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className={`absolute inset-0 bg-[url('${PAGE_HERO_IMAGES.studentLife}')] bg-cover bg-center bg-no-repeat opacity-20`}></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
           </div>
           

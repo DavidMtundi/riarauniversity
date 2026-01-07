@@ -1,25 +1,19 @@
 import { forwardRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/Container";
+import { HERO_IMAGES, getHeroImage } from "@/lib/images";
 
 export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, ref) {
   const [imageError, setImageError] = useState(false);
-  
-  // Use drone image as primary, with fallbacks
-  // Priority: Drone image > Local images > External fallback
-  const droneImageUrl = "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/drone-images/DJI_0634.JPG";
-  const localWebp = "/images/hero-background.webp";
-  const localJpg = "/images/hero-background.jpg";
-  const externalFallback = "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg";
   const fallbackGradient = "bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800";
 
   // Determine which image to use
   const getImageSrc = () => {
     if (imageError) {
       // If drone image failed, try local images, then external
-      return localJpg;
+      return HERO_IMAGES.localJpg;
     }
-    return droneImageUrl;
+    return HERO_IMAGES.drone;
   };
 
   return (
@@ -31,14 +25,14 @@ export const HeroSection = forwardRef<HTMLElement>(function HeroSection(_props, 
       <div className={`absolute inset-0 ${fallbackGradient}`}>
         <picture>
           {/* Primary: Drone image */}
-          <source srcSet={droneImageUrl} type="image/jpeg" />
+          <source srcSet={HERO_IMAGES.drone} type="image/jpeg" />
           {/* Fallback: Local WebP */}
-          <source srcSet={localWebp} type="image/webp" />
+          <source srcSet={HERO_IMAGES.localWebp} type="image/webp" />
           {/* Fallback: Local JPG */}
-          <source srcSet={localJpg} type="image/jpeg" />
+          <source srcSet={HERO_IMAGES.localJpg} type="image/jpeg" />
           {/* Final fallback */}
           <img
-            src={imageError ? (localJpg || externalFallback) : getImageSrc()}
+            src={imageError ? (HERO_IMAGES.localJpg || HERO_IMAGES.externalFallback) : getImageSrc()}
             alt="Riara University Campus - Aerial View"
             className="absolute inset-0 w-full h-full object-cover"
             onError={() => {

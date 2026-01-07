@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { Award, ExternalLink, CheckCircle2, Quote, GraduationCap, TrendingUp, Shield } from "lucide-react";
+import { PAGE_HERO_IMAGES, ACCREDITATION_LOGOS } from "@/lib/images";
 
 export default function Accreditation() {
   const accreditations = [
@@ -11,7 +12,7 @@ export default function Accreditation() {
       abbreviation: "CUE",
       description: "Riara University is accredited by the Commission for University Education (CUE), the official regulator for university education in Kenya. This accreditation affirms the university's commitment to providing quality education and meeting the high standards set for academic institutions in the country.",
       website: "https://www.cue.or.ke",
-      logoUrl: "https://www.cue.or.ke/images/logo/logo.png",
+      logoUrl: ACCREDITATION_LOGOS.cue,
       status: "Fully Accredited",
       year: "2012",
       scope: "Institutional Accreditation",
@@ -28,7 +29,7 @@ export default function Accreditation() {
       abbreviation: "CLE",
       description: "Riara University is accredited by the Council of Legal Education (CLE). This is the statutory regulator of Legal Education and Training in Kenya, among other functions as stipulated in the Legal Education Act (2012). Riara University is proud to have held the status of Accreditation from its inception in 2012.",
       website: "https://www.counciloflegaleducation.or.ke",
-      logoUrl: "https://www.counciloflegaleducation.or.ke/wp-content/uploads/2021/06/cle-logo.png",
+      logoUrl: ACCREDITATION_LOGOS.cle,
       status: "Fully Accredited",
       year: "2012",
       scope: "Law School Programs",
@@ -45,7 +46,7 @@ export default function Accreditation() {
       abbreviation: "KASNEB",
       description: "Riara University holds Accreditation status from the Kenya Accountants and Secretaries National Examinations Board (KASNEB) as both a Training Centre as well as an Examinations Centre.",
       website: "https://www.kasneb.or.ke",
-      logoUrl: "https://www.kasneb.or.ke/images/kasneb-logo.png",
+      logoUrl: ACCREDITATION_LOGOS.kasneb,
       status: "Accredited Training & Examinations Centre",
       year: "2012",
       scope: "Professional Accounting Programs (CPA, CS, ATD)",
@@ -83,7 +84,7 @@ export default function Accreditation() {
         <section className="relative w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           {/* Background Image with Dark Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-            <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat opacity-20"></div>
+            <div className={`absolute inset-0 bg-[url('${PAGE_HERO_IMAGES.default}')] bg-cover bg-center bg-no-repeat opacity-20`}></div>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
           </div>
           

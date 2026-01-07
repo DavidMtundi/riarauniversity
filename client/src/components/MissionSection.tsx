@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/Container";
+import { PAGE_HERO_IMAGES } from "@/lib/images";
 
 export function MissionSection() {
   return (
     <section className="relative py-8 sm:py-10 md:py-12 bg-[var(--color-bg-primary)] overflow-hidden">
       {/* Parallax Background */}
-      <div className="absolute inset-0 bg-[url('https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg')] bg-cover bg-center bg-no-repeat bg-fixed opacity-10"></div>
+      <div className={`absolute inset-0 bg-[url('${PAGE_HERO_IMAGES.default}')] bg-cover bg-center bg-no-repeat bg-fixed opacity-10`}></div>
       
       {/* Content */}
       <Container className="relative z-10">
