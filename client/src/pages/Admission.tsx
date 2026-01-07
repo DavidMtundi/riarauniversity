@@ -57,8 +57,8 @@ export default function Admission() {
                 <div className="order-2 lg:order-1">
                   <div className="aspect-[4/3] rounded-lg overflow-hidden">
                     <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
-                      alt="Undergraduate students at Riara University" 
+                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/PARASOL%20GARDEN/VKCL8999.jpg" 
+                      alt="Students in the garden at Riara University" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -145,8 +145,8 @@ export default function Admission() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden">
                     <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg" 
-                      alt="Graduate students at Riara University" 
+                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6050.jpg" 
+                      alt="Robotics engineering at Riara University" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -165,8 +165,8 @@ export default function Admission() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden">
                     <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg" 
-                      alt="Special courses at Riara University" 
+                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/ROBOTICS/VKCL6042.jpg" 
+                      alt="Robotics development at Riara University" 
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -611,8 +611,8 @@ export default function Admission() {
                 <div>
                   <div className="aspect-[4/3] rounded-lg overflow-hidden">
                     <img 
-                      src="https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg" 
-                      alt="Other programs at Riara University" 
+                      src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6562.jpg" 
+                      alt="Library at Riara University" 
                       className="w-full h-full object-cover"
                     />
                   </div>

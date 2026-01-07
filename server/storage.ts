@@ -131,21 +131,21 @@ export class MemStorage implements IStorage {
         id: "undergraduate",
         title: "Undergraduate Education",
         description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-2.jpg",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6601.jpg",
         link: "/academics#undergraduate",
       },
       {
         id: "graduate",
         title: "Graduate Education",
         description: "Unsurpassed opportunities to participate in the advancement of entire fields of knowledge",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/fun-and-walk-vibe/VKCL5635.jpg",
         link: "/academics#graduate",
       },
       {
         id: "lifelong",
         title: "Lifelong Learning",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2023/12/Student-Life-4.jpg",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/IR/VKCL6671.jpg",
         link: "/academics#lifelong",
       }
     ];
@@ -190,7 +190,7 @@ export class MemStorage implements IStorage {
         name: "Prof. Wanja Tenambergen",
         title: "Deputy Vice Chancellor - Academic Affairs",
         quote: "Arts and culture enrich our academic environment, fostering creativity and critical thinking among our students.",
-        imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2024/01/Prof.-Wanja-MGT-Page.jpg",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/MEDIA%20%26%20JOURNALISM/VKCL6951.jpg",
         link: "#"
       }],
       ["law", {

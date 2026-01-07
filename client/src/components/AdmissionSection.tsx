@@ -28,44 +28,46 @@ export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
           </header>
         )}
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid="card-admission-explore">
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid="text-admission-explore-title">
-              Explore the possibilities of a Riara education
-            </h3>
-            <p className="text-base md:text-lg text-[var(--color-text-secondary)] mb-6 leading-relaxed" data-testid="text-admission-explore-description">
-              We look for distinctive students who exhibit an abundance of energy and curiosity in their classes, activities, projects, research, and lives.
-            </p>
-            <Button 
-              variant="outline"
-              className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
-              data-testid="button-admission-explore"
-              asChild
-            >
-              <a href="/admission">
-                Explore admission <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+          {/* Background Image */}
+          <div className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+            <img 
+              src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/PARASOL%20GARDEN/VKCL8999.jpg" 
+              alt="Students in the garden at Riara University" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 md:bg-gradient-to-r md:from-black/70 md:via-black/50 md:to-transparent"></div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-riara-red)]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
           </div>
 
-          {/* <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid="card-admission-financial">
-            <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid="text-admission-financial-title">
-              Riara meets the full financial need of every admitted undergrad
-            </h3>
-            <p className="text-base md:text-lg text-[var(--color-text-secondary)] mb-6 leading-relaxed" data-testid="text-admission-financial-description">
-              More than two-thirds of undergrads receive some form of financial assistance. Generally, tuition is covered for families with incomes below $150,000.
-            </p>
-            <Button 
-              variant="outline"
-              className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
-              data-testid="button-admission-financial"
-              asChild
-            >
-              <a href="/admission">
-                Learn about financial aid <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-          </div> */}
+          {/* Floating Content Card */}
+          <div className="absolute inset-0 flex items-center p-6 md:p-12 lg:p-16">
+            <div className="max-w-2xl">
+              <div className="bg-white/95 backdrop-blur-sm p-6 md:p-8 lg:p-10 rounded-xl shadow-2xl border-l-4 border-[var(--color-riara-red)] transform transition-all duration-300 hover:bg-white hover:shadow-3xl" data-testid="card-admission-explore">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold mb-4 md:mb-6 text-[var(--color-text-primary)]" data-testid="text-admission-explore-title">
+                  Explore the possibilities of a Riara education
+                </h3>
+                <p className="text-base md:text-lg lg:text-xl text-[var(--color-text-secondary)] mb-6 md:mb-8 leading-relaxed" data-testid="text-admission-explore-description">
+                  We look for distinctive students who exhibit an abundance of energy and curiosity in their classes, activities, projects, research, and lives.
+                </p>
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white text-base md:text-lg px-6 md:px-8 py-3 md:py-4 transition-all duration-200 shadow-md hover:shadow-lg"
+                  data-testid="button-admission-explore"
+                  asChild
+                >
+                  <a href="/admission">
+                    Explore admission <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
