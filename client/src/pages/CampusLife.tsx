@@ -48,7 +48,7 @@ export default function CampusLife() {
         {/* Full-Width Image 1 */}
         <section className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] overflow-hidden">
           <img 
-            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/PARASOL%20GARDEN/VKCL8999.jpg" 
+            src="https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/basketball-court/IMG_8802.jpg" 
             alt="Students at Riara University" 
             className="w-full h-full object-cover"
           />
