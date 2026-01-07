@@ -127,11 +127,19 @@ export function MobileMenu({ isOpen, onClose, onSearchOpen }: MobileMenuProps) {
             </a>
             <a 
               href="/about" 
-              className="p-6 text-center hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              className="p-6 text-center border-b border-[var(--color-border-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
               onClick={onClose}
               style={{ touchAction: 'manipulation' }}
             >
               About
+            </a>
+            <a 
+              href="/leadership" 
+              className="p-6 text-center hover:bg-[var(--color-bg-secondary)] transition-colors touch-manipulation"
+              onClick={onClose}
+              style={{ touchAction: 'manipulation' }}
+            >
+              Leadership
             </a>
           </div>
         </div>
