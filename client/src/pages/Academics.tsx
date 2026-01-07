@@ -426,6 +426,9 @@ export default function Academics() {
           <Container>
             {mainProgramPaths.length > 0 && (
               <div className="mb-16">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-10 md:mb-12 text-center">
+                  Programs Offered
+                </h2>
                 <EducationSection 
                   paths={mainProgramPaths} 
                   schools={schools} 
