@@ -22,6 +22,13 @@ export default function Academics() {
   const isLoading = educationLoading || schoolsLoading;
   const hasError = educationError || schoolsError;
 
+  // Get one path from each category for the main row
+  const undergraduatePath = educationPaths.find(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'));
+  const graduatePath = educationPaths.find(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate'));
+  const lifelongPath = educationPaths.find(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional'));
+  
+  const mainProgramPaths = [undergraduatePath, graduatePath, lifelongPath].filter(Boolean) as EducationPath[];
+
   // Scroll to education path section if hash is present
   useEffect(() => {
     if (!isLoading && location.includes('#')) {
@@ -414,17 +421,13 @@ export default function Academics() {
           </Container>
         </section>
 
-        {/* Education Paths Section with hash anchors */}
+        {/* Education Paths Section - All programs in one row */}
         <section className="py-16 md:py-20 bg-white">
           <Container>
-            {/* Undergraduate Programs */}
-            {educationPaths.filter(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate')).length > 0 && (
-              <div id="undergraduate" className="scroll-mt-24 mb-16">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
-                  Undergraduate Programs
-                </h2>
+            {mainProgramPaths.length > 0 && (
+              <div className="mb-16">
                 <EducationSection 
-                  paths={educationPaths.filter(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'))} 
+                  paths={mainProgramPaths} 
                   schools={schools} 
                   showHeader={false}
                   showSchools={false}
@@ -432,41 +435,13 @@ export default function Academics() {
               </div>
             )}
             
-            {/* Graduate Programs */}
-            {educationPaths.filter(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate')).length > 0 && (
-              <div id="graduate" className="scroll-mt-24 mb-16">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
-                  Graduate Programs
-                </h2>
-                <EducationSection 
-                  paths={educationPaths.filter(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate'))} 
-                  schools={schools} 
-                  showHeader={false}
-                  showSchools={false}
-                />
-              </div>
-            )}
-            
-            {/* Lifelong Learning / Professional Programs */}
-            {educationPaths.filter(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional')).length > 0 && (
-              <div id="lifelong" className="scroll-mt-24 mb-16">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">
-                  Professional & Lifelong Learning Programs
-                </h2>
-                <EducationSection 
-                  paths={educationPaths.filter(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional'))} 
-                  schools={schools} 
-                  showHeader={false}
-                  showSchools={false}
-                />
-              </div>
-            )}
-            
-            {/* Show all other paths that don't match categories */}
+            {/* Show all other paths that don't match the main categories */}
             {educationPaths.filter(p => {
               const id = p.id?.toLowerCase() || '';
               const title = p.title.toLowerCase();
-              return !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
+              const isMainPath = mainProgramPaths.some(mp => mp.id === p.id);
+              return !isMainPath && 
+                     !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
                      !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
             }).length > 0 && (
               <div className="mt-16 mb-16">
@@ -477,7 +452,9 @@ export default function Academics() {
                   paths={educationPaths.filter(p => {
                     const id = p.id?.toLowerCase() || '';
                     const title = p.title.toLowerCase();
-                    return !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
+                    const isMainPath = mainProgramPaths.some(mp => mp.id === p.id);
+                    return !isMainPath && 
+                           !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
                            !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
                   })} 
                   schools={schools} 
