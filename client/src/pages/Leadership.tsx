@@ -63,28 +63,26 @@ export default function Leadership() {
         {/* Leadership Content */}
         <section className="py-12 md:py-16 bg-[var(--color-bg-secondary)]">
           <Container>
-            <div className="max-w-7xl mx-auto">
-              {leadershipLoading ? (
-                <div className="text-center py-12">
-                  <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
-                  <p className="text-[var(--color-text-secondary)]">Loading Leadership...</p>
-                </div>
-              ) : leadershipError ? (
-                <div className="text-center py-12">
-                  <p className="text-[var(--color-text-secondary)] mb-4">Unable to load leadership information.</p>
-                  <RetryButton
-                    onClick={() => refetch()}
-                    data-testid="button-reload"
-                  />
-                </div>
-              ) : leadership.length > 0 ? (
-                <LeadershipSection members={leadership} showHeader={false} />
-              ) : (
-                <div className="text-center py-12">
-                  <p className="text-[var(--color-text-secondary)]">Leadership information coming soon.</p>
-                </div>
-              )}
-            </div>
+            {leadershipLoading ? (
+              <div className="text-center py-12">
+                <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[var(--color-riara-red)] border-r-transparent mb-4"></div>
+                <p className="text-[var(--color-text-secondary)]">Loading Leadership...</p>
+              </div>
+            ) : leadershipError ? (
+              <div className="text-center py-12">
+                <p className="text-[var(--color-text-secondary)] mb-4">Unable to load leadership information.</p>
+                <RetryButton
+                  onClick={() => refetch()}
+                  data-testid="button-reload"
+                />
+              </div>
+            ) : leadership.length > 0 ? (
+              <LeadershipSection members={leadership} showHeader={false} />
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-[var(--color-text-secondary)]">Leadership information coming soon.</p>
+              </div>
+            )}
           </Container>
         </section>
 
