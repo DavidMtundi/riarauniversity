@@ -66,15 +66,6 @@ export default function Founders() {
                         objectFit="cover"
                         containerClassName="rounded-lg bg-gradient-to-br from-primary/20 to-primary/5"
                       />
-                                  <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-[var(--color-riara-red)]/20 flex items-center justify-center border-4 border-[var(--color-riara-red)]/30">
-                                    <span class="text-4xl font-bold text-[var(--color-riara-red)]">DG</span>
-                                  </div>
-                                </div>
-                              </div>
-                            `;
-                          }
-                        }}
-                      />
                     </div>
                     <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-[var(--color-riara-red)]">
                       <h3 className="text-xl font-serif font-semibold text-[var(--color-text-primary)] mb-2">
