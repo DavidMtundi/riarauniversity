@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/Container";
 import { ImageContainer } from "@/components/ImageContainer";
+import { ExternalLink } from "lucide-react";
 
 export default function CampusLife() {
   return (
@@ -224,18 +225,32 @@ export default function CampusLife() {
                 <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-6">
                   The Riara University experience goes beyond academics, offering students a holistic and enriching personal development journey. This is achieved through a wide range of student-driven activities, including sports, recreation, community service, as well as diverse clubs and societies that cater to varied interests and talents.
                 </p>
-                <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed">
-                  Students are encouraged to explore their passions, build leadership skills and connect with peers by joining a club or society of their choice. Register for clubs and societies here:{" "}
-                  <a 
-                    href="https://forms.gle/ZARhGDRETmyXGYui7" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-[var(--color-riara-red)] font-semibold hover:text-[var(--color-riara-red-dark)] underline transition-colors"
-                  >
-                    Clubs Registration Link
-                  </a>
-                  .
+                <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-8">
+                  Students are encouraged to explore their passions, build leadership skills and connect with peers by joining a club or society of their choice.
                 </p>
+                
+                {/* Prominent Registration Call-to-Action */}
+                <div className="bg-gradient-to-r from-[var(--color-riara-red)] to-[var(--color-riara-red-dark)] p-6 md:p-8 rounded-lg shadow-lg">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl md:text-2xl font-serif font-bold text-white mb-2">
+                        Join a Club or Society
+                      </h3>
+                      <p className="text-white/90 text-base md:text-lg">
+                        Register now to become part of our vibrant student community
+                      </p>
+                    </div>
+                    <a 
+                      href="https://forms.gle/ZARhGDRETmyXGYui7" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-white text-[var(--color-riara-red)] font-semibold px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-white/90 transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-xl transform hover:scale-105 whitespace-nowrap"
+                    >
+                      Register Now
+                      <ExternalLink className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </Container>
