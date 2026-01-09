@@ -24,18 +24,20 @@ export default function Academics() {
   const isLoading = educationLoading || schoolsLoading;
   const hasError = educationError || schoolsError;
 
-  // Get one path from each category for the main row
-  const undergraduatePath = educationPaths.find(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'));
+  // Get one path from each category for the main row - in order: Graduate, Undergraduate, Professional Development, Diploma, Certificate
   const graduatePath = educationPaths.find(p => p.id === 'graduate' || p.title.toLowerCase().includes('graduate'));
+  const undergraduatePath = educationPaths.find(p => p.id === 'undergraduate' || p.title.toLowerCase().includes('undergraduate'));
   const lifelongPath = educationPaths.find(p => p.id === 'lifelong' || p.title.toLowerCase().includes('lifelong') || p.title.toLowerCase().includes('professional'));
+  const diplomaPath = educationPaths.find(p => p.id === 'diploma' || p.title.toLowerCase().includes('diploma'));
+  const certificatesPath = educationPaths.find(p => p.id === 'certificates' || p.title.toLowerCase().includes('certificate'));
   
-  const mainProgramPaths = [undergraduatePath, graduatePath, lifelongPath].filter(Boolean) as EducationPath[];
+  const mainProgramPaths = [graduatePath, undergraduatePath, lifelongPath, diplomaPath, certificatesPath].filter(Boolean) as EducationPath[];
 
   // Scroll to education path section if hash is present
   useEffect(() => {
     if (!isLoading && location.includes('#')) {
       const hash = location.split('#')[1];
-      if (hash && ['undergraduate', 'graduate', 'lifelong', 'academics'].includes(hash)) {
+      if (hash && ['certificates', 'diploma', 'undergraduate', 'graduate', 'lifelong', 'academics'].includes(hash)) {
         // Small delay to ensure content is rendered
         setTimeout(() => {
           const element = document.getElementById(hash);
@@ -217,7 +219,7 @@ export default function Academics() {
                     School of Business
                   </h3>
                   <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
-                    We nurture innovative business minds through lifelong learning, innovation, and ethical leadership. Our programs cover management, finance, marketing, accounting, human resources, and procurement.
+                    We nurture innovative business minds through Professional Development, innovation, and ethical leadership. Our programs cover management, finance, marketing, accounting, human resources, and procurement.
                   </p>
                   <p className="text-base text-[var(--color-text-secondary)] leading-relaxed mb-4">
                     We've organized blood donation drives with Nairobi Hospital and Kenyatta National Hospital, and support children's homes through student-led initiatives. Our students have won competitions funded by the British Embassy and Open University through AESU.
@@ -447,8 +449,8 @@ export default function Academics() {
               const title = p.title.toLowerCase();
               const isMainPath = mainProgramPaths.some(mp => mp.id === p.id);
               return !isMainPath && 
-                     !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
-                     !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
+                     !id.includes('certificates') && !id.includes('diploma') && !id.includes('undergraduate') && !id.includes('graduate') && !id.includes('lifelong') && 
+                     !title.includes('certificate') && !title.includes('diploma') && !title.includes('undergraduate') && !title.includes('graduate') && !title.includes('lifelong') && !title.includes('professional');
             }).length > 0 && (
               <div className="mt-16 mb-16">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-8 text-center">

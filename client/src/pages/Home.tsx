@@ -76,51 +76,89 @@ export default function Home() {
 
   const [isHeroInView, setIsHeroInView] = useState(true);
   const heroRef = useRef<HTMLElement | null>(null);
+  const previousValueRef = useRef<boolean>(true);
+  const resizeFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
     }
 
-    let lastKnownScrollY = window.scrollY;
-    let ticking = false;
+    const heroElement = heroRef.current;
+    if (!heroElement) {
+      return;
+    }
 
-    const handleScroll = () => {
-      lastKnownScrollY = window.scrollY;
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const heroElement = heroRef.current;
-          if (heroElement) {
-            const heroHeight = heroElement.offsetHeight;
-            const headerHeight = 120; // total combined header height
-            const isVisible = lastKnownScrollY < Math.max(heroHeight - headerHeight, 0);
-            setIsHeroInView(isVisible);
+    // Use IntersectionObserver for better performance and stability
+    // This prevents flickering by only updating when intersection actually changes
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry) {
+          // Consider hero "in view" if any significant portion is visible above the header
+          // Using intersectionRatio > 0.15 provides a better threshold to prevent rapid toggling
+          // This ensures the transition happens when a meaningful portion of hero is visible
+          const isVisible = entry.intersectionRatio > 0.15;
+          
+          // Only update state if the value actually changed to prevent unnecessary re-renders
+          if (isVisible !== previousValueRef.current) {
+            previousValueRef.current = isVisible;
+            // Use requestAnimationFrame to ensure state update happens at the right time
+            // This helps prevent visual glitches during rapid scrolling
+            requestAnimationFrame(() => {
+              setIsHeroInView(isVisible);
+            });
           }
-          ticking = false;
-        });
-        ticking = true;
+        }
+      },
+      {
+        threshold: [0, 0.1, 0.15, 0.2, 0.3],
+        rootMargin: '-120px 0px 0px 0px' // Account for header height (120px)
       }
+    );
+
+    observer.observe(heroElement);
+
+    // Check initial state after DOM is ready
+    // This handles edge cases like page load with scroll position or dynamic content
+    const checkInitialState = () => {
+      // Use requestAnimationFrame to ensure layout is complete
+      requestAnimationFrame(() => {
+        const rect = heroElement.getBoundingClientRect();
+        const isVisible = rect.top > -120 && rect.bottom > 120;
+        if (isVisible !== previousValueRef.current) {
+          previousValueRef.current = isVisible;
+          setIsHeroInView(isVisible);
+        }
+      });
     };
 
+    // Initial check - use double RAF to ensure layout is complete
+    // This is important for SSR/hydration and dynamic content loading
+    requestAnimationFrame(() => {
+      requestAnimationFrame(checkInitialState);
+    });
+
+    // Debounced resize handler to prevent layout thrashing
+    // Resize events can fire very frequently, so we throttle using requestAnimationFrame
     const handleResize = () => {
-      const heroElement = heroRef.current;
-      if (!heroElement) {
-        return;
+      if (resizeFrameRef.current) {
+        cancelAnimationFrame(resizeFrameRef.current);
       }
-      const heroHeight = heroElement.offsetHeight;
-      const headerHeight = 120;
-      const isVisible = window.scrollY < Math.max(heroHeight - headerHeight, 0);
-      setIsHeroInView(isVisible);
+      resizeFrameRef.current = requestAnimationFrame(() => {
+        checkInitialState();
+        resizeFrameRef.current = null;
+      });
     };
 
-    handleResize();
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
+      if (resizeFrameRef.current) {
+        cancelAnimationFrame(resizeFrameRef.current);
+      }
     };
   }, []);
 
@@ -186,7 +224,7 @@ export default function Home() {
           <ParallaxSection zIndex={2} stickyTop="0">
             <MissionSection />
 
-            {/* Education Section - Academics */}
+            {/* Education Section - Programs */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <EducationSection paths={educationPaths} schools={schools} />
             </Suspense>

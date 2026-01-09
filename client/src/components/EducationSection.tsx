@@ -13,12 +13,35 @@ interface EducationSectionProps {
 export function EducationSection({ paths, schools, showHeader = true, showSchools = true }: EducationSectionProps) {
   const icons = [GraduationCap, BookOpen, Lightbulb];
 
+  // Sort paths to ensure correct display order: Graduate, Undergraduate, Professional Development, Diploma, Certificate
+  const sortedPaths = [...paths].sort((a, b) => {
+    const order = ['graduate', 'undergraduate', 'lifelong', 'diploma', 'certificates'];
+    const getIndex = (path: typeof paths[0]) => {
+      // First try exact id match
+      let index = order.indexOf(path.id);
+      if (index !== -1) return index;
+      
+      // Then try title matching
+      const titleLower = path.title.toLowerCase();
+      if (titleLower.includes('graduate')) return 0;
+      if (titleLower.includes('undergraduate')) return 1;
+      if (titleLower.includes('professional') || titleLower.includes('lifelong')) return 2;
+      if (titleLower.includes('diploma')) return 3;
+      if (titleLower.includes('certificate')) return 4;
+      
+      // Not found, put at end
+      return 999;
+    };
+    
+    return getIndex(a) - getIndex(b);
+  });
+
   const content = (
     <>
         {showHeader && (
           <header className="text-center mb-10 md:mb-14">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-education-heading">
-              Academics
+              Programs
             </h2>
             <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-education-subheading">
               Discover your path to academic excellence and intellectual growth
@@ -27,7 +50,7 @@ export function EducationSection({ paths, schools, showHeader = true, showSchool
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
-          {paths.map((path, index) => {
+          {sortedPaths.map((path, index) => {
             const Icon = icons[index % icons.length];
             return (
               <div key={path.id} data-testid={`card-education-${path.id}`}>
@@ -116,7 +139,7 @@ export function EducationSection({ paths, schools, showHeader = true, showSchool
                 asChild
               >
                 <a href="/academics" className="!text-white">
-                  More about academics <ArrowRight className="h-4 w-4 !text-white" />
+                  More about programs <ArrowRight className="h-4 w-4 !text-white" />
                 </a>
               </Button>
             </div>

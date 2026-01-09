@@ -128,13 +128,6 @@ export class MemStorage implements IStorage {
 
     this.educationPaths = [
       {
-        id: "undergraduate",
-        title: "Undergraduate Education",
-        description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
-        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6601.jpg",
-        link: "/academics#undergraduate",
-      },
-      {
         id: "graduate",
         title: "Graduate Programs",
         description: "Unsurpassed opportunities to participate in the advancement of entire fields of knowledge",
@@ -142,11 +135,32 @@ export class MemStorage implements IStorage {
         link: "/academics#graduate",
       },
       {
+        id: "undergraduate",
+        title: "Undergraduate Education",
+        description: "Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6601.jpg",
+        link: "/academics#undergraduate",
+      },
+      {
         id: "lifelong",
-        title: "Lifelong Learning",
+        title: "Professional Development",
         description: "Continuing adult education, executive and professional programs, and programs for K-12 students",
         imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/IR/VKCL6671.jpg",
         link: "/academics#lifelong",
+      },
+      {
+        id: "diploma",
+        title: "Diploma",
+        description: "Comprehensive diploma programs providing practical skills and foundational knowledge for career advancement",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6601.jpg",
+        link: "/academics#diploma",
+      },
+      {
+        id: "certificates",
+        title: "Certificates",
+        description: "Short-term certificate programs designed to enhance specific skills and knowledge in various fields",
+        imageUrl: "https://pub-9dae0f05d1fc4e96997fa47a670a3841.r2.dev/LIBRARY/VKCL6601.jpg",
+        link: "/academics#certificates",
       }
     ];
 
