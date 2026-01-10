@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import { useLocation } from "wouter";
 import type { Event } from "@shared/schema";
 import { Container } from "@/components/Container";
@@ -17,10 +17,10 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
   const [, setLocation] = useLocation();
   
   return (
-    <section className="py-20 bg-white">
+    <section className="py-14 sm:py-16 md:py-24 bg-white">
       <Container>
         {showHeader && (
-          <header className="text-center mb-10 md:mb-14">
+          <header className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)] mb-4" data-testid="text-events-heading">Upcoming Events</h2>
             <p className="mt-3 text-base sm:text-lg md:text-xl font-semibold text-[var(--color-text-secondary)]" data-testid="text-events-description">
               Discover lectures, performances, exhibitions, and community gatherings at Riara.
@@ -55,14 +55,10 @@ export function EventsSection({ events, showHeader = true, ctaLabel = "More even
                         }
                       }}
                     />
-                    <div className="fallback-gradient absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 hidden items-center justify-center">
-                      <Calendar className="h-16 w-16 text-primary/40" />
-                    </div>
+                    <div className="fallback-gradient absolute inset-0 bg-gradient-to-br from-[var(--color-bg-secondary)] to-[var(--color-bg-secondary)]/80 hidden"></div>
                   </>
                 ) : (
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                    <Calendar className="h-16 w-16 text-primary/40" />
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-bg-secondary)] to-[var(--color-bg-secondary)]/80"></div>
                 )}
                 <div className="absolute top-4 left-4">
                   <div className="bg-[var(--color-riara-red)] text-white px-3 py-2 text-center rounded shadow-lg">

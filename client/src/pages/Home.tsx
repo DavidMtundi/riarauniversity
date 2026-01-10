@@ -14,11 +14,11 @@ const NewsSection = lazy(() => import("@/components/NewsSection").then(m => ({ d
 const EducationSection = lazy(() => import("@/components/EducationSection").then(m => ({ default: m.EducationSection })));
 const ResearchSection = lazy(() => import("@/components/ResearchSection").then(m => ({ default: m.ResearchSection })));
 const CampusLifeSection = lazy(() => import("@/components/CampusLifeSection").then(m => ({ default: m.CampusLifeSection })));
-const ArtsSection = lazy(() => import("@/components/ArtsSection").then(m => ({ default: m.ArtsSection })));
 const EventsSection = lazy(() => import("@/components/EventsSection").then(m => ({ default: m.EventsSection })));
 const HealthcareSection = lazy(() => import("@/components/HealthcareSection").then(m => ({ default: m.HealthcareSection })));
 const AthleticsSection = lazy(() => import("@/components/AthleticsSection").then(m => ({ default: m.AthleticsSection })));
 const AdmissionSection = lazy(() => import("@/components/AdmissionSection").then(m => ({ default: m.AdmissionSection })));
+const RegistrySection = lazy(() => import("@/components/RegistrySection").then(m => ({ default: m.RegistrySection })));
 const PartnersCarousel = lazy(() => import("@/components/PartnersCarousel").then(m => ({ default: m.PartnersCarousel })));
 
 export default function Home() {
@@ -46,16 +46,8 @@ export default function Home() {
     queryKey: ['/api/profiles/campus']
   });
 
-  const { data: artsProfile, isLoading: artsProfileLoading, error: artsProfileError } = useQuery<Profile>({
-    queryKey: ['/api/profiles/arts']
-  });
-
   const { data: campusLifeSections = [], isLoading: campusLifeLoading, error: campusLifeError } = useQuery<ContentSection[]>({
     queryKey: ['/api/campus-life']
-  });
-
-  const { data: artsSections = [], isLoading: artsLoading, error: artsError } = useQuery<ContentSection[]>({
-    queryKey: ['/api/arts']
   });
 
   const { data: events = [], isLoading: eventsLoading, error: eventsError } = useQuery<Event[]>({
@@ -77,97 +69,74 @@ export default function Home() {
   const [isHeroInView, setIsHeroInView] = useState(true);
   const heroRef = useRef<HTMLElement | null>(null);
   const previousValueRef = useRef<boolean>(true);
-  const resizeFrameRef = useRef<number | null>(null);
+  const scrollFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
     }
 
-    const heroElement = heroRef.current;
-    if (!heroElement) {
-      return;
-    }
-
-    // Use IntersectionObserver for better performance and stability
-    // This prevents flickering by only updating when intersection actually changes
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry) {
-          // Consider hero "in view" if any significant portion is visible above the header
-          // Using intersectionRatio > 0.15 provides a better threshold to prevent rapid toggling
-          // This ensures the transition happens when a meaningful portion of hero is visible
-          const isVisible = entry.intersectionRatio > 0.15;
-          
-          // Only update state if the value actually changed to prevent unnecessary re-renders
-          if (isVisible !== previousValueRef.current) {
-            previousValueRef.current = isVisible;
-            // Use requestAnimationFrame to ensure state update happens at the right time
-            // This helps prevent visual glitches during rapid scrolling
-            requestAnimationFrame(() => {
-              setIsHeroInView(isVisible);
-            });
-          }
-        }
-      },
-      {
-        threshold: [0, 0.1, 0.15, 0.2, 0.3],
-        rootMargin: '-120px 0px 0px 0px' // Account for header height (120px)
+    // Function to check if hero section is visible
+    // Check scroll position: when scrolled past approximately one viewport, switch to default header
+    // This matches behavior on other pages where header is always "default" mode (purple top, white bottom)
+    const checkHeroVisibility = () => {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const viewportHeight = window.innerHeight;
+      
+      // Hero section is min-h-screen (full viewport height) and sticky at top:0 (zIndex 1)
+      // Mission section is sticky at top:0 (zIndex 2) and covers Hero when it reaches top
+      // When scrolling to Programs section (EducationSection), we've scrolled past Hero
+      // Use threshold: when scrollY > 60% of viewport OR minimum 400px, switch to default header
+      // This ensures header updates when scrolling to Programs section, as requested
+      const scrollThreshold = Math.max(viewportHeight * 0.6, 400);
+      
+      // Hero is visible if we haven't scrolled past the threshold
+      // When scrolled past (scrollY >= threshold), Mission section covers Hero, switch to default header
+      const isVisible = scrollY < scrollThreshold;
+      
+      // Only update if value changed to prevent unnecessary re-renders
+      if (isVisible !== previousValueRef.current) {
+        previousValueRef.current = isVisible;
+        setIsHeroInView(isVisible);
       }
-    );
+    };
 
-    observer.observe(heroElement);
-
-    // Check initial state after DOM is ready
-    // This handles edge cases like page load with scroll position or dynamic content
-    const checkInitialState = () => {
-      // Use requestAnimationFrame to ensure layout is complete
-      requestAnimationFrame(() => {
-        const rect = heroElement.getBoundingClientRect();
-        const isVisible = rect.top > -120 && rect.bottom > 120;
-        if (isVisible !== previousValueRef.current) {
-          previousValueRef.current = isVisible;
-          setIsHeroInView(isVisible);
-        }
+    // Scroll handler - throttled with requestAnimationFrame
+    const handleScroll = () => {
+      if (scrollFrameRef.current) {
+        cancelAnimationFrame(scrollFrameRef.current);
+      }
+      
+      scrollFrameRef.current = requestAnimationFrame(() => {
+        checkHeroVisibility();
+        scrollFrameRef.current = null;
       });
     };
 
-    // Initial check - use double RAF to ensure layout is complete
-    // This is important for SSR/hydration and dynamic content loading
+    // Initial check after DOM is ready
     requestAnimationFrame(() => {
-      requestAnimationFrame(checkInitialState);
+      requestAnimationFrame(checkHeroVisibility);
     });
-
-    // Debounced resize handler to prevent layout thrashing
-    // Resize events can fire very frequently, so we throttle using requestAnimationFrame
-    const handleResize = () => {
-      if (resizeFrameRef.current) {
-        cancelAnimationFrame(resizeFrameRef.current);
-      }
-      resizeFrameRef.current = requestAnimationFrame(() => {
-        checkInitialState();
-        resizeFrameRef.current = null;
-      });
-    };
-
-    window.addEventListener("resize", handleResize, { passive: true });
+    
+    // Add scroll and resize listeners
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", checkHeroVisibility, { passive: true });
 
     return () => {
-      observer.disconnect();
-      window.removeEventListener("resize", handleResize);
-      if (resizeFrameRef.current) {
-        cancelAnimationFrame(resizeFrameRef.current);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", checkHeroVisibility);
+      if (scrollFrameRef.current) {
+        cancelAnimationFrame(scrollFrameRef.current);
       }
     };
   }, []);
 
   const isLoading = newsLoading || educationLoading || schoolsLoading || statsLoading ||
-                    researchProfileLoading || campusProfileLoading || artsProfileLoading ||
-                    campusLifeLoading || artsLoading || eventsLoading || healthcareLoading || athleticsLoading || partnersLoading;
+                    researchProfileLoading || campusProfileLoading ||
+                    campusLifeLoading || eventsLoading || healthcareLoading || athleticsLoading || partnersLoading;
   const hasError = newsError || educationError || schoolsError || statsError || 
-                   researchProfileError || campusProfileError || artsProfileError ||
-                   campusLifeError || artsError || eventsError || healthcareError || athleticsError || partnersError;
+                   researchProfileError || campusProfileError ||
+                   campusLifeError || eventsError || healthcareError || athleticsError || partnersError;
 
   if (isLoading) {
     return (
@@ -225,51 +194,61 @@ export default function Home() {
             <MissionSection />
 
             {/* Education Section - Programs */}
+            {/* Core offering: What we teach - placed early as primary value proposition */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <EducationSection paths={educationPaths} schools={schools} />
             </Suspense>
 
-            {/* Research Section */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <ResearchSection stats={researchStats} profile={researchProfile} />
-            </Suspense>
-
-            {/* Student Life */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
-            </Suspense>
-
-            {/* Arts & Culture */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <ArtsSection sections={artsSections} profile={artsProfile} />
-            </Suspense>
-
-            {/* Athletics */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <AthleticsSection sections={athleticsSections} />
-            </Suspense>
-
-            {/* Events */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <EventsSection events={events} />
-            </Suspense>
-
-            {/* Healthcare */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <HealthcareSection sections={healthcareSections} />
-            </Suspense>
-
-            {/* News & Stories */}
-            <Suspense fallback={<div className="min-h-[400px]" />}>
-              <NewsSection articles={newsArticles} />
-            </Suspense>
-
-            {/* Admission */}
+            {/* Admission Section */}
+            {/* Natural next step after seeing programs - critical conversion point */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <AdmissionSection />
             </Suspense>
 
+            {/* Student Life */}
+            {/* What it's like to be here - important for decision-making after admission interest */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <CampusLifeSection sections={campusLifeSections} profile={campusProfile} />
+            </Suspense>
+
+            {/* Research Section */}
+            {/* Academic excellence and credibility - builds trust */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <ResearchSection stats={researchStats} profile={researchProfile} />
+            </Suspense>
+
+            {/* Events Section */}
+            {/* Engagement and community - shows active campus life */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <EventsSection events={events} />
+            </Suspense>
+
+            {/* News & Stories */}
+            {/* Latest updates and stories - keeps content fresh and engaging */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <NewsSection articles={newsArticles} />
+            </Suspense>
+
+            {/* Athletics */}
+            {/* Part of student experience - complements student life */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <AthleticsSection sections={athleticsSections} />
+            </Suspense>
+
+            {/* Healthcare */}
+            {/* Support services - important but secondary to core offerings */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <HealthcareSection sections={healthcareSections} />
+            </Suspense>
+
+            {/* Registry */}
+            {/* Administrative support - placed after admission as supporting resource */}
+            <Suspense fallback={<div className="min-h-[400px]" />}>
+              <RegistrySection />
+            </Suspense>
+
             {/* Partners */}
+            {/* Trust signals and credibility - good placement near end before footer */}
             <Suspense fallback={<div className="min-h-[400px]" />}>
               <PartnersCarousel categories={partnerCategories} />
             </Suspense>

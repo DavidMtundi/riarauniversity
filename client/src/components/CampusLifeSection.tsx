@@ -13,7 +13,7 @@ interface CampusLifeSectionProps {
 export function CampusLifeSection({ sections, profile, showHeader = true }: CampusLifeSectionProps) {
 
   return (
-    <section id="campus-life" className="py-16 md:py-20 bg-white">
+    <section id="campus-life" className="py-14 sm:py-16 md:py-24 bg-white">
       <Container>
         {showHeader && (
           <header className="text-center mb-12 md:mb-16">
@@ -94,7 +94,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
           {sections.map((section) => {
             return (
-              <div key={section.id} className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]" data-testid={`card-campus-${section.id}`}>
+              <div key={section.id} className="group bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1" data-testid={`card-campus-${section.id}`}>
                 <h3 className="text-xl md:text-2xl font-serif font-bold mb-4 text-[var(--color-text-primary)]" data-testid={`text-campus-title-${section.id}`}>{section.title}</h3>
                 <p className="text-base md:text-lg text-[var(--color-text-secondary)] mb-6 leading-relaxed" data-testid={`text-campus-description-${section.id}`}>
                   {section.description}
@@ -102,7 +102,7 @@ export function CampusLifeSection({ sections, profile, showHeader = true }: Camp
                 {section.link && section.link !== "#" && (
                   <Button
                     variant="outline"
-                    className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
+                    className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white transition-all duration-200"
                     data-testid={`button-campus-link-${section.id}`}
                     asChild
                   >

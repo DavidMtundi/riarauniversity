@@ -13,128 +13,179 @@ interface ResearchSectionProps {
 
 export function ResearchSection({ stats, profile, showHeader = true }: ResearchSectionProps) {
   return (
-    <section id="research" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+    <section id="research" className="py-14 sm:py-16 md:py-24 bg-[var(--color-bg-secondary)]">
       <Container>
         {showHeader && (
           <AnimatedSection direction="fade-up">
-            <header className="text-center mb-10 md:mb-14">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-3" data-testid="text-research-heading">
-              Research
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed max-w-3xl mx-auto" data-testid="text-research-subheading">
-              Research isn't just something we do—it's who we are. We connect labs and classrooms to real-world impact for Kenya and beyond.
-            </p>
-          </header>
+            <header className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-research-heading">
+                Research That Matters
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed max-w-3xl mx-auto" data-testid="text-research-subheading">
+                Every day, our faculty and students ask tough questions, challenge assumptions, and create knowledge that transforms communities across Kenya and beyond.
+              </p>
+            </header>
           </AnimatedSection>
         )}
 
-        {/* Intro from Research page (document content) */}
+        {/* Story Section - More Human Touch */}
         <AnimatedSection direction="fade-up" delay={100}>
-          <div className="bg-white p-6 md:p-8 border-l-4 border-[var(--color-riara-red)] rounded-lg mb-12 md:mb-16">
-          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-4">
-            At Riara University, research isn't just something we do—it's who we are. Every day, our faculty and students are asking tough questions, challenging assumptions, and working on research that actually matters. Whether it's understanding conflict patterns in East Africa, developing new technologies, or exploring solutions to real-world problems, our research makes a difference.
-          </p>
-          <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">
-            We're not just publishing papers for the sake of it. We're building knowledge that helps communities, informs policy, and creates lasting change. That's what drives us.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-4 text-sm md:text-base text-[var(--color-text-secondary)]">
-            <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Solves Real Problems</p>
-              <p>Policy-shaping insights, community-focused research that tackles challenges people face every day.</p>
-            </div>
-            <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Pushes Boundaries</p>
-              <p>Interdisciplinary teams linking law, business, tech, and international relations to create innovative solutions.</p>
-            </div>
-            <div className="bg-[var(--color-bg-secondary)] p-4 rounded-lg">
-              <p className="font-semibold text-[var(--color-text-primary)] mb-1">Stays Human</p>
-              <p>Research that improves lives—practical, empathetic, impact-driven work that makes a real difference.</p>
+          <div className="relative overflow-hidden bg-gradient-to-br from-white via-[var(--color-bg-secondary)] to-white p-8 md:p-12 rounded-2xl mb-12 md:mb-16 border border-[var(--color-border-secondary)] shadow-lg">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            
+            <div className="relative z-10">
+              <div className="max-w-4xl mx-auto text-center mb-8">
+                <p className="text-lg md:text-xl lg:text-2xl text-[var(--color-text-primary)] leading-relaxed font-medium mb-6">
+                  When we talk about research at Riara, we're talking about real people solving real problems. Our researchers aren't just publishing papers—they're transforming lives, shaping policies, and building a better future for Kenya and the world.
+                </p>
+                <p className="text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
+                  From understanding conflict patterns in East Africa to developing innovative technologies and exploring solutions to everyday challenges, every research project starts with a question: "How can we make a difference?"
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
+
+        {/* Value Propositions with Icons */}
+        <AnimatedSection direction="fade-up" delay={150}>
+          <div className="mb-12 md:mb-16">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-8 md:mb-10 text-[var(--color-text-primary)]">
+              What Makes Our Research Different
+            </h3>
+            <div className="grid sm:grid-cols-3 gap-6 md:gap-8">
+              <div className="group bg-white p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <h4 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">Solves Real Problems</h4>
+                <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
+                  Policy-shaping insights and community-focused research that tackles the challenges people face every day. We don't just study problems—we solve them.
+                </p>
+              </div>
+              
+              <div className="group bg-white p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <h4 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">Pushes Boundaries</h4>
+                <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
+                  Interdisciplinary teams connecting law, business, technology, and international relations to create innovative solutions that wouldn't be possible in isolation.
+                </p>
+              </div>
+              
+              <div className="group bg-white p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <h4 className="text-xl md:text-2xl font-serif font-bold mb-3 text-[var(--color-text-primary)]">Stays Human</h4>
+                <p className="text-base text-[var(--color-text-secondary)] leading-relaxed">
+                  Research that improves lives—practical, empathetic, and impact-driven work that makes a real difference in communities and beyond.
+                </p>
+              </div>
+            </div>
+          </div>
         </AnimatedSection>
 
         {profile && (
           <AnimatedSection direction="fade-up" delay={200}>
-          <div className="mb-16 md:mb-20" data-testid="card-research-profile">
-            <div className="bg-[var(--color-bg-secondary)] p-6 md:p-8 border-l-4 border-[var(--color-riara-red)]">
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-                {/* Image - smaller, positioned on the left */}
-                <div className="flex-shrink-0 w-full md:w-48 lg:w-56">
-                  {profile.imageUrl ? (
-                    <img 
-                      src={profile.imageUrl} 
-                      alt={profile.name}
-                      className="w-full aspect-square rounded-lg object-cover shadow-md"
-                    />
-                  ) : (
-                    <div className="w-full aspect-square bg-white border-2 border-[var(--color-border-secondary)] rounded-lg flex items-center justify-center">
-                      <div className="text-center text-[var(--color-text-secondary)]">
-                        <svg className="w-12 h-12 mx-auto mb-2 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <p className="text-xs font-medium">Image Placeholder</p>
-                      </div>
+            <div className="mb-16 md:mb-20" data-testid="card-research-profile">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white to-[var(--color-bg-secondary)] rounded-2xl shadow-xl border border-[var(--color-border-secondary)]">
+                {/* Background decorative elements */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-riara-red)]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                
+                <div className="relative z-10 p-8 md:p-12">
+                  <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
+                    {/* Image with enhanced styling */}
+                    <div className="flex-shrink-0 w-full lg:w-64 xl:w-72">
+                      {profile.imageUrl ? (
+                        <div className="relative group">
+                          <div className="absolute inset-0 bg-[var(--color-riara-red)]/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                          <img 
+                            src={profile.imageUrl} 
+                            alt={profile.name}
+                            className="relative w-full aspect-square rounded-2xl object-cover shadow-2xl ring-4 ring-white/50 group-hover:ring-[var(--color-riara-red)]/30 transition-all duration-300"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-full aspect-square bg-gradient-to-br from-[var(--color-bg-secondary)] to-white border-2 border-[var(--color-border-secondary)] rounded-2xl shadow-lg"></div>
+                      )}
                     </div>
-                  )}
-                </div>
-                {/* Content - takes remaining space */}
-                <div className="flex-1 flex flex-col justify-center">
-                  <p className="text-xl md:text-2xl font-serif italic mb-6 text-[var(--color-text-primary)] leading-relaxed" data-testid="text-profile-quote">
-                    "{profile.quote}"
-                  </p>
-                  <div>
-                    <p className="font-bold text-lg md:text-xl mb-1 text-[var(--color-text-primary)]" data-testid="text-profile-name">{profile.name}</p>
-                    <p className="text-[var(--color-text-secondary)] mb-6" data-testid="text-profile-title">{profile.title}</p>
-                    <Button
-                      variant="outline"
-                      className="border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white"
-                      data-testid="button-profile-read-more"
-                      asChild
-                    >
-                      <a href="/research">
-                        Read more <ArrowRight className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
+                    
+                    {/* Content with better typography */}
+                    <div className="flex-1 flex flex-col justify-center text-center lg:text-left">
+                      <div className="mb-6">
+                        <div className="inline-flex items-center gap-2 mb-4 text-[var(--color-riara-red)]">
+                          <div className="h-1 w-8 bg-[var(--color-riara-red)]"></div>
+                          <span className="text-sm font-semibold uppercase tracking-wide">Leadership Insight</span>
+                        </div>
+                        <blockquote className="text-2xl md:text-3xl lg:text-4xl font-serif italic mb-6 text-[var(--color-text-primary)] leading-tight" data-testid="text-profile-quote">
+                          "{profile.quote}"
+                        </blockquote>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <p className="font-bold text-xl md:text-2xl mb-2 text-[var(--color-text-primary)]" data-testid="text-profile-name">
+                          {profile.name}
+                        </p>
+                        <p className="text-base md:text-lg text-[var(--color-text-secondary)] font-medium" data-testid="text-profile-title">
+                          {profile.title}
+                        </p>
+                      </div>
+                      
+                      <Button
+                        variant="outline"
+                        className="self-center lg:self-start border-2 border-[var(--color-riara-red)] text-[var(--color-riara-red)] hover:bg-[var(--color-riara-red)] hover:text-white transition-all duration-200 px-6 py-2.5 font-semibold"
+                        data-testid="button-profile-read-more"
+                        asChild
+                      >
+                        <a href="/research">
+                          Learn more about our research <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </AnimatedSection>
         )}
 
-        <AnimatedSection direction="fade-up" delay={300}>
+        {/* Research Impact Stats - Enhanced */}
+        <AnimatedSection direction="fade-up" delay={250}>
           <div className="mb-12 md:mb-16">
-            <h3 className="text-2xl md:text-3xl font-serif font-bold text-center mb-10 md:mb-12 text-[var(--color-text-primary)]" data-testid="text-research-impact-heading">Research Impact</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+            <div className="text-center mb-10 md:mb-12">
+              <h3 className="text-2xl md:text-3xl font-serif font-bold text-[var(--color-text-primary)] mb-4" data-testid="text-research-impact-heading">
+                Our Research Impact
+              </h3>
+              <p className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+                Numbers that tell a story of innovation, transformation, and real-world change
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {stats.map((stat, index) => {
-                // Extract number from stat.value (could be "50+" or "100" or "1,000")
+                // Extract number from stat.value (could be "50+" or "100" or "1,000" or "kshs 94B")
                 const numericValue = parseInt(stat.value.replace(/[^0-9]/g, '')) || 0;
                 const hasPlus = stat.value.includes('+');
-                const hasComma = stat.value.includes(',');
+                const isCurrency = stat.value.toLowerCase().includes('kshs') || stat.value.includes('B') || stat.value.includes('T');
                 
                 // If value is not numeric or is 0, just display the original value
-                if (numericValue === 0 || !numericValue) {
+                if (numericValue === 0 || !numericValue || isCurrency) {
                   return (
-                    <AnimatedSection key={stat.id} direction="fade-up" delay={index * 100}>
-                      <div className="text-center" data-testid={`stat-${stat.id}`}>
-                        <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>
+                    <AnimatedSection key={stat.id} direction="fade-up" delay={index * 50}>
+                      <div className="group bg-white p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-center" data-testid={`stat-${stat.id}`}>
+                        <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3 leading-none" data-testid={`text-stat-value-${stat.id}`}>
                           {stat.value}
                         </p>
-                        <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed" data-testid={`text-stat-label-${stat.id}`}>{stat.label}</p>
+                        <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed font-medium" data-testid={`text-stat-label-${stat.id}`}>
+                          {stat.label}
+                        </p>
                       </div>
                     </AnimatedSection>
                   );
                 }
                 
                 return (
-                  <AnimatedSection key={stat.id} direction="fade-up" delay={index * 100}>
-                    <div className="text-center" data-testid={`stat-${stat.id}`}>
-                      <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3" data-testid={`text-stat-value-${stat.id}`}>
+                  <AnimatedSection key={stat.id} direction="fade-up" delay={index * 50}>
+                    <div className="group bg-white p-6 md:p-8 rounded-xl border-2 border-[var(--color-border-secondary)] hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-center" data-testid={`stat-${stat.id}`}>
+                      <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-riara-red)] mb-3 leading-none" data-testid={`text-stat-value-${stat.id}`}>
                         <CountUp end={numericValue} suffix={hasPlus ? '+' : ''} />
                       </p>
-                      <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed" data-testid={`text-stat-label-${stat.id}`}>{stat.label}</p>
+                      <p className="text-sm md:text-base text-[var(--color-text-secondary)] leading-relaxed font-medium" data-testid={`text-stat-label-${stat.id}`}>
+                        {stat.label}
+                      </p>
                     </div>
                   </AnimatedSection>
                 );
@@ -143,18 +194,24 @@ export function ResearchSection({ stats, profile, showHeader = true }: ResearchS
           </div>
         </AnimatedSection>
 
-        <div className="text-center">
-          <Button
-            variant="outline"
-            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold border-[var(--color-riara-red)] bg-[var(--color-riara-red)] !text-white hover:bg-[var(--color-riara-red-dark)] transition-all duration-200"
-            data-testid="button-more-research"
-            asChild
-          >
-            <a href="/research" className="!text-white">
-              <span className="!text-white">More about research</span> <ArrowRight className="h-4 w-4 !text-white" />
-            </a>
-          </Button>
-        </div>
+        <AnimatedSection direction="fade-up" delay={350}>
+          <div className="text-center bg-gradient-to-br from-[var(--color-riara-red)]/10 via-[var(--color-riara-red)]/5 to-transparent p-8 md:p-10 rounded-2xl border border-[var(--color-riara-red)]/20">
+            <p className="text-lg md:text-xl text-[var(--color-text-secondary)] mb-6 max-w-2xl mx-auto">
+              Ready to explore how our research is making a difference? Discover our projects, meet our researchers, and learn how we're building knowledge that transforms communities.
+            </p>
+            <Button
+              variant="outline"
+              className="inline-flex items-center justify-center gap-2 px-8 sm:px-10 py-4 text-base sm:text-lg font-semibold border-2 border-[var(--color-riara-red)] bg-[var(--color-riara-red)] !text-white hover:bg-[var(--color-riara-red-dark)] hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+              data-testid="button-more-research"
+              asChild
+            >
+              <a href="/research" className="!text-white">
+                <span className="!text-white">Explore Our Research</span> 
+                <ArrowRight className="h-5 w-5 !text-white" />
+              </a>
+            </Button>
+          </div>
+        </AnimatedSection>
       </Container>
     </section>
   );

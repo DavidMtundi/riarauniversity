@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import type { ContentSection } from "@shared/schema";
 import { Container } from "@/components/Container";
+import { ImageContainer } from "@/components/ImageContainer";
+import { PAGE_HERO_IMAGES } from "@/lib/images";
 
 interface AthleticsSectionProps {
   sections: ContentSection[];
@@ -10,7 +12,7 @@ interface AthleticsSectionProps {
 
 export function AthleticsSection({ sections, showHeader = true }: AthleticsSectionProps) {
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="py-14 sm:py-16 md:py-24 bg-white">
       <Container>
         {showHeader && (
           <header className="text-center mb-12 md:mb-16">
@@ -20,6 +22,23 @@ export function AthleticsSection({ sections, showHeader = true }: AthleticsSecti
             </p>
           </header>
         )}
+
+        {/* Large Sports Image */}
+        <div className="mb-12 md:mb-16 relative group overflow-hidden rounded-2xl shadow-xl">
+          <div className="relative aspect-[21/9] md:aspect-[16/6] overflow-hidden">
+            <ImageContainer
+              src={PAGE_HERO_IMAGES.sports}
+              alt="Riara University Sports - Cardinal Athletics in Action"
+              containerClassName="absolute inset-0 w-full h-full"
+              objectFit="cover"
+              showSkeleton={true}
+            />
+            {/* Overlay gradient for better text readability if needed */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            {/* Hover effect */}
+            <div className="absolute inset-0 bg-[var(--color-riara-red)]/0 group-hover:bg-[var(--color-riara-red)]/10 transition-all duration-500"></div>
+          </div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
           {sections.map((section) => {

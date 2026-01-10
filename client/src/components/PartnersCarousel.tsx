@@ -75,7 +75,7 @@ export function PartnersCarousel({ categories }: PartnersCarouselProps) {
   }
 
   return (
-    <section id="partners" className="py-20 bg-white">
+    <section id="partners" className="py-14 sm:py-16 md:py-24 bg-[var(--color-bg-secondary)]">
       <Container>
         <header className="text-center mb-10 md:mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-black leading-snug text-[var(--color-text-primary)]" data-testid="text-partners-heading">

@@ -11,7 +11,7 @@ interface HealthcareSectionProps {
 export function HealthcareSection({ sections, showHeader = true }: HealthcareSectionProps) {
 
   return (
-    <section className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+    <section className="py-14 sm:py-16 md:py-24 bg-[var(--color-bg-secondary)]">
       <Container>
         {showHeader && (
           <header className="text-center mb-12 md:mb-16">

@@ -149,8 +149,9 @@ interface QuickDownload {
 
 const QUICK_DOWNLOADS: QuickDownload[] = [
   { label: "University Brochure", href: "/docs/RU%20GENERIC%20BROCHURE.pdf", testId: "link-download-brochure", downloadFilename: "RU-Generic-Brochure.pdf" },
-  { label: "Application Form", href: "/docs/Riara%20University%20Application%20Form%20%281%29.pdf", testId: "link-download-application", downloadFilename: "Riara-University-Application-Form.pdf" },
-  { label: "Academic Calendar", href: "/docs/RU%20GENERIC%20BROCHURE.pdf", testId: "link-download-calendar", downloadFilename: "RU-Generic-Brochure.pdf" },
+  { label: "Commencement Booklet", href: "/docs/Commencement%20Booklet.pdf", testId: "link-download-commencement", downloadFilename: "Commencement-Booklet.pdf" },
+  { label: "RU Catalogue", href: "/docs/RU%20Catalogue.pdf", testId: "link-download-catalogue", downloadFilename: "RU-Catalogue.pdf" },
+  { label: "Newsletter", href: "/docs/Newsletter.pdf", testId: "link-download-newsletter", downloadFilename: "Newsletter.pdf" },
   { label: "Fee Structure", href: "/docs/RU%20GENERIC%20BROCHURE.pdf", testId: "link-download-fees", downloadFilename: "RU-Generic-Brochure.pdf" },
 ];
 
@@ -201,28 +202,28 @@ const FooterSection: React.FC<{ section: FooterSection }> = ({ section }) => (
 );
 
 const QuickDownloadsSection: React.FC = () => (
-  <div className="bg-gradient-to-r from-[var(--color-riara-red)]/10 to-[var(--color-riara-red)]/5 border-l-4 border-[var(--color-riara-red)] rounded-lg p-6 md:p-8">
-    <div className="flex items-center gap-3 mb-4">
-      <div className="p-2 bg-[var(--color-riara-red)]/20 rounded-lg">
-        <Download className="h-5 w-5 text-[var(--color-riara-red)]" />
+  <div className="bg-gradient-to-r from-[var(--color-riara-red)]/10 to-[var(--color-riara-red)]/5 border-l-4 border-[var(--color-riara-red)] rounded-lg p-4 md:p-6">
+    <div className="flex items-center gap-2 mb-3 md:mb-4">
+      <div className="p-1.5 bg-[var(--color-riara-red)]/20 rounded-lg">
+        <Download className="h-4 w-4 md:h-5 md:w-5 text-[var(--color-riara-red)]" />
       </div>
-      <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide text-[var(--color-riara-red)]">
+      <h3 className="font-bold text-base md:text-lg uppercase tracking-wide text-[var(--color-riara-red)]">
         Quick Downloads
       </h3>
     </div>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3">
       {QUICK_DOWNLOADS.map((download) => (
         <a
           key={download.href}
           href={download.href}
           download={download.downloadFilename || undefined}
-          className="group flex items-center gap-3 p-3 bg-white hover:bg-[var(--color-riara-red)] rounded-lg border-2 border-gray-200 hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+          className="group flex items-center gap-2 p-2 md:p-2.5 bg-white hover:bg-[var(--color-riara-red)] rounded-lg border-2 border-gray-200 hover:border-[var(--color-riara-red)] transition-all duration-300 hover:shadow-md transform hover:-translate-y-0.5"
           data-testid={download.testId}
         >
-          <div className="flex-shrink-0 p-2 bg-[var(--color-riara-red)]/10 group-hover:bg-white rounded-lg transition-colors">
-            <Download className="h-4 w-4 text-[var(--color-riara-red)] group-hover:text-[var(--color-riara-red)]" />
+          <div className="flex-shrink-0 p-1.5 bg-[var(--color-riara-red)]/10 group-hover:bg-white rounded-md transition-colors">
+            <Download className="h-3 w-3 md:h-3.5 md:w-3.5 text-[var(--color-riara-red)] group-hover:text-[var(--color-riara-red)]" />
           </div>
-          <span className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors line-clamp-2">
+          <span className="text-xs md:text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-white transition-colors line-clamp-2 leading-tight">
             {download.label}
           </span>
         </a>

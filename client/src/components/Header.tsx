@@ -32,7 +32,7 @@ export function Header({ variant = "default" }: HeaderProps) {
           "fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300",
           isOverlay
             ? "bg-gradient-to-b from-black/60 via-black/30 to-transparent shadow-none backdrop-blur-[2px]"
-            : "md:bg-[var(--color-bg-primary)] bg-[var(--color-bg-maroon)] md:shadow-riara"
+            : "bg-transparent shadow-md"
         )}
         style={{ touchAction: 'manipulation' }}
       >
@@ -107,10 +107,10 @@ export function Header({ variant = "default" }: HeaderProps) {
       {/* Main Navigation - Desktop Only */}
       <div
         className={cn(
-          "hidden md:block",
+          "hidden md:block transition-colors duration-300",
           isOverlay
             ? "bg-transparent"
-            : "bg-[var(--color-bg-primary)]"
+            : "bg-white shadow-sm"
         )}
       >
         <div className="max-w-7xl mx-auto px-6">
@@ -138,7 +138,7 @@ export function Header({ variant = "default" }: HeaderProps) {
                   className={cn(
                     "text-base lg:text-lg xl:text-xl font-bold no-underline hover:no-underline transition-colors touch-manipulation",
                     isOverlay
-                      ? "!text-white hover:!text-white"
+                      ? "!text-white hover:!text-white/80"
                       : "text-[var(--color-riara-red)] hover:text-[var(--color-riara-red-dark)]"
                   )}
                   data-testid={link.testId}

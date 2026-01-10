@@ -8,7 +8,7 @@ interface AdmissionSectionProps {
 
 export function AdmissionSection({ showHeader = true }: AdmissionSectionProps) {
   return (
-    <section id="admission" className="py-16 md:py-20 bg-[var(--color-bg-secondary)]">
+    <section id="admission" className="py-14 sm:py-16 md:py-24 bg-[var(--color-bg-secondary)]">
       <Container className={showHeader ? undefined : "px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2 2xl:px-2"}>
         {showHeader && (
           <header className="text-center mb-12 md:mb-16">

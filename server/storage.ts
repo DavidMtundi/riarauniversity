@@ -227,25 +227,25 @@ export class MemStorage implements IStorage {
 
     this.campusLifeSections = [
       {
-        id: "student-life",
-        title: "Student Life",
-        description: "A residential campus with diverse housing, exceptional dining, and over 600 student organizations",
+        id: "sports",
+        title: "Sports",
+        description: "Join our vibrant athletic community with competitive teams, modern facilities, and opportunities for both recreational and competitive sports activities",
         imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        link: "#"
+        link: "/athletics"
       },
       {
-        id: "dialogue",
-        title: "Constructive Dialogue",
-        description: "Uplifting academic freedom and free speech; curiosity and critical inquiry; open, inclusive exchange of ideas",
+        id: "clubs",
+        title: "Clubs & Organizations",
+        description: "Explore diverse student clubs and organizations that cater to your interests, from academic societies to cultural groups and special interest clubs",
         imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        link: "#"
+        link: "/campus-life"
       },
       {
-        id: "wellness",
-        title: "Recreation & Wellness",
-        description: "State-of-the-art facilities and fitness programs to encourage movement and play",
+        id: "accommodation",
+        title: "Accommodation",
+        description: "Safe, comfortable, and convenient on-campus housing options designed to support your academic success and provide a vibrant living experience",
         imageUrl: "https://riarauniversity.ac.ke/wp-content/uploads/2025/11/Website-Cover-1.jpg",
-        link: "#"
+        link: "/campus-life"
       }
     ];
 
